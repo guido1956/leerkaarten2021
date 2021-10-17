@@ -7,3 +7,4 @@ el dia : de dag
 escusche : luister
 TEST1 : TEST2 : TEST3 : TEST4
 testa : testb : testc : testd
+groente : blaten

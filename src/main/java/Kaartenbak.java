@@ -11,6 +11,12 @@ public class Kaartenbak {
     private boolean isVoorkant = true;
     private int moduleStart;
     private int moduleEinde;
+    private int aantalGoedV = 0;
+    private int aantalNogNietV= 0;
+    private int aantalNeutraalV = 0;
+    private int aantalGoedA = 0;
+    private int aantalNogNietA= 0;
+    private int aantalNeutraalA = 0;
 
     public Kaartenbak(ArrayList<Kaart> kaarten) {
         this.kaarten = kaarten;
@@ -25,6 +31,13 @@ public class Kaartenbak {
         index = 0;
         moduleStart = 0;
         moduleEinde = 0;
+    }
+
+    public void init() {
+        index = 0;
+        moduleStart = 0;
+        moduleEinde = kaarten.size();
+        telStanden();
     }
 
     public String loadKaartenbak(String filename) {
@@ -55,7 +68,49 @@ public class Kaartenbak {
         }
     }
 
+    public void telStanden() {
+        resetTellers();
+        for (Kaart kaart : kaarten) {
+            if (kaart.getGekendVoorkant().equals("")) {
+                kaart.setGekendVoorkant("neutraal");
+            }
+            if (kaart.getGekendVoorkant().equals("neutraal")) {
+                aantalNeutraalV++;
+            }
+            if (kaart.getGekendVoorkant().equals("goed")) {
+                aantalGoedV++;
+            }
+            if (kaart.getGekendVoorkant().equals("niet")) {
+                aantalNogNietV++;
+            }
 
+
+            if (kaart.getGekendAchterkant().equals("")) {
+                kaart.setGekendVoorkant("neutraal");
+            }
+            if (kaart.getGekendAchterkant().equals("neutraal")) {
+                aantalNeutraalA++;
+            }
+            if (kaart.getGekendAchterkant().equals("goed")) {
+                aantalGoedA++;
+            }
+            if (kaart.getGekendAchterkant().equals("niet")) {
+                aantalNogNietA++;
+            }
+
+        }
+
+    }
+
+    public void resetTellers() {
+        aantalGoedV = 0;
+        aantalNeutraalV = 0;
+        aantalNogNietV = 0;
+
+        aantalGoedA = 0;
+        aantalNeutraalA = 0;
+        aantalNogNietA = 0;
+    }
 
     public Kaart volgendeKaart(String filter) {
         int circle = index;
@@ -197,4 +252,63 @@ public class Kaartenbak {
         return temporaly;
     }
 
+    public boolean isVoorkant() {
+        return isVoorkant;
+    }
+
+    public void setVoorkant(boolean voorkant) {
+        isVoorkant = voorkant;
+    }
+
+    public int getAantalGoedV() {
+        return aantalGoedV;
+    }
+
+    public void setAantalGoedV(int aantalGoedV) {
+        this.aantalGoedV = aantalGoedV;
+    }
+
+    public int getAantalNogNietV() {
+        return aantalNogNietV;
+    }
+
+    public void setAantalNogNietV(int aantalNogNietV) {
+        this.aantalNogNietV = aantalNogNietV;
+    }
+
+    public int getAantalNeutraalV() {
+        return aantalNeutraalV;
+    }
+
+    public int getAantal() {
+        return kaarten.size();
+    }
+
+    public void setAantalNeutraalV(int aantalNeutraalV) {
+        this.aantalNeutraalV = aantalNeutraalV;
+    }
+
+    public int getAantalGoedA() {
+        return aantalGoedA;
+    }
+
+    public void setAantalGoedA(int aantalGoedA) {
+        this.aantalGoedA = aantalGoedA;
+    }
+
+    public int getAantalNogNietA() {
+        return aantalNogNietA;
+    }
+
+    public void setAantalNogNietA(int aantalNogNietA) {
+        this.aantalNogNietA = aantalNogNietA;
+    }
+
+    public int getAantalNeutraalA() {
+        return aantalNeutraalA;
+    }
+
+    public void setAantalNeutraalA(int aantalNeutraalA) {
+        this.aantalNeutraalA = aantalNeutraalA;
+    }
 }

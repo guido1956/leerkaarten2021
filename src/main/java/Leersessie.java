@@ -1,5 +1,5 @@
 /**
- * todo: nadenken over het swithmechanisme
+ * todo: nadenken over het switchmechanisme
  */
 public class Leersessie {
     private static final int VRAAG_ANTWOORD = 1;
@@ -9,11 +9,14 @@ public class Leersessie {
 
     private int leervorm = VRAAG_ANTWOORD;
     private String naamKaartenbak;
-    private int aantalgekend;
-    private int aantalnogNiet;
     private int oefentijd;
+    private boolean isVraag = true;
 
     public Leersessie() {
+        setLeervorm(VRAAG_ANTWOORD);
+    }
+
+    public void init() {
 
     }
 
@@ -37,21 +40,6 @@ public class Leersessie {
         this.naamKaartenbak = naamKaartenbak;
     }
 
-    public int getAantalgekend() {
-        return aantalgekend;
-    }
-
-    public void setAantalgekend(int aantalgekend) {
-        this.aantalgekend = aantalgekend;
-    }
-
-    public int getAantalnogNiet() {
-        return aantalnogNiet;
-    }
-
-    public void setAantalnogNiet(int aantalnogNiet) {
-        this.aantalnogNiet = aantalnogNiet;
-    }
 
     public int getOefentijd() {
         return oefentijd;
@@ -59,5 +47,13 @@ public class Leersessie {
 
     public void setOefentijd(int oefentijd) {
         this.oefentijd = oefentijd;
+    }
+
+    public boolean getIsVraag() {
+        return isVraag;
+    }
+
+    public void switchgetIsVraag() {
+        isVraag = !isVraag;
     }
 }
