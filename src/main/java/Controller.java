@@ -13,24 +13,22 @@ import java.awt.event.ActionListener;
  */
 public class Controller {
 
-    public static void main(String[] args) {
-        KaartenGui view = new KaartenGui();
-        Kaartenbak kaarten = new Kaartenbak();
-        Controller control = new Controller(view, kaarten);
-
-    }
-
     private KaartenGui view;
     private Kaartenbak kaarten;
     private Leersessie leersessie;
-
-    Kaart huidigeKaart = new Kaart("", "");
+    private Kaart huidigeKaart = new Kaart("", "");
 
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
         this.kaarten= kaarten;
         leersessie = new Leersessie();
+         loadKaartenbak("ConGusto.txt");
 
+    }
+
+    public void loadKaartenbak(String filename) {
+        System.out.println("Hoera");
+        System.out.println(kaarten.loadKaartenbak(filename));
     }
 
     public void volgendeKaart() {
@@ -58,7 +56,7 @@ public class Controller {
 
 
 
-class LeerSessieHandler implements ActionListener {
+class LeerSessieButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             Button button  = (Button) e.getSource();
@@ -71,6 +69,18 @@ class LeerSessieHandler implements ActionListener {
                 case "correct" -> setKaartGekend();
                 case "incorrect" -> setKaartNietGekend();
             }
+        }
+    }
+
+    class FileKaartenBakHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField)  e.getSource();
+            String filename = name.getText();
+            loadKaartenbak(filename);
+
+
         }
     }
 

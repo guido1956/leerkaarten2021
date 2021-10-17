@@ -44,6 +44,10 @@ public class Kaart {
         return gekendVoorkant;
     }
 
+    public void setGekendVoorkant(String gekend) {
+        this.gekendVoorkant = gekend;
+    }
+
     public void setGekendAchterkant(String gekend) {
         this.gekendAchterkant = gekend;
     }

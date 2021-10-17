@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class Kaartenbak {
@@ -11,8 +16,9 @@ public class Kaartenbak {
         this.kaarten = kaarten;
         index = 0;
         moduleStart = 0;
-        moduleEinde = kaarten.size() -1;
+        moduleEinde = kaarten.size() - 1;
     }
+
 
     public Kaartenbak() {
         kaarten = new ArrayList<>();
@@ -21,9 +27,39 @@ public class Kaartenbak {
         moduleEinde = 0;
     }
 
-    public Kaart  volgendeKaart(String filter) {
+    public String loadKaartenbak(String filename) {
+        BufferedReader inKaartFile = openBestand(filename);
+        if (inKaartFile == null) {
+            return ("EC fileNotFound");
+        }
+
+        ArrayList<Kaart> temporaly = vulArrayList(inKaartFile);
+        if (temporaly == null) {
+            return ("EC fillArrayError");
+        }
+
+        kaarten = temporaly;
+        System.out.println(kaarten.size() + "!!!!!!");
+        return "";
+    }
+
+    private BufferedReader openBestand(String naamBestand) {
+        BufferedReader inFile;
+        try {
+            inFile = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream(naamBestand), StandardCharsets.UTF_8));
+            return (inFile);
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+
+
+    public Kaart volgendeKaart(String filter) {
         int circle = index;
-        for (int x = index +1 ; x <= moduleEinde + 1; x++ ) {
+        for (int x = index + 1; x <= moduleEinde + 1; x++) {
             if (x > moduleEinde) {
                 x = moduleStart;
             }
@@ -45,7 +81,7 @@ public class Kaartenbak {
 
     public Kaart volgendeKaart() {
         index++;
-        if (index > moduleEinde ) {
+        if (index > moduleEinde) {
             index = moduleStart;
         }
         return kaarten.get(index);
@@ -97,7 +133,7 @@ public class Kaartenbak {
 
     public void setModule() {
         moduleStart = 0;
-        moduleEinde = kaarten.size()-1;
+        moduleEinde = kaarten.size() - 1;
         if (moduleEinde < 0) {
             moduleEinde = 0;
         }
@@ -119,6 +155,46 @@ public class Kaartenbak {
 
     public boolean getIsVoorkant() {
         return isVoorkant;
+    }
+
+    public ArrayList<Kaart> vulArrayList(BufferedReader inKaartfile) {
+        ArrayList<Kaart> temporaly = new ArrayList<>();
+        String tijdelijk;
+        boolean isKaart = true;
+        try {
+            while (isKaart) {
+                tijdelijk = inKaartfile.readLine();
+                System.out.println(tijdelijk);
+                if (!(tijdelijk == null)) {
+                    String[] fields = tijdelijk.split(":");
+                    int lengte = fields.length;
+                    for (int x = 0 ; x < fields.length ; x++) {
+                        fields[x] = fields[x].trim();
+                    }
+
+                    if (lengte < 2) {
+                       return null;
+                    }
+                    Kaart kaart = new Kaart(fields[0], fields[1]);
+                    if (lengte >= 3) {
+                        kaart.setModule(fields[2]);
+                                           }
+                    if (lengte >= 4) {
+                        kaart.setModule(fields[3]);
+                    }
+                    if (lengte >= 5) {
+                        kaart.setGekendAchterkant(fields[4]);
+                    }
+                    temporaly.add(kaart);
+                } else {
+                    isKaart = false;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("OEI ");
+            return null;
+        }
+        return temporaly;
     }
 
 }
