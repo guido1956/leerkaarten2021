@@ -2,15 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalTime;
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
 public class KaartenGui extends JFrame implements ActionListener{
 
-    private JTextArea kaartenTextArea, naamAantalGoedTextArea, naamAantalGoedNogNietTextArea, naamAantalNeutraalTextArea, totaalKaartenTextArea,
+    private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal,
             startTijdTextArea, eindTijdTextArea, leerTijdTextArea;
-    private JButton volgendeKaartButton, vorigeKaartButton, vanafKaartButton,
+    private JButton btnVolgende, btnVorige, btnVanaf,
             leegButton, goedButton, nogNietButton, volgendeNogNietButton,
             resetButton, onthoudScoresButton, resetTijdButton;
     private JTextField naamFileTextField, naarKaartTextField, snelheidTextField, modulesTextField, startModuleTextField,
@@ -80,33 +79,33 @@ public class KaartenGui extends JFrame implements ActionListener{
         totaalKaartenTextAreaLabel = new JLabel("kaarten:");
         window.add(totaalKaartenTextAreaLabel);
 
-        totaalKaartenTextArea = new JTextArea("", 1, 4);
-        totaalKaartenTextArea.setBackground(Color.yellow);
-        totaalKaartenTextArea.setEditable(false);
-        window.add(totaalKaartenTextArea);
+        txtTotaal = new JTextArea("", 1, 4);
+        txtTotaal.setBackground(Color.yellow);
+        txtTotaal.setEditable(false);
+        window.add(txtTotaal);
 
         aantalNeutraalLabel = new JLabel("neutraal");
         window.add(aantalNeutraalLabel);
 
-        naamAantalNeutraalTextArea = new JTextArea("", 1, 4);
-        naamAantalNeutraalTextArea.setBackground(Color.yellow);
-        naamAantalNeutraalTextArea.setEditable(false);
-        window.add(naamAantalNeutraalTextArea);
+        txtAantalNeutraal = new JTextArea("", 1, 4);
+        txtAantalNeutraal.setBackground(Color.yellow);
+        txtAantalNeutraal.setEditable(false);
+        window.add(txtAantalNeutraal);
 
         aantalGoedLabel = new JLabel("goed:");
         window.add(aantalGoedLabel);
-        naamAantalGoedTextArea = new JTextArea("", 1, 4);
-        naamAantalGoedTextArea.setBackground(Color.yellow);
-        naamAantalGoedTextArea.setEditable(false);
-        window.add(naamAantalGoedTextArea);
+        txtAantalGoed = new JTextArea("", 1, 4);
+        txtAantalGoed.setBackground(Color.yellow);
+        txtAantalGoed.setEditable(false);
+        window.add(txtAantalGoed);
 
         aantalNogNietLabel = new JLabel("nog niet:");
         window.add(aantalNogNietLabel);
 
-        naamAantalGoedNogNietTextArea = new JTextArea("", 1, 4);
-        naamAantalGoedNogNietTextArea.setBackground(Color.yellow);
-        naamAantalGoedNogNietTextArea.setEditable(false);
-        window.add(naamAantalGoedNogNietTextArea);
+        txtAantalNogNiet = new JTextArea("", 1, 4);
+        txtAantalNogNiet.setBackground(Color.yellow);
+        txtAantalNogNiet.setEditable(false);
+        window.add(txtAantalNogNiet);
 
         startModuleTextField = new JTextField(3);
         startModuleTextField.setBackground(Color.yellow);
@@ -123,19 +122,19 @@ public class KaartenGui extends JFrame implements ActionListener{
         window.add(eindModuleTextField);
 
 
-        kaartenTextArea = new JTextArea("", 17, 82);  //voor beamer 63
-        JScrollPane scrollPane = new JScrollPane(kaartenTextArea);
-        kaartenTextArea.setLineWrap(true);
-        kaartenTextArea.setWrapStyleWord(true);
-        kaartenTextArea.setEditable(false);
+        txtVraagAntwoord = new JTextArea("", 17, 82);  //voor beamer 63
+        JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
+        txtVraagAntwoord.setLineWrap(true);
+        txtVraagAntwoord.setWrapStyleWord(true);
+        txtVraagAntwoord.setEditable(false);
         Font font = new Font("Default", Font.PLAIN, 20);
-        kaartenTextArea.setFont(font);
+        txtVraagAntwoord.setFont(font);
         window.add(scrollPane);
 
 
-        volgendeKaartButton = new JButton("volgende kaart");
-        volgendeKaartButton.setName("nextCard");
-        window.add(volgendeKaartButton);
+        btnVolgende = new JButton("volgende kaart");
+        btnVolgende.setName("nextCard");
+        window.add(btnVolgende);
 
         goedButton = new JButton("goed");
         goedButton.setName("correct");
@@ -147,19 +146,19 @@ public class KaartenGui extends JFrame implements ActionListener{
         window.add(nogNietButton);
         nogNietButton.addActionListener(this);
 
-        vorigeKaartButton = new JButton("vorige kaart");
-        vorigeKaartButton.setName("formerCard");
-        window.add(vorigeKaartButton);
-        vorigeKaartButton.addActionListener(this);
+        btnVorige = new JButton("vorige kaart");
+        btnVorige.setName("formerCard");
+        window.add(btnVorige);
+        btnVorige.addActionListener(this);
 
         volgendeNogNietButton = new JButton("volgende \"nog niet\"");
         volgendeNogNietButton.setName("nextCardIncorrect");
         window.add(volgendeNogNietButton);
         volgendeNogNietButton.addActionListener(this);
 
-        vanafKaartButton = new JButton("vanaf kaartnr");
-        window.add(vanafKaartButton);
-        vanafKaartButton.addActionListener(this);
+        btnVanaf = new JButton("vanaf kaartnr");
+        window.add(btnVanaf);
+        btnVanaf.addActionListener(this);
 
         onthoudScoresButton = new JButton("onthoud scores");
         window.add(onthoudScoresButton);
@@ -268,9 +267,9 @@ public class KaartenGui extends JFrame implements ActionListener{
     }
 
    public  void buttonHandler(ActionListener actionListener) {
-       volgendeKaartButton.addActionListener(actionListener);
+       btnVolgende.addActionListener(actionListener);
        volgendeNogNietButton.addActionListener(actionListener);
-       vorigeKaartButton.addActionListener(actionListener);
+       btnVorige.addActionListener(actionListener);
        nogNietButton.addActionListener(actionListener);
        goedButton.addActionListener(actionListener);
    }
@@ -280,19 +279,19 @@ public class KaartenGui extends JFrame implements ActionListener{
    }
 
    public void showAantalGoed(String waarde) {
-        naamAantalGoedTextArea.setText(waarde);
+        txtAantalGoed.setText(waarde);
    }
 
    public void showAantalNeutraal(String waarde) {
-        naamAantalNeutraalTextArea.setText(waarde);
+        txtAantalNeutraal.setText(waarde);
    }
 
    public void showAantalNietGoed(String waarde) {
-        naamAantalGoedNogNietTextArea.setText(waarde);
+        txtAantalNogNiet.setText(waarde);
    }
 
     public void showAantalTotaal(String waarde) {
-        totaalKaartenTextArea.setText(waarde);
+        txtTotaal.setText(waarde);
 
     }
 
@@ -305,7 +304,7 @@ public class KaartenGui extends JFrame implements ActionListener{
     }
 
     public void showKaartTekst (String waarde) {
-        kaartenTextArea.setText(waarde);
+        txtVraagAntwoord.setText(waarde);
     }
 }
 
