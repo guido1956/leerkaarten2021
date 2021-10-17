@@ -82,43 +82,36 @@ public class Controller {
     public void volgendeKaartNietGoed() {
 
     }
-
     public void toonKaart() {
         huidigeKaart = kaarten.getHuidigeKaart();
-        String start = "V";
-        String info = "";
-        String  kaartnummer = Integer.toString(kaarten.getIndex() + 1);
         String kaartTekst = "";
-        if (leersessie.getLeervorm() == ANTWOORD_VRAAG || leersessie.getLeervorm() == ANTWOORD_VRAAG_SCHRIJVEN) {
-            start = "A";
-        }
-        if (leersessie.getIsVraag()) {
-            if (start.equals("V")) {
-                info = "Vraag";
-                kaartTekst = huidigeKaart.getVoorkant();
-            } else {
-                kaartTekst = huidigeKaart.getAchterkant();
-            }
-        }
+        String info = "";
+        String kaartnummer = Integer.toString(kaarten.getIndex() + 1);
 
-        if (!leersessie.getIsVraag()) {
-            info = "Antwoord";
-            if (start.equals("V")) {
-                kaartTekst = huidigeKaart.getAchterkant();
-            } else {
+        if (leersessie.getLeervorm() == VRAAG_ANTWOORD) {
+            if (kaarten.getIsVraag()){
                 kaartTekst = huidigeKaart.getVoorkant();
+                info = "Vraag : ";
+            } else {
+                kaartTekst = huidigeKaart.getAchterkant();
+                info = "Antwoord : ";
             }
+
         }
 
         view.showKaartTekst(info + " " + kaartnummer + "\n\n" + kaartTekst);
-
-
     }
+
+
 
     public void setKaartGekend() {
-        System.out.println("YES HET WERKT");
+           huidigeKaart.setGekendVoorkant("goed");
+           kaarten.setKaart(huidigeKaart);
+           kaarten.telStanden();
+           showStanden();
+        }
 
-    }
+
 
     public void setKaartNietGekend() {
 

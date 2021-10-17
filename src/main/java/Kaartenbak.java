@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Kaartenbak {
     private ArrayList<Kaart> kaarten;
     private int index;
-    private boolean isVoorkant = true;
+    private boolean isVraag = true;
     private int moduleStart;
     private int moduleEinde;
     private int aantalGoedV = 0;
@@ -133,13 +133,17 @@ public class Kaartenbak {
         }
         return kaarten.get(index);  // komt niet voor
     }
-
     public Kaart volgendeKaart() {
+        if (isVraag) {
+            switchIsVraag();
+            return getHuidigeKaart();
+        }
+        switchIsVraag();
         index++;
         if (index > moduleEinde) {
             index = moduleStart;
         }
-        return kaarten.get(index);
+        return getHuidigeKaart();
     }
 
     public Kaart getHuidigeKaart() {
@@ -204,13 +208,10 @@ public class Kaartenbak {
 
     }
 
-    public void switchisVoorkant() {
-        isVoorkant = !isVoorkant;
+    public void switchIsVraag() {
+        isVraag = !isVraag;
     }
 
-    public boolean getIsVoorkant() {
-        return isVoorkant;
-    }
 
     public ArrayList<Kaart> vulArrayList(BufferedReader inKaartfile) {
         ArrayList<Kaart> temporaly = new ArrayList<>();
@@ -252,12 +253,12 @@ public class Kaartenbak {
         return temporaly;
     }
 
-    public boolean isVoorkant() {
-        return isVoorkant;
+    public boolean getIsVraag() {
+        return isVraag;
     }
 
-    public void setVoorkant(boolean voorkant) {
-        isVoorkant = voorkant;
+    public void setIsVraag(boolean isVraag) {
+        isVraag = isVraag;
     }
 
     public int getAantalGoedV() {
