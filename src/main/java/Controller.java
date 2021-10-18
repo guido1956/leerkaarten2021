@@ -60,8 +60,6 @@ public class Controller {
         view.showAantalNietGoed(Integer.toString(aantalNietGoed));
         view.showAantalNeutraal(Integer.toString(aantalNeutraal));
         view.showAantalTotaal(Integer.toString(kaarten.getAantal()));
-        view.showModuleStart(Integer.toString(kaarten.getModuleStart()));
-        view.showModuleEinde(Integer.toString(kaarten.getModuleEinde()));
         toonKaart();
     }
 
@@ -72,10 +70,12 @@ public class Controller {
     public void volgendeKaart() {
         kaarten.volgendeKaart();
         toonKaart();
-        System.out.println(kaarten.getIndex());
+
     }
 
     public void vorigeKaart() {
+        kaarten.vorigeKaart();
+        toonKaart();
 
     }
 
@@ -99,6 +99,8 @@ public class Controller {
 
         }
 
+        view.showKleur(huidigeKaart.getGekendVoorkant());
+
         view.showKaartTekst(info + " " + kaartnummer + "\n\n" + kaartTekst);
     }
 
@@ -114,6 +116,11 @@ public class Controller {
 
 
     public void setKaartNietGekend() {
+        huidigeKaart.setGekendVoorkant("niet");
+        kaarten.setKaart(huidigeKaart);
+        kaarten.telStanden();
+        showStanden();
+
 
     }
 

@@ -140,12 +140,24 @@ public class Kaartenbak {
         }
         switchIsVraag();
         index++;
-        if (index > moduleEinde) {
+        if (index >= moduleEinde) {
             index = moduleStart;
         }
         return getHuidigeKaart();
     }
 
+    public Kaart vorigeKaart() {
+        if (isVraag) {
+            switchIsVraag();
+            return getHuidigeKaart();
+        }
+        switchIsVraag();
+        index--;
+        if (index < moduleStart) {
+            index = moduleStart;
+        }
+        return getHuidigeKaart();
+    }
     public Kaart getHuidigeKaart() {
         return kaarten.get(index);
     }
@@ -247,8 +259,7 @@ public class Kaartenbak {
                 }
             }
         } catch (Exception e) {
-            System.out.println("OEI ");
-            return null;
+             return null;
         }
         return temporaly;
     }
@@ -257,9 +268,6 @@ public class Kaartenbak {
         return isVraag;
     }
 
-    public void setIsVraag(boolean isVraag) {
-        isVraag = isVraag;
-    }
 
     public int getAantalGoedV() {
         return aantalGoedV;

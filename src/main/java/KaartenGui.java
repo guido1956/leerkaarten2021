@@ -7,16 +7,14 @@ import static javax.swing.JOptionPane.showMessageDialog;
 
 public class KaartenGui extends JFrame implements ActionListener{
 
-    private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal,
-            startTijdTextArea, eindTijdTextArea, leerTijdTextArea;
-    private JButton btnVolgende, btnVorige, btnVanaf,
+    private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
+
+    private JButton btnVolgende, btnVorige,
             leegButton, goedButton, nogNietButton, volgendeNogNietButton,
-            resetButton, onthoudScoresButton, resetTijdButton;
-    private JTextField naamFileTextField, naarKaartTextField, snelheidTextField, modulesTextField, startModuleTextField,
-            eindModuleTextField;
-    private JLabel naamFileLabel, naarKaartNrLabel, aantalGoedLabel, aantalNeutraalLabel, aantalNogNietLabel, totaalKaartenTextAreaLabel,
-            startTijdLabel, eindTijdLabel, leerTijdLabel, minuutLabel, snelheidLabel, modulesLabel;
-    private JCheckBox kleurCheckBox, randomCheckBox, schrijvenCheckBox;
+            resetButton;
+    private JTextField naamFileTextField, naarKaartTextField, modulesTextField;
+    private JLabel naamFileLabel,  aantalGoedLabel,lblVanaf,  aantalNeutraalLabel, aantalNogNietLabel, totaalKaartenTextAreaLabel;
+    private JCheckBox randomCheckBox, schrijvenCheckBox;
     private JRadioButton voorkantRadioButton, achterkantRadioButton;
     private JComboBox<String> modulesCombo = new JComboBox<>();
 
@@ -27,8 +25,11 @@ public class KaartenGui extends JFrame implements ActionListener{
 
     private void initGui() {
 
-        setSize(1500, 850);
+        setSize(780, 350);
         setFocusable(true);
+        setLocation(100, 200);
+        setUndecorated(true);
+        getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
         createGui();
         setTitle("Leren met flashcards -17-10 2021- Guido Dulos  versie 2.0");
@@ -39,7 +40,8 @@ public class KaartenGui extends JFrame implements ActionListener{
     public void createGui() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container window = getContentPane();
-        window.setLayout(new FlowLayout());
+        window.setLayout(new FlowLayout(FlowLayout.LEFT));
+
 
         naamFileLabel = new JLabel("naam kaartenbestand: ");
         window.add(naamFileLabel);
@@ -49,25 +51,7 @@ public class KaartenGui extends JFrame implements ActionListener{
         window.add(naamFileTextField);
 
 
-        naarKaartNrLabel = new JLabel("start vanaf:");
-        window.add(naarKaartNrLabel);
 
-        naarKaartTextField = new JTextField(5);
-        naarKaartTextField.setBackground(Color.white);
-        naarKaartTextField.setText("1");
-        window.add(naarKaartTextField);
-
-
-        leerTijdLabel = new JLabel("geoefend minuten:");
-        window.add(leerTijdLabel);
-        leerTijdTextArea = new JTextArea("", 1, 2);
-        leerTijdTextArea.setBackground(Color.yellow);
-        leerTijdTextArea.setEditable(false);
-        window.add(leerTijdTextArea);
-
-
-        modulesLabel = new JLabel("module");
-        window.add(modulesLabel);
 
         modulesTextField = new JTextField(2);
         modulesTextField.setBackground(Color.yellow);
@@ -107,22 +91,15 @@ public class KaartenGui extends JFrame implements ActionListener{
         txtAantalNogNiet.setEditable(false);
         window.add(txtAantalNogNiet);
 
-        startModuleTextField = new JTextField(3);
-        startModuleTextField.setBackground(Color.yellow);
-        startModuleTextField.setEditable(false);
-        startModuleTextField.setText("0000");
-        startModuleTextField.addActionListener(this);
-        window.add(startModuleTextField);
+        lblVanaf = new JLabel("leren vanaf kaartnr      ");
+        window.add(lblVanaf);
 
-        eindModuleTextField = new JTextField(3);
-        eindModuleTextField.setBackground(Color.yellow);
-        eindModuleTextField.setEditable(false);
-        eindModuleTextField.setText("9999");
-        eindModuleTextField.addActionListener(this);
-        window.add(eindModuleTextField);
+        naarKaartTextField = new JTextField(5);
+        naarKaartTextField.setBackground(Color.white);
+        naarKaartTextField.setText("1");
+        window.add(naarKaartTextField);
 
-
-        txtVraagAntwoord = new JTextArea("", 17, 82);  //voor beamer 63
+        txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63
         JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
         txtVraagAntwoord.setLineWrap(true);
         txtVraagAntwoord.setWrapStyleWord(true);
@@ -155,14 +132,6 @@ public class KaartenGui extends JFrame implements ActionListener{
         volgendeNogNietButton.setName("nextCardIncorrect");
         window.add(volgendeNogNietButton);
         volgendeNogNietButton.addActionListener(this);
-
-        btnVanaf = new JButton("vanaf kaartnr");
-        window.add(btnVanaf);
-        btnVanaf.addActionListener(this);
-
-        onthoudScoresButton = new JButton("onthoud scores");
-        window.add(onthoudScoresButton);
-        onthoudScoresButton.addActionListener(this);
 
 
 //        for (int x = 0; x < MAX_MODULES - 1; x++) {
@@ -205,10 +174,6 @@ public class KaartenGui extends JFrame implements ActionListener{
         window.add(resetButton);
         resetButton.addActionListener(this);
 
-        resetTijdButton = new JButton("reset tijd");
-        window.add(resetTijdButton);
-        resetTijdButton.addActionListener(this);
-
         voorkantRadioButton = new JRadioButton("start met voorkant");
         window.add(voorkantRadioButton);
         voorkantRadioButton.setSelected(true);
@@ -224,11 +189,6 @@ public class KaartenGui extends JFrame implements ActionListener{
         ButtonGroup volgorde = new ButtonGroup();
         volgorde.add(voorkantRadioButton);
         volgorde.add(achterkantRadioButton);
-
-        kleurCheckBox = new JCheckBox("kleur");
-        window.add(kleurCheckBox);
-        kleurCheckBox.setSelected(true);
-        kleurCheckBox.addActionListener(this);
 
         randomCheckBox = new JCheckBox("random");
         window.add(randomCheckBox);
@@ -295,15 +255,20 @@ public class KaartenGui extends JFrame implements ActionListener{
 
     }
 
-    public void showModuleStart (String waarde) {
-        startModuleTextField.setText(waarde);
+    public void showKleur(String kleur ) {
+        if (kleur.equals("goed")) {
+            txtVraagAntwoord.setBackground(Color.getHSBColor(154, 254, 25));
+        }
+        if (kleur.equals("niet")) {
+            txtVraagAntwoord.setBackground(Color.getHSBColor(0.028f, 0.4f, 1f));
+        }
+        if (kleur.equals("neutraal")) {
+            txtVraagAntwoord.setBackground(Color.getHSBColor(100, 86, 96));
+        }
+
     }
 
-    public void showModuleEinde (String waarde) {
-        eindModuleTextField.setText(waarde);
-    }
-
-    public void showKaartTekst (String waarde) {
+       public void showKaartTekst (String waarde) {
         txtVraagAntwoord.setText(waarde);
     }
 }
