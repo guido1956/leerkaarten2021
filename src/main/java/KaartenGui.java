@@ -9,13 +9,12 @@ public class KaartenGui extends JFrame implements ActionListener{
 
     private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
 
-    private JButton btnVolgende, btnVorige, leegButton, goedButton, nogNietButton, volgendeNogNietButton, resetButton;
+    private JButton btnVolgende, btnVorige, leegButton, goedButton, nogNietButton, btnReset;
     private JTextField naamFileTextField, naarKaartTextField, modulesTextField;
     private JLabel naamFileLabel, aantalGoedLabel, lblVanaf, aantalNeutraalLabel, aantalNogNietLabel, totaalKaartenTextAreaLabel;
     private JCheckBox randomCheckBox, schrijvenCheckBox;
     private JRadioButton voorkantRadioButton, achterkantRadioButton;
     private JComboBox<String> modulesCombo = new JComboBox<>();
-
 
 
     public KaartenGui() {
@@ -48,12 +47,7 @@ public class KaartenGui extends JFrame implements ActionListener{
         naamFileTextField.setBackground(Color.white);
         window.add(naamFileTextField);
 
-        modulesTextField = new JTextField(2);
-        modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
-        modulesTextField.setEditable(false);
-        modulesTextField.setText("0");
-        modulesTextField.addActionListener(this);
-        window.add(modulesTextField);
+
 
         totaalKaartenTextAreaLabel = new JLabel("kaarten:");
         window.add(totaalKaartenTextAreaLabel);
@@ -86,13 +80,20 @@ public class KaartenGui extends JFrame implements ActionListener{
         txtAantalNogNiet.setEditable(false);
         window.add(txtAantalNogNiet);
 
-        lblVanaf = new JLabel("leren vanaf kaartnr      ");
+        lblVanaf = new JLabel("leren vanaf kaartnr:      ");
         window.add(lblVanaf);
 
         naarKaartTextField = new JTextField(5);
         naarKaartTextField.setBackground(Color.white);
         naarKaartTextField.setText("1");
         window.add(naarKaartTextField);
+
+        modulesTextField = new JTextField();
+        modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
+        modulesTextField.setEditable(false);
+        modulesTextField.setText("alle modules");
+        modulesTextField.addActionListener(this);
+        window.add(modulesTextField);
 
         txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63
         JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
@@ -122,10 +123,7 @@ public class KaartenGui extends JFrame implements ActionListener{
         window.add(btnVorige);
         btnVorige.addActionListener(this);
 
-        volgendeNogNietButton = new JButton("volgende \"nog niet\"");
-        volgendeNogNietButton.setName("nextCardIncorrect");
-        window.add(volgendeNogNietButton);
-        volgendeNogNietButton.addActionListener(this);
+
 
 
 //        for (int x = 0; x < MAX_MODULES - 1; x++) {
@@ -164,10 +162,13 @@ public class KaartenGui extends JFrame implements ActionListener{
 
         window.add(modulesCombo);
 
-        resetButton = new JButton("reset scores");
-        window.add(resetButton);
-        resetButton.addActionListener(this);
+        btnReset = new JButton("reset scores");
+        btnReset.setName("reset");
+        window.add(btnReset);
+        btnReset.addActionListener(this);
 
+        JLabel lblVulling = new JLabel("                                ");
+        window.add(lblVulling);
         voorkantRadioButton = new JRadioButton("start met voorkant");
         window.add(voorkantRadioButton);
         voorkantRadioButton.setSelected(true);
@@ -224,7 +225,7 @@ public class KaartenGui extends JFrame implements ActionListener{
 
     public void buttonHandler(ActionListener actionListener) {
         btnVolgende.addActionListener(actionListener);
-        volgendeNogNietButton.addActionListener(actionListener);
+        btnReset.addActionListener(actionListener);
         btnVorige.addActionListener(actionListener);
         nogNietButton.addActionListener(actionListener);
         goedButton.addActionListener(actionListener);

@@ -80,7 +80,6 @@ public class Controller {
     public void vorigeKaart() {
         kaarten.vorigeKaart();
         toonKaart();
-
     }
 
     public void volgendeKaartNietGoed() {
@@ -95,17 +94,17 @@ public class Controller {
         if (leersessie.getLeervorm() == VRAAG_ANTWOORD) {
             if (kaarten.getIsVraag()){
                 kaartTekst = huidigeKaart.getVoorkant();
-                info = "Vraag : ";
+                info = "  Vraag : ";
             } else {
                 kaartTekst = huidigeKaart.getAchterkant();
-                info = "Antwoord : ";
+                info = "  Antwoord : ";
             }
 
         }
 
         view.showKleur(huidigeKaart.getGekendVoorkant());
 
-        view.showKaartTekst(info + " " + kaartnummer + "\n\n" + kaartTekst);
+        view.showKaartTekst(info + " " + kaartnummer + "\n\n  " + kaartTekst);
     }
 
 
@@ -117,6 +116,12 @@ public class Controller {
            showStanden();
         }
 
+        public void reset() {
+        kaarten.resetLeeruitslagen();
+        toonKaart();
+        showStanden();
+        }
+
 
 
     public void setKaartNietGekend() {
@@ -124,6 +129,7 @@ public class Controller {
         kaarten.setKaart(huidigeKaart);
         kaarten.telStanden();
         showStanden();
+
 
 
     }
@@ -140,7 +146,7 @@ class LeerSessieButtonHandler implements ActionListener {
             // controlLeervorm1.leersessieKaart();
             switch (name) {
                 case "nextCard" -> volgendeKaart();
-                case "nextCardIncorrect" -> volgendeKaartNietGoed();
+                case "reset" -> reset();
                 case "formerCard" -> vorigeKaart();
                 case "correct" -> setKaartGekend();
                 case "incorrect" -> setKaartNietGekend();

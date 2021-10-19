@@ -110,6 +110,21 @@ public class Kaartenbak {
 
     }
 
+    /**
+     * todo: scheiden voorkant / achterkant
+     */
+    public void resetLeeruitslagen() {
+        for (int x = 0; x < kaarten.size(); x++) {
+            kaarten.get(x).setGekendVoorkant("neutraal") ;
+            kaarten.get(x).setGekendAchterkant("neutraal") ;
+        }
+        telStanden();
+
+    }
+
+    /**
+     * todo: scheiden voorkant / achterkant
+     */
     public void resetTellers() {
         aantalGoedV = 0;
         aantalNeutraalV = 0;
