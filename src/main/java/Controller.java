@@ -5,30 +5,27 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 /**
- * todo: minimal product
- * todo: handling eerste events
- * todo: inlezen file
  * todo: mechanisme antwoord of volgende kaart
  * todo: mechanisme vorige kaart
- *
  */
 public class Controller {
 
-    private KaartenGui view;
-    private Kaartenbak kaarten;
-    private Leersessie leersessie;
-    private Kaart huidigeKaart = new Kaart("", "");
     private static final int VRAAG_ANTWOORD = 1;
     private static final int ANTWOORD_VRAAG = 2;
     private static final int VRAAG_ANTWOORD_SCHRIJVEN = 3;
     private static final int ANTWOORD_VRAAG_SCHRIJVEN = 4;
+    private final KaartenGui view;
+    private final Kaartenbak kaarten;
+    private final Leersessie leersessie;
+    private Kaart huidigeKaart = new Kaart("", "");
 
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
-        this.kaarten= kaarten;
+        this.kaarten = kaarten;
         leersessie = new Leersessie();
         this.view.buttonHandler(new LeerSessieButtonHandler());
         this.view.textFieldHandler(new FileKaartenBakHandler());
+        this.view.gaNaarHandler(new GaNaarHandler());
         this.view.windowsListener(new WindowsHandler());
 
     }
@@ -50,12 +47,12 @@ public class Controller {
         int aantalNietGoed = 0;
         int aantalNeutraal = 0;
 
-        if (leersessie.getLeervorm() ==  VRAAG_ANTWOORD || leersessie.getLeervorm() == VRAAG_ANTWOORD_SCHRIJVEN) {
+        if (leersessie.getLeervorm() == VRAAG_ANTWOORD || leersessie.getLeervorm() == VRAAG_ANTWOORD_SCHRIJVEN) {
             aantalGoed = kaarten.getAantalGoedV();
             aantalNietGoed = kaarten.getAantalNogNietV();
             aantalNeutraal = kaarten.getAantalNeutraalV();
         }
-        if (leersessie.getLeervorm() ==  ANTWOORD_VRAAG || leersessie.getLeervorm() == ANTWOORD_VRAAG_SCHRIJVEN) {
+        if (leersessie.getLeervorm() == ANTWOORD_VRAAG || leersessie.getLeervorm() == ANTWOORD_VRAAG_SCHRIJVEN) {
             aantalGoed = kaarten.getAantalGoedA();
             aantalNietGoed = kaarten.getAantalNogNietA();
             aantalNeutraal = kaarten.getAantalNeutraalA();
@@ -71,10 +68,16 @@ public class Controller {
         return kaarten.loadKaartenbak(filename);
     }
 
+   public void gaNaar(int positie) {
+        if (positie <= kaarten.getAantal()) {
+            kaarten.setIndex(positie - 1);
+            toonKaart();
+        }
+   }
+
     public void volgendeKaart() {
         kaarten.volgendeKaart();
         toonKaart();
-
     }
 
     public void vorigeKaart() {
@@ -82,66 +85,52 @@ public class Controller {
         toonKaart();
     }
 
-    public void volgendeKaartNietGoed() {
-
-    }
-    public void toonKaart() {
+     public void toonKaart() {
         huidigeKaart = kaarten.getHuidigeKaart();
         String kaartTekst = "";
         String info = "";
         String kaartnummer = Integer.toString(kaarten.getIndex() + 1);
 
         if (leersessie.getLeervorm() == VRAAG_ANTWOORD) {
-            if (kaarten.getIsVraag()){
+            if (kaarten.getIsVraag()) {
                 kaartTekst = huidigeKaart.getVoorkant();
                 info = "  Vraag : ";
             } else {
                 kaartTekst = huidigeKaart.getAchterkant();
                 info = "  Antwoord : ";
             }
-
         }
 
         view.showKleur(huidigeKaart.getGekendVoorkant());
-
         view.showKaartTekst(info + " " + kaartnummer + "\n\n  " + kaartTekst);
     }
 
 
-
     public void setKaartGekend() {
-           huidigeKaart.setGekendVoorkant("goed");
-           kaarten.setKaart(huidigeKaart);
-           kaarten.telStanden();
-           showStanden();
-        }
+        huidigeKaart.setGekendVoorkant("goed");
+        kaarten.setKaart(huidigeKaart);
+        kaarten.telStanden();
+        showStanden();
+    }
 
-        public void reset() {
+    public void reset() {
         kaarten.resetLeeruitslagen();
         toonKaart();
         showStanden();
-        }
-
-
+    }
 
     public void setKaartNietGekend() {
         huidigeKaart.setGekendVoorkant("niet");
         kaarten.setKaart(huidigeKaart);
         kaarten.telStanden();
         showStanden();
-
-
-
     }
 
-
-
-
-class LeerSessieButtonHandler implements ActionListener {
+    class LeerSessieButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            JButton button  = (JButton) e.getSource();
+            JButton button = (JButton) e.getSource();
             String name = button.getName();
             // controlLeervorm1.leersessieKaart();
             switch (name) {
@@ -158,9 +147,19 @@ class LeerSessieButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            JTextField name = (JTextField)  e.getSource();
+            JTextField name = (JTextField) e.getSource();
             String filename = name.getText();
             initNieuweKaarten(filename);
+        }
+    }
+
+    class GaNaarHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField) e.getSource();
+            String gaNaarKaart = name.getText();
+            gaNaar(Integer.parseInt(gaNaarKaart));
         }
     }
 
@@ -171,8 +170,7 @@ class LeerSessieButtonHandler implements ActionListener {
 
         @Override
         public void windowClosing(WindowEvent e) {
-           kaarten.saveFile(leersessie.getNaamKaartenbak());
-
+            kaarten.saveFile(leersessie.getNaamKaartenbak());
         }
 
         @Override
@@ -195,5 +193,4 @@ class LeerSessieButtonHandler implements ActionListener {
         public void windowDeactivated(WindowEvent e) {
         }
     }
-
 }

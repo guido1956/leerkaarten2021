@@ -1,11 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
-public class KaartenGui extends JFrame implements ActionListener{
+public class KaartenGui extends JFrame implements ActionListener {
 
     private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
 
@@ -14,7 +15,7 @@ public class KaartenGui extends JFrame implements ActionListener{
     private JLabel naamFileLabel, aantalGoedLabel, lblVanaf, aantalNeutraalLabel, aantalNogNietLabel, totaalKaartenTextAreaLabel;
     private JCheckBox randomCheckBox, schrijvenCheckBox;
     private JRadioButton voorkantRadioButton, achterkantRadioButton;
-    private JComboBox<String> modulesCombo = new JComboBox<>();
+    private final JComboBox<String> modulesCombo = new JComboBox<>();
 
 
     public KaartenGui() {
@@ -46,8 +47,6 @@ public class KaartenGui extends JFrame implements ActionListener{
         naamFileTextField = new JTextField(15);
         naamFileTextField.setBackground(Color.white);
         window.add(naamFileTextField);
-
-
 
         totaalKaartenTextAreaLabel = new JLabel("kaarten:");
         window.add(totaalKaartenTextAreaLabel);
@@ -86,6 +85,7 @@ public class KaartenGui extends JFrame implements ActionListener{
         naarKaartTextField = new JTextField(5);
         naarKaartTextField.setBackground(Color.white);
         naarKaartTextField.setText("1");
+        naarKaartTextField.setName("ganaar");
         window.add(naarKaartTextField);
 
         modulesTextField = new JTextField();
@@ -122,8 +122,6 @@ public class KaartenGui extends JFrame implements ActionListener{
         btnVorige.setName("formerCard");
         window.add(btnVorige);
         btnVorige.addActionListener(this);
-
-
 
 
 //        for (int x = 0; x < MAX_MODULES - 1; x++) {
@@ -233,6 +231,11 @@ public class KaartenGui extends JFrame implements ActionListener{
 
     public void textFieldHandler(ActionListener actionListener) {
         naamFileTextField.addActionListener(actionListener);
+
+    }
+
+    public void gaNaarHandler(ActionListener actionListener) {
+        naarKaartTextField.addActionListener(actionListener);
     }
 
     public void showAantalGoed(String waarde) {

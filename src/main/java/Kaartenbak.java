@@ -9,10 +9,10 @@ public class Kaartenbak {
     private int moduleStart;
     private int moduleEinde;
     private int aantalGoedV = 0;
-    private int aantalNogNietV= 0;
+    private int aantalNogNietV = 0;
     private int aantalNeutraalV = 0;
     private int aantalGoedA = 0;
-    private int aantalNogNietA= 0;
+    private int aantalNogNietA = 0;
     private int aantalNeutraalA = 0;
 
     public Kaartenbak(ArrayList<Kaart> kaarten) {
@@ -92,7 +92,6 @@ public class Kaartenbak {
                 aantalNogNietV++;
             }
 
-
             if (kaart.getGekendAchterkant().equals("")) {
                 kaart.setGekendVoorkant("neutraal");
             }
@@ -105,9 +104,7 @@ public class Kaartenbak {
             if (kaart.getGekendAchterkant().equals("niet")) {
                 aantalNogNietA++;
             }
-
         }
-
     }
 
     /**
@@ -115,11 +112,10 @@ public class Kaartenbak {
      */
     public void resetLeeruitslagen() {
         for (int x = 0; x < kaarten.size(); x++) {
-            kaarten.get(x).setGekendVoorkant("neutraal") ;
-            kaarten.get(x).setGekendAchterkant("neutraal") ;
+            kaarten.get(x).setGekendVoorkant("neutraal");
+            kaarten.get(x).setGekendAchterkant("neutraal");
         }
         telStanden();
-
     }
 
     /**
@@ -156,6 +152,7 @@ public class Kaartenbak {
         }
         return kaarten.get(index);  // komt niet voor
     }
+
     public Kaart volgendeKaart() {
         if (isVraag) {
             switchIsVraag();
@@ -181,6 +178,7 @@ public class Kaartenbak {
         }
         return getHuidigeKaart();
     }
+
     public Kaart getHuidigeKaart() {
         return kaarten.get(index);
     }
@@ -238,12 +236,7 @@ public class Kaartenbak {
         moduleEinde = einde;
     }
 
-    public void vulKaarten(String naam) {
-
-
-    }
-
-    public void switchIsVraag() {
+      public void switchIsVraag() {
         isVraag = !isVraag;
     }
 
@@ -259,17 +252,17 @@ public class Kaartenbak {
                 if (!(tijdelijk == null)) {
                     String[] fields = tijdelijk.split(":");
                     int lengte = fields.length;
-                    for (int x = 0 ; x < fields.length ; x++) {
+                    for (int x = 0; x < fields.length; x++) {
                         fields[x] = fields[x].trim();
                     }
 
                     if (lengte < 2) {
-                       return null;
+                        return null;
                     }
                     Kaart kaart = new Kaart(fields[0], fields[1]);
                     if (lengte >= 3) {
                         kaart.setModule(fields[2]);
-                                           }
+                    }
                     if (lengte >= 4) {
                         kaart.setGekendVoorkant(fields[3]);
                     }
@@ -282,7 +275,7 @@ public class Kaartenbak {
                 }
             }
         } catch (Exception e) {
-             return null;
+            return null;
         }
         return temporaly;
     }
@@ -330,12 +323,12 @@ public class Kaartenbak {
         return aantalNeutraalV;
     }
 
-    public int getAantal() {
-        return kaarten.size();
-    }
-
     public void setAantalNeutraalV(int aantalNeutraalV) {
         this.aantalNeutraalV = aantalNeutraalV;
+    }
+
+    public int getAantal() {
+        return kaarten.size();
     }
 
     public int getAantalGoedA() {

@@ -48,14 +48,13 @@ public class Kaart {
         this.gekendVoorkant = gekend;
     }
 
-    public void setGekendAchterkant(String gekend) {
-        this.gekendAchterkant = gekend;
-    }
-
     public String getGekendAchterkant() {
         return gekendAchterkant;
     }
 
+    public void setGekendAchterkant(String gekend) {
+        this.gekendAchterkant = gekend;
+    }
 
     @Override
     public String toString() {
