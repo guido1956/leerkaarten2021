@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -52,7 +49,6 @@ public class Kaartenbak {
         }
 
         kaarten = temporaly;
-        System.out.println(kaarten.size() + "!!!!!!");
         return "";
     }
 
@@ -62,6 +58,18 @@ public class Kaartenbak {
             inFile = new BufferedReader(
                     new InputStreamReader(
                             new FileInputStream(naamBestand), StandardCharsets.UTF_8));
+            return (inFile);
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    private BufferedWriter createBestand(String naamBestand) {
+        BufferedWriter inFile;
+        try {
+            inFile = new BufferedWriter(
+                    new OutputStreamWriter(
+                            new FileOutputStream(naamBestand), StandardCharsets.UTF_8));
             return (inFile);
         } catch (IOException e) {
             return null;
@@ -248,7 +256,7 @@ public class Kaartenbak {
                         kaart.setModule(fields[2]);
                                            }
                     if (lengte >= 4) {
-                        kaart.setModule(fields[3]);
+                        kaart.setGekendVoorkant(fields[3]);
                     }
                     if (lengte >= 5) {
                         kaart.setGekendAchterkant(fields[4]);
@@ -262,6 +270,24 @@ public class Kaartenbak {
              return null;
         }
         return temporaly;
+    }
+
+    public void saveFile(String name) {
+        try {
+            BufferedWriter outfile = createBestand(name);
+            System.out.println("YES");
+            for (Kaart e : kaarten) {
+                String a = e.getVoorkant() + ":" + e.getAchterkant() + ":" + e.getModule() + ":" +
+                        e.getGekendVoorkant() + ":" + e.getGekendAchterkant() + "\n";
+                assert outfile != null;
+                outfile.write(a);
+            }
+            assert outfile != null;
+            outfile.close();
+        } catch (Exception e) {
+            System.out.println("NO");
+
+        }
     }
 
     public boolean getIsVraag() {

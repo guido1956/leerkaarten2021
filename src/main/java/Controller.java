@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 /**
  * todo: minimal product
@@ -27,6 +29,8 @@ public class Controller {
         leersessie = new Leersessie();
         this.view.buttonHandler(new LeerSessieButtonHandler());
         this.view.textFieldHandler(new FileKaartenBakHandler());
+        this.view.windowsListener(new WindowsHandler());
+
     }
 
     public void initNieuweKaarten(String filename) {
@@ -151,6 +155,38 @@ class LeerSessieButtonHandler implements ActionListener {
             JTextField name = (JTextField)  e.getSource();
             String filename = name.getText();
             initNieuweKaarten(filename);
+        }
+    }
+
+    class WindowsHandler implements WindowListener {
+        @Override
+        public void windowOpened(WindowEvent e) {
+        }
+
+        @Override
+        public void windowClosing(WindowEvent e) {
+           kaarten.saveFile(leersessie.getNaamKaartenbak());
+
+        }
+
+        @Override
+        public void windowClosed(WindowEvent e) {
+        }
+
+        @Override
+        public void windowIconified(WindowEvent e) {
+        }
+
+        @Override
+        public void windowDeiconified(WindowEvent e) {
+        }
+
+        @Override
+        public void windowActivated(WindowEvent e) {
+        }
+
+        @Override
+        public void windowDeactivated(WindowEvent e) {
         }
     }
 

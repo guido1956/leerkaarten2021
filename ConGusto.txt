@@ -1,4 +1,2 @@
-Spaans1 : Spaans2
-Spaans3 : Spaans4
-Spaans5 : Spaans6
-Spaans7 : Spaans8
+Vraag1:antwoord 1:goed:goed:neutraal
+Vraag 2:antwoord 2:niet:niet:neutraal
