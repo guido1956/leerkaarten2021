@@ -11,9 +11,9 @@ public class KaartenGui extends JFrame {
     private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
     private JButton btnVolgende, btnVorige, btnGoed, btnNietGoed, btnReset;
     private JTextField naamFileTextField;
-    private JTextField naarKaartTextField;
+    private JTextField naarKaartTextField, totKaartTextField;
     private JTextField txtInfo;
-    private JTextField txtModule;
+    private JTextField modulesTextField;
     private JComboBox<String> modulesCombo;
     private JCheckBox randomCheckBox;
 
@@ -89,22 +89,29 @@ public class KaartenGui extends JFrame {
         naarKaartTextField.setName("ganaar");
         window.add(naarKaartTextField);
 
-        JTextField modulesTextField = new JTextField();
-        modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
-        modulesTextField.setEditable(false);
-        modulesTextField.setText("alle modules");
-        //@@ modulesTextField.addActionListener(this);
-        window.add(modulesTextField);
+        JLabel lblTM = new JLabel("t/m");
+        window.add(lblTM);
+
+        totKaartTextField = new JTextField(5);
+        totKaartTextField.setBackground(Color.white);
+        totKaartTextField.setText("999");
+        totKaartTextField.setName("totAan");
+        window.add(totKaartTextField);
 
         txtInfo = new JTextField(15);
         txtInfo.setBackground(Color.getHSBColor(100, 86, 96));
         txtInfo.setEditable(false);
         window.add(txtInfo);
 
-        txtModule = new JTextField(15);
-        txtModule.setBackground(Color.getHSBColor(100, 86, 96));
-        txtModule.setEditable(false);
-        window.add(txtModule);
+        modulesTextField = new JTextField(15);
+        modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
+        modulesTextField.setEditable(false);
+        modulesTextField.setText("alle modules");
+        //@@ modulesTextField.addActionListener(this);
+        window.add(modulesTextField);
+
+
+
 
         txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63
         JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
@@ -197,6 +204,22 @@ public class KaartenGui extends JFrame {
         showMessageDialog(null, message);
     }
 
+    public void showGaNaarKaart(String waarde) {
+        naarKaartTextField.setText(waarde);
+    }
+
+    public String getGaNaarKaart() {
+        return naarKaartTextField.getText();
+    }
+
+    public void showTotEnMet(String waarde) {
+        totKaartTextField.setText(waarde);
+    }
+
+    public String getTotEnMet() {
+        return totKaartTextField.getText();
+    }
+
 
 
     public void buttonHandler(ActionListener actionListener) {
@@ -218,7 +241,17 @@ public class KaartenGui extends JFrame {
 
     public void gaNaarHandler(ActionListener actionListener) {
         naarKaartTextField.addActionListener(actionListener);
+
     }
+
+    public void totenMetHandler(ActionListener actionListener) {
+        totKaartTextField.addActionListener(actionListener);
+
+    }
+
+
+
+
 
    public void randomHandler (ActionListener actionListener) {
         randomCheckBox.addActionListener(actionListener);
@@ -227,10 +260,6 @@ public class KaartenGui extends JFrame {
 
     public void showAantalGoed(String waarde) {
         txtAantalGoed.setText(waarde);
-    }
-
-    public void showModule(String waarde) {
-        txtModule.setText(waarde);
     }
 
     public void showInfo(String waarde) {
@@ -269,6 +298,10 @@ public class KaartenGui extends JFrame {
              modulesCombo.addItem(e);
     }
 }
+
+   public void showSelectieModule(String waarde) {
+        modulesTextField.setText(waarde);
+   }
 
     public void showKaartTekst(String waarde) {
         txtVraagAntwoord.setText(waarde);

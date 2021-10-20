@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * todo: mechanisme antwoord of volgende kaart
- * todo: mechanisme vorige kaart
+ * todo: setModule filter werkt niet goed.
+ *
  */
 public class Controller {
 
@@ -22,6 +22,7 @@ public class Controller {
     private Kaart huidigeKaart = new Kaart("", "");
     private boolean isRandom = false;
 
+
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
         this.kaarten = kaarten;
@@ -32,7 +33,7 @@ public class Controller {
         this.view.windowsListener(new WindowsHandler());
         this.view.moduleHandler(new ModulesHandler());
         this.view.randomHandler(new RandomHandler());
-
+        this.view.totenMetHandler(new TotHandler());
     }
 
     public void initNieuweKaarten(String filename) {
@@ -45,6 +46,8 @@ public class Controller {
         leersessie.setNaamKaartenbak(filename);
         kaarten.init();
         leersessie.init();
+        view.showGaNaarKaart(Integer.toString(kaarten.getModuleStart()+1));
+        view.showTotEnMet(Integer.toString(kaarten.getModuleEinde()));
         showStanden();
     }
 
@@ -75,7 +78,13 @@ public class Controller {
         toonKaart();
     }
 
-   public void moduleAfhandeling (String module) {
+   public void moduleAfhandeling (String module, int keuze) {
+        view.showSelectieModule(module);
+        if (keuze == 0) {
+            leersessie.setModule("");
+       } else {
+            leersessie.setModule(module);
+        }
    }
 
     public String loadKaartenbak(String filename) {
@@ -85,6 +94,7 @@ public class Controller {
    public void gaNaar(int positie) {
         if (positie <= kaarten.getAantal()) {
             kaarten.setIndex(positie - 1);
+            kaarten.setModuleStart(positie-1);
             if (!kaarten.getIsVraag()) {
                 kaarten.switchIsVraag();
             }
@@ -92,10 +102,28 @@ public class Controller {
         }
    }
 
+   public void totEnMetKaart(int positie) {
+
+       if (positie <= kaarten.getAantal()) {
+           kaarten.setIndex(kaarten.getModuleStart());
+           kaarten.setModuleEinde(positie);
+           if (!kaarten.getIsVraag()) {
+               kaarten.switchIsVraag();
+           }
+           toonKaart();
+       }
+   }
+
     public void volgendeKaart() {
         if (isRandom && !(kaarten.getIsVraag())){
-            System.out.println("YES");
             randomKaart();
+            toonKaart();
+            return;
+        }
+        String filter = leersessie.getModule();
+
+        if (!filter.equals("")) {
+            kaarten.volgendeKaart(filter);
             toonKaart();
             return;
         }
@@ -105,7 +133,7 @@ public class Controller {
 
     public void randomKaart() {
         Random random = new Random();
-        kaarten.setIndex(random.nextInt(kaarten.getAantal()));
+        kaarten.setIndex(random.nextInt(kaarten.getModuleEinde()));
         kaarten.switchIsVraag();
     }
 
@@ -126,7 +154,7 @@ public class Controller {
             if (kaarten.getIsVraag()) {
                 kaartTekst = huidigeKaart.getVoorkant();
                 info = "vraag:";
-                buttontekst = "    antwoord    ";
+                buttontekst = "    antwoord      ";
             } else {
                 kaartTekst = huidigeKaart.getAchterkant();
                 info = " antwoord:";
@@ -137,8 +165,14 @@ public class Controller {
         view.showKleur(huidigeKaart.getGekendVoorkant());
         view.setButtonTekst(buttontekst);
         view.showInfo(info + " " + kaartnummer);
-        view.showModule(module);
         view.showKaartTekst(kaartTekst);
+        view.showSelectieModule(huidigeKaart.getModule());
+        setBeginEnEinde();
+    }
+
+    public void setBeginEnEinde() {
+        kaarten.setModuleStart(Integer.parseInt(view.getGaNaarKaart())-1);
+        kaarten.setModuleEinde(Integer.parseInt(view.getTotEnMet()));
     }
 
 
@@ -199,12 +233,24 @@ public class Controller {
         }
     }
 
+
+    class TotHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField) e.getSource();
+            String totEnMetKaart = name.getText();
+            totEnMetKaart(Integer.parseInt(totEnMetKaart));
+        }
+    }
+
     class ModulesHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             JComboBox modules = (JComboBox) e.getSource();
             String module = (String) modules.getSelectedItem();
-            moduleAfhandeling(module);
+            int pointer = (int) modules.getSelectedIndex();
+            moduleAfhandeling(module, pointer);
         }
     }
 

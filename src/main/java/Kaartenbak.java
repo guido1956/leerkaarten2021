@@ -6,7 +6,6 @@ import java.util.Collections;
 public class Kaartenbak {
     private ArrayList<Kaart> kaarten;
     private int index;
-    private final String moduleFilter = "0. alle";
     private boolean isVraag = true;
     private int moduleStart;
     private int moduleEinde;
@@ -150,33 +149,44 @@ public class Kaartenbak {
     }
 
     public Kaart volgendeKaart(String filter) {
-        int circle = index;
-        for (int x = index + 1; x <= moduleEinde + 1; x++) {
-            if (x > moduleEinde) {
-                x = moduleStart;
-            }
-            if (x == circle) {
-                return kaarten.get(x);
-            }
-            if (kaarten.get(x).getGekendVoorkant().equals(filter)) {
-                index = x;
-                return kaarten.get(x);
+        if (isVraag) {
+            switchIsVraag();
+            return (getHuidigeKaart());
+        }
+
+        switchIsVraag();
+
+        index++;
+        if(index >= moduleEinde) {
+            index = moduleStart;
+        }
+        int pointer = index;
+        do {
+            if (kaarten.get(pointer).getModule().equals(filter)) {
+                index = pointer;
+                return getHuidigeKaart();
             }
 
-            if (kaarten.get(x).getGekendAchterkant().equals(filter)) {
-                index = x;
-                return kaarten.get(x);
+            pointer++;
+            if (pointer >= moduleEinde) {
+                pointer = moduleStart;
             }
+
+        } while (pointer != index);
+        if (index !=0) {
+            index--;
         }
-        return kaarten.get(index);  // komt niet voor
+        return getHuidigeKaart();
     }
 
     public Kaart volgendeKaart() {
         if (isVraag) {
             switchIsVraag();
-            return getHuidigeKaart();
+            return (getHuidigeKaart());
         }
+
         switchIsVraag();
+
         index++;
         if (index >= moduleEinde) {
             index = moduleStart;
@@ -367,5 +377,23 @@ public class Kaartenbak {
 
     public void setAantalNeutraalA(int aantalNeutraalA) {
         this.aantalNeutraalA = aantalNeutraalA;
+    }
+
+    /**
+     * todo: filter inbouwen
+     */
+    class Filter {
+        ArrayList<Integer> filter = new ArrayList<>();
+        int pointer = 0;
+
+        public void maakFilter() {
+            filter.clear();
+            int index = 0;
+            for (Kaart e : kaarten) {
+                boolean voegtoe = true;
+                filter.add((index));
+                index++;
+            }
+        }
     }
 }
