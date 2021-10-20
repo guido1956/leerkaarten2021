@@ -31,7 +31,7 @@ public class KaartenGui extends JFrame {
         getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
         createGui();
-        setTitle("Leren met flashcards -18-10 2021- Guido Dulos  versie 2.0");
+        setTitle("Leren met flashcards -20-10 2021- Guido Dulos  versie 3.0");
         setVisible(true);
         repaint();
     }
@@ -109,9 +109,6 @@ public class KaartenGui extends JFrame {
         modulesTextField.setText("alle modules");
         //@@ modulesTextField.addActionListener(this);
         window.add(modulesTextField);
-
-
-
 
         txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63
         JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
