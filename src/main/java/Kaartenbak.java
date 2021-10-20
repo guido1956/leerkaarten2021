@@ -1,10 +1,12 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Kaartenbak {
     private ArrayList<Kaart> kaarten;
     private int index;
+    private final String moduleFilter = "0. alle";
     private boolean isVraag = true;
     private int moduleStart;
     private int moduleEinde;
@@ -105,6 +107,22 @@ public class Kaartenbak {
                 aantalNogNietA++;
             }
         }
+    }
+
+    public ArrayList<String> getModules() {
+        ArrayList<String> modules = new ArrayList<>();
+        if (kaarten.size() == 0) {
+            return modules;
+        }
+
+        for (Kaart e : kaarten) {
+            String module = e.getModule();
+            if (!(module.equals("") || modules.contains(module))) {
+                modules.add(module);
+            }
+        }
+        Collections.sort(modules);
+        return modules;
     }
 
     /**
@@ -236,7 +254,7 @@ public class Kaartenbak {
         moduleEinde = einde;
     }
 
-      public void switchIsVraag() {
+    public void switchIsVraag() {
         isVraag = !isVraag;
     }
 
@@ -248,7 +266,6 @@ public class Kaartenbak {
         try {
             while (isKaart) {
                 tijdelijk = inKaartfile.readLine();
-                System.out.println(tijdelijk);
                 if (!(tijdelijk == null)) {
                     String[] fields = tijdelijk.split(":");
                     int lengte = fields.length;
@@ -283,7 +300,6 @@ public class Kaartenbak {
     public void saveFile(String name) {
         try {
             BufferedWriter outfile = createBestand(name);
-            System.out.println("YES");
             for (Kaart e : kaarten) {
                 String a = e.getVoorkant() + ":" + e.getAchterkant() + ":" + e.getModule() + ":" +
                         e.getGekendVoorkant() + ":" + e.getGekendAchterkant() + "\n";
@@ -293,8 +309,6 @@ public class Kaartenbak {
             assert outfile != null;
             outfile.close();
         } catch (Exception e) {
-            System.out.println("NO");
-
         }
     }
 

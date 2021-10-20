@@ -11,6 +11,7 @@ public class Leersessie {
     private String naamKaartenbak;
     private int oefentijd;
     private boolean isVraag = true;
+    private String module = "";
 
     public Leersessie() {
         setLeervorm(VRAAG_ANTWOORD);
@@ -55,5 +56,21 @@ public class Leersessie {
 
     public void switchgetIsVraag() {
         isVraag = !isVraag;
+    }
+
+    public boolean isVraag() {
+        return isVraag;
+    }
+
+    public void setVraag(boolean vraag) {
+        isVraag = vraag;
+    }
+
+    public String getModule() {
+        return module;
+    }
+
+    public void setModule(String module) {
+        this.module = module;
     }
 }

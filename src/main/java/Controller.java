@@ -3,6 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * todo: mechanisme antwoord of volgende kaart
@@ -18,6 +20,7 @@ public class Controller {
     private final Kaartenbak kaarten;
     private final Leersessie leersessie;
     private Kaart huidigeKaart = new Kaart("", "");
+    private boolean isRandom = false;
 
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
@@ -27,6 +30,8 @@ public class Controller {
         this.view.textFieldHandler(new FileKaartenBakHandler());
         this.view.gaNaarHandler(new GaNaarHandler());
         this.view.windowsListener(new WindowsHandler());
+        this.view.moduleHandler(new ModulesHandler());
+        this.view.randomHandler(new RandomHandler());
 
     }
 
@@ -36,10 +41,16 @@ public class Controller {
             view.showMessageCode(result);
             return;
         }
+        maakModules();
         leersessie.setNaamKaartenbak(filename);
         kaarten.init();
         leersessie.init();
         showStanden();
+    }
+
+    public void maakModules() {
+        ArrayList<String> modules = kaarten.getModules();
+        view.vulModules(modules);
     }
 
     public void showStanden() {
@@ -64,6 +75,9 @@ public class Controller {
         toonKaart();
     }
 
+   public void moduleAfhandeling (String module) {
+   }
+
     public String loadKaartenbak(String filename) {
         return kaarten.loadKaartenbak(filename);
     }
@@ -71,13 +85,28 @@ public class Controller {
    public void gaNaar(int positie) {
         if (positie <= kaarten.getAantal()) {
             kaarten.setIndex(positie - 1);
+            if (!kaarten.getIsVraag()) {
+                kaarten.switchIsVraag();
+            }
             toonKaart();
         }
    }
 
     public void volgendeKaart() {
+        if (isRandom && !(kaarten.getIsVraag())){
+            System.out.println("YES");
+            randomKaart();
+            toonKaart();
+            return;
+        }
         kaarten.volgendeKaart();
         toonKaart();
+    }
+
+    public void randomKaart() {
+        Random random = new Random();
+        kaarten.setIndex(random.nextInt(kaarten.getAantal()));
+        kaarten.switchIsVraag();
     }
 
     public void vorigeKaart() {
@@ -90,19 +119,26 @@ public class Controller {
         String kaartTekst = "";
         String info = "";
         String kaartnummer = Integer.toString(kaarten.getIndex() + 1);
+        String module = huidigeKaart.getModule();
+        String buttontekst = "";
 
         if (leersessie.getLeervorm() == VRAAG_ANTWOORD) {
             if (kaarten.getIsVraag()) {
                 kaartTekst = huidigeKaart.getVoorkant();
-                info = "  Vraag : ";
+                info = "vraag:";
+                buttontekst = "    antwoord    ";
             } else {
                 kaartTekst = huidigeKaart.getAchterkant();
-                info = "  Antwoord : ";
+                info = " antwoord:";
+                buttontekst = "volgende kaart";
             }
         }
 
         view.showKleur(huidigeKaart.getGekendVoorkant());
-        view.showKaartTekst(info + " " + kaartnummer + "\n\n  " + kaartTekst);
+        view.setButtonTekst(buttontekst);
+        view.showInfo(info + " " + kaartnummer);
+        view.showModule(module);
+        view.showKaartTekst(kaartTekst);
     }
 
 
@@ -163,6 +199,24 @@ public class Controller {
         }
     }
 
+    class ModulesHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JComboBox modules = (JComboBox) e.getSource();
+            String module = (String) modules.getSelectedItem();
+            moduleAfhandeling(module);
+        }
+    }
+
+    class RandomHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox)  e.getSource();
+            isRandom = checkBox.isSelected();
+        }
+    }
+
     class WindowsHandler implements WindowListener {
         @Override
         public void windowOpened(WindowEvent e) {
@@ -193,4 +247,6 @@ public class Controller {
         public void windowDeactivated(WindowEvent e) {
         }
     }
+
+
 }

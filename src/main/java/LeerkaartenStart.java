@@ -1,4 +1,4 @@
-public class Start {
+public class LeerkaartenStart {
     public static void main(String[] args) {
         KaartenGui view = new KaartenGui();
         Kaartenbak kaarten = new Kaartenbak();
