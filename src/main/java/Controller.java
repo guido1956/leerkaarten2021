@@ -4,12 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
-import java.util.Random;
 
-/**
- * todo: setModule filter werkt niet goed.
- *
- */
 public class Controller {
 
     private static final int VRAAG_ANTWOORD = 1;
@@ -20,7 +15,6 @@ public class Controller {
     private final Kaartenbak kaarten;
     private final LeersessieState state;
     private Kaart huidigeKaart = new Kaart("", "");
-
 
 
     public Controller(KaartenGui view, Kaartenbak kaarten) {
@@ -35,6 +29,7 @@ public class Controller {
         this.view.moduleHandler(new ModulesHandler());
         this.view.randomHandler(new RandomHandler());
         this.view.totenMetHandler(new TotHandler());
+        this.view.nogNietHandler(new NogNietHandler());
     }
 
     public void initNieuweKaarten(String filename) {
@@ -44,11 +39,17 @@ public class Controller {
             view.showMessageCode(result);
             return;
         }
+        state.setKaarten(kaarten.getKaarten());
+        kaarten.telStanden();
         maakModules();
-        state.init();
+        boolean isStartVoorkant = view.getStartIsVoorkant();
+        boolean isRandom = view.getIsRandom();
+        boolean isNietGoed = view.getIsNietGoed();
+        state.init(isStartVoorkant, isRandom, isNietGoed );
         view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1));
         showStanden();
+        toonKaart();
     }
 
     public void maakModules() {
@@ -85,6 +86,10 @@ public class Controller {
        } else {
             state.setModule(module);
         }
+        state.bouwFilter();
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1));
+        toonKaart();
    }
 
     public String loadKaartenbak() {
@@ -93,12 +98,15 @@ public class Controller {
 
    public void gaNaar(int positie) {
         state.gaNaar(positie);
+        state.setVanaf(positie);
+        state.bouwFilter();
         toonKaart();
-
    }
 
    public void totEnMetKaart(int positie) {
         state.totEnMetKaart(positie);
+        state.setTotenmet((positie));
+        state.bouwFilter();
         toonKaart();
    }
 
@@ -115,11 +123,13 @@ public class Controller {
     }
 
      public void toonKaart() {
+        if (state.getNoCards()) {
+            view.showMessageCode("EC cardsNotInFilter");
+        }
         huidigeKaart = kaarten.getKaart(state.getIndex());
         String kaartTekst = "";
         String info = "";
         String kaartnummer = Integer.toString(state.getIndex() + 1);
-        String module = huidigeKaart.getModule();
         String buttontekst = "";
 
         if (state.getLeervorm() == VRAAG_ANTWOORD) {
@@ -153,10 +163,15 @@ public class Controller {
         kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden();
         showStanden();
+        state.setKaarten(kaarten.getKaarten());
+        state.bouwFilter();
+        toonKaart();
     }
 
     public void reset() {
         kaarten.resetLeeruitslagen();
+        state.setKaarten(kaarten.getKaarten());
+        state.bouwFilter();
         toonKaart();
         showStanden();
     }
@@ -166,6 +181,9 @@ public class Controller {
         kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden();
         showStanden();
+        state.setKaarten(kaarten.getKaarten());
+        state.bouwFilter();
+        toonKaart();
     }
 
     class LeerSessieButtonHandler implements ActionListener {
@@ -219,9 +237,9 @@ public class Controller {
     class ModulesHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            JComboBox modules = (JComboBox) e.getSource();
+            JComboBox modules = (JComboBox)  e.getSource();
             String module = (String) modules.getSelectedItem();
-            int pointer = (int) modules.getSelectedIndex();
+            int pointer =  modules.getSelectedIndex();
             moduleAfhandeling(module, pointer);
         }
     }
@@ -232,6 +250,17 @@ public class Controller {
         public void actionPerformed(ActionEvent e) {
             JCheckBox checkBox = (JCheckBox)  e.getSource();
             state.setIsRandom(checkBox.isSelected());
+        }
+    }
+
+    class NogNietHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox)  e.getSource();
+            state.setIsnietGoed(checkBox.isSelected());
+            state.bouwFilter();
+            toonKaart();
         }
     }
 

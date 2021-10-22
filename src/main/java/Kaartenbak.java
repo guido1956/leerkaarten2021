@@ -17,7 +17,6 @@ public class Kaartenbak {
         this.kaarten = kaarten;
      }
 
-
     public Kaartenbak() {
         kaarten = new ArrayList<>();
     }
@@ -29,12 +28,6 @@ public class Kaartenbak {
     public String getFileName() {
         return filename;
     }
-  //  public void init() {
-   //     index = 0;
-   //     moduleStart = 0;
-   //     moduleEinde = kaarten.size();
-  //      telStanden();
-  //  }
 
     public String loadKaartenbak() {
         BufferedReader inKaartFile = openBestand();
@@ -147,7 +140,6 @@ public class Kaartenbak {
     }
 
 
-
     public Kaart getKaart(int index) {
         return kaarten.get(index);
     }
@@ -167,9 +159,6 @@ public class Kaartenbak {
     public void setKaarten(ArrayList<Kaart> kaarten) {
         this.kaarten = kaarten;
     }
-
-
-
 
 
     public ArrayList<Kaart> vulArrayList(BufferedReader inKaartfile) {

@@ -2,16 +2,20 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class LeersessieState {
-    private int leervorm;
+    private int leervorm = 1;
+    private int vanaf;
+    private int totenmet;
     private boolean startVoorkant;
     private int index;
+    private int filterPointer;
     private int moduleStart;
     private int moduleEinde;
     private boolean isVraag = true;
     private boolean isVoorkant = true;
     private String module;
-    private boolean niet;
+    private boolean isnietGoed;
     private boolean isRandom;
+    private boolean noCards = true;
     private ArrayList<Integer> filterKaarten = new ArrayList<>();
     private ArrayList<Kaart> kaarten = new ArrayList<>();
 
@@ -19,108 +23,121 @@ public class LeersessieState {
 
     }
 
-    public void init() {
+    public void init(boolean startVoorkant, boolean isRandom, boolean isNietGoed) {
         index = 0;
-        moduleStart = 0;
-        moduleEinde = kaarten.size() - 1;
+        vanaf = 0;
+        totenmet = kaarten.size() - 1;
+        module = "";
+        this.startVoorkant = startVoorkant;
+        this.isRandom = isRandom;
+        this.isnietGoed = isNietGoed;
+        bouwFilter();
     }
 
     public int getIndex() {
         return index;
     }
 
-    public int volgendeKaart() {
-        return 0;
-    }
+    public void volgendeKaart() {
+             if (noCards) {
+                 return;
+             }
 
-    public int vorigeKaart() {
-        return 0;
-    }
+             if (isVraag) {
+                 switchIsVraag();
+                 return;
+             }
+
+             if (isRandom) {
+                 Random random = new Random();
+                 int x = random.nextInt(filterKaarten.size());
+                 index = filterKaarten.get(x);
+                 switchIsVraag();
+                 return;
+             }
+
+             filterPointer++;
+             if (filterPointer >= filterKaarten.size()) {
+                 filterPointer = 0;
+             }
+
+              index = filterKaarten.get(filterPointer);
+              switchIsVraag();
+          }
+
+           public void vorigeKaart() {
+               if (noCards) {
+                   return;
+               }
+               if (isVraag) {
+                   switchIsVraag();
+                   return;
+               }
+
+               filterPointer--;
+               if (filterPointer < 0) {
+                   filterPointer = 0;
+               }
+               index = filterKaarten.get(filterPointer);
+               switchIsVraag();
+          }
 
     public void switchIsVraag() {
         isVraag = !isVraag;
+    }
+
+    public void setVanaf(int vanaf) {
+        this.vanaf = vanaf;
+    }
+
+    public void setTotenmet(int totenmet) {
+        this.totenmet = totenmet;
     }
 
     public void setIsRandom(boolean x) {
         isRandom = x;
     }
 
-  //  public int volgendeKaart() {
-   //     int index = huidig;
-
-  //      index = huidig;
-  //      return index;
-
-  //  }
-
- //   public int vorigeKaart() {
-  //      int index = huidig;
-///
-  //      return index;
-  //  }
-
-    public void setDefault() {
-
+    public void bouwFilter() {
+        filterKaarten.clear();
+        for (int x = 0; x < kaarten.size(); x++) {
+            Kaart e = kaarten.get(x);
+            System.out.println(e.getGekendVoorkant());
+            boolean inFilter = true;
+            if (x < vanaf-1 || x > totenmet) {
+                inFilter = false;
+            }
+            if (isnietGoed && e.getGekendVoorkant().equals("goed")) {
+                inFilter = false;
+                           }
+            if (!module.equals("") && !module.equals(e.getModule())) {
+                inFilter = false;
+            }
+            if (inFilter) {
+                filterKaarten.add(x);
+            }
+         }
+        if (filterKaarten.size() != 0) {
+            filterPointer = filterKaarten.indexOf(index);
+            boolean gevonden = false;
+            if (filterPointer == -1) {
+                isVraag = true;
+                filterPointer = 0;
+                for (int x = 0; x < filterKaarten.size() && !gevonden;x++) {
+                    if (filterKaarten.get(x) > index ) {
+                        filterPointer = x;
+                        gevonden = true;
+                    }
+                }
+            }
+            index = filterKaarten.get(filterPointer);
+            noCards = false;
+            moduleStart = filterKaarten.get(0);
+            moduleEinde = filterKaarten.get(filterKaarten.size()-1);
+        } else {
+            noCards = true;
+        }
     }
-
-//    public Kaart volgendeKaart(String filter) {
-//        if (isVraag) {
-//            switchIsVraag();
-//            return (getHuidigeKaart());
-//        }
-//
-//        switchIsVraag();
-//
-//        index++;
-//        if(index >= moduleEinde) {
-//            index = moduleStart;
-//        }
-//        int pointer = index;
-//        do {
-//            if (kaarten.get(pointer).getModule().equals(filter)) {
-//                index = pointer;
-//                return getHuidigeKaart();
-//            }
-//
-//            pointer++;
-//            if (pointer >= moduleEinde) {
-//                pointer = moduleStart;
-//            }
-//
-//        } while (pointer != index);
-//        if (index !=0) {
-//            index--;
-//        }
-//        return getHuidigeKaart();
-//    }
-//
-//    public Kaart volgendeKaart() {
-//        if (isVraag) {
-//            switchIsVraag();
-//            return (getHuidigeKaart());
-//        }
-//
-//        switchIsVraag();
-//
-//        index++;
-//        if (index >= moduleEinde) {
-//            index = moduleStart;
-//        }
-//        return getHuidigeKaart();
-//    }
-//
-//    public Kaart vorigeKaart() {
-//        if (isVraag) {
-//            switchIsVraag();
-//            return getHuidigeKaart();
-//        }
-//        switchIsVraag();
-//        index--;
-//        if (index < moduleStart) {
-//            index = moduleStart;
-//        }
-//        return getHuidigeKaart();
-//    }
 
     public void setModule() {
         moduleStart = 0;
@@ -134,8 +151,6 @@ public class LeersessieState {
         moduleStart = start;
         moduleEinde = einde;
     }
-
-
 
     public int getLeervorm() {
         return leervorm;
@@ -177,21 +192,19 @@ public class LeersessieState {
         this.module = module;
     }
 
-    public boolean isNiet() {
-        return niet;
+    public boolean isIsnietGoed() {
+        return isnietGoed;
     }
 
-    public void setNiet(boolean niet) {
-        this.niet = niet;
+    public void setIsnietGoed(boolean isnietGoed) {
+        this.isnietGoed = isnietGoed;
+        System.out.println(isnietGoed);
     }
 
         public ArrayList<Integer> getFilterKaarten() {
         return filterKaarten;
     }
 
-    public void setFilterKaarten(ArrayList<Integer> filterKaarten) {
-        this.filterKaarten = filterKaarten;
-    }
 
     public ArrayList<Kaart> getKaarten() {
         return kaarten;
@@ -206,13 +219,18 @@ public class LeersessieState {
     }
 
     public void gaNaar(int positie) {
-        if (positie <= kaarten.size()) {
+        if (positie < kaarten.size()) {
             index = positie - 1;
             moduleStart = positie-1;
             if (!isVraag) {
                 switchIsVraag();
             }
         }
+        bouwFilter();
+    }
+
+    public boolean getNoCards() {
+        return noCards;
     }
 
     public void totEnMetKaart(int positie) {
@@ -224,28 +242,6 @@ public class LeersessieState {
                 switchIsVraag();
             }
         }
+        bouwFilter();
     }
-
-//    public void volgendeKaart() {
-//        if (isRandom && !(kaarten.getIsVraag())){
-//            randomKaart();
-//            toonKaart();
-//            return;
-//        }
-//        String filter = leersessie.getModule();
-//
-//        if (!filter.equals("")) {
-//            state.volgendeKaart(filter);
-//            toonKaart();
-//            return;
-//        }
-//        state.volgendeKaart();
-//        toonKaart();
-//    }
-//
-//    public void randomKaart() {
-//        Random random = new Random();
-//        kaarten.setIndex(random.nextInt(state.getModuleEinde()));
-//        kaarten.switchIsVraag();
-//    }
 }
