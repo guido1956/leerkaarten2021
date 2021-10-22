@@ -18,7 +18,6 @@ public class Controller {
     private static final int ANTWOORD_VRAAG_SCHRIJVEN = 4;
     private final KaartenGui view;
     private final Kaartenbak kaarten;
-    private final Leersessie leersessie;
     private final LeersessieState state;
     private Kaart huidigeKaart = new Kaart("", "");
 
@@ -28,7 +27,6 @@ public class Controller {
         this.view = view;
         this.kaarten = kaarten;
         state = new LeersessieState();
-        leersessie = new Leersessie();
 
         this.view.buttonHandler(new LeerSessieButtonHandler());
         this.view.textFieldHandler(new FileKaartenBakHandler());
@@ -83,9 +81,9 @@ public class Controller {
    public void moduleAfhandeling (String module, int keuze) {
         view.showSelectieModule(module);
         if (keuze == 0) {
-            leersessie.setModule("");
+            state.setModule("");
        } else {
-            leersessie.setModule(module);
+            state.setModule(module);
         }
    }
 
@@ -124,8 +122,8 @@ public class Controller {
         String module = huidigeKaart.getModule();
         String buttontekst = "";
 
-        if (leersessie.getLeervorm() == VRAAG_ANTWOORD) {
-            if (kaarten.getIsVraag()) {
+        if (state.getLeervorm() == VRAAG_ANTWOORD) {
+            if (state.getIsVraag()) {
                 kaartTekst = huidigeKaart.getVoorkant();
                 info = "vraag:";
                 buttontekst = "    antwoord      ";

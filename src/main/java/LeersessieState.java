@@ -201,6 +201,10 @@ public class LeersessieState {
         this.kaarten = kaarten;
     }
 
+    public boolean getIsVraag() {
+        return isVraag;
+    }
+
     public void gaNaar(int positie) {
         if (positie <= kaarten.size()) {
             index = positie - 1;
