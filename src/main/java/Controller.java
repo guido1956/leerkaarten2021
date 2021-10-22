@@ -19,14 +19,17 @@ public class Controller {
     private final KaartenGui view;
     private final Kaartenbak kaarten;
     private final Leersessie leersessie;
+    private final LeersessieState state;
     private Kaart huidigeKaart = new Kaart("", "");
-    private boolean isRandom = false;
+
 
 
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
         this.kaarten = kaarten;
+        state = new LeersessieState();
         leersessie = new Leersessie();
+
         this.view.buttonHandler(new LeerSessieButtonHandler());
         this.view.textFieldHandler(new FileKaartenBakHandler());
         this.view.gaNaarHandler(new GaNaarHandler());
@@ -37,17 +40,16 @@ public class Controller {
     }
 
     public void initNieuweKaarten(String filename) {
-        String result = loadKaartenbak(filename);
+        kaarten.setFileName(filename);
+        String result = loadKaartenbak();
         if (!result.equals("")) {
             view.showMessageCode(result);
             return;
         }
         maakModules();
-        leersessie.setNaamKaartenbak(filename);
-        kaarten.init();
-        leersessie.init();
-        view.showGaNaarKaart(Integer.toString(kaarten.getModuleStart()+1));
-        view.showTotEnMet(Integer.toString(kaarten.getModuleEinde()));
+        state.init();
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde()));
         showStanden();
     }
 
@@ -61,12 +63,12 @@ public class Controller {
         int aantalNietGoed = 0;
         int aantalNeutraal = 0;
 
-        if (leersessie.getLeervorm() == VRAAG_ANTWOORD || leersessie.getLeervorm() == VRAAG_ANTWOORD_SCHRIJVEN) {
+        if (state.getLeervorm() == VRAAG_ANTWOORD || state.getLeervorm() == VRAAG_ANTWOORD_SCHRIJVEN) {
             aantalGoed = kaarten.getAantalGoedV();
             aantalNietGoed = kaarten.getAantalNogNietV();
             aantalNeutraal = kaarten.getAantalNeutraalV();
         }
-        if (leersessie.getLeervorm() == ANTWOORD_VRAAG || leersessie.getLeervorm() == ANTWOORD_VRAAG_SCHRIJVEN) {
+        if (state.getLeervorm() == ANTWOORD_VRAAG || state.getLeervorm() == ANTWOORD_VRAAG_SCHRIJVEN) {
             aantalGoed = kaarten.getAantalGoedA();
             aantalNietGoed = kaarten.getAantalNogNietA();
             aantalNeutraal = kaarten.getAantalNeutraalA();
@@ -87,66 +89,38 @@ public class Controller {
         }
    }
 
-    public String loadKaartenbak(String filename) {
-        return kaarten.loadKaartenbak(filename);
+    public String loadKaartenbak() {
+        return kaarten.loadKaartenbak();
     }
 
    public void gaNaar(int positie) {
-        if (positie <= kaarten.getAantal()) {
-            kaarten.setIndex(positie - 1);
-            kaarten.setModuleStart(positie-1);
-            if (!kaarten.getIsVraag()) {
-                kaarten.switchIsVraag();
-            }
-            toonKaart();
-        }
+        state.gaNaar(positie);
+        toonKaart();
+
    }
 
    public void totEnMetKaart(int positie) {
-
-       if (positie <= kaarten.getAantal()) {
-           kaarten.setIndex(kaarten.getModuleStart());
-           kaarten.setModuleEinde(positie);
-           if (!kaarten.getIsVraag()) {
-               kaarten.switchIsVraag();
-           }
-           toonKaart();
-       }
+        state.totEnMetKaart(positie);
+        toonKaart();
    }
 
-    public void volgendeKaart() {
-        if (isRandom && !(kaarten.getIsVraag())){
-            randomKaart();
-            toonKaart();
-            return;
-        }
-        String filter = leersessie.getModule();
-
-        if (!filter.equals("")) {
-            kaarten.volgendeKaart(filter);
-            toonKaart();
-            return;
-        }
-        kaarten.volgendeKaart();
+   public void volgendeKaart() {
+        state.volgendeKaart();
         toonKaart();
-    }
+   }
 
-    public void randomKaart() {
-        Random random = new Random();
-        kaarten.setIndex(random.nextInt(kaarten.getModuleEinde()));
-        kaarten.switchIsVraag();
-    }
+
 
     public void vorigeKaart() {
-        kaarten.vorigeKaart();
+        state.vorigeKaart();
         toonKaart();
     }
 
      public void toonKaart() {
-        huidigeKaart = kaarten.getHuidigeKaart();
+        huidigeKaart = kaarten.getKaart(state.getIndex());
         String kaartTekst = "";
         String info = "";
-        String kaartnummer = Integer.toString(kaarten.getIndex() + 1);
+        String kaartnummer = Integer.toString(state.getIndex() + 1);
         String module = huidigeKaart.getModule();
         String buttontekst = "";
 
@@ -171,14 +145,14 @@ public class Controller {
     }
 
     public void setBeginEnEinde() {
-        kaarten.setModuleStart(Integer.parseInt(view.getGaNaarKaart())-1);
-        kaarten.setModuleEinde(Integer.parseInt(view.getTotEnMet()));
+        state.setModuleStart(Integer.parseInt(view.getGaNaarKaart())-1);
+        state.setModuleEinde(Integer.parseInt(view.getTotEnMet()));
     }
 
 
     public void setKaartGekend() {
         huidigeKaart.setGekendVoorkant("goed");
-        kaarten.setKaart(huidigeKaart);
+        kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden();
         showStanden();
     }
@@ -191,7 +165,7 @@ public class Controller {
 
     public void setKaartNietGekend() {
         huidigeKaart.setGekendVoorkant("niet");
-        kaarten.setKaart(huidigeKaart);
+        kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden();
         showStanden();
     }
@@ -259,7 +233,7 @@ public class Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
             JCheckBox checkBox = (JCheckBox)  e.getSource();
-            isRandom = checkBox.isSelected();
+            state.setIsRandom(checkBox.isSelected());
         }
     }
 
@@ -270,7 +244,7 @@ public class Controller {
 
         @Override
         public void windowClosing(WindowEvent e) {
-            kaarten.saveFile(leersessie.getNaamKaartenbak());
+            kaarten.saveFile();
         }
 
         @Override

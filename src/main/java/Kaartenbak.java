@@ -5,10 +5,7 @@ import java.util.Collections;
 
 public class Kaartenbak {
     private ArrayList<Kaart> kaarten;
-    private int index;
-    private boolean isVraag = true;
-    private int moduleStart;
-    private int moduleEinde;
+    private String filename = "";
     private int aantalGoedV = 0;
     private int aantalNogNietV = 0;
     private int aantalNeutraalV = 0;
@@ -18,28 +15,29 @@ public class Kaartenbak {
 
     public Kaartenbak(ArrayList<Kaart> kaarten) {
         this.kaarten = kaarten;
-        index = 0;
-        moduleStart = 0;
-        moduleEinde = kaarten.size() - 1;
-    }
+     }
 
 
     public Kaartenbak() {
         kaarten = new ArrayList<>();
-        index = 0;
-        moduleStart = 0;
-        moduleEinde = 0;
     }
 
-    public void init() {
-        index = 0;
-        moduleStart = 0;
-        moduleEinde = kaarten.size();
-        telStanden();
+    public void setFileName(String filename) {
+        this.filename = filename;
     }
 
-    public String loadKaartenbak(String filename) {
-        BufferedReader inKaartFile = openBestand(filename);
+    public String getFileName() {
+        return filename;
+    }
+  //  public void init() {
+   //     index = 0;
+   //     moduleStart = 0;
+   //     moduleEinde = kaarten.size();
+  //      telStanden();
+  //  }
+
+    public String loadKaartenbak() {
+        BufferedReader inKaartFile = openBestand();
         if (inKaartFile == null) {
             return ("EC fileNotFound");
         }
@@ -53,24 +51,24 @@ public class Kaartenbak {
         return "";
     }
 
-    private BufferedReader openBestand(String naamBestand) {
+    private BufferedReader openBestand() {
         BufferedReader inFile;
         try {
             inFile = new BufferedReader(
                     new InputStreamReader(
-                            new FileInputStream(naamBestand), StandardCharsets.UTF_8));
+                            new FileInputStream(filename), StandardCharsets.UTF_8));
             return (inFile);
         } catch (IOException e) {
             return null;
         }
     }
 
-    private BufferedWriter createBestand(String naamBestand) {
+    private BufferedWriter createBestand() {
         BufferedWriter inFile;
         try {
             inFile = new BufferedWriter(
                     new OutputStreamWriter(
-                            new FileOutputStream(naamBestand), StandardCharsets.UTF_8));
+                            new FileOutputStream(filename), StandardCharsets.UTF_8));
             return (inFile);
         } catch (IOException e) {
             return null;
@@ -148,70 +146,13 @@ public class Kaartenbak {
         aantalNogNietA = 0;
     }
 
-    public Kaart volgendeKaart(String filter) {
-        if (isVraag) {
-            switchIsVraag();
-            return (getHuidigeKaart());
-        }
 
-        switchIsVraag();
 
-        index++;
-        if(index >= moduleEinde) {
-            index = moduleStart;
-        }
-        int pointer = index;
-        do {
-            if (kaarten.get(pointer).getModule().equals(filter)) {
-                index = pointer;
-                return getHuidigeKaart();
-            }
-
-            pointer++;
-            if (pointer >= moduleEinde) {
-                pointer = moduleStart;
-            }
-
-        } while (pointer != index);
-        if (index !=0) {
-            index--;
-        }
-        return getHuidigeKaart();
-    }
-
-    public Kaart volgendeKaart() {
-        if (isVraag) {
-            switchIsVraag();
-            return (getHuidigeKaart());
-        }
-
-        switchIsVraag();
-
-        index++;
-        if (index >= moduleEinde) {
-            index = moduleStart;
-        }
-        return getHuidigeKaart();
-    }
-
-    public Kaart vorigeKaart() {
-        if (isVraag) {
-            switchIsVraag();
-            return getHuidigeKaart();
-        }
-        switchIsVraag();
-        index--;
-        if (index < moduleStart) {
-            index = moduleStart;
-        }
-        return getHuidigeKaart();
-    }
-
-    public Kaart getHuidigeKaart() {
+    public Kaart getKaart(int index) {
         return kaarten.get(index);
     }
 
-    public void setKaart(Kaart kaart) {
+    public void setKaart(Kaart kaart, int index) {
         kaarten.set(index, kaart);
     }
 
@@ -227,46 +168,8 @@ public class Kaartenbak {
         this.kaarten = kaarten;
     }
 
-    public int getIndex() {
-        return index;
-    }
 
-    public void setIndex(int index) {
-        this.index = index;
-    }
 
-    public int getModuleStart() {
-        return moduleStart;
-    }
-
-    public void setModuleStart(int moduleStart) {
-        this.moduleStart = moduleStart;
-    }
-
-    public int getModuleEinde() {
-        return moduleEinde;
-    }
-
-    public void setModuleEinde(int moduleEinde) {
-        this.moduleEinde = moduleEinde;
-    }
-
-    public void setModule() {
-        moduleStart = 0;
-        moduleEinde = kaarten.size() - 1;
-        if (moduleEinde < 0) {
-            moduleEinde = 0;
-        }
-    }
-
-    public void setModule(int start, int einde) {
-        moduleStart = start;
-        moduleEinde = einde;
-    }
-
-    public void switchIsVraag() {
-        isVraag = !isVraag;
-    }
 
 
     public ArrayList<Kaart> vulArrayList(BufferedReader inKaartfile) {
@@ -307,9 +210,9 @@ public class Kaartenbak {
         return temporaly;
     }
 
-    public void saveFile(String name) {
+    public void saveFile() {
         try {
-            BufferedWriter outfile = createBestand(name);
+            BufferedWriter outfile = createBestand();
             for (Kaart e : kaarten) {
                 String a = e.getVoorkant() + ":" + e.getAchterkant() + ":" + e.getModule() + ":" +
                         e.getGekendVoorkant() + ":" + e.getGekendAchterkant() + "\n";
@@ -321,11 +224,6 @@ public class Kaartenbak {
         } catch (Exception e) {
         }
     }
-
-    public boolean getIsVraag() {
-        return isVraag;
-    }
-
 
     public int getAantalGoedV() {
         return aantalGoedV;
