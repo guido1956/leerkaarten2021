@@ -30,7 +30,7 @@ public class KaartenGui extends JFrame {
         getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
         createGui();
-        setTitle("Leren met flashcards -23-10 2021- Guido Dulos  versie 4");
+        setTitle("Leren met flashcards -23-10 2021- Guido Dulos  versie 5");
         setVisible(true);
         repaint();
     }
@@ -240,8 +240,8 @@ public class KaartenGui extends JFrame {
     public void herteken() {
        txtVraagAntwoord.update(txtVraagAntwoord.getGraphics());
        txtInfo.update(txtInfo.getGraphics());
-
-
+       totKaartTextField.update(txtInfo.getGraphics());
+       naarKaartTextField.update(txtInfo.getGraphics());
     }
 
     public void showAantalNeutraal(String waarde) {

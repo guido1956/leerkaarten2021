@@ -3,7 +3,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.sql.Date;
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+
+import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class Controller {
 
@@ -128,27 +137,26 @@ public class Controller {
     }
 
     public void volgendeKaartContinue() {
-        {
-            while (view.getIsAutoCue()) {
-                System.out.println(state.getIndex());
-                System.out.println(state.getModuleEinde());
-                state.volgendeKaart();
-                view.herteken();
-                toonKaart();
-                try {
-                    Thread.sleep(2000);
-                    if (Thread.interrupted())
-                        view.setIsAutoCue(false);
 
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        new Thread() {
+            public void run() {
 
-                if (state.getIndex() >= state.getModuleEinde()-1&& !state.getIsVraag()) {
-                    view.setIsAutoCue(false);
+                while (view.getIsAutoCue()) {
+                    state.volgendeKaart();
+                    view.herteken();
+                    toonKaart();
+                    LocalTime time = LocalTime.now();
+                    boolean wait = true;
+                    while (wait) {
+                        LocalTime time2 = LocalTime.now();
+                        int seconds = (int) (time.until(time2, SECONDS));
+                        if (seconds > 4) {
+                            wait = false;
+                        }
+                    }
                 }
             }
-        }
+        }.start();
     }
 
 
