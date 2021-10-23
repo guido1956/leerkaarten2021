@@ -8,6 +8,7 @@ public class LeersessieState {
     private boolean startVoorkant;
     private int index;
     private int filterPointer;
+    private int aantalInFilter;
     private int moduleStart;
     private int moduleEinde;
     private boolean isVraag = true;
@@ -242,7 +243,7 @@ public class LeersessieState {
 
         if (positie <= kaarten.size()) {
             index = moduleStart;
-            moduleEinde = positie;
+            moduleEinde = positie + 1; //@@laatste wijzijging
             if (!isVraag) {
                 switchIsVraag();
             }

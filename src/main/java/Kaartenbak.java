@@ -37,7 +37,7 @@ public class Kaartenbak {
 
         ArrayList<Kaart> temporaly = vulArrayList(inKaartFile);
         if (temporaly == null) {
-            return ("EC fillArrayError");
+           return ("EC fillArrayError");
         }
 
         kaarten = temporaly;

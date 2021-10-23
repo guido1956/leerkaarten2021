@@ -4,7 +4,7 @@ buenaos dias:goedendag:unidad 00:goed:neutraal
 el dia:de dag:unidad 00:goed:neutraal
 escusche:luister:unidad 00:neutraal:neutraal
 me llamo...:ik heet...:unidad 00:neutraal:neutraal
-cómo se llama usted?:hoe heet u?:unidad 00:neutraal:neutraal
+cómo se llama usted?:hoe heet u?:unidad 00:niet:neutraal
 buenas tardes:goedemiddag:unidad 00:goed:neutraal
 la tarde:de namiddag, de vooravond:unidad 00:neutraal:neutraal
 y tú?:en jij?:unidad 00:neutraal:neutraal

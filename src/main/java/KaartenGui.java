@@ -14,7 +14,7 @@ public class KaartenGui extends JFrame {
     private JTextField txtInfo;
     private JTextField modulesTextField;
     private JComboBox<String> modulesCombo;
-    private JCheckBox chkRandom, chkNogNiet;
+    private JCheckBox chkRandom, chkNogNiet, chkAutocue;
     private JRadioButton achterkantRadioButton, voorkantRadioButton;
 
 
@@ -157,10 +157,14 @@ public class KaartenGui extends JFrame {
         window.add(chkRandom);
         chkRandom.setSelected(false);
 
-
         chkNogNiet = new JCheckBox("nog niet");
         window.add(chkNogNiet);
         chkNogNiet.setSelected(false);
+
+        chkAutocue = new JCheckBox("autocue");
+        window.add(chkAutocue);
+        chkAutocue.setSelected(false);
+
 
         JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
         window.add(schrijvenCheckBox);
@@ -230,6 +234,14 @@ public class KaartenGui extends JFrame {
 
     public void showInfo(String waarde) {
         txtInfo.setText(waarde);
+        repaint();
+    }
+
+    public void herteken() {
+       txtVraagAntwoord.update(txtVraagAntwoord.getGraphics());
+       txtInfo.update(txtInfo.getGraphics());
+
+
     }
 
     public void showAantalNeutraal(String waarde) {
@@ -264,6 +276,13 @@ public class KaartenGui extends JFrame {
         return chkRandom.isSelected();
     }
 
+    public boolean getIsAutoCue() {
+        return chkAutocue.isSelected();
+    }
+
+    public void setIsAutoCue(boolean check) {
+        chkAutocue.setSelected(check);
+    }
 
 
     public void showSelectieModule(String waarde) {
@@ -304,6 +323,10 @@ public class KaartenGui extends JFrame {
 
     public void nogNietHandler(ActionListener actionListener) {
         chkNogNiet.addActionListener(actionListener);
+    }
+
+    public void autocueHandler(ActionListener actionListener) {
+        chkAutocue.addActionListener(actionListener);
     }
 }
 

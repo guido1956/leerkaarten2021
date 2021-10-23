@@ -17,6 +17,7 @@ public class Controller {
     private Kaart huidigeKaart = new Kaart("", "");
 
 
+
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
         this.kaarten = kaarten;
@@ -30,6 +31,7 @@ public class Controller {
         this.view.randomHandler(new RandomHandler());
         this.view.totenMetHandler(new TotHandler());
         this.view.nogNietHandler(new NogNietHandler());
+        this.view.autocueHandler(new AutocueHandler());
     }
 
     public void initNieuweKaarten(String filename) {
@@ -40,16 +42,19 @@ public class Controller {
             return;
         }
         state.setKaarten(kaarten.getKaarten());
+
         kaarten.telStanden();
-        maakModules();
         boolean isStartVoorkant = view.getStartIsVoorkant();
         boolean isRandom = view.getIsRandom();
         boolean isNietGoed = view.getIsNietGoed();
-        state.init(isStartVoorkant, isRandom, isNietGoed );
-        view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1));
+        state.init(isStartVoorkant, isRandom, isNietGoed);
+        maakModules();
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde()));
         showStanden();
+        state.bouwFilter();
         toonKaart();
+
     }
 
     public void maakModules() {
@@ -76,45 +81,75 @@ public class Controller {
         view.showAantalNietGoed(Integer.toString(aantalNietGoed));
         view.showAantalNeutraal(Integer.toString(aantalNeutraal));
         view.showAantalTotaal(Integer.toString(kaarten.getAantal()));
-        toonKaart();
+        //toonKaart();
     }
 
-   public void moduleAfhandeling (String module, int keuze) {
+    public void moduleAfhandeling(String module, int keuze) {
         view.showSelectieModule(module);
         if (keuze == 0) {
             state.setModule("");
-       } else {
+        } else {
             state.setModule(module);
         }
+        state.setTotenmet(kaarten.getAantal());
+        state.setVanaf(0);
         state.bouwFilter();
-        view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1));
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1) );
         toonKaart();
-   }
+    }
 
     public String loadKaartenbak() {
         return kaarten.loadKaartenbak();
     }
 
-   public void gaNaar(int positie) {
+    public void gaNaar(int positie) {
         state.gaNaar(positie);
         state.setVanaf(positie);
         state.bouwFilter();
         toonKaart();
-   }
+    }
 
-   public void totEnMetKaart(int positie) {
+    public void totEnMetKaart(int positie) {
         state.totEnMetKaart(positie);
         state.setTotenmet((positie));
         state.bouwFilter();
         toonKaart();
-   }
+    }
 
-   public void volgendeKaart() {
-        state.volgendeKaart();
-        toonKaart();
-   }
+    public void volgendeKaart() {
+        if (view.getIsAutoCue()) {
+            volgendeKaartContinue();
+        } else {
+            state.volgendeKaart();
+            toonKaart();
+        }
 
+    }
+
+    public void volgendeKaartContinue() {
+        {
+            while (view.getIsAutoCue()) {
+                System.out.println(state.getIndex());
+                System.out.println(state.getModuleEinde());
+                state.volgendeKaart();
+                view.herteken();
+                toonKaart();
+                try {
+                    Thread.sleep(2000);
+                    if (Thread.interrupted())
+                        view.setIsAutoCue(false);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                if (state.getIndex() >= state.getModuleEinde()-1&& !state.getIsVraag()) {
+                    view.setIsAutoCue(false);
+                }
+            }
+        }
+    }
 
 
     public void vorigeKaart() {
@@ -122,7 +157,7 @@ public class Controller {
         toonKaart();
     }
 
-     public void toonKaart() {
+    public void toonKaart() {
         if (state.getNoCards()) {
             view.showMessageCode("EC cardsNotInFilter");
         }
@@ -153,7 +188,7 @@ public class Controller {
     }
 
     public void setBeginEnEinde() {
-        state.setModuleStart(Integer.parseInt(view.getGaNaarKaart())-1);
+        state.setModuleStart(Integer.parseInt(view.getGaNaarKaart()) - 1);
         state.setModuleEinde(Integer.parseInt(view.getTotEnMet()));
     }
 
@@ -237,9 +272,9 @@ public class Controller {
     class ModulesHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            JComboBox modules = (JComboBox)  e.getSource();
+            JComboBox modules = (JComboBox) e.getSource();
             String module = (String) modules.getSelectedItem();
-            int pointer =  modules.getSelectedIndex();
+            int pointer = modules.getSelectedIndex();
             moduleAfhandeling(module, pointer);
         }
     }
@@ -248,7 +283,7 @@ public class Controller {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            JCheckBox checkBox = (JCheckBox)  e.getSource();
+            JCheckBox checkBox = (JCheckBox) e.getSource();
             state.setIsRandom(checkBox.isSelected());
         }
     }
@@ -257,10 +292,18 @@ public class Controller {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            JCheckBox checkBox = (JCheckBox)  e.getSource();
+            JCheckBox checkBox = (JCheckBox) e.getSource();
             state.setIsnietGoed(checkBox.isSelected());
             state.bouwFilter();
             toonKaart();
+        }
+    }
+
+    class AutocueHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
         }
     }
 
