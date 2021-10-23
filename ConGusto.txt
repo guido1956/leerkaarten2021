@@ -85,10 +85,10 @@ Latinoamérica:Latijns-Amerika:unidad 01:goed:neutraal
 trabajar:werken:unidad 01:goed:neutraal
 en un hotel:in een hotel:unidad 01:goed:neutraal
 en Tenerife:op Tenerife:unidad 01:goed:neutraal
-Espana:Spanje:unidad 01:goed:neutraal
+Espana:Spanje:unidad 01:niet:neutraal
 comprar:kopen:unidad 01:goed:neutraal
 una finca:een perceel, een huis op het platteland:unidad 01:goed:neutraal
-visitar:bezoeken:unidad 01:goed:neutraal
+visitar:bezoeken:unidad 01:niet:neutraal
 escuchar:luisteren:unidad 01:goed:neutraal
 cubano, cubana:Cubaanse:unidad 01:goed:neutraal
 pasar las vacaciones:de vakantie doorbrengen:unidad 01:goed:neutraal

@@ -103,6 +103,7 @@ public class Controller {
         state.setTotenmet(kaarten.getAantal());
         state.setVanaf(0);
         state.bouwFilter();
+        state.setTotenmet(state.getModuleEinde());
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde()+1) );
         toonKaart();
@@ -115,13 +116,21 @@ public class Controller {
     public void gaNaar(int positie) {
         state.gaNaar(positie);
         state.setVanaf(positie);
+        state.setRange(true);
         state.bouwFilter();
         toonKaart();
     }
 
     public void totEnMetKaart(int positie) {
-        state.totEnMetKaart(positie);
-        state.setTotenmet((positie));
+        int tijdelijk = state.getTotenMet() +1;
+
+            if (state.getVanaf() < positie - 1) {
+                positie = tijdelijk;
+            }
+
+        // state.totEnMetKaart(positie-1);
+        state.setTotenmet((positie)-1);
+        state.setRange(true);
         state.bouwFilter();
         toonKaart();
     }
@@ -169,6 +178,8 @@ public class Controller {
         if (state.getNoCards()) {
             view.showMessageCode("EC cardsNotInFilter");
         }
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1));
         huidigeKaart = kaarten.getKaart(state.getIndex());
         String kaartTekst = "";
         String info = "";
@@ -192,13 +203,9 @@ public class Controller {
         view.showInfo(info + " " + kaartnummer);
         view.showKaartTekst(kaartTekst);
         view.showSelectieModule(huidigeKaart.getModule());
-        setBeginEnEinde();
+
     }
 
-    public void setBeginEnEinde() {
-        state.setModuleStart(Integer.parseInt(view.getGaNaarKaart()) - 1);
-        state.setModuleEinde(Integer.parseInt(view.getTotEnMet()));
-    }
 
 
     public void setKaartGekend() {
@@ -207,6 +214,7 @@ public class Controller {
         kaarten.telStanden();
         showStanden();
         state.setKaarten(kaarten.getKaarten());
+        state.setRange(true);
         state.bouwFilter();
         toonKaart();
     }
@@ -225,6 +233,7 @@ public class Controller {
         kaarten.telStanden();
         showStanden();
         state.setKaarten(kaarten.getKaarten());
+        state.setRange(true);
         state.bouwFilter();
         toonKaart();
     }

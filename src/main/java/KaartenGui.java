@@ -83,7 +83,7 @@ public class KaartenGui extends JFrame {
 
         naarKaartTextField = new JTextField(5);
         naarKaartTextField.setBackground(Color.white);
-        naarKaartTextField.setText("1");
+        naarKaartTextField.setText("");
         naarKaartTextField.setName("ganaar");
         window.add(naarKaartTextField);
 
@@ -92,7 +92,7 @@ public class KaartenGui extends JFrame {
 
         totKaartTextField = new JTextField(5);
         totKaartTextField.setBackground(Color.white);
-        totKaartTextField.setText("999");
+        totKaartTextField.setText("");
         totKaartTextField.setName("totAan");
         window.add(totKaartTextField);
 
@@ -104,7 +104,7 @@ public class KaartenGui extends JFrame {
         modulesTextField = new JTextField(15);
         modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
         modulesTextField.setEditable(false);
-        modulesTextField.setText("alle modules");
+        modulesTextField.setText("");
         window.add(modulesTextField);
 
         txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63

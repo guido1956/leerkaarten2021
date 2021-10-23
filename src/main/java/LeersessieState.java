@@ -11,6 +11,7 @@ public class LeersessieState {
     private int aantalInFilter;
     private int moduleStart;
     private int moduleEinde;
+    private boolean isRange = false;
     private boolean isVraag = true;
     private boolean isVoorkant = true;
     private String module;
@@ -92,22 +93,39 @@ public class LeersessieState {
         this.vanaf = vanaf;
     }
 
+    public int getVanaf() {
+        return vanaf;
+    }
+
     public void setTotenmet(int totenmet) {
         this.totenmet = totenmet;
+    }
+
+    public int  getTotenMet() {
+        return totenmet;
     }
 
     public void setIsRandom(boolean x) {
         isRandom = x;
     }
+    public void setRange(boolean check) {
+        isRange = check;
+    }
 
     public void bouwFilter() {
         filterKaarten.clear();
+        if (!isRange) {
+            vanaf = 0;
+            totenmet = kaarten.size();
+        }
+        isRange = false;
         for (int x = 0; x < kaarten.size(); x++) {
             Kaart e = kaarten.get(x);
             boolean inFilter = true;
-            if (x < vanaf-1 || x > totenmet) {
+            if (x < vanaf-1 || x > totenmet ) {
                 inFilter = false;
             }
+
             if (isnietGoed && e.getGekendVoorkant().equals("goed")) {
                 inFilter = false;
                            }
@@ -127,6 +145,8 @@ public class LeersessieState {
                     Random random = new Random();
                     filterPointer = random.nextInt(filterKaarten.size());
                     index = filterKaarten.get(filterPointer);
+                    moduleStart = filterKaarten.get(0);
+                    moduleEinde = filterKaarten.get(filterKaarten.size()-1);
                     return;
                 }
                 filterPointer = 0;
