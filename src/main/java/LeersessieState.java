@@ -52,6 +52,7 @@ public class LeersessieState {
                  Random random = new Random();
                  int x = random.nextInt(filterKaarten.size());
                  index = filterKaarten.get(x);
+                 filterPointer = x;
                  switchIsVraag();
                  return;
              }
@@ -102,7 +103,6 @@ public class LeersessieState {
         filterKaarten.clear();
         for (int x = 0; x < kaarten.size(); x++) {
             Kaart e = kaarten.get(x);
-            System.out.println(e.getGekendVoorkant());
             boolean inFilter = true;
             if (x < vanaf-1 || x > totenmet) {
                 inFilter = false;
@@ -122,6 +122,12 @@ public class LeersessieState {
             boolean gevonden = false;
             if (filterPointer == -1) {
                 isVraag = true;
+                if (isRandom) {
+                    Random random = new Random();
+                    filterPointer = random.nextInt(filterKaarten.size());
+                    index = filterKaarten.get(filterPointer);
+                    return;
+                }
                 filterPointer = 0;
                 for (int x = 0; x < filterKaarten.size() && !gevonden;x++) {
                     if (filterKaarten.get(x) > index ) {
@@ -198,7 +204,6 @@ public class LeersessieState {
 
     public void setIsnietGoed(boolean isnietGoed) {
         this.isnietGoed = isnietGoed;
-        System.out.println(isnietGoed);
     }
 
         public ArrayList<Integer> getFilterKaarten() {
