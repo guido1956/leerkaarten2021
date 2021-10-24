@@ -11,7 +11,7 @@ public class KaartenGui extends JFrame {
     private JButton btnVolgende, btnVorige, btnGoed, btnNietGoed, btnReset;
     private JTextField naamFileTextField;
     private JTextField naarKaartTextField, totKaartTextField;
-    private JTextField txtInfo;
+    private JTextField txtInfo, txtTotaalinfilter;
     private JTextField modulesTextField;
     private JComboBox<String> modulesCombo;
     private JCheckBox chkRandom, chkNogNiet, chkAutocue;
@@ -95,6 +95,15 @@ public class KaartenGui extends JFrame {
         totKaartTextField.setText("");
         totKaartTextField.setName("totAan");
         window.add(totKaartTextField);
+
+        JLabel lblInFilter = new JLabel("in filter");
+        window.add(lblInFilter);
+
+        txtTotaalinfilter = new JTextField(5);
+        txtTotaalinfilter.setBackground(Color.getHSBColor(100, 86, 96));
+        txtTotaalinfilter.setText("");
+        txtTotaalinfilter.setEditable(false);
+        window.add(txtTotaalinfilter);
 
         txtInfo = new JTextField(15);
         txtInfo.setBackground(Color.getHSBColor(100, 86, 96));
@@ -218,6 +227,10 @@ public class KaartenGui extends JFrame {
 
     public String getGaNaarKaart() {
         return naarKaartTextField.getText();
+    }
+
+    public void showTotaalInFilter(String message) {
+        txtTotaalinfilter.setText(message);
     }
 
     public boolean getIsNietGoed() {

@@ -41,73 +41,78 @@ public class LeersessieState {
     }
 
     public void volgendeKaart() {
-             if (noCards) {
-                 return;
-             }
+        if (noCards) {
+            return;
+        }
 
-             if (isVraag) {
-                 switchIsVraag();
-                 return;
-             }
+        if (isVraag) {
+            switchIsVraag();
+            return;
+        }
 
-             if (isRandom) {
-                 Random random = new Random();
-                 int x = random.nextInt(filterKaarten.size());
-                 index = filterKaarten.get(x);
-                 filterPointer = x;
-                 switchIsVraag();
-                 return;
-             }
+        if (isRandom) {
+            Random random = new Random();
+            int x = random.nextInt(filterKaarten.size());
+            index = filterKaarten.get(x);
+            filterPointer = x;
+            switchIsVraag();
+            return;
+        }
 
-             filterPointer++;
-             if (filterPointer >= filterKaarten.size()) {
-                 filterPointer = 0;
-             }
+        filterPointer++;
+        if (filterPointer >= filterKaarten.size()) {
+            filterPointer = 0;
+        }
 
-              index = filterKaarten.get(filterPointer);
-              switchIsVraag();
-          }
+        index = filterKaarten.get(filterPointer);
+        switchIsVraag();
+    }
 
-           public void vorigeKaart() {
-               if (noCards) {
-                   return;
-               }
-               if (isVraag) {
-                   switchIsVraag();
-                   return;
-               }
+    public int getAantalInfilter() {
+        return aantalInFilter;
+    }
 
-               filterPointer--;
-               if (filterPointer < 0) {
-                   filterPointer = 0;
-               }
-               index = filterKaarten.get(filterPointer);
-               switchIsVraag();
-          }
+    public void vorigeKaart() {
+        if (noCards) {
+            return;
+        }
+        if (isVraag) {
+            switchIsVraag();
+            return;
+        }
+
+        filterPointer--;
+        if (filterPointer < 0) {
+            filterPointer = 0;
+        }
+        index = filterKaarten.get(filterPointer);
+        switchIsVraag();
+    }
 
     public void switchIsVraag() {
         isVraag = !isVraag;
-    }
-
-    public void setVanaf(int vanaf) {
-        this.vanaf = vanaf;
     }
 
     public int getVanaf() {
         return vanaf;
     }
 
+    public void setVanaf(int vanaf) {
+        this.vanaf = vanaf;
+    }
+
     public void setTotenmet(int totenmet) {
         this.totenmet = totenmet;
     }
 
-    public int  getTotenMet() {
+    public int getTotenMet() {
         return totenmet;
     }
 
     public void setIsRandom(boolean x) {
         isRandom = x;
     }
+
     public void setRange(boolean check) {
         isRange = check;
     }
@@ -122,20 +127,20 @@ public class LeersessieState {
         for (int x = 0; x < kaarten.size(); x++) {
             Kaart e = kaarten.get(x);
             boolean inFilter = true;
-            if (x < vanaf-1 || x > totenmet ) {
+            if (x < vanaf - 1 || x > totenmet) {
                 inFilter = false;
             }
 
             if (isnietGoed && e.getGekendVoorkant().equals("goed")) {
                 inFilter = false;
-                           }
+            }
             if (!module.equals("") && !module.equals(e.getModule())) {
                 inFilter = false;
             }
             if (inFilter) {
                 filterKaarten.add(x);
             }
-         }
+        }
         if (filterKaarten.size() != 0) {
             filterPointer = filterKaarten.indexOf(index);
             boolean gevonden = false;
@@ -146,12 +151,12 @@ public class LeersessieState {
                     filterPointer = random.nextInt(filterKaarten.size());
                     index = filterKaarten.get(filterPointer);
                     moduleStart = filterKaarten.get(0);
-                    moduleEinde = filterKaarten.get(filterKaarten.size()-1);
+                    moduleEinde = filterKaarten.get(filterKaarten.size() - 1);
                     return;
                 }
                 filterPointer = 0;
-                for (int x = 0; x < filterKaarten.size() && !gevonden;x++) {
-                    if (filterKaarten.get(x) > index ) {
+                for (int x = 0; x < filterKaarten.size() && !gevonden; x++) {
+                    if (filterKaarten.get(x) > index) {
                         filterPointer = x;
                         gevonden = true;
                     }
@@ -160,7 +165,8 @@ public class LeersessieState {
             index = filterKaarten.get(filterPointer);
             noCards = false;
             moduleStart = filterKaarten.get(0);
-            moduleEinde = filterKaarten.get(filterKaarten.size()-1);
+            moduleEinde = filterKaarten.get(filterKaarten.size() - 1);
+            aantalInFilter = filterKaarten.size();
         } else {
             noCards = true;
         }
@@ -227,7 +233,7 @@ public class LeersessieState {
         this.isnietGoed = isnietGoed;
     }
 
-        public ArrayList<Integer> getFilterKaarten() {
+    public ArrayList<Integer> getFilterKaarten() {
         return filterKaarten;
     }
 
@@ -247,7 +253,7 @@ public class LeersessieState {
     public void gaNaar(int positie) {
         if (positie < kaarten.size()) {
             index = positie - 1;
-            moduleStart = positie-1;
+            moduleStart = positie - 1;
             if (!isVraag) {
                 switchIsVraag();
             }

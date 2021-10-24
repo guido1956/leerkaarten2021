@@ -1,4 +1,4 @@
-bienvenidos:welkom:unidad 00:goed:neutraal
+bienvenidos:welkom:unidad 00:niet:neutraal
 hola:hallo:unidad 00:goed:neutraal
 buenaos dias:goedendag:unidad 00:goed:neutraal
 el dia:de dag:unidad 00:goed:neutraal

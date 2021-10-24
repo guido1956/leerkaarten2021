@@ -203,7 +203,7 @@ public class Controller {
         view.showInfo(info + " " + kaartnummer);
         view.showKaartTekst(kaartTekst);
         view.showSelectieModule(huidigeKaart.getModule());
-
+        view.showTotaalInFilter(Integer.toString(state.getAantalInfilter()));
     }
 
 
