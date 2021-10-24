@@ -30,7 +30,7 @@ public class KaartenGui extends JFrame {
         getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
         createGui();
-        setTitle("Leren met flashcards -23-10 2021- Guido Dulos  versie 5");
+        setTitle("Leren met flashcards -24-10 2021- Guido Dulos  versie 6");
         setVisible(true);
         repaint();
     }
@@ -43,11 +43,11 @@ public class KaartenGui extends JFrame {
         JLabel naamFileLabel = new JLabel("naam kaartenbestand: ");
         window.add(naamFileLabel);
 
-        naamFileTextField = new JTextField(15);
+        naamFileTextField = new JTextField(13);
         naamFileTextField.setBackground(Color.white);
         window.add(naamFileTextField);
 
-        JLabel totaalKaartenTextAreaLabel = new JLabel("kaarten:");
+        JLabel totaalKaartenTextAreaLabel = new JLabel("aantal:  ");
         window.add(totaalKaartenTextAreaLabel);
 
         txtTotaal = new JTextArea("", 1, 4);
@@ -55,7 +55,7 @@ public class KaartenGui extends JFrame {
         txtTotaal.setEditable(false);
         window.add(txtTotaal);
 
-        JLabel aantalNeutraalLabel = new JLabel("neutraal");
+        JLabel aantalNeutraalLabel = new JLabel("neutraal:");
         window.add(aantalNeutraalLabel);
 
         txtAantalNeutraal = new JTextArea("", 1, 4);
@@ -78,7 +78,7 @@ public class KaartenGui extends JFrame {
         txtAantalNogNiet.setEditable(false);
         window.add(txtAantalNogNiet);
 
-        JLabel lblVanaf = new JLabel("leren vanaf kaartnr:      ");
+        JLabel lblVanaf = new JLabel("leren vanaf kaartnr:     ");
         window.add(lblVanaf);
 
         naarKaartTextField = new JTextField(5);
@@ -96,7 +96,7 @@ public class KaartenGui extends JFrame {
         totKaartTextField.setName("totAan");
         window.add(totKaartTextField);
 
-        JLabel lblInFilter = new JLabel("in filter");
+        JLabel lblInFilter = new JLabel("in filter:");
         window.add(lblInFilter);
 
         txtTotaalinfilter = new JTextField(5);
@@ -264,6 +264,7 @@ public class KaartenGui extends JFrame {
         txtInfo.update(txtInfo.getGraphics());
         totKaartTextField.update(txtInfo.getGraphics());
         naarKaartTextField.update(txtInfo.getGraphics());
+        txtTotaalinfilter.update(txtTotaalinfilter.getGraphics());
     }
 
     public void showAantalNeutraal(String waarde) {

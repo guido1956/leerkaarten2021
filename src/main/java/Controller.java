@@ -3,13 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.sql.Date;
-import java.sql.Time;
-import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 import static java.time.temporal.ChronoUnit.SECONDS;
@@ -51,6 +45,8 @@ public class Controller {
             return;
         }
         state.setKaarten(kaarten.getKaarten());
+        // test
+        state.flipKaarten();
 
         kaarten.telStanden();
         boolean isStartVoorkant = view.getStartIsVoorkant();
@@ -147,25 +143,23 @@ public class Controller {
 
     public void volgendeKaartContinue() {
 
-        new Thread() {
-            public void run() {
+        new Thread(() -> {
 
-                while (view.getIsAutoCue()) {
-                    state.volgendeKaart();
-                    view.herteken();
-                    toonKaart();
-                    LocalTime time = LocalTime.now();
-                    boolean wait = true;
-                    while (wait) {
-                        LocalTime time2 = LocalTime.now();
-                        int seconds = (int) (time.until(time2, SECONDS));
-                        if (seconds > 4) {
-                            wait = false;
-                        }
+            while (view.getIsAutoCue()) {
+                state.volgendeKaart();
+                view.herteken();
+                toonKaart();
+                LocalTime time = LocalTime.now();
+                boolean wait = true;
+                while (wait) {
+                    LocalTime time2 = LocalTime.now();
+                    int seconds = (int) (time.until(time2, SECONDS));
+                    if (seconds > 4) {
+                        wait = false;
                     }
                 }
             }
-        }.start();
+        }).start();
     }
 
 
@@ -205,8 +199,6 @@ public class Controller {
         view.showSelectieModule(huidigeKaart.getModule());
         view.showTotaalInFilter(Integer.toString(state.getAantalInfilter()));
     }
-
-
 
     public void setKaartGekend() {
         huidigeKaart.setGekendVoorkant("goed");

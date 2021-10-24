@@ -41,11 +41,13 @@ public class LeersessieState {
     }
 
     public void volgendeKaart() {
+
+
         if (noCards) {
             return;
         }
 
-        if (isVraag) {
+        if (isVraag && isVoorkant) {
             switchIsVraag();
             return;
         }
@@ -152,6 +154,7 @@ public class LeersessieState {
                     index = filterKaarten.get(filterPointer);
                     moduleStart = filterKaarten.get(0);
                     moduleEinde = filterKaarten.get(filterKaarten.size() - 1);
+                    aantalInFilter = filterKaarten.size();
                     return;
                 }
                 filterPointer = 0;
@@ -275,5 +278,29 @@ public class LeersessieState {
             }
         }
         bouwFilter();
+    }
+
+    public void flipKaarten() {
+        for (Kaart e : kaarten) {
+            String tijdelijk = e.getAchterkant();
+            e.setAchterkant(e.getVoorkant());
+            e.setVoorkant(tijdelijk);
+
+            tijdelijk = e.getGekendAchterkant();
+            e.setGekendVoorkant(e.getGekendAchterkant());
+            e.setGekendAchterkant(tijdelijk);
+        }
+    }
+
+    public Kaart flipKaart(Kaart e) {
+        String tijdelijk = e.getAchterkant();
+        e.setAchterkant(e.getVoorkant());
+        e.setVoorkant(tijdelijk);
+
+        tijdelijk = e.getGekendAchterkant();
+        e.setGekendVoorkant(e.getGekendAchterkant());
+        e.setGekendAchterkant(tijdelijk);
+
+        return e;
     }
 }
