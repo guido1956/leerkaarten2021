@@ -30,7 +30,7 @@ public class KaartenGui extends JFrame {
         getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
         createGui();
-        setTitle("Leren met flashcards -24-10 2021- Guido Dulos  versie 6");
+        setTitle("Leren met flashcards -25-10 2021- Guido Dulos  versie 6");
         setVisible(true);
         repaint();
     }
@@ -179,7 +179,7 @@ public class KaartenGui extends JFrame {
 
 
         JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
-        window.add(schrijvenCheckBox);
+      //  window.add(schrijvenCheckBox);
         schrijvenCheckBox.setSelected(false);
     }
 
