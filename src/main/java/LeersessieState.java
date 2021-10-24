@@ -13,7 +13,7 @@ public class LeersessieState {
     private int moduleEinde;
     private boolean isRange = false;
     private boolean isVraag = true;
-    private boolean isVoorkant = true;
+    private boolean isVoorkant;
     private String module;
     private boolean isnietGoed;
     private boolean isRandom;
@@ -47,7 +47,7 @@ public class LeersessieState {
             return;
         }
 
-        if (isVraag && isVoorkant) {
+        if (isVraag) {
             switchIsVraag();
             return;
         }
@@ -109,6 +109,14 @@ public class LeersessieState {
 
     public int getTotenMet() {
         return totenmet;
+    }
+
+    public boolean getIsVoorkant() {
+        return isVoorkant;
+    }
+
+    public void setIsVoorkant(boolean isVoorkant) {
+        this.isVoorkant = isVoorkant;
     }
 
     public void setIsRandom(boolean x) {
@@ -196,13 +204,7 @@ public class LeersessieState {
         this.leervorm = leervorm;
     }
 
-    public boolean isStartVoorkant() {
-        return startVoorkant;
-    }
 
-    public void setStartVoorkant(boolean startVoorkant) {
-        this.startVoorkant = startVoorkant;
-    }
 
     public int getModuleStart() {
         return moduleStart;
@@ -287,9 +289,13 @@ public class LeersessieState {
             e.setVoorkant(tijdelijk);
 
             tijdelijk = e.getGekendAchterkant();
-            e.setGekendVoorkant(e.getGekendAchterkant());
-            e.setGekendAchterkant(tijdelijk);
+            e.setGekendAchterkant(e.getGekendVoorkant());
+            e.setGekendVoorkant(tijdelijk);
         }
+    }
+
+    public void setIsVraag(boolean isVraag) {
+        this.isVraag = isVraag;
     }
 
     public Kaart flipKaart(Kaart e) {

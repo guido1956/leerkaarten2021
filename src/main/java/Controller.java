@@ -10,10 +10,6 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class Controller {
 
-    private static final int VRAAG_ANTWOORD = 1;
-    private static final int ANTWOORD_VRAAG = 2;
-    private static final int VRAAG_ANTWOORD_SCHRIJVEN = 3;
-    private static final int ANTWOORD_VRAAG_SCHRIJVEN = 4;
     private final KaartenGui view;
     private final Kaartenbak kaarten;
     private final LeersessieState state;
@@ -35,6 +31,7 @@ public class Controller {
         this.view.totenMetHandler(new TotHandler());
         this.view.nogNietHandler(new NogNietHandler());
         this.view.autocueHandler(new AutocueHandler());
+        this.view.isVoorkantHandler(new IsVoorkantHandler());
     }
 
     public void initNieuweKaarten(String filename) {
@@ -45,11 +42,8 @@ public class Controller {
             return;
         }
         state.setKaarten(kaarten.getKaarten());
-        // test
-        state.flipKaarten();
-
         kaarten.telStanden();
-        boolean isStartVoorkant = view.getStartIsVoorkant();
+        boolean isStartVoorkant = true;
         boolean isRandom = view.getIsRandom();
         boolean isNietGoed = view.getIsNietGoed();
         state.init(isStartVoorkant, isRandom, isNietGoed);
@@ -72,16 +66,16 @@ public class Controller {
         int aantalNietGoed = 0;
         int aantalNeutraal = 0;
 
-        if (state.getLeervorm() == VRAAG_ANTWOORD || state.getLeervorm() == VRAAG_ANTWOORD_SCHRIJVEN) {
+        if (state.getIsVoorkant()) {
             aantalGoed = kaarten.getAantalGoedV();
             aantalNietGoed = kaarten.getAantalNogNietV();
             aantalNeutraal = kaarten.getAantalNeutraalV();
-        }
-        if (state.getLeervorm() == ANTWOORD_VRAAG || state.getLeervorm() == ANTWOORD_VRAAG_SCHRIJVEN) {
+        } else{
             aantalGoed = kaarten.getAantalGoedA();
             aantalNietGoed = kaarten.getAantalNogNietA();
             aantalNeutraal = kaarten.getAantalNeutraalA();
         }
+
         view.showAantalGoed(Integer.toString(aantalGoed));
         view.showAantalNietGoed(Integer.toString(aantalNietGoed));
         view.showAantalNeutraal(Integer.toString(aantalNeutraal));
@@ -180,7 +174,7 @@ public class Controller {
         String kaartnummer = Integer.toString(state.getIndex() + 1);
         String buttontekst = "";
 
-        if (state.getLeervorm() == VRAAG_ANTWOORD) {
+
             if (state.getIsVraag()) {
                 kaartTekst = huidigeKaart.getVoorkant();
                 info = "vraag:";
@@ -190,7 +184,7 @@ public class Controller {
                 info = " antwoord:";
                 buttontekst = "volgende kaart";
             }
-        }
+
 
         view.showKleur(huidigeKaart.getGekendVoorkant());
         view.setButtonTekst(buttontekst);
@@ -201,30 +195,38 @@ public class Controller {
     }
 
     public void setKaartGekend() {
-        huidigeKaart.setGekendVoorkant("goed");
-        kaarten.setKaart(huidigeKaart, state.getIndex());
+        if (state.getIsVoorkant()) {
+            huidigeKaart.setGekendVoorkant("goed");
+        } else {
+            huidigeKaart.setGekendAchterkant("goed");
+        }
+        // kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden();
         showStanden();
-        state.setKaarten(kaarten.getKaarten());
+        //state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
     }
 
     public void reset() {
-        kaarten.resetLeeruitslagen();
-        state.setKaarten(kaarten.getKaarten());
+        kaarten.resetLeeruitslagen(state.getIsVoorkant());
+        // state.setKaarten(kaarten.getKaarten());
         state.bouwFilter();
         toonKaart();
         showStanden();
     }
 
     public void setKaartNietGekend() {
-        huidigeKaart.setGekendVoorkant("niet");
-        kaarten.setKaart(huidigeKaart, state.getIndex());
+        if (state.getIsVoorkant()) {
+            huidigeKaart.setGekendVoorkant("niet");
+        } else {
+            huidigeKaart.setGekendAchterkant("niet");
+        }
+      //  kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden();
         showStanden();
-        state.setKaarten(kaarten.getKaarten());
+       // state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
@@ -316,6 +318,56 @@ public class Controller {
         }
     }
 
+    class IsVoorkantHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JRadioButton radioButton = (JRadioButton) e.getSource();
+            String name = radioButton.getName();
+            System.out.println("VOORKANT");
+            if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
+                state.setIsVoorkant(true);
+                state.setKaarten(kaarten.getKaarten());
+                kaarten.telStanden();
+                //boolean isStartVoorkant = true;
+                //boolean isRandom = view.getIsRandom();
+                //boolean isNietGoed = view.getIsNietGoed();
+               // state.init(isStartVoorkant, isRandom, isNietGoed);
+                //state.setIsVraag(true);
+                //maakModules();
+                view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+                view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+                showStanden();
+                state.bouwFilter();
+                view.herteken();
+                toonKaart();
+                System.out.println(state.getIsVoorkant());
+                return;
+            }
+            if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
+                state.setIsVoorkant(false);
+                state.setIsVraag(true);
+                state.flipKaarten();
+                state.setKaarten(kaarten.getKaarten());
+                kaarten.telStanden();
+                //boolean isStartVoorkant = false;
+                //boolean isRandom = view.getIsRandom();
+                //boolean isNietGoed = view.getIsNietGoed();
+                // state.init(isStartVoorkant, isRandom, isNietGoed);
+                //maakModules();
+                view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+                view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+                showStanden();
+                state.bouwFilter();
+                view.herteken();
+                toonKaart();
+                System.out.println(state.getIsVoorkant());
+                return;
+            }
+
+        }
+    }
+
     class WindowsHandler implements WindowListener {
         @Override
         public void windowOpened(WindowEvent e) {
@@ -323,7 +375,11 @@ public class Controller {
 
         @Override
         public void windowClosing(WindowEvent e) {
-            kaarten.saveFile();
+            System.out.println(state.getIsVoorkant());
+            if (!state.getIsVoorkant()) {
+                state.flipKaarten();
+            }
+           kaarten.saveFile();
         }
 
         @Override

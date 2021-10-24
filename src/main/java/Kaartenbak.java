@@ -119,10 +119,13 @@ public class Kaartenbak {
     /**
      * todo: scheiden voorkant / achterkant
      */
-    public void resetLeeruitslagen() {
+    public void resetLeeruitslagen(boolean isVoorkant) {
         for (int x = 0; x < kaarten.size(); x++) {
-            kaarten.get(x).setGekendVoorkant("neutraal");
-            kaarten.get(x).setGekendAchterkant("neutraal");
+            if (isVoorkant) {
+                kaarten.get(x).setGekendVoorkant("neutraal");
+            } else {
+                kaarten.get(x).setGekendAchterkant("neutraal");
+            }
         }
         telStanden();
     }
@@ -201,6 +204,7 @@ public class Kaartenbak {
     }
 
     public void saveFile() {
+
         try {
             BufferedWriter outfile = createBestand();
             for (Kaart e : kaarten) {

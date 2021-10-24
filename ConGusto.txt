@@ -1,13 +1,13 @@
-welkom:bienvenidos:unidad 00:goed:neutraal
+welkom:bienvenidos:unidad 00:neutraal:neutraal
 hallo:hola:unidad 00:neutraal:neutraal
 goedendag:buenaos dias:unidad 00:neutraal:neutraal
-de dag:el dia:unidad 00:neutraal:neutraal
-luister:escusche:unidad 00:neutraal:neutraal
+de dag:el dia:unidad 00:neutraal:niet
+luister:escusche:unidad 00:goed:neutraal
 ik heet...:me llamo...:unidad 00:neutraal:neutraal
 hoe heet u?:cómo se llama usted?:unidad 00:neutraal:neutraal
 goedemiddag:buenas tardes:unidad 00:neutraal:neutraal
 de namiddag, de vooravond:la tarde:unidad 00:neutraal:neutraal
-en jij?:y tú?:unidad 00:neutraal:neutraal
+en jij?:y tú?:unidad 00:goed:niet
 hoe heet jij?:cómo te llamas?:unidad 00:neutraal:neutraal
 ik ben:soy:unidad 00:neutraal:neutraal
 tot ziens:adiós:unidad 00:neutraal:neutraal
@@ -17,12 +17,12 @@ goedenavond:buenas noches:unidad 00:neutraal:neutraal
 de nacht:la noche:unidad 00:neutraal:neutraal
 tot snel:hasta pronto:unidad 00:neutraal:neutraal
 de getallen:los números:unidad 00:neutraal:neutraal
-Mexico:México:unidad 00:neutraal:neutraal
+Mexico:México:unidad 00:goed:niet
 het is:es:unidad 00:neutraal:neutraal
 het hoofdstuk:la unidad:unidad 00:neutraal:neutraal
 Colombia:Colombia:unidad 00:neutraal:neutraal
 zij zijn:son:unidad 00:neutraal:neutraal
-het laatste hoofdstuk:la última unidad:unidad 00:neutraal:neutraal
+het laatste hoofdstuk:la última unidad:unidad 00:goed:neutraal
 Argentinie:Argentina:unidad 00:neutraal:neutraal
 de reis naar het Spaans:el viaje al espanol:unidad 01:neutraal:neutraal
 het Spaans:el espanol:unidad 01:neutraal:neutraal

@@ -151,12 +151,15 @@ public class KaartenGui extends JFrame {
         JLabel lblVulling = new JLabel("                                ");
         window.add(lblVulling);
         voorkantRadioButton = new JRadioButton("start met voorkant");
-        window.add(voorkantRadioButton);
         voorkantRadioButton.setSelected(true);
+        voorkantRadioButton.setName("radioVoorkant");
+        window.add(voorkantRadioButton);
 
-        JRadioButton achterkantRadioButton = new JRadioButton("start met achterkant");
-        window.add(achterkantRadioButton);
+
+        achterkantRadioButton = new JRadioButton("start met achterkant");
         achterkantRadioButton.setSelected(false);
+        achterkantRadioButton.setName("radioAchterkant");
+        window.add(achterkantRadioButton);
 
         ButtonGroup volgorde = new ButtonGroup();
         volgorde.add(voorkantRadioButton);
@@ -291,9 +294,7 @@ public class KaartenGui extends JFrame {
         }
     }
 
-    public boolean getStartIsVoorkant() {
-        return voorkantRadioButton.isSelected();
-    }
+
 
     public boolean getIsRandom() {
         return chkRandom.isSelected();
@@ -350,6 +351,11 @@ public class KaartenGui extends JFrame {
 
     public void autocueHandler(ActionListener actionListener) {
         chkAutocue.addActionListener(actionListener);
+    }
+
+    public void isVoorkantHandler(ActionListener actionListener) {
+        voorkantRadioButton.addActionListener(actionListener);
+        achterkantRadioButton.addActionListener(actionListener);
     }
 }
 
