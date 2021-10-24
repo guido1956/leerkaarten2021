@@ -68,33 +68,37 @@ public class Kaartenbak {
         }
     }
 
-    public void telStanden() {
-        resetTellers();
+    public void telStanden(boolean isVoorkant) {
+        resetTellers(isVoorkant);
         for (Kaart kaart : kaarten) {
-            if (kaart.getGekendVoorkant().equals("")) {
-                kaart.setGekendVoorkant("neutraal");
-            }
-            if (kaart.getGekendVoorkant().equals("neutraal")) {
-                aantalNeutraalV++;
-            }
-            if (kaart.getGekendVoorkant().equals("goed")) {
-                aantalGoedV++;
-            }
-            if (kaart.getGekendVoorkant().equals("niet")) {
-                aantalNogNietV++;
-            }
+            if (isVoorkant) {
+                if (kaart.getGekendVoorkant().equals("")) {
+                    kaart.setGekendVoorkant("neutraal");
+                }
+                if (kaart.getGekendVoorkant().equals("neutraal")) {
+                    aantalNeutraalV++;
+                }
+                if (kaart.getGekendVoorkant().equals("goed")) {
+                    aantalGoedV++;
+                }
+                if (kaart.getGekendVoorkant().equals("niet")) {
+                    aantalNogNietV++;
+                }
 
-            if (kaart.getGekendAchterkant().equals("")) {
-                kaart.setGekendVoorkant("neutraal");
             }
-            if (kaart.getGekendAchterkant().equals("neutraal")) {
-                aantalNeutraalA++;
-            }
-            if (kaart.getGekendAchterkant().equals("goed")) {
-                aantalGoedA++;
-            }
-            if (kaart.getGekendAchterkant().equals("niet")) {
-                aantalNogNietA++;
+            if (!isVoorkant) {
+                if (kaart.getGekendAchterkant().equals("")) {
+                    kaart.setGekendVoorkant("neutraal");
+                }
+                if (kaart.getGekendAchterkant().equals("neutraal")) {
+                    aantalNeutraalA++;
+                }
+                if (kaart.getGekendAchterkant().equals("goed")) {
+                    aantalGoedA++;
+                }
+                if (kaart.getGekendAchterkant().equals("niet")) {
+                    aantalNogNietA++;
+                }
             }
         }
     }
@@ -127,16 +131,20 @@ public class Kaartenbak {
                 kaarten.get(x).setGekendAchterkant("neutraal");
             }
         }
-        telStanden();
+        telStanden(isVoorkant);
     }
 
     /**
      * todo: scheiden voorkant / achterkant
      */
-    public void resetTellers() {
-        aantalGoedV = 0;
-        aantalNeutraalV = 0;
-        aantalNogNietV = 0;
+    public void resetTellers(boolean isVoorkant) {
+
+        if (isVoorkant) {
+            aantalGoedV = 0;
+            aantalNeutraalV = 0;
+            aantalNogNietV = 0;
+            return;
+        }
 
         aantalGoedA = 0;
         aantalNeutraalA = 0;
@@ -271,21 +279,5 @@ public class Kaartenbak {
         this.aantalNeutraalA = aantalNeutraalA;
     }
 
-    /**
-     * todo: filter inbouwen
-     */
-    class Filter {
-        ArrayList<Integer> filter = new ArrayList<>();
-        int pointer = 0;
 
-        public void maakFilter() {
-            filter.clear();
-            int index = 0;
-            for (Kaart e : kaarten) {
-                boolean voegtoe = true;
-                filter.add((index));
-                index++;
-            }
-        }
-    }
 }

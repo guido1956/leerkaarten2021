@@ -1,4 +1,4 @@
-vraag 1:antwoord 1::neutraal:neutraal
-vraag 2:antwoord 2::neutraal:neutraal
-vraag 3:antwoord 3::neutraal:neutraal
-vraag 4:antwoord 4::neutraal:neutraal
+vraag 1:antwoord 1::goed:neutraal
+vraag 2:antwoord 2::niet:neutraal
+vraag 3:antwoord 3::niet:neutraal
+vraag 4:antwoord 4::niet:goed

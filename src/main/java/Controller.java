@@ -42,11 +42,10 @@ public class Controller {
             return;
         }
         state.setKaarten(kaarten.getKaarten());
-        kaarten.telStanden();
-        boolean isStartVoorkant = true;
+        kaarten.telStanden(state.getIsVoorkant());
         boolean isRandom = view.getIsRandom();
         boolean isNietGoed = view.getIsNietGoed();
-        state.init(isStartVoorkant, isRandom, isNietGoed);
+        state.init(isRandom, isNietGoed);
         maakModules();
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde()));
@@ -80,7 +79,7 @@ public class Controller {
         view.showAantalNietGoed(Integer.toString(aantalNietGoed));
         view.showAantalNeutraal(Integer.toString(aantalNeutraal));
         view.showAantalTotaal(Integer.toString(kaarten.getAantal()));
-        //toonKaart();
+        toonKaart();
     }
 
     public void moduleAfhandeling(String module, int keuze) {
@@ -185,8 +184,11 @@ public class Controller {
                 buttontekst = "volgende kaart";
             }
 
-
-        view.showKleur(huidigeKaart.getGekendVoorkant());
+if (state.getIsVoorkant()) {
+    view.showKleur(huidigeKaart.getGekendVoorkant());
+} else {
+    view.showKleur(huidigeKaart.getGekendAchterkant());
+}
         view.setButtonTekst(buttontekst);
         view.showInfo(info + " " + kaartnummer);
         view.showKaartTekst(kaartTekst);
@@ -200,10 +202,10 @@ public class Controller {
         } else {
             huidigeKaart.setGekendAchterkant("goed");
         }
-        // kaarten.setKaart(huidigeKaart, state.getIndex());
-        kaarten.telStanden();
+        kaarten.setKaart(huidigeKaart, state.getIndex());
+        kaarten.telStanden(state.getIsVoorkant());
         showStanden();
-        //state.setKaarten(kaarten.getKaarten());
+        state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
@@ -218,15 +220,16 @@ public class Controller {
     }
 
     public void setKaartNietGekend() {
+
         if (state.getIsVoorkant()) {
             huidigeKaart.setGekendVoorkant("niet");
         } else {
             huidigeKaart.setGekendAchterkant("niet");
         }
-      //  kaarten.setKaart(huidigeKaart, state.getIndex());
-        kaarten.telStanden();
+        kaarten.setKaart(huidigeKaart, state.getIndex());
+        kaarten.telStanden(state.getIsVoorkant());
         showStanden();
-       // state.setKaarten(kaarten.getKaarten());
+        state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
@@ -324,17 +327,13 @@ public class Controller {
         public void actionPerformed(ActionEvent e) {
             JRadioButton radioButton = (JRadioButton) e.getSource();
             String name = radioButton.getName();
-            System.out.println("VOORKANT");
+
             if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
+                System.out.println("VOORKANT");
                 state.setIsVoorkant(true);
+                state.flipKaarten();
                 state.setKaarten(kaarten.getKaarten());
-                kaarten.telStanden();
-                //boolean isStartVoorkant = true;
-                //boolean isRandom = view.getIsRandom();
-                //boolean isNietGoed = view.getIsNietGoed();
-               // state.init(isStartVoorkant, isRandom, isNietGoed);
-                //state.setIsVraag(true);
-                //maakModules();
+                kaarten.telStanden(state.getIsVoorkant());
                 view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
                 view.showTotEnMet(Integer.toString(state.getModuleEinde()));
                 showStanden();
@@ -345,16 +344,11 @@ public class Controller {
                 return;
             }
             if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
+                System.out.println("Achterkant");
                 state.setIsVoorkant(false);
-                state.setIsVraag(true);
                 state.flipKaarten();
                 state.setKaarten(kaarten.getKaarten());
-                kaarten.telStanden();
-                //boolean isStartVoorkant = false;
-                //boolean isRandom = view.getIsRandom();
-                //boolean isNietGoed = view.getIsNietGoed();
-                // state.init(isStartVoorkant, isRandom, isNietGoed);
-                //maakModules();
+                kaarten.telStanden(state.getIsVoorkant());
                 view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
                 view.showTotEnMet(Integer.toString(state.getModuleEinde()));
                 showStanden();

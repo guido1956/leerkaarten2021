@@ -5,7 +5,6 @@ public class LeersessieState {
     private int leervorm = 1;
     private int vanaf;
     private int totenmet;
-    private boolean startVoorkant;
     private int index;
     private int filterPointer;
     private int aantalInFilter;
@@ -13,7 +12,7 @@ public class LeersessieState {
     private int moduleEinde;
     private boolean isRange = false;
     private boolean isVraag = true;
-    private boolean isVoorkant;
+    private boolean isVoorkant = true;
     private String module;
     private boolean isnietGoed;
     private boolean isRandom;
@@ -25,12 +24,11 @@ public class LeersessieState {
 
     }
 
-    public void init(boolean startVoorkant, boolean isRandom, boolean isNietGoed) {
+    public void init(boolean isRandom, boolean isNietGoed) {
         index = 0;
         vanaf = 0;
         totenmet = kaarten.size() - 1;
         module = "";
-        this.startVoorkant = startVoorkant;
         this.isRandom = isRandom;
         this.isnietGoed = isNietGoed;
         bouwFilter();
@@ -140,10 +138,17 @@ public class LeersessieState {
             if (x < vanaf - 1 || x > totenmet) {
                 inFilter = false;
             }
-
-            if (isnietGoed && e.getGekendVoorkant().equals("goed")) {
-                inFilter = false;
+            if (isVoorkant) {
+                if (isnietGoed && e.getGekendVoorkant().equals("goed")) {
+                    inFilter = false;
+                }
             }
+            else {
+                if (isnietGoed && e.getGekendAchterkant().equals("goed")) {
+                    inFilter = false;
+                }
+            }
+
             if (!module.equals("") && !module.equals(e.getModule())) {
                 inFilter = false;
             }
@@ -287,10 +292,6 @@ public class LeersessieState {
             String tijdelijk = e.getAchterkant();
             e.setAchterkant(e.getVoorkant());
             e.setVoorkant(tijdelijk);
-
-            tijdelijk = e.getGekendAchterkant();
-            e.setGekendAchterkant(e.getGekendVoorkant());
-            e.setGekendVoorkant(tijdelijk);
         }
     }
 
@@ -298,15 +299,5 @@ public class LeersessieState {
         this.isVraag = isVraag;
     }
 
-    public Kaart flipKaart(Kaart e) {
-        String tijdelijk = e.getAchterkant();
-        e.setAchterkant(e.getVoorkant());
-        e.setVoorkant(tijdelijk);
 
-        tijdelijk = e.getGekendAchterkant();
-        e.setGekendVoorkant(e.getGekendAchterkant());
-        e.setGekendAchterkant(tijdelijk);
-
-        return e;
-    }
 }
