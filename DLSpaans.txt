@@ -1,0 +1,14 @@
+Yo escribo mucho, tu escribes mucho?:I write a lot, do you write a lot?:01-school:neutraal:neutraal
+Un profesor importante:An important professor:01-school:neutraal:neutraal
+Yo estudio medicina. Tú estudias espanol:I study medicine. You study Spanish:01-school:neutraal:neutraal
+Mi universidad:my university:01-school:neutraal:neutraal
+Tu lees en espanol? Yo leo en inglés:Do you read in Spanish? I read in English:01-school:neutraal:neutraal
+El profesor está aqui:the professor is here:01-school:neutraal:neutraal
+Un profesor:a professor:01-school:neutraal:neutraal
+Tú lees en espanol?:Do you read in Spanish?:01-school:neutraal:neutraal
+Tú estudias medicina?:Do you study medicine?:01-school:neutraal:neutraal
+Tú escribes en la computadora?:Do you write on the computer?:01-school:neutraal:neutraal
+Tú estudias en la universidad?:Do you study at the university?:01-school:neutraal:neutraal
+Yo no estudio medicina:I do not study medicine?:01-school:neutraal:neutraal
+Tú lees en la computadora?:Do you read on the computer?:01-school:neutraal:neutraal
+Una universidad importante:An important university:01-school:neutraal:neutraal

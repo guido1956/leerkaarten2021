@@ -105,6 +105,7 @@ public class Kaartenbak {
             return modules;
         }
 
+        modules.clear();
         for (Kaart e : kaarten) {
             String module = e.getModule();
             if (!(module.equals("") || modules.contains(module))) {

@@ -124,11 +124,11 @@ public class Controller {
     public void totEnMetKaart(int positie) {
         int tijdelijk = state.getTotenMet() +1;
 
-            if (state.getVanaf() < positie - 1) {
+            if (state.getVanaf() > positie - 1) {
                 positie = tijdelijk;
             }
 
-        // state.totEnMetKaart(positie-1);
+        //state.totEnMetKaart(positie-1);
         state.setTotenmet((positie)-1);
         state.setRange(true);
         state.bouwFilter();

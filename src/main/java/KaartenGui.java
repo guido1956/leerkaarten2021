@@ -172,9 +172,19 @@ public class KaartenGui extends JFrame {
     }
 
     public void vulModules(ArrayList<String> modules) {
-        modulesCombo.addItem("Alle");
+        int aantal = modulesCombo.getItemCount();
+        if (modulesCombo.getItemCount() > 0) {
+            for (int x = 0; x < aantal; x++) {
+                System.out.println(x);
+                modulesCombo.removeItem(modulesCombo.getItemAt(1));
+            }
+        } else {
+            modulesCombo.addItem("Alle");
+        }
+
         for (String e : modules) {
             modulesCombo.addItem(e);
+
         }
     }
 
@@ -227,7 +237,6 @@ public class KaartenGui extends JFrame {
     }
 
 
-
     public void showAantalGoed(String waarde) {
         txtAantalGoed.setText(waarde);
     }
@@ -238,10 +247,10 @@ public class KaartenGui extends JFrame {
     }
 
     public void herteken() {
-       txtVraagAntwoord.update(txtVraagAntwoord.getGraphics());
-       txtInfo.update(txtInfo.getGraphics());
-       totKaartTextField.update(txtInfo.getGraphics());
-       naarKaartTextField.update(txtInfo.getGraphics());
+        txtVraagAntwoord.update(txtVraagAntwoord.getGraphics());
+        txtInfo.update(txtInfo.getGraphics());
+        totKaartTextField.update(txtInfo.getGraphics());
+        naarKaartTextField.update(txtInfo.getGraphics());
     }
 
     public void showAantalNeutraal(String waarde) {
