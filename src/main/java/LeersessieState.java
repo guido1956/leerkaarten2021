@@ -24,13 +24,14 @@ public class LeersessieState {
 
     }
 
-    public void init(boolean isRandom, boolean isNietGoed) {
+    public void init() {
         index = 0;
         vanaf = 0;
         totenmet = kaarten.size() - 1;
         module = "";
-        this.isRandom = isRandom;
-        this.isnietGoed = isNietGoed;
+        this.isRandom = false;
+        this.isnietGoed = false;
+        this.isVoorkant = true;
         bouwFilter();
     }
 

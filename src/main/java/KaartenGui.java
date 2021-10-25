@@ -200,9 +200,30 @@ public class KaartenGui extends JFrame {
         }
     }
 
-
     public void setButtonTekst(String waarde) {
         btnVolgende.setText(waarde);
+    }
+
+    public void setChkNogNiet(boolean check) {
+        chkNogNiet.setSelected(check);
+    }
+
+    public void setChkAutocue(boolean check) {
+        chkAutocue.setSelected(check);
+    }
+
+    public void setVoorkantRadioButton(boolean check) {
+          voorkantRadioButton.setSelected(check);
+    }
+
+    public void setAchterkanRadioButton(boolean check) {
+        achterkantRadioButton.setSelected(check);
+    }
+
+
+
+    public void setChkRandom(boolean check) {
+        chkRandom.setSelected(check);
     }
 
     public void windowsListener(WindowListener windowListener) {

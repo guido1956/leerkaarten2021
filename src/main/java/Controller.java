@@ -16,7 +16,6 @@ public class Controller {
     private Kaart huidigeKaart = new Kaart("", "");
 
 
-
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
         this.kaarten = kaarten;
@@ -43,10 +42,12 @@ public class Controller {
         }
         state.setKaarten(kaarten.getKaarten());
         kaarten.telStanden(state.getIsVoorkant());
-        boolean isRandom = view.getIsRandom();
-        boolean isNietGoed = view.getIsNietGoed();
-        state.init(isRandom, isNietGoed);
+        state.init();
         maakModules();
+        view.setChkAutocue(false);
+        view.setChkRandom(false);
+        view.setChkNogNiet(false);
+        view.setVoorkantRadioButton(true);
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde()));
         showStanden();
@@ -69,7 +70,7 @@ public class Controller {
             aantalGoed = kaarten.getAantalGoedV();
             aantalNietGoed = kaarten.getAantalNogNietV();
             aantalNeutraal = kaarten.getAantalNeutraalV();
-        } else{
+        } else {
             aantalGoed = kaarten.getAantalGoedA();
             aantalNietGoed = kaarten.getAantalNogNietA();
             aantalNeutraal = kaarten.getAantalNeutraalA();
@@ -94,7 +95,7 @@ public class Controller {
         state.bouwFilter();
         state.setTotenmet(state.getModuleEinde());
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1) );
+        view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
         toonKaart();
     }
 
@@ -111,14 +112,14 @@ public class Controller {
     }
 
     public void totEnMetKaart(int positie) {
-        int tijdelijk = state.getTotenMet() +1;
+        int tijdelijk = state.getTotenMet() + 1;
 
-            if (state.getVanaf() > positie - 1) {
-                positie = tijdelijk;
-            }
+        if (state.getVanaf() > positie - 1) {
+            positie = tijdelijk;
+        }
 
         //state.totEnMetKaart(positie-1);
-        state.setTotenmet((positie)-1);
+        state.setTotenmet((positie) - 1);
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
@@ -165,8 +166,8 @@ public class Controller {
         if (state.getNoCards()) {
             view.showMessageCode("EC cardsNotInFilter");
         }
-        view.showGaNaarKaart(Integer.toString(state.getModuleStart()+1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde()+1));
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
         huidigeKaart = kaarten.getKaart(state.getIndex());
         String kaartTekst = "";
         String info = "";
@@ -174,21 +175,21 @@ public class Controller {
         String buttontekst = "";
 
 
-            if (state.getIsVraag()) {
-                kaartTekst = huidigeKaart.getVoorkant();
-                info = "vraag:";
-                buttontekst = "    antwoord      ";
-            } else {
-                kaartTekst = huidigeKaart.getAchterkant();
-                info = " antwoord:";
-                buttontekst = "volgende kaart";
-            }
+        if (state.getIsVraag()) {
+            kaartTekst = huidigeKaart.getVoorkant();
+            info = "vraag:";
+            buttontekst = "    antwoord      ";
+        } else {
+            kaartTekst = huidigeKaart.getAchterkant();
+            info = " antwoord:";
+            buttontekst = "volgende kaart";
+        }
 
-if (state.getIsVoorkant()) {
-    view.showKleur(huidigeKaart.getGekendVoorkant());
-} else {
-    view.showKleur(huidigeKaart.getGekendAchterkant());
-}
+        if (state.getIsVoorkant()) {
+            view.showKleur(huidigeKaart.getGekendVoorkant());
+        } else {
+            view.showKleur(huidigeKaart.getGekendAchterkant());
+        }
         view.setButtonTekst(buttontekst);
         view.showInfo(info + " " + kaartnummer);
         view.showKaartTekst(kaartTekst);
@@ -235,6 +236,42 @@ if (state.getIsVoorkant()) {
         toonKaart();
     }
 
+    public void saveFile() {
+        if (!state.getIsVoorkant()) {
+            state.flipKaarten();
+        }
+        kaarten.saveFile();
+    }
+
+    public void flipVoorkantAchterkant(String name) {
+        if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
+            state.setIsVoorkant(true);
+            state.flipKaarten();
+            state.setKaarten(kaarten.getKaarten());
+            kaarten.telStanden(state.getIsVoorkant());
+            view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+            view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+            showStanden();
+            state.bouwFilter();
+            view.herteken();
+            toonKaart();
+            return;
+        }
+        if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
+            state.setIsVoorkant(false);
+            state.flipKaarten();
+            state.setKaarten(kaarten.getKaarten());
+            kaarten.telStanden(state.getIsVoorkant());
+            view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+            view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+            showStanden();
+            state.bouwFilter();
+            view.herteken();
+            toonKaart();
+        }
+
+    }
+
     class LeerSessieButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -256,9 +293,11 @@ if (state.getIsVoorkant()) {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            saveFile();
             JTextField name = (JTextField) e.getSource();
             String filename = name.getText();
             initNieuweKaarten(filename);
+
         }
     }
 
@@ -327,37 +366,8 @@ if (state.getIsVoorkant()) {
         public void actionPerformed(ActionEvent e) {
             JRadioButton radioButton = (JRadioButton) e.getSource();
             String name = radioButton.getName();
+            flipVoorkantAchterkant(name);
 
-            if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
-                System.out.println("VOORKANT");
-                state.setIsVoorkant(true);
-                state.flipKaarten();
-                state.setKaarten(kaarten.getKaarten());
-                kaarten.telStanden(state.getIsVoorkant());
-                view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
-                view.showTotEnMet(Integer.toString(state.getModuleEinde()));
-                showStanden();
-                state.bouwFilter();
-                view.herteken();
-                toonKaart();
-                System.out.println(state.getIsVoorkant());
-                return;
-            }
-            if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
-                System.out.println("Achterkant");
-                state.setIsVoorkant(false);
-                state.flipKaarten();
-                state.setKaarten(kaarten.getKaarten());
-                kaarten.telStanden(state.getIsVoorkant());
-                view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
-                view.showTotEnMet(Integer.toString(state.getModuleEinde()));
-                showStanden();
-                state.bouwFilter();
-                view.herteken();
-                toonKaart();
-                System.out.println(state.getIsVoorkant());
-                return;
-            }
 
         }
     }
@@ -369,11 +379,8 @@ if (state.getIsVoorkant()) {
 
         @Override
         public void windowClosing(WindowEvent e) {
-            System.out.println(state.getIsVoorkant());
-            if (!state.getIsVoorkant()) {
-                state.flipKaarten();
-            }
-           kaarten.saveFile();
+            saveFile();
+
         }
 
         @Override
@@ -396,6 +403,6 @@ if (state.getIsVoorkant()) {
         public void windowDeactivated(WindowEvent e) {
         }
     }
-
-
 }
+
+

@@ -212,7 +212,9 @@ public class Kaartenbak {
     }
 
     public void saveFile() {
-
+        if (kaarten.size() == 0) {
+            return;
+        }
         try {
             BufferedWriter outfile = createBestand();
             for (Kaart e : kaarten) {
