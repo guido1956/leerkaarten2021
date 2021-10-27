@@ -34,10 +34,13 @@ public class Controller {
     }
 
     public void initNieuweKaarten(String filename) {
+        String tijdelijk = kaarten.getFileName();
         kaarten.setFileName(filename);
         String result = loadKaartenbak();
         if (!result.equals("")) {
             view.showMessageCode(result);
+            kaarten.setFileName(tijdelijk);
+            view.showFileName(tijdelijk);
             return;
         }
         state.setKaarten(kaarten.getKaarten());
@@ -62,9 +65,9 @@ public class Controller {
     }
 
     public void showStanden() {
-        int aantalGoed = 0;
-        int aantalNietGoed = 0;
-        int aantalNeutraal = 0;
+        int aantalGoed;
+        int aantalNietGoed;
+        int aantalNeutraal;
 
         if (state.getIsVoorkant()) {
             aantalGoed = kaarten.getAantalGoedV();
@@ -169,10 +172,10 @@ public class Controller {
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
         huidigeKaart = kaarten.getKaart(state.getIndex());
-        String kaartTekst = "";
-        String info = "";
+        String kaartTekst;
+        String info;
         String kaartnummer = Integer.toString(state.getIndex() + 1);
-        String buttontekst = "";
+        String buttontekst;
 
 
         if (state.getIsVraag()) {
@@ -325,7 +328,7 @@ public class Controller {
     class ModulesHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            JComboBox modules = (JComboBox) e.getSource();
+            JComboBox modules =   (JComboBox) e.getSource();
             String module = (String) modules.getSelectedItem();
             int pointer = modules.getSelectedIndex();
             moduleAfhandeling(module, pointer);

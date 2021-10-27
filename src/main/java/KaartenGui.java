@@ -179,7 +179,7 @@ public class KaartenGui extends JFrame {
 
 
         JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
-      //  window.add(schrijvenCheckBox);
+        //  window.add(schrijvenCheckBox);
         schrijvenCheckBox.setSelected(false);
     }
 
@@ -200,6 +200,10 @@ public class KaartenGui extends JFrame {
         }
     }
 
+    public void showFileName(String name) {
+
+    naamFileTextField.setText(name);
+    }
     public void setButtonTekst(String waarde) {
         btnVolgende.setText(waarde);
     }
