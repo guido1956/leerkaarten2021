@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -16,30 +17,56 @@ public class KaartenGui extends JFrame {
     private JComboBox<String> modulesCombo;
     private JCheckBox chkRandom, chkNogNiet, chkAutocue;
     private JRadioButton achterkantRadioButton, voorkantRadioButton;
+    private JTabbedPane tabTabs;
+    private JPanel pnlLeersessie = new JPanel();
+    private JPanel pnlOnderhoud = new JPanel();
+
+    // GUIbeheer later apart
+    private JTextArea txtEditVraag, txtEditAntwoord, txtEditModule;
+    private JButton btnNieuw;
+
 
 
     public KaartenGui() {
         initGui();
     }
 
+
+    public void setUpTabs() {
+        tabTabs = new JTabbedPane();
+        Border rand = BorderFactory.createEmptyBorder(5, 5, 5, 5);
+        tabTabs.setBorder(rand);
+        tabTabs.add("leren",  pnlLeersessie );
+        tabTabs.add("beheer", pnlOnderhoud);
+
+
+        tabTabs.setBounds(50, 50, 200, 200);
+        this.add(tabTabs);
+
+    }
+
     private void initGui() {
-        setSize(780, 400);
+        setSize(800, 430);
         setFocusable(true);
         setLocation(400, 250);
         setLocation(400, 300);
         getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
-        createGui();
+        createGuiLeersessie();
+        createGuiBeheer();
+        setUpTabs();
+
+
         setTitle("Leren met flashcards -25-10 2021- Guido Dulos  versie 6");
         setVisible(true);
         repaint();
     }
 
-    public void createGui() {
+    public void createGuiLeersessie() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        Container window = getContentPane();
+        //Container window = getContentPane();
+        JPanel window = pnlLeersessie;
         window.setLayout(new FlowLayout(FlowLayout.LEFT));
-
         JLabel naamFileLabel = new JLabel("naam kaartenbestand: ");
         window.add(naamFileLabel);
 
@@ -181,6 +208,8 @@ public class KaartenGui extends JFrame {
         JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
         //  window.add(schrijvenCheckBox);
         schrijvenCheckBox.setSelected(false);
+
+
     }
 
     public void vulModules(ArrayList<String> modules) {
@@ -381,6 +410,30 @@ public class KaartenGui extends JFrame {
     public void isVoorkantHandler(ActionListener actionListener) {
         voorkantRadioButton.addActionListener(actionListener);
         achterkantRadioButton.addActionListener(actionListener);
+    }
+
+
+    public void createGuiBeheer() {
+        JPanel window = pnlOnderhoud;
+        window.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel lblEditVoorkant = new JLabel("Vraag: ");
+        txtEditVraag = new JTextArea(4,800);
+        window.add(lblEditVoorkant);
+        window.add(txtEditVraag);
+        JLabel lblEditAchterkant = new JLabel("Antwoord: ");
+        txtEditAntwoord = new JTextArea(4,80);
+        window.add(lblEditAchterkant);
+        window.add(txtEditAntwoord);
+
+
+        JLabel lblEditModule = new JLabel("Module: ");
+        txtEditModule = new JTextArea(1,80);
+        window.add(lblEditModule);
+        window.add(txtEditModule);
+
+
+
+
     }
 }
 

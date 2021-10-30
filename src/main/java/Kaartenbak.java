@@ -30,6 +30,7 @@ public class Kaartenbak {
     }
 
     public String loadKaartenbak() {
+
         BufferedReader inKaartFile = openBestand();
         if (inKaartFile == null) {
             return ("EC fileNotFound");
