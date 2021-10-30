@@ -55,25 +55,25 @@ el companero:de medecursist:unidad 01:goed:neutraal
 la companera:de medecursiste:unidad 01:goed:neutraal
 Cómo se pronuncia:Hoe spreek je dat uit?:unidad 01:goed:neutraal
 pronunciar:uitspreken:unidad 01:goed:neutraal
-estos nombres:deze namen:unidad 01:neutraal:niet
-leer:lezen:unidad 01:neutraal:goed
+estos nombres:deze namen:unidad 01:goed:niet
+leer:lezen:unidad 01:goed:goed
 luego:dan, daarna:unidad 01:neutraal:niet
-complete:vul..aan:unidad 01:neutraal:goed
-las reglas de pronunciación:de uitspraakregels:unidad 01:neutraal:neutraal
-la pronunciación:de uitspraak:unidad 01:neutraal:neutraal
-Cómo se pronunciation?:Hoe worden ... uitgesproken:unidad 01:neutraal:neutraal
-estas palabras:deze woorden:unidad 01:neutraal:neutraal
-la tortilla:de aardappelomelet:unidad 01:neutraal:neutraal
-la geografia:de geografie:unidad 01:neutraal:neutraal
+complete:vul..aan:unidad 01:goed:goed
+las reglas de pronunciación:de uitspraakregels:unidad 01:goed:neutraal
+la pronunciación:de uitspraak:unidad 01:goed:neutraal
+Cómo se pronunciation?:Hoe worden ... uitgesproken:unidad 01:goed:neutraal
+estas palabras:deze woorden:unidad 01:goed:neutraal
+la tortilla:de aardappelomelet:unidad 01:goed:neutraal
+la geografia:de geografie:unidad 01:goed:neutraal
 la informatión:de informatie:unidad 01:neutraal:neutraal
 la organización:de organisatie:unidad 01:neutraal:neutraal
-la universidad:de universiteit:unidad 01:neutraal:neutraal
-el teatro:het theater:unidad 01:neutraal:neutraal
-el quiosco:de kiosk:unidad 01:neutraal:neutraal
-el concierto:het concert:unidad 01:neutraal:neutraal
-el hotel:het hotel:unidad 01:neutraal:neutraal
-el chocolate:de chocolade:unidad 01:neutraal:neutraal
-el trabalenguas:de tongbreker:unidad 01:neutraal:neutraal
+la universidad:de universiteit:unidad 01:goed:neutraal
+el teatro:het theater:unidad 01:goed:neutraal
+el quiosco:de kiosk:unidad 01:goed:neutraal
+el concierto:het concert:unidad 01:goed:neutraal
+el hotel:het hotel:unidad 01:goed:neutraal
+el chocolate:de chocolade:unidad 01:goed:neutraal
+el trabalenguas:de tongbreker:unidad 01:niet:neutraal
 Para qué estudias espanol?:Waarvoor leer jij Spaans?:unidad 01:neutraal:neutraal
 estudiar:leren, studeren:unidad 01:neutraal:neutraal
 marque:kruis aan:unidad 01:neutraal:neutraal
@@ -129,7 +129,7 @@ de dónde vienen...?:Waar komen zij vandaan?:unidad 01:neutraal:neutraal
 el 80% (ochenta por cieto):tachtig procens:unidad 01:neutraal:neutraal
 viene del latin:komt uit het Latijn:unidad 01:neutraal:neutraal
 el latin:het Latijn:unidad 01:neutraal:neutraal
-por ejempio:bijvoorbeeld:unidad 01:neutraal:neutraal
+por ejemplo:bijvoorbeeld:unidad 01:neutraal:neutraal
 la fábrica:de fabriek:unidad 01:neutraal:neutraal
 el hospital:het ziekenhuis:unidad 01:neutraal:neutraal
 la fruta:de vrucht; het fruit:unidad 01:neutraal:neutraal
@@ -179,7 +179,7 @@ la bebida:het drankje:unidad 01:neutraal:neutraal
 el edificio:het gebouw:unidad 01:neutraal:neutraal
 el animal:het dier:unidad 01:neutraal:neutraal
 son las deiz en punto:het is 10 uur:100 klokkijken:neutraal:neutraal
-es la dos en punto:het is 1 uur:100 klokkijken:neutraal
+es la dos en punto:het is 1 uur:100 klokkijken:neutraal:neutraal
 son las cinco y diez minutos:het is tien over vijf:100 klokkijken:neutraal:neutraal
 son las cinco minos diez minutos:het is tien voor vijf:100 klokkijken:neutraal:neutraal
 son las cinco y quarto:het is kwart over vijf:100 klokkijken:neutraal:neutraal

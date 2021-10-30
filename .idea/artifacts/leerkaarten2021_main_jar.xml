@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="leerkaarten2021.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/leerkaarten2021_main_jar</output-path>
+    <root id="archive" name="leerkaarten2021.main.jar">
+      <element id="module-output" name="leerkaarten2021.main" />
+    </root>
+  </artifact>
+</component>
