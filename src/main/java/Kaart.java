@@ -16,6 +16,15 @@ public class Kaart {
         this.module = module;
     }
 
+
+    public Kaart(String voorkant, String achterkant, String module, String gekendVoorkant, String gekendAchterkant) {
+        this.voorkant = voorkant;
+        this.achterkant = achterkant;
+        this.module = module;
+        this.gekendVoorkant = gekendVoorkant;
+        this.gekendAchterkant = gekendAchterkant;
+    }
+
     public String getVoorkant() {
         return voorkant;
     }

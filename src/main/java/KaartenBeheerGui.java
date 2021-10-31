@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class KaartenBeheerGui extends JPanel{
     private JTextField txtKaartnr;
     private JTextArea txtFilename, txtInvoerKaart;
-    private JButton btnNieuw, btnWijzig, btnSave;
+    private JButton btnNieuw, btnVerwijder, btnSave;
     private static final int BREEDTE = 200;
 
     public void createGuiBeheer() {
@@ -41,9 +41,9 @@ public class KaartenBeheerGui extends JPanel{
         btnNieuw.setName("nieuw");
         this.add(btnNieuw);
 
-        btnWijzig = new JButton("wijzig");
-        btnWijzig.setName("wijzig");
-        this.add(btnWijzig);
+        btnVerwijder = new JButton("verwijder");
+        btnVerwijder.setName("verwijder");
+        this.add(btnVerwijder);
 
         btnSave = new JButton("save");
         btnSave.setName("save");
@@ -71,9 +71,14 @@ public class KaartenBeheerGui extends JPanel{
         return txtInvoerKaart.getText();
     }
 
+    public void beheerMaakLeeg(String waarde) {
+        txtKaartnr.setText(waarde);
+        txtInvoerKaart.setText("");
+    }
+
     public void buttonBeheerHandler(ActionListener actionListener) {
         btnNieuw.addActionListener(actionListener);
-        btnWijzig.addActionListener(actionListener);
+        btnVerwijder.addActionListener(actionListener);
         btnSave.addActionListener(actionListener);
     }
 

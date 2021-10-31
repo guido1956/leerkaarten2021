@@ -21,3 +21,5 @@ Yo necesito una computadora:I need a computer:01-school:goed:neutraal
 Tú escribes en espanol?:Do you write in Spanish:01-school:goed:neutraal
 Tú escribres mucho?:Do you write a lot?:01-school:goed:neutraal
 Tú lees en la computadora?:Do you read on the computer?:01-school:goed:neutraal
+Yo escribo mucho, tu escribes mucho? Hoera:I write a lot, do you write a lot?:02-Scholen:goed:goed
+groot:groot::neutraal:neutraal

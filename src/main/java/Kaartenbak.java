@@ -165,6 +165,10 @@ public class Kaartenbak {
         kaarten.add(kaart);
     }
 
+    public void verwijderKaart(int index) {
+        kaarten.remove(index);
+    }
+
     public ArrayList<Kaart> getKaarten() {
         return kaarten;
     }

@@ -296,25 +296,35 @@ public class Controller {
     }
 
     public void nieuweKaart() {
+        view.beheerMaakLeeg(Integer.toString(kaarten.getAantal() +1));
 
     }
 
-    public void wijzigKaart() {
-
+    public void verwijderKaart() {
+        int kaartnr = Integer.parseInt(view.getBeheerKaartnummer());
+        kaarten.verwijderKaart(kaartnr-1);
+        maakModules();
+        kaarten.telStanden(state.getIsVoorkant());
+        state.bouwFilter();
+        showStanden();
+        initBeheerSessie();
     }
 
     public void saveKaart() {
         int kaartnr = Integer.parseInt(view.getBeheerKaartnummer());
+        String kaartgegevens = view.getBeheerKaart();
+        kaartgegevens = kaartgegevens + " \n".repeat(5);
+        String[] fields = kaartgegevens.split("\n");
+        Kaart temp = new Kaart(fields[0], fields[1], fields[2], fields[3], fields[4]);
         if (kaartnr == state.getIndex() +1) {
-            String kaartgegevens = view.getBeheerKaart();
-            String[] fields = kaartgegevens.split("\n");
-            huidigeKaart.setVoorkant(fields[0]);
-            huidigeKaart.setAchterkant(fields[1]);
-            huidigeKaart.setModule(fields[2]);
-            huidigeKaart.setGekendVoorkant(fields[3]);
-            huidigeKaart.setGekendAchterkant(fields[4]);
-            kaarten.setKaart(huidigeKaart,state.getIndex());
+           kaarten.setKaart(temp,state.getIndex());
+        } else {
+            kaarten.addKaart(temp);
         }
+        maakModules();
+        kaarten.telStanden(state.getIsVoorkant());
+        state.bouwFilter();
+        showStanden();
     }
 
     class TabHandler implements ChangeListener {
@@ -473,7 +483,7 @@ public class Controller {
             // controlLeervorm1.leersessieKaart();
             switch (name) {
                 case "nieuw" -> nieuweKaart();
-                case "wijzig" -> wijzigKaart();
+                case "verwijder" -> verwijderKaart();
                 case "save" -> saveKaart();
             }
         }
