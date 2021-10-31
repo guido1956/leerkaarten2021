@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -31,6 +33,8 @@ public class Controller {
         this.view.nogNietHandler(new NogNietHandler());
         this.view.autocueHandler(new AutocueHandler());
         this.view.isVoorkantHandler(new IsVoorkantHandler());
+        this.view.tabHandler((new TabHandler()));
+        this.view.beheerButtonHandler(new BeheerButtonHandler());
     }
 
     public void initNieuweKaarten(String filename) {
@@ -275,6 +279,59 @@ public class Controller {
 
     }
 
+    public void initBeheerSessie() {
+        toonBeheerkaart();
+    }
+
+    // methods voor beheerKaarten
+    public void toonBeheerkaart() {
+        view.showBeheerFileNaam(kaarten.getFileName());
+        view.showKaartnummer(Integer.toString(state.getIndex() + 1));
+        String kaartgegevens = huidigeKaart.getVoorkant() + "\n" +
+                huidigeKaart.getAchterkant() + "\n" +
+                huidigeKaart.getModule() + "\n" +
+                huidigeKaart.getGekendVoorkant() + "\n" +
+                huidigeKaart.getGekendAchterkant();
+        view.showKaartgegevens(kaartgegevens);
+    }
+
+    public void nieuweKaart() {
+
+    }
+
+    public void wijzigKaart() {
+
+    }
+
+    public void saveKaart() {
+        int kaartnr = Integer.parseInt(view.getBeheerKaartnummer());
+        if (kaartnr == state.getIndex() +1) {
+            String kaartgegevens = view.getBeheerKaart();
+            String[] fields = kaartgegevens.split("\n");
+            huidigeKaart.setVoorkant(fields[0]);
+            huidigeKaart.setAchterkant(fields[1]);
+            huidigeKaart.setModule(fields[2]);
+            huidigeKaart.setGekendVoorkant(fields[3]);
+            huidigeKaart.setGekendAchterkant(fields[4]);
+            kaarten.setKaart(huidigeKaart,state.getIndex());
+        }
+    }
+
+    class TabHandler implements ChangeListener {
+        @Override
+        public void stateChanged(ChangeEvent e) {
+            JTabbedPane sourceTabbedPane = (JTabbedPane) e.getSource();
+            int index = sourceTabbedPane.getSelectedIndex();
+            if (index == 0) {
+                toonKaart();
+            }
+            if (index == 1) {
+                initBeheerSessie();
+            }
+        }
+    }
+
+
     class LeerSessieButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -328,7 +385,7 @@ public class Controller {
     class ModulesHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            JComboBox modules =   (JComboBox) e.getSource();
+            JComboBox modules = (JComboBox) e.getSource();
             String module = (String) modules.getSelectedItem();
             int pointer = modules.getSelectedIndex();
             moduleAfhandeling(module, pointer);
@@ -404,6 +461,21 @@ public class Controller {
 
         @Override
         public void windowDeactivated(WindowEvent e) {
+        }
+    }
+
+    class BeheerButtonHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            JButton button = (JButton) e.getSource();
+            String name = button.getName();
+            // controlLeervorm1.leersessieKaart();
+            switch (name) {
+                case "nieuw" -> nieuweKaart();
+                case "wijzig" -> wijzigKaart();
+                case "save" -> saveKaart();
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -13,25 +14,8 @@ public class KaartenGui extends JFrame {
     private KaartenBeheerGui beheerview = new KaartenBeheerGui();
     private KaartenLeersessieGui leersessieview = new KaartenLeersessieGui();
 
-
-
-
-
-
     public KaartenGui() {
         initGui();
-    }
-
-
-    public void setUpTabs() {
-        tabTabs = new JTabbedPane();
-        Border rand = BorderFactory.createEmptyBorder(5, 5, 5, 5);
-        tabTabs.setBorder(rand);
-        tabTabs.add("leren",  leersessieview );
-        tabTabs.add("beheer", beheerview);
-        tabTabs.setBounds(50, 50, 200, 200);
-        this.add(tabTabs);
-
     }
 
     private void initGui() {
@@ -44,14 +28,30 @@ public class KaartenGui extends JFrame {
         leersessieview.createGuiLeersessie();
         beheerview.createGuiBeheer();
         setUpTabs();
-        setTitle("Leren met flashcards -25-10 2021- Guido Dulos  versie 6");
+        setTitle("Leren met flashcards -31-10 2021- Guido Dulos  versie 7");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //Container window = getContentPane();
         repaint();
     }
 
-    // Afhandeling leersessie
+
+    public void setUpTabs() {
+        tabTabs = new JTabbedPane();
+        Border rand = BorderFactory.createEmptyBorder(5, 5, 5, 5);
+        tabTabs.setBorder(rand);
+        tabTabs.add("leren",  leersessieview );
+        tabTabs.add("beheer", beheerview);
+        tabTabs.setBounds(50, 50, 200, 200);
+        this.add(tabTabs);
+    }
+
+    void tabHandler(ChangeListener tabListener) {
+        tabTabs.addChangeListener(tabListener);
+    }
+
+    // Afhandeling leersessieview
+
+
     public void vulModules(ArrayList<String> modules) {
         leersessieview.vulModules(modules);
     }
@@ -202,6 +202,33 @@ public class KaartenGui extends JFrame {
     public void windowsListener(WindowListener windowListener) {
         this.addWindowListener(windowListener);
     }
+
+    //Afhandeling beheerview
+
+    public void beheerButtonHandler(ActionListener actionListener) {
+        beheerview.buttonBeheerHandler(actionListener);
+    }
+    public void showBeheerFileNaam(String waarde) {
+        beheerview.showBeheerFileNaam(waarde);
+    }
+    public void showKaartnummer(String waarde) {
+        beheerview.showKaartnummer(waarde);
+    }
+
+    public void showKaartgegevens(String waarde) {
+        beheerview.showKaartgegevens(waarde);
+    }
+
+    public String getBeheerKaartnummer() {
+        return beheerview.getBeheerKaartnummer();
+    }
+
+    public String getBeheerKaart() {
+        return beheerview.getBeheerKaart();
+    }
+
+
+
 }
 
 

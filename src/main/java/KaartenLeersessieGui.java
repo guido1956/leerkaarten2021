@@ -21,8 +21,6 @@ public class KaartenLeersessieGui extends JPanel {
 
 
     public void createGuiLeersessie() {
-
-
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         JLabel naamFileLabel = new JLabel("naam kaartenbestand: ");
         this.add(naamFileLabel);
@@ -160,13 +158,9 @@ public class KaartenLeersessieGui extends JPanel {
         chkAutocue = new JCheckBox("autocue");
         this.add(chkAutocue);
         chkAutocue.setSelected(false);
-
-
         JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
         //  window.add(schrijvenCheckBox);
         schrijvenCheckBox.setSelected(false);
-
-
     }
 
     public void vulModules(ArrayList<String> modules) {
@@ -210,16 +204,9 @@ public class KaartenLeersessieGui extends JPanel {
         achterkantRadioButton.setSelected(check);
     }
 
-
-
     public void setChkRandom(boolean check) {
         chkRandom.setSelected(check);
     }
-
-
-
-
-
 
     public void showMessageCode(String code) {
         String message = maakMessage(code);
@@ -296,8 +283,6 @@ public class KaartenLeersessieGui extends JPanel {
         }
     }
 
-
-
     public boolean getIsRandom() {
         return chkRandom.isSelected();
     }
@@ -368,6 +353,4 @@ public class KaartenLeersessieGui extends JPanel {
             default -> "Onbekende fout";
         };
     }
-
-
 }
