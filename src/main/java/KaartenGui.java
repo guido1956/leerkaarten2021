@@ -8,22 +8,13 @@ import java.util.ArrayList;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 public class KaartenGui extends JFrame {
-    private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
-    private JButton btnVolgende, btnVorige, btnGoed, btnNietGoed, btnReset;
-    private JTextField naamFileTextField;
-    private JTextField naarKaartTextField, totKaartTextField;
-    private JTextField txtInfo, txtTotaalinfilter;
-    private JTextField modulesTextField;
-    private JComboBox<String> modulesCombo;
-    private JCheckBox chkRandom, chkNogNiet, chkAutocue;
-    private JRadioButton achterkantRadioButton, voorkantRadioButton;
-    private JTabbedPane tabTabs;
-    private JPanel pnlLeersessie = new JPanel();
-    private JPanel pnlOnderhoud = new JPanel();
 
-    // GUIbeheer later apart
-    private JTextArea txtEditVraag, txtEditAntwoord, txtEditModule;
-    private JButton btnNieuw;
+    private JTabbedPane tabTabs;
+    private KaartenBeheerGui beheerview = new KaartenBeheerGui();
+    private KaartenLeersessieGui leersessieview = new KaartenLeersessieGui();
+
+
+
 
 
 
@@ -36,10 +27,8 @@ public class KaartenGui extends JFrame {
         tabTabs = new JTabbedPane();
         Border rand = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         tabTabs.setBorder(rand);
-        tabTabs.add("leren",  pnlLeersessie );
-        tabTabs.add("beheer", pnlOnderhoud);
-
-
+        tabTabs.add("leren",  leersessieview );
+        tabTabs.add("beheer", beheerview);
         tabTabs.setBounds(50, 50, 200, 200);
         this.add(tabTabs);
 
@@ -52,388 +41,166 @@ public class KaartenGui extends JFrame {
         setLocation(400, 300);
         getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.lightGray));
         requestFocusInWindow();
-        createGuiLeersessie();
-        createGuiBeheer();
+        leersessieview.createGuiLeersessie();
+        beheerview.createGuiBeheer();
         setUpTabs();
-
-
         setTitle("Leren met flashcards -25-10 2021- Guido Dulos  versie 6");
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //Container window = getContentPane();
         repaint();
     }
 
-    public void createGuiLeersessie() {
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //Container window = getContentPane();
-        JPanel window = pnlLeersessie;
-        window.setLayout(new FlowLayout(FlowLayout.LEFT));
-        JLabel naamFileLabel = new JLabel("naam kaartenbestand: ");
-        window.add(naamFileLabel);
-
-        naamFileTextField = new JTextField(13);
-        naamFileTextField.setBackground(Color.white);
-        window.add(naamFileTextField);
-
-        JLabel totaalKaartenTextAreaLabel = new JLabel("aantal:  ");
-        window.add(totaalKaartenTextAreaLabel);
-
-        txtTotaal = new JTextArea("", 1, 4);
-        txtTotaal.setBackground(Color.getHSBColor(100, 86, 96));
-        txtTotaal.setEditable(false);
-        window.add(txtTotaal);
-
-        JLabel aantalNeutraalLabel = new JLabel("neutraal:");
-        window.add(aantalNeutraalLabel);
-
-        txtAantalNeutraal = new JTextArea("", 1, 4);
-        txtAantalNeutraal.setBackground(Color.getHSBColor(100, 86, 96));
-        txtAantalNeutraal.setEditable(false);
-        window.add(txtAantalNeutraal);
-
-        JLabel aantalGoedLabel = new JLabel("goed:");
-        window.add(aantalGoedLabel);
-        txtAantalGoed = new JTextArea("", 1, 4);
-        txtAantalGoed.setBackground(Color.getHSBColor(100, 86, 96));
-        txtAantalGoed.setEditable(false);
-        window.add(txtAantalGoed);
-
-        JLabel aantalNogNietLabel = new JLabel("nog niet:");
-        window.add(aantalNogNietLabel);
-
-        txtAantalNogNiet = new JTextArea("", 1, 4);
-        txtAantalNogNiet.setBackground(Color.getHSBColor(100, 86, 96));
-        txtAantalNogNiet.setEditable(false);
-        window.add(txtAantalNogNiet);
-
-        JLabel lblVanaf = new JLabel("leren vanaf kaartnr:     ");
-        window.add(lblVanaf);
-
-        naarKaartTextField = new JTextField(5);
-        naarKaartTextField.setBackground(Color.white);
-        naarKaartTextField.setText("");
-        naarKaartTextField.setName("ganaar");
-        window.add(naarKaartTextField);
-
-        JLabel lblTM = new JLabel("t/m");
-        window.add(lblTM);
-
-        totKaartTextField = new JTextField(5);
-        totKaartTextField.setBackground(Color.white);
-        totKaartTextField.setText("");
-        totKaartTextField.setName("totAan");
-        window.add(totKaartTextField);
-
-        JLabel lblInFilter = new JLabel("in filter:");
-        window.add(lblInFilter);
-
-        txtTotaalinfilter = new JTextField(5);
-        txtTotaalinfilter.setBackground(Color.getHSBColor(100, 86, 96));
-        txtTotaalinfilter.setText("");
-        txtTotaalinfilter.setEditable(false);
-        window.add(txtTotaalinfilter);
-
-        txtInfo = new JTextField(15);
-        txtInfo.setBackground(Color.getHSBColor(100, 86, 96));
-        txtInfo.setEditable(false);
-        window.add(txtInfo);
-
-        modulesTextField = new JTextField(15);
-        modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
-        modulesTextField.setEditable(false);
-        modulesTextField.setText("");
-        window.add(modulesTextField);
-
-        txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63
-        JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
-        txtVraagAntwoord.setLineWrap(true);
-        txtVraagAntwoord.setWrapStyleWord(true);
-        txtVraagAntwoord.setEditable(false);
-        Font font = new Font("Default", Font.PLAIN, 20);
-        txtVraagAntwoord.setFont(font);
-        window.add(scrollPane);
-
-        btnVolgende = new JButton("volgende kaart");
-        btnVolgende.setName("nextCard");
-        window.add(btnVolgende);
-
-        btnGoed = new JButton("goed");
-        btnGoed.setName("correct");
-        window.add(btnGoed);
-
-        btnNietGoed = new JButton("nog niet");
-        btnNietGoed.setName("incorrect");
-        window.add(btnNietGoed);
-
-        btnVorige = new JButton("vorige kaart");
-        btnVorige.setName("formerCard");
-        window.add(btnVorige);
-
-        btnReset = new JButton("reset scores");
-        btnReset.setName("reset");
-        window.add(btnReset);
-
-        modulesCombo = new JComboBox<>();
-        window.add(modulesCombo);
-
-        JLabel lblVulling = new JLabel("                                ");
-        window.add(lblVulling);
-        voorkantRadioButton = new JRadioButton("start met voorkant");
-        voorkantRadioButton.setSelected(true);
-        voorkantRadioButton.setName("radioVoorkant");
-        window.add(voorkantRadioButton);
-
-
-        achterkantRadioButton = new JRadioButton("start met achterkant");
-        achterkantRadioButton.setSelected(false);
-        achterkantRadioButton.setName("radioAchterkant");
-        window.add(achterkantRadioButton);
-
-        ButtonGroup volgorde = new ButtonGroup();
-        volgorde.add(voorkantRadioButton);
-        volgorde.add(achterkantRadioButton);
-
-        chkRandom = new JCheckBox("random");
-        window.add(chkRandom);
-        chkRandom.setSelected(false);
-
-        chkNogNiet = new JCheckBox("nog niet");
-        window.add(chkNogNiet);
-        chkNogNiet.setSelected(false);
-
-        chkAutocue = new JCheckBox("autocue");
-        window.add(chkAutocue);
-        chkAutocue.setSelected(false);
-
-
-        JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
-        //  window.add(schrijvenCheckBox);
-        schrijvenCheckBox.setSelected(false);
-
-
-    }
-
+    // Afhandeling leersessie
     public void vulModules(ArrayList<String> modules) {
-        int aantal = modulesCombo.getItemCount();
-        if (modulesCombo.getItemCount() > 0) {
-            for (int x = 0; x < aantal; x++) {
-                System.out.println(x);
-                modulesCombo.removeItem(modulesCombo.getItemAt(1));
-            }
-        } else {
-            modulesCombo.addItem("Alle");
-        }
-
-        for (String e : modules) {
-            modulesCombo.addItem(e);
-
-        }
+        leersessieview.vulModules(modules);
     }
 
     public void showFileName(String name) {
-
-    naamFileTextField.setText(name);
+        leersessieview.showFileName(name);
     }
+
     public void setButtonTekst(String waarde) {
-        btnVolgende.setText(waarde);
+        leersessieview.setButtonTekst(waarde);
     }
 
     public void setChkNogNiet(boolean check) {
-        chkNogNiet.setSelected(check);
+        leersessieview.setChkNogNiet(check);
     }
 
     public void setChkAutocue(boolean check) {
-        chkAutocue.setSelected(check);
+        leersessieview.setChkAutocue(check);
     }
 
     public void setVoorkantRadioButton(boolean check) {
-          voorkantRadioButton.setSelected(check);
+        leersessieview.setVoorkantRadioButton(check);
     }
 
     public void setAchterkanRadioButton(boolean check) {
-        achterkantRadioButton.setSelected(check);
+        leersessieview.setAchterkanRadioButton(check);
     }
-
 
 
     public void setChkRandom(boolean check) {
-        chkRandom.setSelected(check);
-    }
-
-    public void windowsListener(WindowListener windowListener) {
-        this.addWindowListener(windowListener);
-    }
-
-
-    public String maakMessage(String code) {
-        return switch (code) {
-            case "EC fileNotFound" -> "Bestand niet gevonden";
-            case "EC fillArrayError" -> "Bestand met kaarten bevat errors";
-            case "EC cardsNotInFilter" -> "Er zijn 0 kaarten in het filter. \nWijzig het filter";
-            default -> "Onbekende fout";
-        };
+        leersessieview.setChkRandom(check);
     }
 
     public void showMessageCode(String code) {
-        String message = maakMessage(code);
-        showMessageDialog(null, message);
+        leersessieview.showMessageCode(code);
     }
 
     public void showGaNaarKaart(String waarde) {
-        naarKaartTextField.setText(waarde);
-    }
-
-    public String getGaNaarKaart() {
-        return naarKaartTextField.getText();
+        leersessieview.showGaNaarKaart(waarde);
     }
 
     public void showTotaalInFilter(String message) {
-        txtTotaalinfilter.setText(message);
+        leersessieview.showTotaalInFilter(message);
     }
 
-    public boolean getIsNietGoed() {
-        return false; //@@ aanpassen
+    public String getGaNaarKaart() {
+        return leersessieview.getGaNaarKaart();
     }
+
 
     public void showTotEnMet(String waarde) {
-        totKaartTextField.setText(waarde);
+        leersessieview.showTotEnMet(waarde);
     }
 
     public String getTotEnMet() {
-        return totKaartTextField.getText();
+        return leersessieview.getTotEnMet();
     }
 
     public boolean getIsNogNiet() {
-        return chkNogNiet.isSelected();
+        return leersessieview.getIsNogNiet();
     }
 
 
     public void showAantalGoed(String waarde) {
-        txtAantalGoed.setText(waarde);
+        leersessieview.showAantalGoed(waarde);
     }
 
     public void showInfo(String waarde) {
-        txtInfo.setText(waarde);
-        repaint();
+        leersessieview.showInfo(waarde);
     }
 
     public void herteken() {
-        txtVraagAntwoord.update(txtVraagAntwoord.getGraphics());
-        txtInfo.update(txtInfo.getGraphics());
-        totKaartTextField.update(txtInfo.getGraphics());
-        naarKaartTextField.update(txtInfo.getGraphics());
-        txtTotaalinfilter.update(txtTotaalinfilter.getGraphics());
+        leersessieview.herteken();
     }
 
     public void showAantalNeutraal(String waarde) {
-        txtAantalNeutraal.setText(waarde);
+        leersessieview.showAantalNeutraal(waarde);
     }
 
     public void showAantalNietGoed(String waarde) {
-        txtAantalNogNiet.setText(waarde);
+        leersessieview.showAantalNietGoed(waarde);
     }
 
     public void showAantalTotaal(String waarde) {
-        txtTotaal.setText(waarde);
+        leersessieview.showAantalTotaal(waarde);
     }
 
     public void showKleur(String kleur) {
-        if (kleur.equals("goed")) {
-            txtVraagAntwoord.setBackground(Color.getHSBColor(154, 254, 25));
-        }
-        if (kleur.equals("niet")) {
-            txtVraagAntwoord.setBackground(Color.getHSBColor(0.028f, 0.4f, 1f));
-        }
-        if (kleur.equals("neutraal")) {
-            txtVraagAntwoord.setBackground(Color.getHSBColor(100, 86, 96));
-        }
+        leersessieview.showKleur(kleur);
     }
 
-
-
     public boolean getIsRandom() {
-        return chkRandom.isSelected();
+        return leersessieview.getIsRandom();
     }
 
     public boolean getIsAutoCue() {
-        return chkAutocue.isSelected();
+        return leersessieview.getIsAutoCue();
     }
 
     public void setIsAutoCue(boolean check) {
-        chkAutocue.setSelected(check);
+        leersessieview.setIsAutoCue(check);
     }
 
-
     public void showSelectieModule(String waarde) {
-        modulesTextField.setText(waarde);
+        leersessieview.showSelectieModule(waarde);
     }
 
     public void showKaartTekst(String waarde) {
-        txtVraagAntwoord.setText(waarde);
+        leersessieview.showKaartTekst(waarde);
     }
 
     public void buttonHandler(ActionListener actionListener) {
-        btnVolgende.addActionListener(actionListener);
-        btnReset.addActionListener(actionListener);
-        btnVorige.addActionListener(actionListener);
-        btnNietGoed.addActionListener(actionListener);
-        btnGoed.addActionListener(actionListener);
+        leersessieview.buttonHandler(actionListener);
     }
 
     public void textFieldHandler(ActionListener actionListener) {
-        naamFileTextField.addActionListener(actionListener);
+        leersessieview.textFieldHandler(actionListener);
     }
 
     public void moduleHandler(ActionListener actionListener) {
-        modulesCombo.addActionListener(actionListener);
+        leersessieview.moduleHandler(actionListener);
     }
 
     public void gaNaarHandler(ActionListener actionListener) {
-        naarKaartTextField.addActionListener(actionListener);
+        leersessieview.gaNaarHandler(actionListener);
     }
 
     public void totenMetHandler(ActionListener actionListener) {
-        totKaartTextField.addActionListener(actionListener);
+        leersessieview.totenMetHandler(actionListener);
     }
 
     public void randomHandler(ActionListener actionListener) {
-        chkRandom.addActionListener(actionListener);
+        leersessieview.randomHandler(actionListener);
     }
 
     public void nogNietHandler(ActionListener actionListener) {
-        chkNogNiet.addActionListener(actionListener);
+        leersessieview.nogNietHandler(actionListener);
     }
 
     public void autocueHandler(ActionListener actionListener) {
-        chkAutocue.addActionListener(actionListener);
+        leersessieview.autocueHandler(actionListener);
     }
 
     public void isVoorkantHandler(ActionListener actionListener) {
-        voorkantRadioButton.addActionListener(actionListener);
-        achterkantRadioButton.addActionListener(actionListener);
+        leersessieview.isVoorkantHandler(actionListener);
     }
 
-
-    public void createGuiBeheer() {
-        JPanel window = pnlOnderhoud;
-        window.setLayout(new FlowLayout(FlowLayout.LEFT));
-        JLabel lblEditVoorkant = new JLabel("Vraag: ");
-        txtEditVraag = new JTextArea(4,800);
-        window.add(lblEditVoorkant);
-        window.add(txtEditVraag);
-        JLabel lblEditAchterkant = new JLabel("Antwoord: ");
-        txtEditAntwoord = new JTextArea(4,80);
-        window.add(lblEditAchterkant);
-        window.add(txtEditAntwoord);
-
-
-        JLabel lblEditModule = new JLabel("Module: ");
-        txtEditModule = new JTextArea(1,80);
-        window.add(lblEditModule);
-        window.add(txtEditModule);
-
-
-
-
+    public void windowsListener(WindowListener windowListener) {
+        this.addWindowListener(windowListener);
     }
 }
 
