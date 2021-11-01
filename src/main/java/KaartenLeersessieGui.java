@@ -167,7 +167,6 @@ public class KaartenLeersessieGui extends JPanel {
         int aantal = modulesCombo.getItemCount();
         if (modulesCombo.getItemCount() > 0) {
             for (int x = 0; x < aantal; x++) {
-                System.out.println(x);
                 modulesCombo.removeItem(modulesCombo.getItemAt(1));
             }
         } else {
@@ -176,7 +175,6 @@ public class KaartenLeersessieGui extends JPanel {
 
         for (String e : modules) {
             modulesCombo.addItem(e);
-
         }
     }
 

@@ -152,7 +152,6 @@ public class Kaartenbak {
         aantalNogNietA = 0;
     }
 
-
     public Kaart getKaart(int index) {
         return kaarten.get(index);
     }

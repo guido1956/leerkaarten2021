@@ -325,18 +325,20 @@ public class Controller {
         kaarten.telStanden(state.getIsVoorkant());
         state.bouwFilter();
         showStanden();
+        initBeheerSessie();
     }
 
     class TabHandler implements ChangeListener {
         @Override
         public void stateChanged(ChangeEvent e) {
+
             JTabbedPane sourceTabbedPane = (JTabbedPane) e.getSource();
             int index = sourceTabbedPane.getSelectedIndex();
             if (index == 0) {
                 toonKaart();
             }
             if (index == 1) {
-                initBeheerSessie();
+                    initBeheerSessie();
             }
         }
     }
