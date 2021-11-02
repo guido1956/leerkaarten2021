@@ -17,7 +17,6 @@ public class KaartenLeersessieGui extends JPanel {
     private JCheckBox chkRandom, chkNogNiet, chkAutocue;
     private JRadioButton achterkantRadioButton, voorkantRadioButton;
 
-
     public void createGuiLeersessie() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         createFileField();
