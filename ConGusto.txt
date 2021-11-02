@@ -1,4 +1,4 @@
-Bienvenidos:welkom:unidad 00:goed:goed       
+Bienvenidos:welkom:unidad 00:goed:goed
 hola:hallo:unidad 00:goed:neutraal
 buenaos dias:goedendag:unidad 00:goed:neutraal
 el dia:de dag:unidad 00:goed:neutraal
@@ -185,8 +185,8 @@ son las cinco minos diez minutos:het is tien voor vijf:100 klokkijken:neutraal:n
 son las cinco y quarto:het is kwart over vijf:100 klokkijken:neutraal:neutraal
 son las cinco minos quarto:het is kwart voor vijf:100 klokkijken:neutraal:neutraal
 Groeten uit Amsterdam:Groeten uit Zaandam:01 test:neutraal:neutraal
-test:test:test:neutraal:
-test:test:test : : 
-test1:test2:test3 : : 
-test4:test5:test6 : : 
-test7:test8 : : : 
+test:test:test:neutraal:neutraal
+test:test:test:neutraal:neutraal
+test1:test2:test3:neutraal:neutraal
+test4:test5:test6:neutraal:neutraal
+test7:test8::neutraal:neutraal

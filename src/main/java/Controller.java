@@ -333,12 +333,17 @@ public class Controller {
         public void stateChanged(ChangeEvent e) {
 
             JTabbedPane sourceTabbedPane = (JTabbedPane) e.getSource();
+            if (kaarten.getAantal() == 0) {
+                sourceTabbedPane.setSelectedIndex(0);
+            }
             int index = sourceTabbedPane.getSelectedIndex();
-            if (index == 0) {
+
+            if (index == 0 && kaarten.getAantal() != 0) {
                 toonKaart();
             }
             if (index == 1) {
-                    initBeheerSessie();
+                view.setChkAutocue(false);
+                initBeheerSessie();
             }
         }
     }

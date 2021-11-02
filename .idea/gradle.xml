@@ -9,7 +9,7 @@
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/Documents/gradle/gradle-6.4.1" />
-        <option name="gradleJvm" value="15" />
+        <option name="gradleJvm" value="14" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -19,5 +19,6 @@
         </option>
       </GradleProjectSettings>
     </option>
+    <option name="offlineMode" value="true" />
   </component>
 </project>

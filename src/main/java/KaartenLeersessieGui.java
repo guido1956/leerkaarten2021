@@ -1,8 +1,6 @@
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -22,16 +20,31 @@ public class KaartenLeersessieGui extends JPanel {
 
     public void createGuiLeersessie() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
+        createFileField();
+        createStatisticFields();
+        createNavigateFields();
+        createFilterFields();
+        createInfoFields();
+        createModuleFields();
+        createKaartFields();
+        createButtons();
+        createComboBoxFields();
+        createVulling();
+        createRadioButtons();
+        createCheckFields();
+    }
+
+    public void createFileField() {
         JLabel naamFileLabel = new JLabel("naam kaartenbestand: ");
         this.add(naamFileLabel);
-
         naamFileTextField = new JTextField(13);
         naamFileTextField.setBackground(Color.white);
         this.add(naamFileTextField);
+    }
 
+    public void createStatisticFields() {
         JLabel totaalKaartenTextAreaLabel = new JLabel("aantal:  ");
         this.add(totaalKaartenTextAreaLabel);
-
         txtTotaal = new JTextArea("", 1, 4);
         txtTotaal.setBackground(Color.getHSBColor(100, 86, 96));
         txtTotaal.setEditable(false);
@@ -39,7 +52,6 @@ public class KaartenLeersessieGui extends JPanel {
 
         JLabel aantalNeutraalLabel = new JLabel("neutraal:");
         this.add(aantalNeutraalLabel);
-
         txtAantalNeutraal = new JTextArea("", 1, 4);
         txtAantalNeutraal.setBackground(Color.getHSBColor(100, 86, 96));
         txtAantalNeutraal.setEditable(false);
@@ -47,6 +59,7 @@ public class KaartenLeersessieGui extends JPanel {
 
         JLabel aantalGoedLabel = new JLabel("goed:");
         this.add(aantalGoedLabel);
+
         txtAantalGoed = new JTextArea("", 1, 4);
         txtAantalGoed.setBackground(Color.getHSBColor(100, 86, 96));
         txtAantalGoed.setEditable(false);
@@ -54,7 +67,6 @@ public class KaartenLeersessieGui extends JPanel {
 
         JLabel aantalNogNietLabel = new JLabel("nog niet:");
         this.add(aantalNogNietLabel);
-
         txtAantalNogNiet = new JTextArea("", 1, 4);
         txtAantalNogNiet.setBackground(Color.getHSBColor(100, 86, 96));
         txtAantalNogNiet.setEditable(false);
@@ -62,7 +74,9 @@ public class KaartenLeersessieGui extends JPanel {
 
         JLabel lblVanaf = new JLabel("leren vanaf kaartnr:     ");
         this.add(lblVanaf);
+    }
 
+    public void createNavigateFields() {
         naarKaartTextField = new JTextField(5);
         naarKaartTextField.setBackground(Color.white);
         naarKaartTextField.setText("");
@@ -77,27 +91,34 @@ public class KaartenLeersessieGui extends JPanel {
         totKaartTextField.setText("");
         totKaartTextField.setName("totAan");
         this.add(totKaartTextField);
+    }
 
+    public void createFilterFields() {
         JLabel lblInFilter = new JLabel("in filter:");
         this.add(lblInFilter);
-
         txtTotaalinfilter = new JTextField(5);
         txtTotaalinfilter.setBackground(Color.getHSBColor(100, 86, 96));
         txtTotaalinfilter.setText("");
         txtTotaalinfilter.setEditable(false);
         this.add(txtTotaalinfilter);
+    }
 
+    public void createInfoFields() {
         txtInfo = new JTextField(15);
         txtInfo.setBackground(Color.getHSBColor(100, 86, 96));
         txtInfo.setEditable(false);
         this.add(txtInfo);
+    }
 
+    public void createModuleFields() {
         modulesTextField = new JTextField(15);
         modulesTextField.setBackground(Color.getHSBColor(100, 86, 96));
         modulesTextField.setEditable(false);
         modulesTextField.setText("");
         this.add(modulesTextField);
+    }
 
+    public void createKaartFields() {
         txtVraagAntwoord = new JTextArea("", 8, 40);  //voor beamer 63
         JScrollPane scrollPane = new JScrollPane(txtVraagAntwoord);
         txtVraagAntwoord.setLineWrap(true);
@@ -106,7 +127,9 @@ public class KaartenLeersessieGui extends JPanel {
         Font font = new Font("Default", Font.PLAIN, 20);
         txtVraagAntwoord.setFont(font);
         this.add(scrollPane);
+    }
 
+    public void createButtons() {
         btnVolgende = new JButton("volgende kaart");
         btnVolgende.setName("nextCard");
         this.add(btnVolgende);
@@ -126,27 +149,35 @@ public class KaartenLeersessieGui extends JPanel {
         btnReset = new JButton("reset scores");
         btnReset.setName("reset");
         this.add(btnReset);
+    }
 
+    public void createComboBoxFields() {
         modulesCombo = new JComboBox<>();
         this.add(modulesCombo);
+    }
 
+    public void createVulling() {
         JLabel lblVulling = new JLabel("                                ");
         this.add(lblVulling);
+    }
+
+    public void createRadioButtons() {
+        ButtonGroup volgorde = new ButtonGroup();
+        volgorde.add(voorkantRadioButton);
+        volgorde.add(achterkantRadioButton);
+
         voorkantRadioButton = new JRadioButton("start met voorkant");
         voorkantRadioButton.setSelected(true);
         voorkantRadioButton.setName("radioVoorkant");
         this.add(voorkantRadioButton);
 
-
         achterkantRadioButton = new JRadioButton("start met achterkant");
         achterkantRadioButton.setSelected(false);
         achterkantRadioButton.setName("radioAchterkant");
         this.add(achterkantRadioButton);
+    }
 
-        ButtonGroup volgorde = new ButtonGroup();
-        volgorde.add(voorkantRadioButton);
-        volgorde.add(achterkantRadioButton);
-
+    public void createCheckFields() {
         chkRandom = new JCheckBox("random");
         this.add(chkRandom);
         chkRandom.setSelected(false);
@@ -179,9 +210,9 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void showFileName(String name) {
-
         naamFileTextField.setText(name);
     }
+
     public void setButtonTekst(String waarde) {
         btnVolgende.setText(waarde);
     }
@@ -270,6 +301,7 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void showKleur(String kleur) {
+        txtVraagAntwoord.setBackground(Color.getHSBColor(100, 86, 96));
         if (kleur.equals("goed")) {
             txtVraagAntwoord.setBackground(Color.getHSBColor(154, 254, 25));
         }
@@ -279,6 +311,7 @@ public class KaartenLeersessieGui extends JPanel {
         if (kleur.equals("neutraal")) {
             txtVraagAntwoord.setBackground(Color.getHSBColor(100, 86, 96));
         }
+
     }
 
     public boolean getIsRandom() {
