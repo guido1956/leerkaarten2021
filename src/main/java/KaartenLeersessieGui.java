@@ -253,10 +253,6 @@ public class KaartenLeersessieGui extends JPanel {
         txtTotaalinfilter.setText(message);
     }
 
-    public boolean getIsNietGoed() {
-        return false; //@@ aanpassen
-    }
-
     public void showTotEnMet(String waarde) {
         totKaartTextField.setText(waarde);
     }
