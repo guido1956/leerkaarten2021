@@ -127,7 +127,6 @@ public class Controller {
             positie = tijdelijk;
         }
 
-        //state.totEnMetKaart(positie-1);
         state.setTotenmet((positie) - 1);
         state.setRange(true);
         state.bouwFilter();
@@ -223,7 +222,6 @@ public class Controller {
 
     public void reset() {
         kaarten.resetLeeruitslagen(state.getIsVoorkant());
-        // state.setKaarten(kaarten.getKaarten());
         state.bouwFilter();
         toonKaart();
         showStanden();
@@ -299,6 +297,7 @@ public class Controller {
     public void toonBeheerkaart() {
         view.showBeheerFileNaam(kaarten.getFileName());
         view.showKaartnummer(Integer.toString(state.getIndex() + 1));
+
     }
 
     public void nieuweKaart() {
