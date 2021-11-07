@@ -6,13 +6,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
-import static javax.swing.JOptionPane.showMessageDialog;
-
 public class KaartenGui extends JFrame {
 
     private JTabbedPane tabTabs;
     private KaartenBeheerGui beheerview = new KaartenBeheerGui();
     private KaartenLeersessieGui leersessieview = new KaartenLeersessieGui();
+    private KaartenLeersessieGuiSchrijven leersessieschrijven = new KaartenLeersessieGuiSchrijven();
 
     public KaartenGui() {
         initGui();
@@ -27,8 +26,9 @@ public class KaartenGui extends JFrame {
         requestFocusInWindow();
         leersessieview.createGuiLeersessie();
         beheerview.createGuiBeheer();
+        leersessieschrijven.createGuiLeersessie();
         setUpTabs();
-        setTitle("Leren met flashcards -02-11-2021- Guido Dulos  versie 8.2");
+        setTitle("Leren met flashcards -02-11-2021- Guido Dulos  versie 8.4");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         repaint();
@@ -40,7 +40,9 @@ public class KaartenGui extends JFrame {
         Border rand = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         tabTabs.setBorder(rand);
         tabTabs.add("leren",  leersessieview );
+        tabTabs.add("schrijven" , leersessieschrijven);
         tabTabs.add("beheer", beheerview);
+
         tabTabs.setBounds(50, 50, 200, 200);
         this.add(tabTabs);
     }
@@ -97,6 +99,10 @@ public class KaartenGui extends JFrame {
         leersessieview.showTotaalInFilter(message);
     }
 
+    public void schrijfShowTotaalInFilter(String message) {
+        leersessieschrijven.showTotaalInFilter(message);
+    }
+
     public String getGaNaarKaart() {
         return leersessieview.getGaNaarKaart();
     }
@@ -123,6 +129,10 @@ public class KaartenGui extends JFrame {
         leersessieview.showInfo(waarde);
     }
 
+    public void schrijfShowInfo(String waarde) {
+        leersessieschrijven.showInfo(waarde);
+    }
+
     public void herteken() {
         leersessieview.herteken();
     }
@@ -143,6 +153,10 @@ public class KaartenGui extends JFrame {
         leersessieview.showKleur(kleur);
     }
 
+    public void schrijfShowKleur(String kleur) {
+        leersessieschrijven.showKleur(kleur);
+    }
+
     public boolean getIsRandom() {
         return leersessieview.getIsRandom();
     }
@@ -159,9 +173,18 @@ public class KaartenGui extends JFrame {
         leersessieview.showSelectieModule(waarde);
     }
 
+    public void schrijfShowSelectieModule(String waarde) {
+        leersessieschrijven.showSelectieModule(waarde);
+    }
+
     public void showKaartTekst(String waarde) {
         leersessieview.showKaartTekst(waarde);
     }
+
+    public void schrijfShowKaartTekst(String waarde) {
+        leersessieschrijven.showKaartTekst(waarde);
+    }
+
 
     public void buttonHandler(ActionListener actionListener) {
         leersessieview.buttonHandler(actionListener);
@@ -230,6 +253,9 @@ public class KaartenGui extends JFrame {
 
     public String getBeheerKaart() {
         return beheerview.getBeheerKaart();
+    }
+    public void showSchrijvenFileName(String name) {
+        leersessieschrijven.showFileName(name);
     }
 
 

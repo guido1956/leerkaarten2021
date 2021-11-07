@@ -7,15 +7,15 @@ import static javax.swing.JOptionPane.showMessageDialog;
 
 public class KaartenLeersessieGui extends JPanel {
 
-    private JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
-    private JButton btnVolgende, btnVorige, btnGoed, btnNietGoed, btnReset;
-    private JTextField naamFileTextField;
-    private JTextField naarKaartTextField, totKaartTextField;
-    private JTextField txtInfo, txtTotaalinfilter;
-    private JTextField modulesTextField;
-    private JComboBox<String> modulesCombo;
-    private JCheckBox chkRandom, chkNogNiet, chkAutocue;
-    private JRadioButton achterkantRadioButton, voorkantRadioButton;
+    protected JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
+    protected JButton btnVolgende, btnVorige, btnGoed, btnNietGoed, btnReset;
+    protected JTextField naamFileTextField;
+    protected JTextField naarKaartTextField, totKaartTextField;
+    protected JTextField txtInfo, txtTotaalinfilter;
+    protected JTextField modulesTextField;
+    protected JComboBox<String> modulesCombo;
+    protected JCheckBox chkRandom, chkNogNiet, chkAutocue;
+    protected JRadioButton achterkantRadioButton, voorkantRadioButton;
 
     public void createGuiLeersessie() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));

@@ -12,17 +12,19 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class Controller {
 
-    private final KaartenGui view;
-    private final Kaartenbak kaarten;
-    private final LeersessieState state;
-    private Kaart huidigeKaart = new Kaart("", "");
-
+   protected final KaartenGui view;
+   protected final Kaartenbak kaarten;
+   protected final LeersessieState state = new LeersessieState();
+   protected Kaart huidigeKaart = new Kaart("", "");
+   protected ControlSchrijf controlSchrijf;
 
     public Controller(KaartenGui view, Kaartenbak kaarten) {
         this.view = view;
         this.kaarten = kaarten;
-        state = new LeersessieState();
+        initHandlers();
+    }
 
+    public void initHandlers() {
         this.view.buttonHandler(new LeerSessieButtonHandler());
         this.view.textFieldHandler(new FileKaartenBakHandler());
         this.view.gaNaarHandler(new GaNaarHandler());
@@ -35,6 +37,7 @@ public class Controller {
         this.view.isVoorkantHandler(new IsVoorkantHandler());
         this.view.tabHandler((new TabHandler()));
         this.view.beheerButtonHandler(new BeheerButtonHandler());
+        controlSchrijf = new ControlSchrijf(view, kaarten);
     }
 
     public void initNieuweKaarten(String filename) {
@@ -60,7 +63,6 @@ public class Controller {
         showStanden();
         state.bouwFilter();
         toonKaart();
-
     }
 
     public void maakModules() {
@@ -283,16 +285,20 @@ public class Controller {
         toonBeheerkaart();
     }
 
+    public void initSchrijfsessie() {
+        // todo: schrijfsessie
+       String name = kaarten.getFileName();
+       view.showSchrijvenFileName(name);
+       toonSchrijfKaart();
+
+
+
+    }
+
     // methods voor beheerKaarten
     public void toonBeheerkaart() {
         view.showBeheerFileNaam(kaarten.getFileName());
         view.showKaartnummer(Integer.toString(state.getIndex() + 1));
-        String kaartgegevens = huidigeKaart.getVoorkant() + "\n" +
-                huidigeKaart.getAchterkant() + "\n" +
-                huidigeKaart.getModule() + "\n" +
-                huidigeKaart.getGekendVoorkant() + "\n" +
-                huidigeKaart.getGekendAchterkant();
-        view.showKaartgegevens(kaartgegevens);
     }
 
     public void nieuweKaart() {
@@ -328,6 +334,35 @@ public class Controller {
         initBeheerSessie();
     }
 
+    public void toonSchrijfKaart() {
+        view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
+        view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
+        huidigeKaart = kaarten.getKaart(state.getIndex());
+        String kaartTekst;
+        String info;
+        String kaartnummer = Integer.toString(state.getIndex() + 1);
+        if (state.getIsVraag()) {
+            kaartTekst = huidigeKaart.getVoorkant();
+            info = "vraag:";
+
+        } else {
+            kaartTekst = huidigeKaart.getAchterkant();
+            info = " antwoord:";
+
+        }
+
+        if (state.getIsVoorkant()) {
+            view.schrijfShowKleur(huidigeKaart.getGekendVoorkant());
+        } else {
+            view.schrijfShowKleur(huidigeKaart.getGekendAchterkant());
+        }
+
+          view.schrijfShowInfo(info + " " + kaartnummer);
+          view.schrijfShowKaartTekst(kaartTekst);
+          view.schrijfShowSelectieModule(huidigeKaart.getModule());
+          view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+    }
+
     class TabHandler implements ChangeListener {
         @Override
         public void stateChanged(ChangeEvent e) {
@@ -343,8 +378,14 @@ public class Controller {
             }
             if (index == 1) {
                 view.setChkAutocue(false);
+                initSchrijfsessie();
+                toonSchrijfKaart();
+            }
+            if (index == 2) {
+                view.setChkAutocue(false);
                 initBeheerSessie();
             }
+
         }
     }
 
