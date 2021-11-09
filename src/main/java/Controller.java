@@ -183,12 +183,15 @@ public class Controller {
         String buttontekst;
 
 
+
         if (state.getIsVraag()) {
             kaartTekst = huidigeKaart.getVoorkant();
             info = "vraag:";
             buttontekst = "    antwoord      ";
+            kaartTekst = kaartTekst.replaceAll("@@", "\n");
         } else {
             kaartTekst = huidigeKaart.getAchterkant();
+            kaartTekst = kaartTekst.replaceAll("@@", "\n");
             info = " antwoord:";
             buttontekst = "volgende kaart";
         }
@@ -293,12 +296,23 @@ public class Controller {
 
     }
 
-    // methods voor beheerKaarten
-    public void toonBeheerkaart() {
-        view.showBeheerFileNaam(kaarten.getFileName());
-        view.showKaartnummer(Integer.toString(state.getIndex() + 1));
 
-    }
+        // methods voor beheerKaarten
+        public void toonBeheerkaart() {
+            view.showBeheerFileNaam(kaarten.getFileName());
+            view.showKaartnummer(Integer.toString(state.getIndex() + 1));
+            String kaartgegevens = huidigeKaart.getVoorkant() + "\n" +
+                    huidigeKaart.getAchterkant() + "\n" +
+                    huidigeKaart.getModule() + "\n" +
+                    huidigeKaart.getGekendVoorkant() + "\n" +
+                    huidigeKaart.getGekendAchterkant();
+            view.showKaartgegevens(kaartgegevens);
+        }
+
+
+
+
+
 
     public void nieuweKaart() {
         view.beheerMaakLeeg(Integer.toString(kaarten.getAantal() +1));

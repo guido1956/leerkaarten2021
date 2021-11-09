@@ -12,10 +12,10 @@ cómo te llamas?:hoe heet jij?:unidad 00:goed:niet
 soy:ik ben:unidad 00:goed:goed
 adiós:tot ziens:unidad 00:goed:goed
 hasta luego:tot straks:unidad 00:goed:goed
-una candena:een ketting:unidad 00:goed:goed
+una cadena:een ketting:unidad 00:goed:goed 
 buenas noches:goedenavond:unidad 00:goed:goed
 la noche:de nacht:unidad 00:goed:goed
-hasta pronto:tot snel:unidad 00:niet:niet
+hasta pronto:tot snel:unidad 00:goed:niet
 los números:de getallen:unidad 00:goed:niet
 México:Mexico:unidad 00:goed:goed
 es:het is:unidad 00:goed:niet
@@ -184,9 +184,3 @@ son las cinco y diez minutos:het is tien over vijf:100 klokkijken:neutraal:neutr
 son las cinco minos diez minutos:het is tien voor vijf:100 klokkijken:neutraal:neutraal
 son las cinco y quarto:het is kwart over vijf:100 klokkijken:neutraal:neutraal
 son las cinco minos quarto:het is kwart voor vijf:100 klokkijken:neutraal:neutraal
-Groeten uit Amsterdam:Groeten uit Zaandam:01 test:neutraal:neutraal
-test:test:test:neutraal:neutraal
-test:test:test:neutraal:neutraal
-test1:test2:test3:neutraal:neutraal
-test4:test5:test6:neutraal:neutraal
-test7:test8::neutraal:neutraal
