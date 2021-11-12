@@ -12,7 +12,7 @@ cómo te llamas?:hoe heet jij?:unidad 00:goed:niet
 soy:ik ben:unidad 00:goed:goed
 adiós:tot ziens:unidad 00:goed:goed
 hasta luego:tot straks:unidad 00:goed:goed
-una cadena:een ketting:unidad 00:goed:goed 
+una cadena:een ketting:unidad 00:goed:goed
 buenas noches:goedenavond:unidad 00:goed:goed
 la noche:de nacht:unidad 00:goed:goed
 hasta pronto:tot snel:unidad 00:goed:niet

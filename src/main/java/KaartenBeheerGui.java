@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
 public class KaartenBeheerGui extends JPanel{
     private JTextField txtKaartnr;
@@ -76,11 +75,7 @@ public class KaartenBeheerGui extends JPanel{
         txtInvoerKaart.setText("");
     }
 
-    public void buttonBeheerHandler(ActionListener actionListener) {
-        btnNieuw.addActionListener(actionListener);
-        btnVerwijder.addActionListener(actionListener);
-        btnSave.addActionListener(actionListener);
-    }
+
 
 
 }

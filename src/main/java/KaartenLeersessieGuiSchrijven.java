@@ -1,9 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
 
     private JTextArea txtSchrijf;
+    private JButton btnVolgende, btnVorige, btnCheck, btnReset;
+
     public void createGuiLeersessie() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         createFileField();
@@ -19,6 +22,7 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         createVulling();
         createRadioButtons();
         createCheckFields();
+
     }
 
     public void createKaartFields() {
@@ -54,20 +58,31 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
 
     public void createButtons() {
         btnVolgende = new JButton("volgende kaart");
-        btnVolgende.setName("nextCard");
+        btnVolgende.setName("volgende");
         this.add(btnVolgende);
 
-        btnGoed = new JButton("check");
-        btnGoed.setName("check");
-        this.add(btnGoed);
+        btnCheck = new JButton("check");
+        btnCheck.setName("check");
+        this.add(btnCheck);
 
         btnVorige = new JButton("vorige kaart");
-        btnVorige.setName("formerCard");
+        btnVorige.setName("vorige");
         this.add(btnVorige);
 
         btnReset = new JButton("reset scores");
         btnReset.setName("reset");
         this.add(btnReset);
     }
+
+
+
+
+    public void schrijfButtonHandler(ActionListener actionListener) {
+        btnVolgende.addActionListener(actionListener);
+        btnReset.addActionListener(actionListener);
+        btnVorige.addActionListener(actionListener);
+        btnCheck.addActionListener(actionListener);
+    }
+
 
 }
