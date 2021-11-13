@@ -75,14 +75,16 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
     }
 
 
-
-
     public void schrijfButtonHandler(ActionListener actionListener) {
         btnVolgende.addActionListener(actionListener);
         btnReset.addActionListener(actionListener);
         btnVorige.addActionListener(actionListener);
         btnCheck.addActionListener(actionListener);
     }
+
+
+
+
 
 
 }

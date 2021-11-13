@@ -257,6 +257,9 @@ public class KaartenGui extends JFrame {
     public void showSchrijvenFileName(String name) {
         leersessieschrijven.showFileName(name);
     }
+    public void schrijfButtonHandler(ActionListener actionListener) {
+        leersessieschrijven.schrijfButtonHandler(actionListener);
+    }
 
 
 

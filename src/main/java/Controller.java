@@ -37,8 +37,10 @@ public class Controller {
         this.view.isVoorkantHandler(new IsVoorkantHandler());
         this.view.tabHandler((new TabHandler()));
         this.view.beheerButtonHandler(new BeheerButtonHandler());
+        this.view.schrijfButtonHandler(new SchrijfButtonHandler());
         controlSchrijf = new ControlSchrijf(view, kaarten);
-    }
+
+        }
 
     public void initNieuweKaarten(String filename) {
         String tijdelijk = kaarten.getFileName();
@@ -146,7 +148,6 @@ public class Controller {
     public void volgendeKaartContinue() {
 
         new Thread(() -> {
-
             while (view.getIsAutoCue()) {
                 state.volgendeKaart();
                 view.herteken();
@@ -291,9 +292,6 @@ public class Controller {
        String name = kaarten.getFileName();
        view.showSchrijvenFileName(name);
        toonSchrijfKaart();
-
-
-
     }
 
 
@@ -376,6 +374,11 @@ public class Controller {
           view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
     }
 
+    public void checkSchrijven() {
+        System.out.println("TEST checkKaart");
+    }
+
+
     class TabHandler implements ChangeListener {
         @Override
         public void stateChanged(ChangeEvent e) {
@@ -390,6 +393,7 @@ public class Controller {
                 toonKaart();
             }
             if (index == 1) {
+
                 view.setChkAutocue(false);
                 initSchrijfsessie();
                 toonSchrijfKaart();
@@ -546,6 +550,20 @@ public class Controller {
                 case "nieuw" -> nieuweKaart();
                 case "verwijder" -> verwijderKaart();
                 case "save" -> saveKaart();
+            }
+        }
+    }
+
+    class SchrijfButtonHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton) e.getSource();
+            String name = button.getName();
+            switch (name) {
+                case "volgende" -> controlSchrijf.volgendeKaart();
+                case "vorige" -> controlSchrijf.vorigeKaart();
+                case "check" -> controlSchrijf.checkSchrijven();
+                case "reset" -> controlSchrijf.reset();
             }
         }
     }
