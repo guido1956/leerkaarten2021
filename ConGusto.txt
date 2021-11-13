@@ -1,9 +1,9 @@
-Bienvenidos:welkom:unidad 00:neutraal:goed
-hola:hallo:unidad 00:neutraal:neutraal
+Bienvenidos:welkom:unidad 00:goed:goed
+hola:hallo:unidad 00:niet:neutraal
 buenaos dias:goedendag:unidad 00:neutraal:neutraal
 el dia:de dag:unidad 00:neutraal:neutraal
 escusche:luister:unidad 00:neutraal:neutraal
-me llamo...:ik heet...:unidad 00:goed:neutraal
+me llamo...:ik heet...:unidad 00:niet:neutraal
 cómo se llama usted?:hoe heet u?:unidad 00:neutraal:neutraal
 buenas tardes:goedemiddag:unidad 00:neutraal:neutraal
 la tarde:de namiddag, de vooravond:unidad 00:neutraal:neutraal

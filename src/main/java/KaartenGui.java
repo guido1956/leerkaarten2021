@@ -28,7 +28,7 @@ public class KaartenGui extends JFrame {
         beheerview.createGuiBeheer();
         leersessieschrijven.createGuiLeersessie();
         setUpTabs();
-        setTitle("Leren met flashcards -09-11-2021- Guido Dulos  versie 8.5");
+        setTitle("Leren met flashcards -13-11-2021- Guido Dulos  versie 8.6");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         repaint();
@@ -56,6 +56,10 @@ public class KaartenGui extends JFrame {
 
     public void vulModules(ArrayList<String> modules) {
         leersessieview.vulModules(modules);
+    }
+
+    public void vulModulesSchrijf(ArrayList<String> modules) {
+        leersessieschrijven.vulModules(modules);
     }
 
     public void showFileName(String name) {
@@ -95,6 +99,11 @@ public class KaartenGui extends JFrame {
         leersessieview.showGaNaarKaart(waarde);
     }
 
+    public void showGaNaarKaartSchrijf(String waarde) {
+        leersessieschrijven.showGaNaarKaart(waarde);
+    }
+
+
     public void showTotaalInFilter(String message) {
         leersessieview.showTotaalInFilter(message);
     }
@@ -105,6 +114,10 @@ public class KaartenGui extends JFrame {
 
     public String getGaNaarKaart() {
         return leersessieview.getGaNaarKaart();
+    }
+
+    public String getSchrijfTekst() {
+        return leersessieschrijven.getSchrijfTekst();
     }
 
 
@@ -169,6 +182,14 @@ public class KaartenGui extends JFrame {
         leersessieview.setIsAutoCue(check);
     }
 
+    public void setBtnCheck(boolean check) {
+        leersessieschrijven.setBtnCheck(check);
+    }
+
+    public void setSchrijfKaart(String waarde) {
+        leersessieschrijven.setSchrijfKaart(waarde);
+    }
+
     public void showSelectieModule(String waarde) {
         leersessieview.showSelectieModule(waarde);
     }
@@ -182,6 +203,11 @@ public class KaartenGui extends JFrame {
     }
 
     public void schrijfShowKaartTekst(String waarde) {
+        leersessieschrijven.showKaartTekst((waarde));
+    }
+
+
+    public void showKaartTekstSchrijf(String waarde) {
         leersessieschrijven.showKaartTekst(waarde);
     }
 

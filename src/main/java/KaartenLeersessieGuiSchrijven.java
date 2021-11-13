@@ -46,6 +46,28 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         this.add(scrollPane);
     }
 
+    public void showGaNaarKaart(String waarde) {
+        naarKaartTextField.setText(waarde);
+    }
+
+    public void showKaartTekst(String waarde) {
+        txtVraagAntwoord.setText(waarde);
+    }
+
+
+
+    public String getSchrijfTekst() {
+        return txtSchrijf.getText();
+    }
+
+    public void setSchrijfKaart(String waarde) {
+        txtSchrijf.setText(waarde);
+    }
+
+    public void setBtnCheck(boolean waarde) {
+        btnCheck.setEnabled(waarde);
+    }
+
     public void createCheckFields() {
         chkRandom = new JCheckBox("random");
         this.add(chkRandom);

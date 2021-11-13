@@ -10,17 +10,22 @@ import java.util.ArrayList;
 
 import static java.time.temporal.ChronoUnit.SECONDS;
 
+
+// todo 1: Controller alle op goed plaats zetten
+// todo 2: Controller scheiden aanroepen model en view /experiment of alles naar 1 method kan gaan die viewer aanroept
+// todo 3: Controller alleen voor hoofd en verder uitsplitsen naar drie anderen modules
 public class Controller {
 
    protected final KaartenGui view;
    protected final Kaartenbak kaarten;
-   protected final LeersessieState state = new LeersessieState();
+   protected final LeersessieState state;
    protected Kaart huidigeKaart = new Kaart("", "");
    protected ControlSchrijf controlSchrijf;
 
-    public Controller(KaartenGui view, Kaartenbak kaarten) {
+    public Controller(KaartenGui view, Kaartenbak kaarten, LeersessieState state) {
         this.view = view;
         this.kaarten = kaarten;
+        this.state = state;
         initHandlers();
     }
 
@@ -38,33 +43,44 @@ public class Controller {
         this.view.tabHandler((new TabHandler()));
         this.view.beheerButtonHandler(new BeheerButtonHandler());
         this.view.schrijfButtonHandler(new SchrijfButtonHandler());
-        controlSchrijf = new ControlSchrijf(view, kaarten);
+        controlSchrijf = new ControlSchrijf(view, kaarten, state);
+    }
 
-        }
 
-    public void initNieuweKaarten(String filename) {
+    public void verwerkKaartenBestand(String filename) {
         String tijdelijk = kaarten.getFileName();
         kaarten.setFileName(filename);
         String result = loadKaartenbak();
         if (!result.equals("")) {
-            view.showMessageCode(result);
-            kaarten.setFileName(tijdelijk);
-            view.showFileName(tijdelijk);
+            geenInitNieuweKaarten(result, tijdelijk);
             return;
         }
+        initKaarten();
+        state.bouwFilter();
+        toonKaart();
+    }
+
+    public void initKaarten() {
         state.setKaarten(kaarten.getKaarten());
         kaarten.telStanden(state.getIsVoorkant());
         state.init();
+        initSettings();
         maakModules();
+    }
+
+    public void initSettings() {
         view.setChkAutocue(false);
         view.setChkRandom(false);
         view.setChkNogNiet(false);
         view.setVoorkantRadioButton(true);
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde()));
-        showStanden();
-        state.bouwFilter();
-        toonKaart();
+    }
+
+    public void geenInitNieuweKaarten(String result, String tijdelijk) {
+        view.showMessageCode(result);
+        kaarten.setFileName(tijdelijk);
+        view.showFileName(tijdelijk);
     }
 
     public void maakModules() {
@@ -91,7 +107,7 @@ public class Controller {
         view.showAantalNietGoed(Integer.toString(aantalNietGoed));
         view.showAantalNeutraal(Integer.toString(aantalNeutraal));
         view.showAantalTotaal(Integer.toString(kaarten.getAantal()));
-        toonKaart();
+        // toonKaart();
     }
 
     public void moduleAfhandeling(String module, int keuze) {
@@ -142,11 +158,9 @@ public class Controller {
             state.volgendeKaart();
             toonKaart();
         }
-
     }
 
     public void volgendeKaartContinue() {
-
         new Thread(() -> {
             while (view.getIsAutoCue()) {
                 state.volgendeKaart();
@@ -183,8 +197,6 @@ public class Controller {
         String kaartnummer = Integer.toString(state.getIndex() + 1);
         String buttontekst;
 
-
-
         if (state.getIsVraag()) {
             kaartTekst = huidigeKaart.getVoorkant();
             info = "vraag:";
@@ -207,6 +219,7 @@ public class Controller {
         view.showKaartTekst(kaartTekst);
         view.showSelectieModule(huidigeKaart.getModule());
         view.showTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+        showStanden();
     }
 
     public void setKaartGekend() {
@@ -217,7 +230,6 @@ public class Controller {
         }
         kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden(state.getIsVoorkant());
-        showStanden();
         state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
@@ -228,7 +240,6 @@ public class Controller {
         kaarten.resetLeeruitslagen(state.getIsVoorkant());
         state.bouwFilter();
         toonKaart();
-        showStanden();
     }
 
     public void setKaartNietGekend() {
@@ -240,7 +251,6 @@ public class Controller {
         }
         kaarten.setKaart(huidigeKaart, state.getIndex());
         kaarten.telStanden(state.getIsVoorkant());
-        showStanden();
         state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
@@ -262,7 +272,6 @@ public class Controller {
             kaarten.telStanden(state.getIsVoorkant());
             view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
-            showStanden();
             state.bouwFilter();
             view.herteken();
             toonKaart();
@@ -275,7 +284,6 @@ public class Controller {
             kaarten.telStanden(state.getIsVoorkant());
             view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
-            showStanden();
             state.bouwFilter();
             view.herteken();
             toonKaart();
@@ -291,7 +299,7 @@ public class Controller {
         // todo: schrijfsessie
        String name = kaarten.getFileName();
        view.showSchrijvenFileName(name);
-       toonSchrijfKaart();
+       controlSchrijf.toonKaart();
     }
 
 
@@ -307,11 +315,6 @@ public class Controller {
             view.showKaartgegevens(kaartgegevens);
         }
 
-
-
-
-
-
     public void nieuweKaart() {
         view.beheerMaakLeeg(Integer.toString(kaarten.getAantal() +1));
 
@@ -323,7 +326,7 @@ public class Controller {
         maakModules();
         kaarten.telStanden(state.getIsVoorkant());
         state.bouwFilter();
-        showStanden();
+        toonKaart();  //@@ hier stond show standen
         initBeheerSessie();
     }
 
@@ -341,7 +344,7 @@ public class Controller {
         maakModules();
         kaarten.telStanden(state.getIsVoorkant());
         state.bouwFilter();
-        showStanden();
+        toonKaart(); // hier stond show standen
         initBeheerSessie();
     }
 
@@ -378,6 +381,11 @@ public class Controller {
         System.out.println("TEST checkKaart");
     }
 
+    public void volgendeSchrijfKaart() {
+        volgendeKaart();
+        toonSchrijfKaart();
+    }
+
 
     class TabHandler implements ChangeListener {
         @Override
@@ -406,7 +414,6 @@ public class Controller {
         }
     }
 
-
     class LeerSessieButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -415,7 +422,7 @@ public class Controller {
             String name = button.getName();
             // controlLeervorm1.leersessieKaart();
             switch (name) {
-                case "nextCard" -> volgendeKaart();
+                case "nextCard" -> volgendeSchrijfKaart();
                 case "reset" -> reset();
                 case "formerCard" -> vorigeKaart();
                 case "correct" -> setKaartGekend();
@@ -431,7 +438,7 @@ public class Controller {
             saveFile();
             JTextField name = (JTextField) e.getSource();
             String filename = name.getText();
-            initNieuweKaarten(filename);
+            verwerkKaartenBestand(filename);
 
         }
     }
