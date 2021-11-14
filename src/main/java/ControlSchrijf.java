@@ -23,9 +23,15 @@ public class ControlSchrijf {
                 volgendeKaart();
             }
         } else {
-            setKaartNietGekend();
+            if (!schrijf.equals("")) {
+                setKaartNietGekend();
+            }
         }
+
         volgendeKaart();
+        view.hertekenSchrijf();
+        toonKaart();
+
     }
 
     public void setKaartNietGekend() {

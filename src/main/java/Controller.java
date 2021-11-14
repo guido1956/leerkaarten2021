@@ -1,10 +1,7 @@
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
@@ -45,7 +42,7 @@ public class Controller {
         this.view.tabHandler((new TabHandler()));
         this.view.buttonHandlerBeheer(new BeheerButtonHandler());
         this.view.buttonHandlerSchrijf(new SchrijfButtonHandler());
-    //    this.view.enterToetsHandlerSchrijf(new EnterToetsHandlerSchrijf);
+        this.view.enterToetsHandlerSchrijf(new EnterToetsHandlerSchrijf());
         controlSchrijf = new ControlSchrijf(view, kaarten, state);
     }
 
@@ -457,7 +454,7 @@ public class Controller {
 
     public void volgendeSchrijfKaart() {
         volgendeKaart();
-       // toonSchrijfKaart();
+        // toonSchrijfKaart();
         controlSchrijf.toonKaart();
     }
 
@@ -624,79 +621,97 @@ public class Controller {
         }
     }
 
-        class IsVoorkantHandlerSchrijf implements ActionListener {
+    class IsVoorkantHandlerSchrijf implements ActionListener {
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JRadioButton radioButton = (JRadioButton) e.getSource();
-                String name = radioButton.getName();
-                flipVoorkantAchterkantSchrijf(name);
-            }
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JRadioButton radioButton = (JRadioButton) e.getSource();
+            String name = radioButton.getName();
+            flipVoorkantAchterkantSchrijf(name);
+        }
+    }
+
+
+    class WindowsHandler implements WindowListener {
+        @Override
+        public void windowOpened(WindowEvent e) {
         }
 
+        @Override
+        public void windowClosing(WindowEvent e) {
+            saveFile();
 
-
-        class WindowsHandler implements WindowListener {
-            @Override
-            public void windowOpened(WindowEvent e) {
-            }
-
-            @Override
-            public void windowClosing(WindowEvent e) {
-                saveFile();
-
-            }
-
-            @Override
-            public void windowClosed(WindowEvent e) {
-            }
-
-            @Override
-            public void windowIconified(WindowEvent e) {
-            }
-
-            @Override
-            public void windowDeiconified(WindowEvent e) {
-            }
-
-            @Override
-            public void windowActivated(WindowEvent e) {
-            }
-
-            @Override
-            public void windowDeactivated(WindowEvent e) {
-            }
         }
 
-        class BeheerButtonHandler implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                JButton button = (JButton) e.getSource();
-                String name = button.getName();
-                // controlLeervorm1.leersessieKaart();
-                switch (name) {
-                    case "nieuw" -> nieuweKaart();
-                    case "verwijder" -> verwijderKaart();
-                    case "save" -> saveKaart();
-                }
-            }
+        @Override
+        public void windowClosed(WindowEvent e) {
         }
 
-        class SchrijfButtonHandler implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JButton button = (JButton) e.getSource();
-                String name = button.getName();
-                switch (name) {
-                    case "volgende" -> controlSchrijf.volgendeKaart();
-                    case "vorige" -> controlSchrijf.vorigeKaart();
-                    case "check" -> checkSchrijven();
-                    case "reset" -> controlSchrijf.reset();
-                }
+        @Override
+        public void windowIconified(WindowEvent e) {
+        }
+
+        @Override
+        public void windowDeiconified(WindowEvent e) {
+        }
+
+        @Override
+        public void windowActivated(WindowEvent e) {
+        }
+
+        @Override
+        public void windowDeactivated(WindowEvent e) {
+        }
+    }
+
+    class BeheerButtonHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            JButton button = (JButton) e.getSource();
+            String name = button.getName();
+            // controlLeervorm1.leersessieKaart();
+            switch (name) {
+                case "nieuw" -> nieuweKaart();
+                case "verwijder" -> verwijderKaart();
+                case "save" -> saveKaart();
             }
         }
     }
+
+    class SchrijfButtonHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton) e.getSource();
+            String name = button.getName();
+            switch (name) {
+                case "volgende" -> controlSchrijf.volgendeKaart();
+                case "vorige" -> controlSchrijf.vorigeKaart();
+                case "check" -> checkSchrijven();
+                case "reset" -> controlSchrijf.reset();
+            }
+        }
+    }
+
+
+    class EnterToetsHandlerSchrijf implements KeyListener {
+        @Override
+        public void keyTyped(KeyEvent e) {
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_F1) {
+                controlSchrijf.checkSchrijven();
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+
+        }
+    }
+}
 
 
 
