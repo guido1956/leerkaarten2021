@@ -42,7 +42,6 @@ public class Controller {
         this.view.autocueHandler(new AutocueHandler());
         this.view.isVoorkantHandler(new IsVoorkantHandler());
         this.view.isVoorkantHandlerSchrijf(new IsVoorkantHandlerSchrijf());
-        this.view.isVoorkantHandlerSchrijf(new IsVoorkantHandlerSchrijf());
         this.view.tabHandler((new TabHandler()));
         this.view.buttonHandlerBeheer(new BeheerButtonHandler());
         this.view.buttonHandlerSchrijf(new SchrijfButtonHandler());
