@@ -11,9 +11,7 @@ import java.util.ArrayList;
 import static java.time.temporal.ChronoUnit.SECONDS;
 
 
-// todo 1: Controller alle op goed plaats zetten
-// todo 2: Controller scheiden aanroepen model en view /experiment of alles naar 1 method kan gaan die viewer aanroept
-// todo 3: Controller alleen voor hoofd en verder uitsplitsen naar drie anderen modules
+// todo 1 voor schrijfmodule t/m en random inbouwen
 public class Controller {
 
     protected final KaartenGui view;
