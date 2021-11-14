@@ -333,6 +333,34 @@ public class Controller {
 
     }
 
+    public void flipVoorkantAchterkantSchrijf(String name) {
+        if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
+            state.setIsVoorkant(true);
+            state.flipKaarten();
+            state.setKaarten(kaarten.getKaarten());
+            kaarten.telStanden(state.getIsVoorkant());
+            view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
+            view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+            state.bouwFilter();
+            //view.herteken();
+
+            controlSchrijf.toonKaart();
+            return;
+        }
+        if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
+            state.setIsVoorkant(false);
+            state.flipKaarten();
+            state.setKaarten(kaarten.getKaarten());
+            kaarten.telStanden(state.getIsVoorkant());
+            view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
+            view.showTotEnMet(Integer.toString(state.getModuleEinde()));
+            state.bouwFilter();
+            // view.herteken();
+            controlSchrijf.toonKaart();
+        }
+
+    }
+
     public void initBeheerSessie() {
         toonBeheerkaart();
     }
