@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 
 public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
 
@@ -22,6 +23,7 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         createVulling();
         createRadioButtons();
         createCheckFields();
+
     }
 
     public void createKaartFields() {
@@ -103,6 +105,12 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         btnVorige.addActionListener(actionListener);
         btnCheck.addActionListener(actionListener);
     }
+
+    public void enterToetsHandlerSchrijf (KeyAdapter e ) {
+        txtSchrijf.addKeyListener(e);
+    }
+
+
 
     @Override
     public void createRadioButtons() {

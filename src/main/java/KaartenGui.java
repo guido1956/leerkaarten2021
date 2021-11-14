@@ -74,6 +74,10 @@ public class KaartenGui extends JFrame {
         leersessieview.setChkNogNiet(check);
     }
 
+    public void setChkNogNietSchrijf(boolean check) {
+        leersessieschrijven.setChkNogNiet(check);
+    }
+
     public void setChkAutocue(boolean check) {
         leersessieview.setChkAutocue(check);
     }
@@ -90,6 +94,12 @@ public class KaartenGui extends JFrame {
     public void setChkRandom(boolean check) {
         leersessieview.setChkRandom(check);
     }
+
+    public void setChkRandomSchrijf(boolean check) {
+        leersessieschrijven.setChkRandom(check);
+    }
+
+
 
     public void showMessageCode(String code) {
         leersessieview.showMessageCode(code);
@@ -271,9 +281,22 @@ public class KaartenGui extends JFrame {
         leersessieview.randomHandler(actionListener);
     }
 
+    public void randomHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.randomHandler(actionListener);
+    }
+
     public void nogNietHandler(ActionListener actionListener) {
         leersessieview.nogNietHandler(actionListener);
     }
+
+    public void nogNietHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.nogNietHandler(actionListener);
+    }
+
+   // public void enterToetsHandlerSchrijf(KeyAdapter keyAdapter) {
+
+  // }
+
 
     public void autocueHandler(ActionListener actionListener) {
         leersessieview.autocueHandler(actionListener);

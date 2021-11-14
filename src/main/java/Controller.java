@@ -35,14 +35,17 @@ public class Controller {
         this.view.moduleHandler(new ModulesHandler());
         this.view.moduleHandlerSchrijf(new ModulesHandlerSchrijf());
         this.view.randomHandler(new RandomHandler());
+        this.view.randomHandlerSchrijf(new RandomHandlerSchrijf());
         this.view.totenMetHandler(new TotHandler());
         this.view.nogNietHandler(new NogNietHandler());
+        this.view.nogNietHandlerSchrijf(new NogNietHandlerSchrijf());
         this.view.autocueHandler(new AutocueHandler());
         this.view.isVoorkantHandler(new IsVoorkantHandler());
         this.view.isVoorkantHandlerSchrijf(new IsVoorkantHandlerSchrijf());
         this.view.tabHandler((new TabHandler()));
         this.view.buttonHandlerBeheer(new BeheerButtonHandler());
         this.view.buttonHandlerSchrijf(new SchrijfButtonHandler());
+    //    this.view.enterToetsHandlerSchrijf(new EnterToetsHandlerSchrijf);
         controlSchrijf = new ControlSchrijf(view, kaarten, state);
     }
 
@@ -370,6 +373,8 @@ public class Controller {
         // todo: schrijfsessie
         String name = kaarten.getFileName();
         controlSchrijf.maakModules();
+        view.setChkRandomSchrijf(false);
+        //view.setVoorkantRadioButtonSchrijf(true);
         view.showSchrijvenFileName(name);
         controlSchrijf.toonKaart();
     }
@@ -570,6 +575,15 @@ public class Controller {
         }
     }
 
+    class RandomHandlerSchrijf implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
+            state.setIsRandom(checkBox.isSelected());
+        }
+    }
+
     class NogNietHandler implements ActionListener {
 
         @Override
@@ -578,6 +592,17 @@ public class Controller {
             state.setIsnietGoed(checkBox.isSelected());
             state.bouwFilter();
             toonKaart();
+        }
+    }
+
+    class NogNietHandlerSchrijf implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
+            state.setIsnietGoed(checkBox.isSelected());
+            state.bouwFilter();
+            controlSchrijf.toonKaart();
         }
     }
 

@@ -19,6 +19,9 @@ public class ControlSchrijf {
         String schrijf = view.getSchrijfTekst();
         if (vraag.equals(schrijf)) {
             setKaartGekend();
+            if (view.getIsNogNiet()) {
+                volgendeKaart();
+            }
         } else {
             setKaartNietGekend();
         }
