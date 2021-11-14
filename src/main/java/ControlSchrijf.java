@@ -20,7 +20,13 @@ public class ControlSchrijf {
         if (vraag.equals(schrijf)) {
             setKaartGekend();
             if (view.getIsNogNiet()) {
-                volgendeKaart();
+                state.bouwFilter();
+                state.setIsVraag(true);
+                showStandenSchrijf();
+                toonKaart();
+                view.setSchrijfKaart("");
+                return;
+
             }
         } else {
             if (!schrijf.equals("")) {
@@ -30,7 +36,9 @@ public class ControlSchrijf {
 
         volgendeKaart();
         view.hertekenSchrijf();
+        showStandenSchrijf();
         toonKaart();
+        view.setSchrijfKaart("");
 
     }
 
@@ -61,6 +69,28 @@ public class ControlSchrijf {
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
+    }
+
+    public void showStandenSchrijf() {
+        int aantalGoed;
+        int aantalNietGoed;
+        int aantalNeutraal;
+
+        if (state.getIsVoorkant()) {
+            aantalGoed = kaarten.getAantalGoedV();
+            aantalNietGoed = kaarten.getAantalNogNietV();
+            aantalNeutraal = kaarten.getAantalNeutraalV();
+        } else {
+            aantalGoed = kaarten.getAantalGoedA();
+            aantalNietGoed = kaarten.getAantalNogNietA();
+            aantalNeutraal = kaarten.getAantalNeutraalA();
+        }
+
+        view.showAantalGoedSchrijf(Integer.toString(aantalGoed));
+        view.showAantalNietGoedSchrijf(Integer.toString(aantalNietGoed));
+        view.showAantalNeutraalSchrijf(Integer.toString(aantalNeutraal));
+        view.showAantalTotaalSchrijf(Integer.toString(kaarten.getAantal()));
+        // toonKaart();
     }
 
 

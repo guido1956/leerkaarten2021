@@ -110,27 +110,7 @@ public class Controller {
         // toonKaart();
     }
 
-    public void showStandenSchrijf() {
-        int aantalGoed;
-        int aantalNietGoed;
-        int aantalNeutraal;
 
-        if (state.getIsVoorkant()) {
-            aantalGoed = kaarten.getAantalGoedV();
-            aantalNietGoed = kaarten.getAantalNogNietV();
-            aantalNeutraal = kaarten.getAantalNeutraalV();
-        } else {
-            aantalGoed = kaarten.getAantalGoedA();
-            aantalNietGoed = kaarten.getAantalNogNietA();
-            aantalNeutraal = kaarten.getAantalNeutraalA();
-        }
-
-        view.showAantalGoedSchrijf(Integer.toString(aantalGoed));
-        view.showAantalNietGoedSchrijf(Integer.toString(aantalNietGoed));
-        view.showAantalNeutraalSchrijf(Integer.toString(aantalNeutraal));
-        view.showAantalTotaalSchrijf(Integer.toString(kaarten.getAantal()));
-        // toonKaart();
-    }
 
 
     public void moduleAfhandeling(String module, int keuze) {
@@ -343,7 +323,7 @@ public class Controller {
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
             //view.herteken();
-            showStandenSchrijf();
+            controlSchrijf.showStandenSchrijf();
             controlSchrijf.toonKaart();
             return;
         }
@@ -356,7 +336,7 @@ public class Controller {
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
             // view.herteken();
-            showStandenSchrijf();
+            controlSchrijf.showStandenSchrijf();
             controlSchrijf.toonKaart();
         }
 
@@ -424,7 +404,7 @@ public class Controller {
     }
 
     public void toonSchrijfKaart() {
-        showStandenSchrijf();
+        controlSchrijf.showStandenSchrijf();
         view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
         huidigeKaart = kaarten.getKaart(state.getIndex());
@@ -460,7 +440,7 @@ public class Controller {
 
     public void checkSchrijven() {
         controlSchrijf.checkSchrijven();
-        showStandenSchrijf();
+      controlSchrijf.showStandenSchrijf();
     }
 
 
@@ -480,7 +460,7 @@ public class Controller {
             if (index == 1) {
                 view.setChkAutocue(false);
                 initSchrijfsessie();
-                showStandenSchrijf();
+              controlSchrijf.showStandenSchrijf();
                 controlSchrijf.toonKaart();
                 //toonSchrijfKaart();
             }

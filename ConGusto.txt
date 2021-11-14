@@ -1,56 +1,56 @@
-Bienvenidos:welkom:unidad 00:niet:goed
+Bienvenidos:welkom:unidad 00:goed:goed
 hola:hallo:unidad 00:goed:goed
 buenos dias:goedendag:unidad 00:goed:niet
-el dia:de dag:unidad 00:goed:neutraal
+el dia:de dag:unidad 00:goed:goed
 escusche:luister:unidad 00:goed:neutraal
 me llamo...:ik heet...:unidad 00:goed:neutraal
 cómo se llama usted?:hoe heet u?:unidad 00:goed:neutraal
-buenas tardes:goedemiddag:unidad 00:niet:neutraal
-la tarde:de namiddag, de vooravond:unidad 00:niet:neutraal
+buenas tardes:goedemiddag:unidad 00:goed:neutraal
+la tarde:de namiddag, de vooravond:unidad 00:goed:neutraal
 y tú?:en jij?:unidad 00:goed:goed
 cómo te llamas?:hoe heet jij?:unidad 00:goed:niet
-soy:ik ben:unidad 00:neutraal:goed
-adiós:tot ziens:unidad 00:neutraal:goed
-hasta luego:tot straks:unidad 00:neutraal:goed
-una cadena:een ketting:unidad 00:neutraal:goed
-buenas noches:goedenavond:unidad 00:neutraal:goed
-la noche:de nacht:unidad 00:neutraal:goed
-hasta pronto:tot snel:unidad 00:neutraal:niet
-los números:de getallen:unidad 00:neutraal:niet
-México:Mexico:unidad 00:neutraal:goed
-es:het is:unidad 00:neutraal:niet
-la unidad:het hoofdstuk:unidad 00:neutraal:goed
-Colombia:Colombia:unidad 00:neutraal:goed
-son:zij zijn:unidad 00:niet:niet
-la última unidad:het laatste hoofdstuk:unidad 00:neutraal:niet
-Argentina:Argentinie:unidad 00:neutraal:goed
-el viaje al espanol:de reis naar het Spaans:unidad 01:neutraal:niet
-el espanol:het Spaans:unidad 01:neutraal:niet
-el vino:de wijn:unidad 01:neutraal:goed
-el cacao:de cacao:unidad 01:neutraal:goed
-el mate:de maté:unidad 01:neutraal:goed
-las ruinas mayas:de Mayaruines:unidad 01:neutraal:niet
-la fiesta:het feest:unidad 01:neutraal:goed
-el jamón:de ham:unidad 01:neutraal:niet
+soy:ik ben:unidad 00:goed:goed
+adiós:tot ziens:unidad 00:goed:goed
+hasta luego:tot straks:unidad 00:goed:goed
+una cadena:een ketting:unidad 00:goed:niet
+buenas noches:goedenavond:unidad 00:goed:goed
+la noche:de nacht:unidad 00:goed:goed
+hasta pronto:tot snel:unidad 00:goed:goed
+los números:de getallen:unidad 00:goed:niet
+México:Mexico:unidad 00:goed:goed
+es:het is:unidad 00:goed:niet
+la unidad:het hoofdstuk:unidad 00:goed:goed
+Colombia:Colombia:unidad 00:goed:goed
+son:zij zijn:unidad 00:goed:niet
+la última unidad:het laatste hoofdstuk:unidad 00:goed:niet
+Argentina:Argentinie:unidad 00:goed:goed
+el viaje al espanol:de reis naar het Spaans:unidad 01:goed:niet
+el espanol:het Spaans:unidad 01:goed:niet
+el vino:de wijn:unidad 01:goed:goed
+el cacao:de cacao:unidad 01:goed:goed
+el mate:de maté:unidad 01:goed:goed
+las ruinas mayas:de Mayaruines:unidad 01:niet:niet
+la fiesta:het feest:unidad 01:goed:goed
+el jamón:de ham:unidad 01:niet:niet
 las tapas:de tapas:unidad 01:goed:goed
 la guitarra:de gitaar:unidad 01:goed:goed
-la playa:het strand:unidad 01:neutraal:goed
-la música:de muziek:unidad 01:neutraal:goed
-la salsa:de salsa:unidad 01:neutraal:goed
-la paella:de paella:unidad 01:neutraal:goed
-la sangria:de sangria:unidad 01:neutraal:goed
+la playa:het strand:unidad 01:goed:goed
+la música:de muziek:unidad 01:goed:goed
+la salsa:de salsa:unidad 01:goed:goed
+la paella:de paella:unidad 01:goed:goed
+la sangria:de sangria:unidad 01:goed:goed
 el tomate:de tomaat:unidad 01:goed:goed
-los tacos:de taco's:unidad 01:neutraal:niet
-las palabras espanolas:de Spaanse woorden:unidad 01:neutraal:neutraal
-la palabra:het woord:unidad 01:neutraal:neutraal
-un viaje:een reis:unidad 01:neutraal:neutraal
-la persona:de persoon:unidad 01:neutraal:neutraal
-famoso/famosa:beroemd:unidad 01:neutraal:neutraal
-Cómo se llaman las personas?:Hoe heten deze personen?:unidad 01:neutraal:neutraal
-el nombre:de voornaam:unidad 01:neutraal:neutraal
-el apellido:de achternaam:unidad 01:neutraal:neutraal
+los tacos:de taco's:unidad 01:goed:niet
+las palabras espanolas:de Spaanse woorden:unidad 01:goed:neutraal
+la palabra:het woord:unidad 01:niet:neutraal
+un viaje:een reis:unidad 01:goed:neutraal
+la persona:de persoon:unidad 01:goed:neutraal
+famoso/famosa:beroemd:unidad 01:goed:neutraal
+Cómo se llaman las personas?:Hoe heten deze personen?:unidad 01:niet:neutraal
+el nombre:de voornaam:unidad 01:niet:neutraal
+el apellido:de achternaam:unidad 01:goed:neutraal
 mi identidad espanola:mijn Spaanse identiteit:unidad 01:goed:neutraal
-la identidad de sus companeros:de identiteit:unidad 01:neutraal:neutraal
+la identidad de sus companeros:de identiteit:unidad 01:goed:neutraal
 el companero:de medecursist:unidad 01:neutraal:neutraal
 la companera:de medecursiste:unidad 01:neutraal:neutraal
 Cómo se pronuncia:Hoe spreek je dat uit?:unidad 01:neutraal:neutraal
@@ -59,20 +59,20 @@ estos nombres:deze namen:unidad 01:neutraal:niet
 leer:lezen:unidad 01:neutraal:goed
 luego:dan, daarna:unidad 01:neutraal:niet
 complete:vul..aan:unidad 01:neutraal:goed
-las reglas de pronunciación:de uitspraakregels:unidad 01:neutraal:neutraal
-la pronunciación:de uitspraak:unidad 01:neutraal:neutraal
+las reglas de pronunciación:de uitspraakregels:unidad 01:niet:neutraal
+la pronunciación:de uitspraak:unidad 01:goed:neutraal
 Cómo se pronunciation?:Hoe worden ... uitgesproken:unidad 01:neutraal:neutraal
-estas palabras:deze woorden:unidad 01:neutraal:neutraal
+estas palabras:deze woorden:unidad 01:neutraal:niet
 la tortilla:de aardappelomelet:unidad 01:neutraal:neutraal
 la geografia:de geografie:unidad 01:goed:neutraal
 la informatión:de informatie:unidad 01:neutraal:neutraal
 la organización:de organisatie:unidad 01:goed:neutraal
-la universidad:de universiteit:unidad 01:neutraal:neutraal
+la universidad:de universiteit:unidad 01:neutraal:goed
 el teatro:het theater:unidad 01:neutraal:neutraal
 el quiosco:de kiosk:unidad 01:neutraal:neutraal
 el concierto:het concert:unidad 01:neutraal:neutraal
-el hotel:het hotel:unidad 01:goed:neutraal
-el chocolate:de chocolade:unidad 01:neutraal:neutraal
+el hotel:het hotel:unidad 01:goed:goed
+el chocolate:de chocolade:unidad 01:neutraal:goed
 el trabalenguas:de tongbreker:unidad 01:goed:neutraal
 Para qué estudias espanol?:Waarvoor leer jij Spaans?:unidad 01:neutraal:neutraal
 estudiar:leren, studeren:unidad 01:neutraal:neutraal
@@ -80,7 +80,7 @@ marque:kruis aan:unidad 01:neutraal:neutraal
 el motivo:de reden:unidad 01:neutraal:neutraal
 estudio:ik leer, ik studeer:unidad 01:niet:neutraal
 para viajar:om te reizen:unidad 01:niet:neutraal
-a:naar:unidad 01:neutraal:neutraal
+a:naar:unidad 01:neutraal:goed
 Latinoamérica:Latijns-Amerika:unidad 01:goed:neutraal
 trabajar:werken:unidad 01:neutraal:neutraal
 en un hotel:in een hotel:unidad 01:neutraal:neutraal
@@ -89,29 +89,29 @@ Espana:Spanje:unidad 01:goed:neutraal
 comprar:kopen:unidad 01:neutraal:neutraal
 una finca:een perceel, een huis op het platteland:unidad 01:neutraal:neutraal
 visitar:bezoeken:unidad 01:neutraal:neutraal
-escuchar:luisteren:unidad 01:neutraal:neutraal
+escuchar:luisteren:unidad 01:neutraal:niet
 cubano, cubana:Cubaanse:unidad 01:neutraal:neutraal
 pasar las vacaciones:de vakantie doorbrengen:unidad 01:neutraal:neutraal
-hablar:praten spreken:unidad 01:neutraal:neutraal
-con la familia:met de familie:unidad 01:neutraal:neutraal
+hablar:praten spreken:unidad 01:neutraal:goed
+con la familia:met de familie:unidad 01:niet:niet
 de:van:unidad 01:neutraal:neutraal
 mi pareja:mijn partner:unidad 01:neutraal:neutraal
 los colegas espanoles:de Spaanse collega's:unidad 01:neutraal:neutraal
 el colega / la colega:de collega:unidad 01:neutraal:neutraal
 Qué motivos son personales?:Welke redenen zijn privé?:unidad 01:neutraal:neutraal
-personal:persoonlijk, privé:unidad 01:neutraal:neutraal
+personal:persoonlijk, privé:unidad 01:neutraal:niet
 Cuáles profesionales:Welke werkgerelateerd?:unidad 01:neutraal:neutraal
 professional:beroepsmatig:unidad 01:neutraal:neutraal
 el verbo:het werkwoord:unidad 01:neutraal:neutraal
 yo:ik:unidad 01:neutraal:neutraal
 tú:jij:unidad 01:neutraal:neutraal
 él / ella:hij/zij, ze:unidad 01:neutraal:neutraal
-usted:u (enkelvoud):unidad 01:neutraal:neutraal
-nosotros / nosotras:wij:unidad 01:neutraal:neutraal
+usted:u (enkelvoud):unidad 01:neutraal:goed
+nosotros / nosotras:wij:unidad 01:neutraal:niet
 vosotros / vosotras:jullie:unidad 01:neutraal:neutraal
 ellos / ellas:zij, ze:unidad 01:neutraal:neutraal
 ustedes:u (meervoud):unidad 01:neutraal:neutraal
-el inglés:het Engels:unidad 01:neutraal:neutraal
+el inglés:het Engels:unidad 01:neutraal:niet
 clásico/ clásica:klassiek:unidad 01:neutraal:neutraal
 un apartamento:een appartement:unidad 01:neutraal:neutraal
 si:of:unidad 01:neutraal:neutraal
@@ -124,7 +124,7 @@ ahora:nu:unidad 01:neutraal:neutraal
 el resultado:het resultaat:unidad 01:neutraal:neutraal
 la historia:de geschiedenis:unidad 01:goed:neutraal
 una lengua:een taal:unidad 01:neutraal:neutraal
-el texto:de tekst:unidad 01:neutraal:neutraal
+el texto:de tekst:unidad 01:neutraal:niet
 de dónde vienen...?:Waar komen zij vandaan?:unidad 01:niet:neutraal
 el 80% (ochenta por cieto):tachtig procens:unidad 01:neutraal:neutraal
 viene del latin:komt uit het Latijn:unidad 01:neutraal:neutraal
@@ -141,13 +141,13 @@ como:zoals:unidad 01:neutraal:neutraal
 el aceite:de olie:unidad 01:neutraal:neutraal
 el arroz:de rijst:unidad 01:neutraal:neutraal
 la taza:het kopje:unidad 01:neutraal:neutraal
-la naranja:de sinaasappel:unidad 01:neutraal:neutraal
-la jirafa:de giraf:unidad 01:neutraal:neutraal
+la naranja:de sinaasappel:unidad 01:neutraal:niet
+la jirafa:de giraf:unidad 01:neutraal:niet
 el café:de koffie:unidad 01:neutraal:neutraal
 la cifra:het getal:unidad 01:neutraal:neutraal
 o:of:unidad 01:neutraal:neutraal
 el griego:het Grieks:unidad 01:neutraal:neutraal
-la bibliotheca:de bibliotheek:unidad 01:neutraal:neutraal
+la bibliotheca:de bibliotheek:unidad 01:neutraal:niet
 el museo:het museum:unidad 01:neutraal:neutraal
 vienen:ze komen:unidad 01:neutraal:neutraal
 las lenguas indigenas:de inheemse talen::neutraal:neutraal
@@ -155,7 +155,7 @@ indigena:inheems:unidad 01:neutraal:neutraal
 América:Amerika:unidad 01:neutraal:neutraal
 el tabaco:de tabak:unidad 01:neutraal:neutraal
 el maiz:de mais:unidad 01:neutraal:neutraal
-el colibri:de kolibrie:unidad 01:neutraal:neutraal
+el colibri:de kolibrie:unidad 01:goed:neutraal
 el jaguar:de jaguar:unidad 01:neutraal:neutraal
 la barbacoa:de barbecue:unidad 01:neutraal:neutraal
 también:ook:unidad 01:neutraal:neutraal
@@ -166,9 +166,9 @@ el champú:de shampoo:unidad 01:neutraal:neutraal
 el fútbol:het voetbal:unidad 01:neutraal:neutraal
 todas las lenguas:alle talen:unidad 01:neutraal:neutraal
 muchas influencias:veel invloeden:unidad 01:niet:neutraal
-la influencia:de invloed:unidad 01:neutraal:neutraal
+la influencia:de invloed:unidad 01:neutraal:niet
 "Aceite" significa...:"Aceite" betekent...:unidad 01:neutraal:neutraal
-significar:betekenen:unidad 01:neutraal:neutraal
+significar:betekenen:unidad 01:neutraal:niet
 qué significa...?:wat betekent...?:unidad 01:neutraal:neutraal
 si:ja:unidad 01:neutraal:neutraal
 no:nee:unidad 01:neutraal:neutraal
