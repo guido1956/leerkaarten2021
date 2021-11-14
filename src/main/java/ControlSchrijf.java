@@ -22,7 +22,6 @@ public class ControlSchrijf {
         } else {
             setKaartNietGekend();
         }
-
         volgendeKaart();
     }
 
@@ -92,8 +91,8 @@ public class ControlSchrijf {
         view.setButtonTekstSchrijf(buttontekst);
         view.showInfoSchrijf(info + " " + kaartnummer);
         view.showKaartTekstSchrijf(kaartTekst);
-        view.showSelectieModule(huidigeKaart.getModule());
-        view.showTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+        view.schrijfShowSelectieModule(huidigeKaart.getModule());
+        view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
 
     }
 

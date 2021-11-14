@@ -1,6 +1,6 @@
 Bienvenidos:welkom:unidad 00:goed:goed
-hola:hallo:unidad 00:niet:neutraal
-buenaos dias:goedendag:unidad 00:neutraal:neutraal
+hola:hallo:unidad 00:niet:goed
+buenos dias:goedendag:unidad 00:goed:niet
 el dia:de dag:unidad 00:neutraal:neutraal
 escusche:luister:unidad 00:neutraal:neutraal
 me llamo...:ik heet...:unidad 00:niet:neutraal
@@ -184,3 +184,4 @@ son las cinco y diez minutos:het is tien over vijf:100 klokkijken:neutraal:neutr
 son las cinco minos diez minutos:het is tien voor vijf:100 klokkijken:neutraal:neutraal
 son las cinco y quarto:het is kwart over vijf:100 klokkijken:neutraal:neutraal
 son las cinco minos quarto:het is kwart voor vijf:100 klokkijken:neutraal:neutraal
+yo@@tú@@el, ella, usted@@nosotros/-as@@vosotros/-as@@ellos/ellas/ustedes:ik@@jij@@hij@@wij@@jullie@@zij en u:werkwoorden:neutraal:neutraal

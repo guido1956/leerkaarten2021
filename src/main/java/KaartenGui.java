@@ -28,7 +28,7 @@ public class KaartenGui extends JFrame {
         beheerview.createGuiBeheer();
         leersessieschrijven.createGuiLeersessie();
         setUpTabs();
-        setTitle("Leren met flashcards -13-11-2021- Guido Dulos  versie 8.6");
+        setTitle("Leren met flashcards -14-11-2021- Guido Dulos  versie 9");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         repaint();

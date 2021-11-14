@@ -164,7 +164,8 @@ public class Controller {
         state.setTotenmet(state.getModuleEinde());
         view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
-        toonSchrijfKaart();
+        //toonSchrijfKaart();
+        controlSchrijf.toonKaart();
     }
 
     public String loadKaartenbak() {
@@ -315,6 +316,7 @@ public class Controller {
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
             view.herteken();
+            showStanden();
             toonKaart();
             return;
         }
@@ -327,6 +329,7 @@ public class Controller {
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
             view.herteken();
+            showStanden();
             toonKaart();
         }
 
@@ -342,7 +345,7 @@ public class Controller {
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
             //view.herteken();
-
+            showStandenSchrijf();
             controlSchrijf.toonKaart();
             return;
         }
@@ -355,6 +358,7 @@ public class Controller {
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
             // view.herteken();
+            showStandenSchrijf();
             controlSchrijf.toonKaart();
         }
 
@@ -377,6 +381,7 @@ public class Controller {
     public void toonBeheerkaart() {
         view.showBeheerFileNaam(kaarten.getFileName());
         view.showKaartnummer(Integer.toString(state.getIndex() + 1));
+        huidigeKaart = state.getKaarten().get(state.getIndex());    // nagaan wat er in schrijf gebeurt met huidige
         String kaartgegevens = huidigeKaart.getVoorkant() + "\n" +
                 huidigeKaart.getAchterkant() + "\n" +
                 huidigeKaart.getModule() + "\n" +
@@ -420,8 +425,8 @@ public class Controller {
 
     public void toonSchrijfKaart() {
         showStandenSchrijf();
-        view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
+        view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
+        view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
         huidigeKaart = kaarten.getKaart(state.getIndex());
         String kaartTekst;
         String info;
@@ -449,7 +454,8 @@ public class Controller {
 
     public void volgendeSchrijfKaart() {
         volgendeKaart();
-        toonSchrijfKaart();
+       // toonSchrijfKaart();
+        controlSchrijf.toonKaart();
     }
 
     public void checkSchrijven() {
@@ -474,7 +480,9 @@ public class Controller {
             if (index == 1) {
                 view.setChkAutocue(false);
                 initSchrijfsessie();
-                toonSchrijfKaart();
+                showStandenSchrijf();
+                controlSchrijf.toonKaart();
+                //toonSchrijfKaart();
             }
             if (index == 2) {
                 view.setChkAutocue(false);
@@ -599,7 +607,7 @@ public class Controller {
             public void actionPerformed(ActionEvent e) {
                 JRadioButton radioButton = (JRadioButton) e.getSource();
                 String name = radioButton.getName();
-                flipVoorkantAchterkant(name);
+                flipVoorkantAchterkantSchrijf(name);
             }
         }
 
