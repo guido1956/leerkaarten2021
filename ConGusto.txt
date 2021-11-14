@@ -178,8 +178,8 @@ la comida:het eten:unidad 01:neutraal:neutraal
 la bebida:het drankje:unidad 01:neutraal:neutraal
 el edificio:het gebouw:unidad 01:neutraal:neutraal
 el animal:het dier:unidad 01:neutraal:neutraal
-son las deiz en punto:het is 10 uur:100 klokkijken:neutraal:neutraal
-es la dos en punto:het is 1 uur:100 klokkijken:neutraal:neutraal
+son las deiz en punto:het is 10 uur:100 klokkijken:goed:neutraal
+es la dos en punto:het is 2 uur:100 klokkijken:niet:neutraal
 son las cinco y diez minutos:het is tien over vijf:100 klokkijken:neutraal:neutraal
 son las cinco minos diez minutos:het is tien voor vijf:100 klokkijken:neutraal:neutraal
 son las cinco y quarto:het is kwart over vijf:100 klokkijken:neutraal:neutraal

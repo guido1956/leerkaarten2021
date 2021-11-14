@@ -8,7 +8,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class KaartenLeersessieGui extends JPanel {
 
     protected JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
-    protected JButton btnVolgende, btnVorige, btnCheck, btnNietGoed, btnReset;
+    protected JButton  btnVolgende, btnVorige, btnCheck, btnNietGoed, btnReset;
     protected JTextField naamFileTextField;
     protected JTextField naarKaartTextField, totKaartTextField;
     protected JTextField txtInfo, txtTotaalinfilter;

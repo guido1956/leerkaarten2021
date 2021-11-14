@@ -125,6 +125,12 @@ public class KaartenGui extends JFrame {
         leersessieview.showTotEnMet(waarde);
     }
 
+    public void showTotEnMetSchrijf(String waarde) {
+        leersessieschrijven.showTotEnMet(waarde);
+    }
+
+
+
     public String getTotEnMet() {
         return leersessieview.getTotEnMet();
     }
@@ -138,6 +144,10 @@ public class KaartenGui extends JFrame {
         leersessieview.showAantalGoed(waarde);
     }
 
+    public void showAantalGoedSchrijf(String waarde) {
+        leersessieschrijven.showAantalGoed((waarde));
+    }
+
     public void showInfo(String waarde) {
         leersessieview.showInfo(waarde);
     }
@@ -145,6 +155,7 @@ public class KaartenGui extends JFrame {
     public void schrijfShowInfo(String waarde) {
         leersessieschrijven.showInfo(waarde);
     }
+
 
     public void herteken() {
         leersessieview.herteken();
@@ -154,13 +165,28 @@ public class KaartenGui extends JFrame {
         leersessieview.showAantalNeutraal(waarde);
     }
 
+    public void showAantalNeutraalSchrijf(String waarde) {
+        leersessieschrijven.showAantalNeutraal(waarde);
+    }
+
+
+
     public void showAantalNietGoed(String waarde) {
         leersessieview.showAantalNietGoed(waarde);
+    }
+
+    public void showAantalNietGoedSchrijf(String waarde) {
+        leersessieschrijven.showAantalNietGoed(waarde);
     }
 
     public void showAantalTotaal(String waarde) {
         leersessieview.showAantalTotaal(waarde);
     }
+
+    public void showAantalTotaalSchrijf(String waarde) {
+        leersessieschrijven.showAantalTotaal(waarde);
+    }
+
 
     public void showKleur(String kleur) {
         leersessieview.showKleur(kleur);
@@ -202,6 +228,7 @@ public class KaartenGui extends JFrame {
         leersessieview.showKaartTekst(waarde);
     }
 
+
     public void schrijfShowKaartTekst(String waarde) {
         leersessieschrijven.showKaartTekst((waarde));
     }
@@ -216,12 +243,20 @@ public class KaartenGui extends JFrame {
         leersessieview.buttonHandler(actionListener);
     }
 
+    public void setButtonTekstSchrijf(String waarde) {
+        leersessieschrijven.setButtonTekst(waarde);
+    }
+
     public void textFieldHandler(ActionListener actionListener) {
         leersessieview.textFieldHandler(actionListener);
     }
 
     public void moduleHandler(ActionListener actionListener) {
         leersessieview.moduleHandler(actionListener);
+    }
+
+    public void moduleHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.moduleHandler(actionListener);
     }
 
     public void gaNaarHandler(ActionListener actionListener) {
@@ -248,13 +283,18 @@ public class KaartenGui extends JFrame {
         leersessieview.isVoorkantHandler(actionListener);
     }
 
+    public void isVoorkantHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.isVoorkantHandler(actionListener);
+    }
+
+
     public void windowsListener(WindowListener windowListener) {
         this.addWindowListener(windowListener);
     }
 
     //Afhandeling beheerview
 
-    public void beheerButtonHandler(ActionListener actionListener) {
+    public void buttonHandlerBeheer(ActionListener actionListener) {
         beheerview.buttonBeheerHandler(actionListener);
     }
     public void showBeheerFileNaam(String waarde) {
@@ -283,12 +323,14 @@ public class KaartenGui extends JFrame {
     public void showSchrijvenFileName(String name) {
         leersessieschrijven.showFileName(name);
     }
-    public void schrijfButtonHandler(ActionListener actionListener) {
+    public void buttonHandlerSchrijf(ActionListener actionListener) {
         leersessieschrijven.schrijfButtonHandler(actionListener);
     }
 
 
-
+    public void showInfoSchrijf(String waarde) {
+        leersessieschrijven.showInfo(waarde);
+    }
 }
 
 

@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
 
     private JTextArea txtSchrijf;
-    private JButton btnVolgende, btnVorige, btnCheck, btnReset;
+    private JButton btnCheck;
 
     public void createGuiLeersessie() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -22,7 +22,6 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         createVulling();
         createRadioButtons();
         createCheckFields();
-
     }
 
     public void createKaartFields() {
@@ -35,6 +34,7 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         txtVraagAntwoord.setFont(font);
         this.add(scrollPane);
     }
+
 
     public void createSchrijfFields() {
         txtSchrijf = new JTextArea("", 4, 40);  //voor beamer 63
@@ -104,9 +104,8 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         btnCheck.addActionListener(actionListener);
     }
 
-
-
-
-
-
+    @Override
+    public void createRadioButtons() {
+        super.createRadioButtons();
+    }
 }

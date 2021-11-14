@@ -16,11 +16,11 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 // todo 3: Controller alleen voor hoofd en verder uitsplitsen naar drie anderen modules
 public class Controller {
 
-   protected final KaartenGui view;
-   protected final Kaartenbak kaarten;
-   protected final LeersessieState state;
-   protected Kaart huidigeKaart = new Kaart("", "");
-   protected ControlSchrijf controlSchrijf;
+    protected final KaartenGui view;
+    protected final Kaartenbak kaarten;
+    protected final LeersessieState state;
+    protected Kaart huidigeKaart = new Kaart("", "");
+    protected ControlSchrijf controlSchrijf;
 
     public Controller(KaartenGui view, Kaartenbak kaarten, LeersessieState state) {
         this.view = view;
@@ -35,14 +35,16 @@ public class Controller {
         this.view.gaNaarHandler(new GaNaarHandler());
         this.view.windowsListener(new WindowsHandler());
         this.view.moduleHandler(new ModulesHandler());
+        this.view.moduleHandlerSchrijf(new ModulesHandlerSchrijf());
         this.view.randomHandler(new RandomHandler());
         this.view.totenMetHandler(new TotHandler());
         this.view.nogNietHandler(new NogNietHandler());
         this.view.autocueHandler(new AutocueHandler());
         this.view.isVoorkantHandler(new IsVoorkantHandler());
+        this.view.isVoorkantHandlerSchrijf(new IsVoorkantHandlerSchrijf());
         this.view.tabHandler((new TabHandler()));
-        this.view.beheerButtonHandler(new BeheerButtonHandler());
-        this.view.schrijfButtonHandler(new SchrijfButtonHandler());
+        this.view.buttonHandlerBeheer(new BeheerButtonHandler());
+        this.view.buttonHandlerSchrijf(new SchrijfButtonHandler());
         controlSchrijf = new ControlSchrijf(view, kaarten, state);
     }
 
@@ -110,6 +112,29 @@ public class Controller {
         // toonKaart();
     }
 
+    public void showStandenSchrijf() {
+        int aantalGoed;
+        int aantalNietGoed;
+        int aantalNeutraal;
+
+        if (state.getIsVoorkant()) {
+            aantalGoed = kaarten.getAantalGoedV();
+            aantalNietGoed = kaarten.getAantalNogNietV();
+            aantalNeutraal = kaarten.getAantalNeutraalV();
+        } else {
+            aantalGoed = kaarten.getAantalGoedA();
+            aantalNietGoed = kaarten.getAantalNogNietA();
+            aantalNeutraal = kaarten.getAantalNeutraalA();
+        }
+
+        view.showAantalGoedSchrijf(Integer.toString(aantalGoed));
+        view.showAantalNietGoedSchrijf(Integer.toString(aantalNietGoed));
+        view.showAantalNeutraalSchrijf(Integer.toString(aantalNeutraal));
+        view.showAantalTotaalSchrijf(Integer.toString(kaarten.getAantal()));
+        // toonKaart();
+    }
+
+
     public void moduleAfhandeling(String module, int keuze) {
         view.showSelectieModule(module);
         if (keuze == 0) {
@@ -124,6 +149,22 @@ public class Controller {
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
         toonKaart();
+    }
+
+    public void moduleAfhandelingSchrijf(String module, int keuze) {
+        view.showSelectieModule(module);
+        if (keuze == 0) {
+            state.setModule("");
+        } else {
+            state.setModule(module);
+        }
+        state.setTotenmet(kaarten.getAantal());
+        state.setVanaf(0);
+        state.bouwFilter();
+        state.setTotenmet(state.getModuleEinde());
+        view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
+        view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
+        toonSchrijfKaart();
     }
 
     public String loadKaartenbak() {
@@ -297,32 +338,33 @@ public class Controller {
 
     public void initSchrijfsessie() {
         // todo: schrijfsessie
-       String name = kaarten.getFileName();
-       view.showSchrijvenFileName(name);
-       controlSchrijf.toonKaart();
+        String name = kaarten.getFileName();
+        controlSchrijf.maakModules();
+        view.showSchrijvenFileName(name);
+        controlSchrijf.toonKaart();
     }
 
 
-        // methods voor beheerKaarten
-        public void toonBeheerkaart() {
-            view.showBeheerFileNaam(kaarten.getFileName());
-            view.showKaartnummer(Integer.toString(state.getIndex() + 1));
-            String kaartgegevens = huidigeKaart.getVoorkant() + "\n" +
-                    huidigeKaart.getAchterkant() + "\n" +
-                    huidigeKaart.getModule() + "\n" +
-                    huidigeKaart.getGekendVoorkant() + "\n" +
-                    huidigeKaart.getGekendAchterkant();
-            view.showKaartgegevens(kaartgegevens);
-        }
+    // methods voor beheerKaarten
+    public void toonBeheerkaart() {
+        view.showBeheerFileNaam(kaarten.getFileName());
+        view.showKaartnummer(Integer.toString(state.getIndex() + 1));
+        String kaartgegevens = huidigeKaart.getVoorkant() + "\n" +
+                huidigeKaart.getAchterkant() + "\n" +
+                huidigeKaart.getModule() + "\n" +
+                huidigeKaart.getGekendVoorkant() + "\n" +
+                huidigeKaart.getGekendAchterkant();
+        view.showKaartgegevens(kaartgegevens);
+    }
 
     public void nieuweKaart() {
-        view.beheerMaakLeeg(Integer.toString(kaarten.getAantal() +1));
+        view.beheerMaakLeeg(Integer.toString(kaarten.getAantal() + 1));
 
     }
 
     public void verwijderKaart() {
         int kaartnr = Integer.parseInt(view.getBeheerKaartnummer());
-        kaarten.verwijderKaart(kaartnr-1);
+        kaarten.verwijderKaart(kaartnr - 1);
         maakModules();
         kaarten.telStanden(state.getIsVoorkant());
         state.bouwFilter();
@@ -336,8 +378,8 @@ public class Controller {
         kaartgegevens = kaartgegevens + " \n".repeat(5);
         String[] fields = kaartgegevens.split("\n");
         Kaart temp = new Kaart(fields[0], fields[1], fields[2], fields[3], fields[4]);
-        if (kaartnr == state.getIndex() +1) {
-           kaarten.setKaart(temp,state.getIndex());
+        if (kaartnr == state.getIndex() + 1) {
+            kaarten.setKaart(temp, state.getIndex());
         } else {
             kaarten.addKaart(temp);
         }
@@ -349,6 +391,7 @@ public class Controller {
     }
 
     public void toonSchrijfKaart() {
+        showStandenSchrijf();
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
         huidigeKaart = kaarten.getKaart(state.getIndex());
@@ -362,7 +405,6 @@ public class Controller {
         } else {
             kaartTekst = huidigeKaart.getAchterkant();
             info = " antwoord:";
-
         }
 
         if (state.getIsVoorkant()) {
@@ -370,20 +412,21 @@ public class Controller {
         } else {
             view.schrijfShowKleur(huidigeKaart.getGekendAchterkant());
         }
-
-          view.schrijfShowInfo(info + " " + kaartnummer);
-          view.schrijfShowKaartTekst(kaartTekst);
-          view.schrijfShowSelectieModule(huidigeKaart.getModule());
-          view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+        view.schrijfShowInfo(info + " " + kaartnummer);
+        view.schrijfShowKaartTekst(kaartTekst);
+        view.schrijfShowSelectieModule(huidigeKaart.getModule());
+        view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
     }
 
-    public void checkSchrijven() {
-        System.out.println("TEST checkKaart");
-    }
 
     public void volgendeSchrijfKaart() {
         volgendeKaart();
         toonSchrijfKaart();
+    }
+
+    public void checkSchrijven() {
+        controlSchrijf.checkSchrijven();
+        showStandenSchrijf();
     }
 
 
@@ -401,7 +444,6 @@ public class Controller {
                 toonKaart();
             }
             if (index == 1) {
-
                 view.setChkAutocue(false);
                 initSchrijfsessie();
                 toonSchrijfKaart();
@@ -474,6 +516,17 @@ public class Controller {
         }
     }
 
+    class ModulesHandlerSchrijf implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JComboBox modules = (JComboBox) e.getSource();
+            String module = (String) modules.getSelectedItem();
+            int pointer = modules.getSelectedIndex();
+            moduleAfhandelingSchrijf(module, pointer);
+        }
+    }
+
+
     class RandomHandler implements ActionListener {
 
         @Override
@@ -509,71 +562,80 @@ public class Controller {
             JRadioButton radioButton = (JRadioButton) e.getSource();
             String name = radioButton.getName();
             flipVoorkantAchterkant(name);
-
-
         }
     }
 
-    class WindowsHandler implements WindowListener {
-        @Override
-        public void windowOpened(WindowEvent e) {
+        class IsVoorkantHandlerSchrijf implements ActionListener {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JRadioButton radioButton = (JRadioButton) e.getSource();
+                String name = radioButton.getName();
+                flipVoorkantAchterkant(name);
+            }
         }
 
-        @Override
-        public void windowClosing(WindowEvent e) {
-            saveFile();
+        class WindowsHandler implements WindowListener {
+            @Override
+            public void windowOpened(WindowEvent e) {
+            }
 
+            @Override
+            public void windowClosing(WindowEvent e) {
+                saveFile();
+
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+            }
         }
 
-        @Override
-        public void windowClosed(WindowEvent e) {
+        class BeheerButtonHandler implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                JButton button = (JButton) e.getSource();
+                String name = button.getName();
+                // controlLeervorm1.leersessieKaart();
+                switch (name) {
+                    case "nieuw" -> nieuweKaart();
+                    case "verwijder" -> verwijderKaart();
+                    case "save" -> saveKaart();
+                }
+            }
         }
 
-        @Override
-        public void windowIconified(WindowEvent e) {
-        }
-
-        @Override
-        public void windowDeiconified(WindowEvent e) {
-        }
-
-        @Override
-        public void windowActivated(WindowEvent e) {
-        }
-
-        @Override
-        public void windowDeactivated(WindowEvent e) {
-        }
-    }
-
-    class BeheerButtonHandler implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-            JButton button = (JButton) e.getSource();
-            String name = button.getName();
-            // controlLeervorm1.leersessieKaart();
-            switch (name) {
-                case "nieuw" -> nieuweKaart();
-                case "verwijder" -> verwijderKaart();
-                case "save" -> saveKaart();
+        class SchrijfButtonHandler implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton button = (JButton) e.getSource();
+                String name = button.getName();
+                switch (name) {
+                    case "volgende" -> controlSchrijf.volgendeKaart();
+                    case "vorige" -> controlSchrijf.vorigeKaart();
+                    case "check" -> checkSchrijven();
+                    case "reset" -> controlSchrijf.reset();
+                }
             }
         }
     }
 
-    class SchrijfButtonHandler implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            JButton button = (JButton) e.getSource();
-            String name = button.getName();
-            switch (name) {
-                case "volgende" -> controlSchrijf.volgendeKaart();
-                case "vorige" -> controlSchrijf.vorigeKaart();
-                case "check" -> controlSchrijf.checkSchrijven();
-                case "reset" -> controlSchrijf.reset();
-            }
-        }
-    }
-}
 
 
