@@ -162,8 +162,7 @@ public class KaartenLeersessieGui extends JPanel {
 
     public void createRadioButtons() {
         ButtonGroup volgorde = new ButtonGroup();
-        volgorde.add(voorkantRadioButton);
-        volgorde.add(achterkantRadioButton);
+
 
         voorkantRadioButton = new JRadioButton("start met voorkant");
         voorkantRadioButton.setSelected(true);
@@ -174,6 +173,8 @@ public class KaartenLeersessieGui extends JPanel {
         achterkantRadioButton.setSelected(false);
         achterkantRadioButton.setName("radioAchterkant");
         this.add(achterkantRadioButton);
+        volgorde.add(voorkantRadioButton);
+        volgorde.add(achterkantRadioButton);
     }
 
     public void createCheckFields() {
