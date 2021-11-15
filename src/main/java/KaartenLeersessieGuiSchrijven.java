@@ -41,7 +41,6 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         this.add(scrollPane);
     }
 
-
     public void createSchrijfFields() {
         txtSchrijf = new JTextArea("", 4, 40);  //voor beamer 63
         JScrollPane scrollPane = new JScrollPane(txtSchrijf);
@@ -72,6 +71,11 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
 
     public void setBtnCheck(boolean waarde) {
         btnCheck.setEnabled(waarde);
+    }
+
+    public void setVoorkantRadioButton(boolean check) {
+       voorkantRadioButton.setSelected(check);
+       achterkantRadioButton.setSelected(!check);
     }
 
     public void createCheckFields() {
@@ -113,8 +117,6 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
     public void enterToetsHandlerSchrijf (KeyListener e ) {
         txtSchrijf.addKeyListener(e);
     }
-
-
 
     @Override
     public void createRadioButtons() {

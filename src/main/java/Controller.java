@@ -16,6 +16,7 @@ public class Controller {
     protected final LeersessieState state;
     protected Kaart huidigeKaart = new Kaart("", "");
     protected ControlSchrijf controlSchrijf;
+    private int tabkeuze = -1;
 
     public Controller(KaartenGui view, Kaartenbak kaarten, LeersessieState state) {
         this.view = view;
@@ -350,8 +351,8 @@ public class Controller {
         // todo: schrijfsessie
         String name = kaarten.getFileName();
         controlSchrijf.maakModules();
-        view.setChkRandomSchrijf(false);
-        //view.setVoorkantRadioButtonSchrijf(true);
+        view.setChkRandomSchrijf(view.getIsRandom());
+        view.setChkNogNietSchrijf(view.getIsNogNiet());
         view.showSchrijvenFileName(name);
         controlSchrijf.toonKaart();
     }
@@ -455,13 +456,22 @@ public class Controller {
             int index = sourceTabbedPane.getSelectedIndex();
 
             if (index == 0 && kaarten.getAantal() != 0) {
+                if (tabkeuze == 1) {
+                    view.setVoorkantRadioButton(view.getVoorkantRadioButtonSchrijf());
+                }
                 toonKaart();
+
+                tabkeuze = index;
             }
             if (index == 1) {
+                if (tabkeuze == 0) {
+                    view.setVoorkantRadioButtonSchrijf(view.getVoorkantRadioButton());
+                }
                 view.setChkAutocue(false);
                 initSchrijfsessie();
-              controlSchrijf.showStandenSchrijf();
+                controlSchrijf.showStandenSchrijf();
                 controlSchrijf.toonKaart();
+                tabkeuze = index;
                 //toonSchrijfKaart();
             }
             if (index == 2) {

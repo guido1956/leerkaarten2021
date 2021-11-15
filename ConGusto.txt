@@ -1,12 +1,12 @@
 Bienvenidos:welkom:unidad 00:goed:goed
 hola:hallo:unidad 00:goed:goed
 buenos dias:goedendag:unidad 00:goed:niet
-el dia:de dag:unidad 00:goed:goed
-escusche:luister:unidad 00:goed:neutraal
-me llamo...:ik heet...:unidad 00:goed:neutraal
-cómo se llama usted?:hoe heet u?:unidad 00:goed:neutraal
-buenas tardes:goedemiddag:unidad 00:goed:neutraal
-la tarde:de namiddag, de vooravond:unidad 00:goed:neutraal
+el dia:de dag:unidad 00:goed:niet
+escusche:luister:unidad 00:goed:niet
+me llamo...:ik heet...:unidad 00:goed:niet
+cómo se llama usted?:hoe heet u?:unidad 00:goed:niet
+buenas tardes:goedemiddag:unidad 00:goed:niet
+la tarde:de namiddag, de vooravond:unidad 00:goed:niet
 y tú?:en jij?:unidad 00:goed:goed
 cómo te llamas?:hoe heet jij?:unidad 00:goed:niet
 soy:ik ben:unidad 00:goed:goed

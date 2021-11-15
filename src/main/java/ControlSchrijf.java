@@ -33,7 +33,6 @@ public class ControlSchrijf {
                 setKaartNietGekend();
             }
         }
-
         volgendeKaart();
         view.hertekenSchrijf();
         showStandenSchrijf();
@@ -43,7 +42,6 @@ public class ControlSchrijf {
     }
 
     public void setKaartNietGekend() {
-
         if (state.getIsVoorkant()) {
             huidigeKaart.setGekendVoorkant("niet");
         } else {
@@ -90,9 +88,7 @@ public class ControlSchrijf {
         view.showAantalNietGoedSchrijf(Integer.toString(aantalNietGoed));
         view.showAantalNeutraalSchrijf(Integer.toString(aantalNeutraal));
         view.showAantalTotaalSchrijf(Integer.toString(kaarten.getAantal()));
-        // toonKaart();
-    }
-
+     }
 
 
     public void toonKaart() {

@@ -87,6 +87,10 @@ public class KaartenGui extends JFrame {
         leersessieview.setVoorkantRadioButton(check);
     }
 
+    public boolean getVoorkantRadioButton() {
+        return leersessieview.getVoorkantRadioButton();
+    }
+
     public void setAchterkanRadioButton(boolean check) {
         leersessieview.setAchterkanRadioButton(check);
     }
@@ -150,6 +154,13 @@ public class KaartenGui extends JFrame {
         return leersessieview.getIsNogNiet();
     }
 
+    public boolean getVoorkantRadioButtonSchrijf() {
+        return leersessieschrijven.getVoorkantRadioButton();
+    }
+
+    public void setVoorkantRadioButtonSchrijf(boolean check) {
+        leersessieschrijven.setVoorkantRadioButton(check);
+    }
 
     public void showAantalGoed(String waarde) {
         leersessieview.showAantalGoed(waarde);
