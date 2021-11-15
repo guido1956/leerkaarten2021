@@ -16,7 +16,7 @@ public class Controller {
     protected final LeersessieState state;
     protected Kaart huidigeKaart = new Kaart("", "");
     protected ControlSchrijf controlSchrijf;
-    private int tabkeuze = -1;
+    private int tabkeuze = 0;
 
     public Controller(KaartenGui view, Kaartenbak kaarten, LeersessieState state) {
         this.view = view;
@@ -67,6 +67,7 @@ public class Controller {
         state.init();
         initSettings();
         maakModules();
+        tabkeuze = 0;
     }
 
     public void initSettings() {
@@ -351,6 +352,7 @@ public class Controller {
         // todo: schrijfsessie
         String name = kaarten.getFileName();
         controlSchrijf.maakModules();
+        view.setModulesComboSchrijf(view.getModulesCombo());
         view.setChkRandomSchrijf(view.getIsRandom());
         view.setChkNogNietSchrijf(view.getIsNogNiet());
         view.showSchrijvenFileName(name);
@@ -458,6 +460,9 @@ public class Controller {
             if (index == 0 && kaarten.getAantal() != 0) {
                 if (tabkeuze == 1) {
                     view.setVoorkantRadioButton(view.getVoorkantRadioButtonSchrijf());
+                    view.setChkNogNiet(view.getIsNogNietSchrijf());
+                    view.setChkRandom(view.getIsRandomSchrijf());
+                    view.setModulesCombo(view.getModulesComboSchrijf());
                 }
                 toonKaart();
 
@@ -466,6 +471,8 @@ public class Controller {
             if (index == 1) {
                 if (tabkeuze == 0) {
                     view.setVoorkantRadioButtonSchrijf(view.getVoorkantRadioButton());
+                    view.setChkNogNietSchrijf(view.getIsNogNiet());
+                    view.setChkRandomSchrijf(view.getIsRandom());
                 }
                 view.setChkAutocue(false);
                 initSchrijfsessie();

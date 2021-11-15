@@ -79,6 +79,8 @@ public class KaartenGui extends JFrame {
         leersessieschrijven.setChkNogNiet(check);
     }
 
+
+
     public void setChkAutocue(boolean check) {
         leersessieview.setChkAutocue(check);
     }
@@ -154,6 +156,10 @@ public class KaartenGui extends JFrame {
         return leersessieview.getIsNogNiet();
     }
 
+    public boolean getIsNogNietSchrijf() {
+        return leersessieschrijven.getIsNogNiet();
+    }
+
     public boolean getVoorkantRadioButtonSchrijf() {
         return leersessieschrijven.getVoorkantRadioButton();
     }
@@ -226,6 +232,10 @@ public class KaartenGui extends JFrame {
         return leersessieview.getIsRandom();
     }
 
+    public boolean getIsRandomSchrijf() {
+        return leersessieschrijven.getIsRandom();
+    }
+
     public boolean getIsAutoCue() {
         return leersessieview.getIsAutoCue();
     }
@@ -275,6 +285,22 @@ public class KaartenGui extends JFrame {
 
     public void textFieldHandler(ActionListener actionListener) {
         leersessieview.textFieldHandler(actionListener);
+    }
+
+    public int getModulesCombo() {
+        return leersessieview.getModulesCombo();
+    }
+
+    public void setModulesCombo(int index) {
+        leersessieview.setModulesCombo(index);
+    }
+
+    public int getModulesComboSchrijf() {
+        return leersessieschrijven.getModulesCombo();
+    }
+
+    public void setModulesComboSchrijf(int index) {
+        leersessieschrijven.setModulesCombo(index);
     }
 
     public void moduleHandler(ActionListener actionListener) {

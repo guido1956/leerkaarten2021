@@ -278,6 +278,8 @@ public class KaartenLeersessieGui extends JPanel {
         repaint();
     }
 
+
+
     public void herteken() {
         txtVraagAntwoord.update(txtVraagAntwoord.getGraphics());
         txtInfo.update(txtInfo.getGraphics());
@@ -322,6 +324,14 @@ public class KaartenLeersessieGui extends JPanel {
 
     public void setIsAutoCue(boolean check) {
         chkAutocue.setSelected(check);
+    }
+
+   public int getModulesCombo() {
+        return modulesCombo.getSelectedIndex();
+   }
+
+    public void setModulesCombo(int index) {
+        modulesCombo.setSelectedIndex(index);
     }
 
 

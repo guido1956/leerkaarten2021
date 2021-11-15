@@ -60,7 +60,6 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
     }
 
 
-
     public String getSchrijfTekst() {
         return txtSchrijf.getText();
     }
