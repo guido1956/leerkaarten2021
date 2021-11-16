@@ -201,6 +201,11 @@ public class Controller {
         }).start();
     }
 
+    public void flipKaart() {
+        state.switchIsVraag();
+        toonKaart();
+    }
+
 
     public void vorigeKaart() {
         state.vorigeKaart();
@@ -502,6 +507,7 @@ public class Controller {
                 case "formerCard" -> vorigeKaart();
                 case "correct" -> setKaartGekend();
                 case "incorrect" -> setKaartNietGekend();
+                case "flip" -> flipKaart();
             }
         }
     }

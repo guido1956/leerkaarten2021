@@ -8,7 +8,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class KaartenLeersessieGui extends JPanel {
 
     protected JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
-    protected JButton  btnVolgende, btnVorige, btnCheck, btnNietGoed, btnReset;
+    protected JButton  btnVolgende, btnVorige, btnCheck, btnNietGoed, btnReset, btnFlip;
     protected JTextField naamFileTextField;
     protected JTextField naarKaartTextField, totKaartTextField;
     protected JTextField txtInfo, txtTotaalinfilter;
@@ -144,6 +144,10 @@ public class KaartenLeersessieGui extends JPanel {
         btnVorige = new JButton("vorige kaart");
         btnVorige.setName("formerCard");
         this.add(btnVorige);
+
+        btnFlip = new JButton("flip kaart");
+        btnFlip.setName("flip");
+        this.add(btnFlip);
 
         btnReset = new JButton("reset scores");
         btnReset.setName("reset");
@@ -348,6 +352,7 @@ public class KaartenLeersessieGui extends JPanel {
         btnReset.addActionListener(actionListener);
         btnVorige.addActionListener(actionListener);
         btnNietGoed.addActionListener(actionListener);
+        btnFlip.addActionListener((actionListener));
         btnCheck.addActionListener(actionListener);
     }
 
