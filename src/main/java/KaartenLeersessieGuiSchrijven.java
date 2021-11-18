@@ -100,6 +100,10 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         btnVorige.setName("vorige");
         this.add(btnVorige);
 
+        btnFlip = new JButton("flip kaart");
+        btnFlip.setName("flip");
+        this.add(btnFlip);
+
         btnReset = new JButton("reset scores");
         btnReset.setName("reset");
         this.add(btnReset);
@@ -111,6 +115,7 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         btnReset.addActionListener(actionListener);
         btnVorige.addActionListener(actionListener);
         btnCheck.addActionListener(actionListener);
+        btnFlip.addActionListener((actionListener));
     }
 
     public void enterToetsHandlerSchrijf (KeyListener e ) {

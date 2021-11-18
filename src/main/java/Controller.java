@@ -206,6 +206,16 @@ public class Controller {
         toonKaart();
     }
 
+    public void flipKaartSchrijf() {
+        state.switchIsVraag();
+        if (state.getIsVraag()){
+            view.setBtnCheck(true);
+        } else {
+            view.setBtnCheck(false);
+        }
+        toonSchrijfKaart();
+    }
+
 
     public void vorigeKaart() {
         state.vorigeKaart();
@@ -691,6 +701,7 @@ public class Controller {
                 case "volgende" -> controlSchrijf.volgendeKaart();
                 case "vorige" -> controlSchrijf.vorigeKaart();
                 case "check" -> checkSchrijven();
+                case "flip" -> flipKaartSchrijf();
                 case "reset" -> controlSchrijf.reset();
             }
         }
