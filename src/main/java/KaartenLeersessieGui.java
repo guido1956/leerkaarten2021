@@ -14,7 +14,7 @@ public class KaartenLeersessieGui extends JPanel {
     protected JTextField txtInfo, txtTotaalinfilter;
     protected JTextField modulesTextField;
     protected JComboBox<String> modulesCombo;
-    protected JCheckBox chkRandom, chkNogNiet, chkAutocue;
+    protected JCheckBox chkRandom, chkNeutraal,chkGoed, chkNogNiet, chkAutocue;
     protected JRadioButton achterkantRadioButton, voorkantRadioButton;
 
     public void createGuiLeersessie() {
@@ -184,9 +184,17 @@ public class KaartenLeersessieGui extends JPanel {
         this.add(chkRandom);
         chkRandom.setSelected(false);
 
+        chkNeutraal = new JCheckBox("neutraal");
+        this.add(chkNeutraal);
+        chkNeutraal.setSelected(true);
+
+        chkGoed = new JCheckBox("goed");
+        this.add(chkGoed);
+        chkGoed.setSelected(true);
+
         chkNogNiet = new JCheckBox("nog niet");
         this.add(chkNogNiet);
-        chkNogNiet.setSelected(false);
+        chkNogNiet.setSelected(true);
 
         chkAutocue = new JCheckBox("autocue");
         this.add(chkAutocue);
@@ -221,6 +229,14 @@ public class KaartenLeersessieGui extends JPanel {
 
     public void setChkNogNiet(boolean check) {
         chkNogNiet.setSelected(check);
+    }
+
+    public void setChkGoed(boolean check) {
+        chkGoed.setSelected(check);
+    }
+
+    public void setChkNeutraal(boolean check) {
+        chkNeutraal.setSelected(check);
     }
 
     public void setChkAutocue(boolean check) {
@@ -268,6 +284,9 @@ public class KaartenLeersessieGui extends JPanel {
         return chkNogNiet.isSelected();
     }
 
+    public boolean getNeutraal() {
+        return chkNeutraal.isSelected();
+    }
     public void setVoorkantRadioButton(boolean check) {
         voorkantRadioButton.setSelected(check);
         achterkantRadioButton.setSelected(!check);
@@ -378,6 +397,14 @@ public class KaartenLeersessieGui extends JPanel {
 
     public void nogNietHandler(ActionListener actionListener) {
         chkNogNiet.addActionListener(actionListener);
+    }
+
+    public void neutraalHandler(ActionListener actionListener) {
+        chkNeutraal.addActionListener(actionListener);
+    }
+
+    public void goedHandler(ActionListener actionListener) {
+        chkGoed.addActionListener(actionListener);
     }
 
     public void autocueHandler(ActionListener actionListener) {

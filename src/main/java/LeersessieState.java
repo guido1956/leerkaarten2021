@@ -16,6 +16,8 @@ public class LeersessieState {
     private String module;
     private boolean isnietGoed;
     private boolean isRandom;
+    private boolean isNeutraal;
+    private boolean isGoed;
     private boolean noCards = true;
     private ArrayList<Integer> filterKaarten = new ArrayList<>();
     private ArrayList<Kaart> kaarten = new ArrayList<>();
@@ -30,7 +32,9 @@ public class LeersessieState {
         totenmet = kaarten.size() - 1;
         module = "";
         this.isRandom = false;
-        this.isnietGoed = false;
+        this.isnietGoed = true;
+        this.isNeutraal = true;
+        this.isGoed = true;
         this.isVoorkant = true;
         bouwFilter();
     }
@@ -140,14 +144,31 @@ public class LeersessieState {
                 inFilter = false;
             }
             if (isVoorkant) {
-                if (isnietGoed && e.getGekendVoorkant().equals("goed")) {
+                if (!isnietGoed && e.getGekendVoorkant().equals("niet")) {
                     inFilter = false;
                 }
+                if (!isNeutraal && e.getGekendVoorkant().equals("neutraal")) {
+                    inFilter = false;
+                }
+                if (!isGoed && e.getGekendVoorkant().equals("goed")) {
+                    inFilter = false;
+                }
+
+
             }
             else {
-                if (isnietGoed && e.getGekendAchterkant().equals("goed")) {
+                if (!isnietGoed && e.getGekendAchterkant().equals("niet goed")) {
                     inFilter = false;
                 }
+
+                if (!isNeutraal && e.getGekendAchterkant().equals("neutraal")) {
+                    inFilter = false;
+                }
+
+                if (!isGoed && e.getGekendAchterkant().equals("goed")) {
+                    inFilter = false;
+                }
+
             }
 
             if (!module.equals("") && !module.equals(e.getModule())) {
@@ -240,9 +261,18 @@ public class LeersessieState {
         return isnietGoed;
     }
 
-    public void setIsnietGoed(boolean isnietGoed) {
+    public void setIsNietGoed(boolean isnietGoed) {
         this.isnietGoed = isnietGoed;
     }
+
+    public void setNeutraal (boolean isNeutraal) {
+        this.isNeutraal = isNeutraal;
+    }
+
+    public void setGoed (boolean isGoed) {
+        this.isGoed = isGoed;
+    }
+
 
     public ArrayList<Integer> getFilterKaarten() {
         return filterKaarten;

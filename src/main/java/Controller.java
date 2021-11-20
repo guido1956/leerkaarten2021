@@ -36,7 +36,9 @@ public class Controller {
         this.view.randomHandlerSchrijf(new RandomHandlerSchrijf());
         this.view.totenMetHandler(new TotHandler());
         this.view.nogNietHandler(new NogNietHandler());
+        this.view.goedHandler(new GoedHandler());
         this.view.nogNietHandlerSchrijf(new NogNietHandlerSchrijf());
+        this.view.neutraalHandler(new NeutraalHandler());
         this.view.autocueHandler(new AutocueHandler());
         this.view.isVoorkantHandler(new IsVoorkantHandler());
         this.view.isVoorkantHandlerSchrijf(new IsVoorkantHandlerSchrijf());
@@ -46,7 +48,6 @@ public class Controller {
         this.view.enterToetsHandlerSchrijf(new EnterToetsHandlerSchrijf());
         controlSchrijf = new ControlSchrijf(view, kaarten, state);
     }
-
 
     public void verwerkKaartenBestand(String filename) {
         String tijdelijk = kaarten.getFileName();
@@ -73,7 +74,8 @@ public class Controller {
     public void initSettings() {
         view.setChkAutocue(false);
         view.setChkRandom(false);
-        view.setChkNogNiet(false);
+        view.setChkNogNiet(true);
+        view.setChkNeutraal(true);
         view.setVoorkantRadioButton(true);
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde()));
@@ -594,14 +596,37 @@ public class Controller {
         }
     }
 
+    class GoedHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
+            state.setGoed(checkBox.isSelected());
+            state.bouwFilter();
+            toonKaart();
+        }
+    }
+
     class NogNietHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
             JCheckBox checkBox = (JCheckBox) e.getSource();
-            state.setIsnietGoed(checkBox.isSelected());
+            state.setIsNietGoed(checkBox.isSelected());
             state.bouwFilter();
             toonKaart();
+        }
+    }
+
+    class NeutraalHandler implements  ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
+            state.setNeutraal(checkBox.isSelected());
+            state.bouwFilter();
+            toonKaart();
+
         }
     }
 
@@ -610,7 +635,7 @@ public class Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
             JCheckBox checkBox = (JCheckBox) e.getSource();
-            state.setIsnietGoed(checkBox.isSelected());
+            state.setIsNietGoed(checkBox.isSelected());
             state.bouwFilter();
             controlSchrijf.toonKaart();
         }
