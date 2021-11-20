@@ -157,7 +157,7 @@ public class LeersessieState {
 
             }
             else {
-                if (!isnietGoed && e.getGekendAchterkant().equals("niet goed")) {
+                if (!isnietGoed && e.getGekendAchterkant().equals("niet")) {
                     inFilter = false;
                 }
 
