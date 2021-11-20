@@ -87,6 +87,14 @@ public class KaartenGui extends JFrame {
         leersessieschrijven.setChkNogNiet(check);
     }
 
+    public void setChkNeutraalSchrijf(boolean check) {
+        leersessieschrijven.setChkNeutraal(check);
+    }
+
+    public boolean getNeutraalSchrijf() {
+        return leersessieschrijven.getNeutraal();
+    }
+
 
 
     public void setChkAutocue(boolean check) {
@@ -166,6 +174,22 @@ public class KaartenGui extends JFrame {
 
     public boolean getIsNogNietSchrijf() {
         return leersessieschrijven.getIsNogNiet();
+    }
+
+    public boolean getGoedSchrijf() {
+        return leersessieschrijven.getGoed();
+    }
+
+    public void setGoedSchrijf(boolean check) {
+        leersessieschrijven.setChkGoed(check);
+    }
+
+    public boolean getGoed() {
+        return leersessieview.getGoed();
+    }
+
+    public boolean getNeutraal() {
+        return leersessieview.getNeutraal();
     }
 
     public boolean getVoorkantRadioButtonSchrijf() {
@@ -343,8 +367,16 @@ public class KaartenGui extends JFrame {
         leersessieview.neutraalHandler(actionListener);
     }
 
+    public void neutraalHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.neutraalHandler(actionListener);
+    }
+
     public void goedHandler(ActionListener actionListener) {
         leersessieview.goedHandler(actionListener);
+    }
+
+    public void goedHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.goedHandler(actionListener);
     }
 
     public void nogNietHandlerSchrijf(ActionListener actionListener) {

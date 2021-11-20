@@ -82,9 +82,17 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         this.add(chkRandom);
         chkRandom.setSelected(false);
 
+        chkNeutraal = new JCheckBox("neutraal");
+        this.add(chkNeutraal);
+        chkNeutraal.setSelected(true);
+
+        chkGoed = new JCheckBox("goed");
+        this.add(chkGoed);
+        chkGoed.setSelected(true);
+
         chkNogNiet = new JCheckBox("nog niet");
         this.add(chkNogNiet);
-        chkNogNiet.setSelected(false);
+        chkNogNiet.setSelected(true);
     }
 
     public void createButtons() {

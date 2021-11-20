@@ -287,6 +287,11 @@ public class KaartenLeersessieGui extends JPanel {
     public boolean getNeutraal() {
         return chkNeutraal.isSelected();
     }
+
+    public boolean getGoed() {
+        return chkGoed.isSelected();
+    }
+
     public void setVoorkantRadioButton(boolean check) {
         voorkantRadioButton.setSelected(check);
         achterkantRadioButton.setSelected(!check);

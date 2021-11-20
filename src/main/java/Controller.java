@@ -38,7 +38,9 @@ public class Controller {
         this.view.nogNietHandler(new NogNietHandler());
         this.view.goedHandler(new GoedHandler());
         this.view.nogNietHandlerSchrijf(new NogNietHandlerSchrijf());
+        this.view.goedHandlerSchrijf(new GoedHandlerSchrijf() );
         this.view.neutraalHandler(new NeutraalHandler());
+        this.view.neutraalHandlerSchrijf(new NeutraalHandlerSchrijf());
         this.view.autocueHandler(new AutocueHandler());
         this.view.isVoorkantHandler(new IsVoorkantHandler());
         this.view.isVoorkantHandlerSchrijf(new IsVoorkantHandlerSchrijf());
@@ -477,6 +479,8 @@ public class Controller {
             if (index == 0 && kaarten.getAantal() != 0) {
                 if (tabkeuze == 1) {
                     view.setVoorkantRadioButton(view.getVoorkantRadioButtonSchrijf());
+                    view.setChkGoed(view.getGoedSchrijf());
+                    view.setChkNeutraal(view.getNeutraalSchrijf());
                     view.setChkNogNiet(view.getIsNogNietSchrijf());
                     view.setChkRandom(view.getIsRandomSchrijf());
                     view.setModulesCombo(view.getModulesComboSchrijf());
@@ -489,6 +493,8 @@ public class Controller {
                 if (tabkeuze == 0) {
                     view.setVoorkantRadioButtonSchrijf(view.getVoorkantRadioButton());
                     view.setChkNogNietSchrijf(view.getIsNogNiet());
+                    view.setChkNeutraalSchrijf(view.getNeutraal());
+                    view.setGoedSchrijf(view.getGoed());
                     view.setChkRandomSchrijf(view.getIsRandom());
                 }
                 view.setChkAutocue(false);
@@ -636,6 +642,28 @@ public class Controller {
         public void actionPerformed(ActionEvent e) {
             JCheckBox checkBox = (JCheckBox) e.getSource();
             state.setIsNietGoed(checkBox.isSelected());
+            state.bouwFilter();
+            controlSchrijf.toonKaart();
+        }
+    }
+
+    class GoedHandlerSchrijf implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
+            state.setGoed(checkBox.isSelected());
+            state.bouwFilter();
+            controlSchrijf.toonKaart();
+        }
+    }
+
+    class NeutraalHandlerSchrijf implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JCheckBox checkBox = (JCheckBox) e.getSource();
+            state.setNeutraal(checkBox.isSelected());
             state.bouwFilter();
             controlSchrijf.toonKaart();
         }
