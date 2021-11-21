@@ -414,7 +414,7 @@ public class Controller {
         String kaartgegevens = view.getBeheerKaart();
         kaartgegevens = kaartgegevens + " \n".repeat(5);
         String[] fields = kaartgegevens.split("\n");
-        Kaart temp = new Kaart(fields[0], fields[1], fields[2], fields[3], fields[4]);
+        Kaart temp = new Kaart(fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim(), fields[4].trim());
         if (kaartnr == state.getIndex() + 1) {
             kaarten.setKaart(temp, state.getIndex());
         } else {
