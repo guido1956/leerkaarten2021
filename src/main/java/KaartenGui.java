@@ -216,6 +216,9 @@ public class KaartenGui extends JFrame {
         leersessieschrijven.showInfo(waarde);
     }
 
+    public void showVulling(String waarde) {
+        leersessieview.showVulling(waarde);
+    }
 
     public void herteken() {
         leersessieview.herteken();

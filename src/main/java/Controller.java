@@ -92,6 +92,7 @@ public class Controller {
     public void maakModules() {
         ArrayList<String> modules = kaarten.getModules();
         view.vulModules(modules);
+        view.showVulling("");
     }
 
     public void showStanden() {
@@ -228,7 +229,8 @@ public class Controller {
 
     public void toonKaart() {
         if (state.getNoCards()) {
-            view.showMessageCode("EC cardsNotInFilter");
+            view.showKaartTekst("Er voldoet geen enkele kaart aan de selectiecriteria\nWijzig de selectie");
+            return;
         }
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
         view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));

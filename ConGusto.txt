@@ -1,5 +1,5 @@
-Bienvenidos:welkom:unidad 00:niet:neutraal
-hola:hallo:unidad 00:niet:neutraal
+Bienvenidos:welkom:unidad 00:goed:neutraal
+hola:hallo:unidad 00:goed:neutraal
 buenos dias:goedendag:unidad 00:goed:goed
 el dia:de dag:unidad 00:neutraal:niet
 escusche:luister:unidad 00:neutraal:neutraal

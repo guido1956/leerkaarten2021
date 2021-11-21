@@ -16,6 +16,7 @@ public class KaartenLeersessieGui extends JPanel {
     protected JComboBox<String> modulesCombo;
     protected JCheckBox chkRandom, chkNeutraal,chkGoed, chkNogNiet, chkAutocue;
     protected JRadioButton achterkantRadioButton, voorkantRadioButton;
+    protected JLabel lblVulling;
 
     public void createGuiLeersessie() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -159,9 +160,9 @@ public class KaartenLeersessieGui extends JPanel {
         this.add(modulesCombo);
     }
 
-    public void createVulling() {
-        JLabel lblVulling = new JLabel("                                ");
-        this.add(lblVulling);
+       public void createVulling() {
+          lblVulling = new JLabel("                                ");
+          this.add(lblVulling);
     }
 
     public void createRadioButtons() {
@@ -217,6 +218,10 @@ public class KaartenLeersessieGui extends JPanel {
         for (String e : modules) {
             modulesCombo.addItem(e);
         }
+    }
+
+    public void showVulling(String waarde) {
+        lblVulling.setText(waarde);
     }
 
     public void showFileName(String name) {

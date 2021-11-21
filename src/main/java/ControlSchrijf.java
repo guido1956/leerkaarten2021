@@ -93,42 +93,43 @@ public class ControlSchrijf {
 
     public void toonKaart() {
         if (state.getNoCards()) {
-            view.showMessageCode("EC cardsNotInFilter");
-        }
-        view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
-        view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
-        huidigeKaart = kaarten.getKaart(state.getIndex());
-        String kaartTekst;
-        String info;
-        String kaartnummer = Integer.toString(state.getIndex() + 1);
-        String buttontekst;
+            view.showKaartTekstSchrijf("Er voldoet geen enkele kaart aan de selectiecriteria\nWijzig de selectie");
 
-        if (state.getIsVraag()) {
-            view.setBtnCheck(true);
-            kaartTekst = huidigeKaart.getVoorkant();
-            info = "vraag:";
-            buttontekst = "    antwoord      ";
-            kaartTekst = kaartTekst.replaceAll("@@", "\n");
         } else {
-            view.setBtnCheck(false);
-            view.setSchrijfKaart("");
-            kaartTekst = huidigeKaart.getAchterkant();
-            kaartTekst = kaartTekst.replaceAll("@@", "\n");
-            info = " antwoord:";
-            buttontekst = "volgende kaart";
-        }
+            view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
+            view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
+            huidigeKaart = kaarten.getKaart(state.getIndex());
+            String kaartTekst;
+            String info;
+            String kaartnummer = Integer.toString(state.getIndex() + 1);
+            String buttontekst;
 
-        if (state.getIsVoorkant()) {
-            view.schrijfShowKleur(huidigeKaart.getGekendVoorkant());
-        } else {
-            view.schrijfShowKleur(huidigeKaart.getGekendAchterkant());
-        }
-        view.setButtonTekstSchrijf(buttontekst);
-        view.showInfoSchrijf(info + " " + kaartnummer);
-        view.showKaartTekstSchrijf(kaartTekst);
-        view.schrijfShowSelectieModule(huidigeKaart.getModule());
-        view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+            if (state.getIsVraag()) {
+                view.setBtnCheck(true);
+                kaartTekst = huidigeKaart.getVoorkant();
+                info = "vraag:";
+                buttontekst = "    antwoord      ";
+                kaartTekst = kaartTekst.replaceAll("@@", "\n");
+            } else {
+                view.setBtnCheck(false);
+                view.setSchrijfKaart("");
+                kaartTekst = huidigeKaart.getAchterkant();
+                kaartTekst = kaartTekst.replaceAll("@@", "\n");
+                info = " antwoord:";
+                buttontekst = "volgende kaart";
+            }
 
+            if (state.getIsVoorkant()) {
+                view.schrijfShowKleur(huidigeKaart.getGekendVoorkant());
+            } else {
+                view.schrijfShowKleur(huidigeKaart.getGekendAchterkant());
+            }
+            view.setButtonTekstSchrijf(buttontekst);
+            view.showInfoSchrijf(info + " " + kaartnummer);
+            view.showKaartTekstSchrijf(kaartTekst);
+            view.schrijfShowSelectieModule(huidigeKaart.getModule());
+            view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+        }
     }
 
     public void volgendeKaart() {
