@@ -198,7 +198,7 @@ public class Controller {
                 while (wait) {
                     LocalTime time2 = LocalTime.now();
                     int seconds = (int) (time.until(time2, SECONDS));
-                    if (seconds > 4) {
+                    if (seconds > 2) {
                         wait = false;
                     }
                 }
