@@ -66,7 +66,7 @@ public class Controller {
 
     public void initKaarten() {
         state.setKaarten(kaarten.getKaarten());
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant() , state.getLeervorm());
         state.init();
         initSettings();
         maakModules();
@@ -272,7 +272,7 @@ public class Controller {
             huidigeKaart.setGekendAchterkant("goed");
         }
         kaarten.setKaart(huidigeKaart, state.getIndex());
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
         state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
@@ -280,9 +280,14 @@ public class Controller {
     }
 
     public void reset() {
-        kaarten.resetLeeruitslagen(state.getIsVoorkant());
+        kaarten.resetLeeruitslagen(state.getIsVoorkant(), state.getLeervorm());
         state.bouwFilter();
-        toonKaart();
+        if (state.getLeervorm() == 0) {
+            toonKaart();
+        }
+        if (state.getLeervorm() == 1) {
+            toonSchrijfKaart();
+        }
     }
 
     public void setKaartNietGekend() {
@@ -293,7 +298,7 @@ public class Controller {
             huidigeKaart.setGekendAchterkant("niet");
         }
         kaarten.setKaart(huidigeKaart, state.getIndex());
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
         state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
@@ -312,7 +317,7 @@ public class Controller {
             state.setIsVoorkant(true);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
-            kaarten.telStanden(state.getIsVoorkant());
+            kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
             view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
@@ -325,7 +330,7 @@ public class Controller {
             state.setIsVoorkant(false);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
-            kaarten.telStanden(state.getIsVoorkant());
+            kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
             view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
@@ -341,7 +346,7 @@ public class Controller {
             state.setIsVoorkant(true);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
-            kaarten.telStanden(state.getIsVoorkant());
+            kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
             view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
@@ -354,7 +359,7 @@ public class Controller {
             state.setIsVoorkant(false);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
-            kaarten.telStanden(state.getIsVoorkant());
+            kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
             view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMet(Integer.toString(state.getModuleEinde()));
             state.bouwFilter();
@@ -403,7 +408,7 @@ public class Controller {
         int kaartnr = Integer.parseInt(view.getBeheerKaartnummer());
         kaarten.verwijderKaart(kaartnr - 1);
         maakModules();
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
         state.bouwFilter();
         toonKaart();  //@@ hier stond show standen
         initBeheerSessie();
@@ -421,7 +426,7 @@ public class Controller {
             kaarten.addKaart(temp);
         }
         maakModules();
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
         state.bouwFilter();
         toonKaart(); // hier stond show standen
         initBeheerSessie();
@@ -477,6 +482,7 @@ public class Controller {
                 sourceTabbedPane.setSelectedIndex(0);
             }
             int index = sourceTabbedPane.getSelectedIndex();
+            state.setLeervorm(index);
 
             if (index == 0 && kaarten.getAantal() != 0) {
                 if (tabkeuze == 1) {
@@ -490,6 +496,7 @@ public class Controller {
                 toonKaart();
 
                 tabkeuze = index;
+
             }
             if (index == 1) {
                 if (tabkeuze == 0) {
@@ -504,7 +511,7 @@ public class Controller {
                 controlSchrijf.showStandenSchrijf();
                 controlSchrijf.toonKaart();
                 tabkeuze = index;
-                //toonSchrijfKaart();
+
             }
             if (index == 2) {
                 view.setChkAutocue(false);

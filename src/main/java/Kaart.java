@@ -4,6 +4,8 @@ public class Kaart {
     private String module = "";
     private String gekendVoorkant = "neutraal";
     private String gekendAchterkant = "neutraal";
+    private String gekendSchrijfVoorkant = "neutraal";
+    private String gekendSchrijfAchterkant = "neutraal";
 
     public Kaart(String voorkant, String achterkant) {
         this.voorkant = voorkant;
@@ -23,6 +25,17 @@ public class Kaart {
         this.module = module;
         this.gekendVoorkant = gekendVoorkant;
         this.gekendAchterkant = gekendAchterkant;
+    }
+
+    public Kaart(String voorkant, String achterkant, String module, String gekendVoorkant, String gekendAchterkant,
+                 String gekendSchrijfVoorkant, String gekendSchrijfAchterkant) {
+        this.voorkant = voorkant;
+        this.achterkant = achterkant;
+        this.module = module;
+        this.gekendVoorkant = gekendVoorkant;
+        this.gekendAchterkant = gekendAchterkant;
+        this.gekendSchrijfVoorkant = gekendSchrijfVoorkant;
+        this.gekendSchrijfAchterkant = gekendSchrijfAchterkant;
     }
 
     public String getVoorkant() {
@@ -65,14 +78,21 @@ public class Kaart {
         this.gekendAchterkant = gekend;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Kaart{");
-        sb.append("voorkant='").append(voorkant).append('\'');
-        sb.append(", achterkant='").append(achterkant).append('\'');
-        sb.append(", module='").append(module).append('\'');
-        sb.append(", gekend='").append(gekendVoorkant).append('\'');
-        sb.append('}');
-        return sb.toString();
+    public String getGekendSchrijfVoorkant() {
+        return gekendSchrijfVoorkant;
     }
+
+    public void setGekendSchrijfVoorkant(String gekendSchrijfVoorkant) {
+        this.gekendSchrijfVoorkant = gekendSchrijfVoorkant;
+    }
+
+    public String getGekendSchrijfAchterkant() {
+        return gekendSchrijfAchterkant;
+    }
+
+    public void setGekendSchrijfAchterkant(String gekendSchrijfAchterkant) {
+        this.gekendSchrijfAchterkant = gekendSchrijfAchterkant;
+    }
+
+
 }

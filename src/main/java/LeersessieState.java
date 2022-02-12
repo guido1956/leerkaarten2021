@@ -144,18 +144,32 @@ public class LeersessieState {
                 inFilter = false;
             }
             if (isVoorkant) {
-                if (!isnietGoed && e.getGekendVoorkant().equals("niet")) {
-                    inFilter = false;
+                if (leervorm == 0) {
+                    if (!isnietGoed && e.getGekendVoorkant().equals("niet")) {
+                        inFilter = false;
+                    }
+                    if (!isNeutraal && e.getGekendVoorkant().equals("neutraal")) {
+                        inFilter = false;
+                    }
+                    if (!isGoed && e.getGekendVoorkant().equals("goed")) {
+                        inFilter = false;
+
+                    }
                 }
-                if (!isNeutraal && e.getGekendVoorkant().equals("neutraal")) {
-                    inFilter = false;
-                }
-                if (!isGoed && e.getGekendVoorkant().equals("goed")) {
-                    inFilter = false;
-                }
+                if (leervorm == 1) {
+                        if (!isnietGoed && e.getGekendVoorkant().equals("niet")) {
+                            inFilter = false;
+                        }
+                        if (!isNeutraal && e.getGekendVoorkant().equals("neutraal")) {
+                            inFilter = false;
+                        }
+                        if (!isGoed && e.getGekendVoorkant().equals("goed")) {
+                            inFilter = false;
+                        }
+                    }
 
 
-            }
+                }
             else {
                 if (!isnietGoed && e.getGekendAchterkant().equals("niet")) {
                     inFilter = false;

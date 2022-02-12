@@ -13,6 +13,13 @@ public class Kaartenbak {
     private int aantalNogNietA = 0;
     private int aantalNeutraalA = 0;
 
+    private int aantalGoedSV = 0;
+    private int aantalNogNietSV = 0;
+    private int aantalNeutraalSV = 0;
+    private int aantalGoedSA = 0;
+    private int aantalNogNietSA = 0;
+    private int aantalNeutraalSA = 0;
+
     public Kaartenbak(ArrayList<Kaart> kaarten) {
         this.kaarten = kaarten;
      }
@@ -69,9 +76,10 @@ public class Kaartenbak {
         }
     }
 
-    public void telStanden(boolean isVoorkant) {
-        resetTellers(isVoorkant);
+    public void telStanden(boolean isVoorkant, int leersessie) {
+        resetTellers(isVoorkant, leersessie);
         for (Kaart kaart : kaarten) {
+            if (leersessie == 0) {
             if (isVoorkant) {
                 if (kaart.getGekendVoorkant().equals("")) {
                     kaart.setGekendVoorkant("neutraal");
@@ -102,6 +110,52 @@ public class Kaartenbak {
                 }
             }
         }
+            if (leersessie == 1) {
+                if (isVoorkant) {
+                    if (kaart.getGekendVoorkant().equals("")) {
+                        kaart.setGekendVoorkant("neutraal");
+                    }
+                    if (kaart.getGekendVoorkant().equals("neutraal")) {
+                        aantalNeutraalV++;
+                    }
+                    if (kaart.getGekendVoorkant().equals("goed")) {
+                        aantalGoedV++;
+                    }
+                    if (kaart.getGekendVoorkant().equals("niet")) {
+                        aantalNogNietV++;
+                    }
+
+                }
+                if (!isVoorkant) {
+                    if (kaart.getGekendAchterkant().equals("")) {
+                        kaart.setGekendVoorkant("neutraal");
+                    }
+                    if (kaart.getGekendAchterkant().equals("neutraal")) {
+                        aantalNeutraalA++;
+                    }
+                    if (kaart.getGekendAchterkant().equals("goed")) {
+                        aantalGoedA++;
+                    }
+                    if (kaart.getGekendAchterkant().equals("niet")) {
+                        aantalNogNietA++;
+                    }
+                }
+            }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public ArrayList<String> getModules() {
@@ -124,7 +178,7 @@ public class Kaartenbak {
     /**
      * todo: scheiden voorkant / achterkant
      */
-    public void resetLeeruitslagen(boolean isVoorkant) {
+    public void resetLeeruitslagen(boolean isVoorkant, int leersessie) {
         for (int x = 0; x < kaarten.size(); x++) {
             if (isVoorkant) {
                 kaarten.get(x).setGekendVoorkant("neutraal");
@@ -132,24 +186,42 @@ public class Kaartenbak {
                 kaarten.get(x).setGekendAchterkant("neutraal");
             }
         }
-        telStanden(isVoorkant);
+        telStanden(isVoorkant, leersessie);
     }
 
     /**
      * todo: scheiden voorkant / achterkant
      */
-    public void resetTellers(boolean isVoorkant) {
+    public void resetTellers(boolean isVoorkant, int leersessie) {
 
-        if (isVoorkant) {
-            aantalGoedV = 0;
-            aantalNeutraalV = 0;
-            aantalNogNietV = 0;
-            return;
+        if (leersessie == 0) {
+            if (isVoorkant) {
+                aantalGoedV = 0;
+                aantalNeutraalV = 0;
+                aantalNogNietV = 0;
+
+            } else {
+
+                aantalGoedA = 0;
+                aantalNeutraalA = 0;
+                aantalNogNietA = 0;
+            }
         }
 
-        aantalGoedA = 0;
-        aantalNeutraalA = 0;
-        aantalNogNietA = 0;
+        if (leersessie == 1) {
+            if (isVoorkant) {
+                aantalGoedSV = 0;
+                aantalNeutraalSV = 0;
+                aantalNogNietSV = 0;
+
+            } else {
+
+                aantalGoedSA = 0;
+                aantalNeutraalSA = 0;
+                aantalNogNietSA = 0;
+            }
+        }
+
     }
 
     public Kaart getKaart(int index) {
