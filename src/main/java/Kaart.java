@@ -94,5 +94,17 @@ public class Kaart {
         this.gekendSchrijfAchterkant = gekendSchrijfAchterkant;
     }
 
-
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Kaart{");
+        sb.append("voorkant='").append(voorkant).append('\'');
+        sb.append(", achterkant='").append(achterkant).append('\'');
+        sb.append(", module='").append(module).append('\'');
+        sb.append(", gekendVoorkant='").append(gekendVoorkant).append('\'');
+        sb.append(", gekendAchterkant='").append(gekendAchterkant).append('\'');
+        sb.append(", gekendSchrijfVoorkant='").append(gekendSchrijfVoorkant).append('\'');
+        sb.append(", gekendSchrijfAchterkant='").append(gekendSchrijfAchterkant).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

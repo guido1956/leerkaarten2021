@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class LeersessieState {
-    private int leervorm = 1;
+    private int leervorm = 0;
     private int vanaf;
     private int totenmet;
     private int index;
@@ -157,30 +157,45 @@ public class LeersessieState {
                     }
                 }
                 if (leervorm == 1) {
-                        if (!isnietGoed && e.getGekendVoorkant().equals("niet")) {
+                        if (!isnietGoed && e.getGekendSchrijfVoorkant().equals("niet")) {
                             inFilter = false;
                         }
-                        if (!isNeutraal && e.getGekendVoorkant().equals("neutraal")) {
+                        if (!isNeutraal && e.getGekendSchrijfVoorkant().equals("neutraal")) {
                             inFilter = false;
                         }
-                        if (!isGoed && e.getGekendVoorkant().equals("goed")) {
+                        if (!isGoed && e.getGekendSchrijfVoorkant().equals("goed")) {
                             inFilter = false;
                         }
                     }
-
-
-                }
-            else {
-                if (!isnietGoed && e.getGekendAchterkant().equals("niet")) {
-                    inFilter = false;
                 }
 
-                if (!isNeutraal && e.getGekendAchterkant().equals("neutraal")) {
-                    inFilter = false;
+                if (!isVoorkant) {
+                if (leervorm == 0) {
+                    if (!isnietGoed && e.getGekendAchterkant().equals("niet")) {
+                        inFilter = false;
+                    }
+
+                    if (!isNeutraal && e.getGekendAchterkant().equals("neutraal")) {
+                        inFilter = false;
+                    }
+
+                    if (!isGoed && e.getGekendAchterkant().equals("goed")) {
+                        inFilter = false;
+                    }
                 }
 
-                if (!isGoed && e.getGekendAchterkant().equals("goed")) {
-                    inFilter = false;
+                if (leervorm == 1) {
+                    if (!isnietGoed && e.getGekendSchrijfAchterkant().equals("niet")) {
+                        inFilter = false;
+                    }
+
+                    if (!isNeutraal && e.getGekendSchrijfAchterkant().equals("neutraal")) {
+                        inFilter = false;
+                    }
+
+                    if (!isGoed && e.getGekendSchrijfAchterkant().equals("goed")) {
+                        inFilter = false;
+                    }
                 }
 
             }

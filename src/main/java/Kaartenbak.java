@@ -49,6 +49,7 @@ public class Kaartenbak {
         }
 
         kaarten = temporaly;
+        System.out.println(kaarten.get(0));
         return "";
     }
 
@@ -108,53 +109,45 @@ public class Kaartenbak {
                 if (kaart.getGekendAchterkant().equals("niet")) {
                     aantalNogNietA++;
                 }
+
+
             }
         }
             if (leersessie == 1) {
                 if (isVoorkant) {
-                    if (kaart.getGekendVoorkant().equals("")) {
-                        kaart.setGekendVoorkant("neutraal");
+                    if (kaart.getGekendSchrijfVoorkant().equals("")) {
+                        kaart.setGekendSchrijfVoorkant("neutraal");
                     }
-                    if (kaart.getGekendVoorkant().equals("neutraal")) {
-                        aantalNeutraalV++;
+                    if (kaart.getGekendSchrijfVoorkant().equals("neutraal")) {
+                        aantalNeutraalSV++;
                     }
-                    if (kaart.getGekendVoorkant().equals("goed")) {
-                        aantalGoedV++;
+                    if (kaart.getGekendSchrijfVoorkant().equals("goed")) {
+                        aantalGoedSV++;
                     }
-                    if (kaart.getGekendVoorkant().equals("niet")) {
-                        aantalNogNietV++;
+                    if (kaart.getGekendSchrijfVoorkant().equals("niet")) {
+                        aantalNogNietSV++;
                     }
 
                 }
                 if (!isVoorkant) {
-                    if (kaart.getGekendAchterkant().equals("")) {
-                        kaart.setGekendVoorkant("neutraal");
+                    if (kaart.getGekendSchrijfAchterkant().equals("")) {
+                        kaart.setGekendAchterkant("neutraal");
                     }
-                    if (kaart.getGekendAchterkant().equals("neutraal")) {
-                        aantalNeutraalA++;
+                    if (kaart.getGekendSchrijfAchterkant().equals("neutraal")) {
+                        aantalNeutraalSA++;
                     }
-                    if (kaart.getGekendAchterkant().equals("goed")) {
-                        aantalGoedA++;
+                    if (kaart.getGekendSchrijfAchterkant().equals("goed")) {
+                        aantalGoedSA++;
                     }
-                    if (kaart.getGekendAchterkant().equals("niet")) {
-                        aantalNogNietA++;
+                    if (kaart.getGekendSchrijfAchterkant().equals("niet")) {
+                        aantalNogNietSA++;
                     }
                 }
+
+
             }
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 
@@ -178,13 +171,33 @@ public class Kaartenbak {
     /**
      * todo: scheiden voorkant / achterkant
      */
-    public void resetLeeruitslagen(boolean isVoorkant, int leersessie) {
-        for (int x = 0; x < kaarten.size(); x++) {
-            if (isVoorkant) {
-                kaarten.get(x).setGekendVoorkant("neutraal");
-            } else {
-                kaarten.get(x).setGekendAchterkant("neutraal");
+    public void resetLeeruitslagen(boolean isVoorkant, int leersessie, String module) {
+        if (leersessie == 0) {
+            for (Kaart kaart : kaarten) {
+                if (isVoorkant) {
+                    if (module.equals(kaart.getModule()) || module.equals("")) {
+                        kaart.setGekendVoorkant("neutraal");
+                    }
+                } else {
+                    if (module.equals(kaart.getModule()) || module.equals("")) {
+                        kaart.setGekendAchterkant("neutraal");
+                    }
+                }
             }
+        }
+        if (leersessie == 1) {
+            for (Kaart kaart : kaarten) {
+                if (isVoorkant) {
+                    if (module.equals(kaart.getModule()) || module.equals("")) {
+                        kaart.setGekendSchrijfVoorkant("neutraal");
+                    }
+                } else {
+                    if (module.equals(kaart.getModule()) || module.equals("")) {
+                        kaart.setGekendSchrijfAchterkant("neutraal");
+                    }
+                }
+            }
+
         }
         telStanden(isVoorkant, leersessie);
     }
@@ -196,12 +209,11 @@ public class Kaartenbak {
 
         if (leersessie == 0) {
             if (isVoorkant) {
-                aantalGoedV = 0;
+               aantalGoedV = 0;
                 aantalNeutraalV = 0;
                 aantalNogNietV = 0;
 
             } else {
-
                 aantalGoedA = 0;
                 aantalNeutraalA = 0;
                 aantalNogNietA = 0;
@@ -215,13 +227,11 @@ public class Kaartenbak {
                 aantalNogNietSV = 0;
 
             } else {
-
                 aantalGoedSA = 0;
                 aantalNeutraalSA = 0;
                 aantalNogNietSA = 0;
             }
         }
-
     }
 
     public Kaart getKaart(int index) {
@@ -276,6 +286,12 @@ public class Kaartenbak {
                     if (lengte >= 5) {
                         kaart.setGekendAchterkant(fields[4]);
                     }
+                    if (lengte >= 6) {
+                        kaart.setGekendSchrijfVoorkant(fields[5]);
+                    }
+                    if (lengte >= 7) {
+                        kaart.setGekendSchrijfAchterkant(fields[6]);
+                    }
                     temporaly.add(kaart);
                 } else {
                     isKaart = false;
@@ -295,7 +311,8 @@ public class Kaartenbak {
             BufferedWriter outfile = createBestand();
             for (Kaart e : kaarten) {
                 String a = e.getVoorkant() + ":" + e.getAchterkant() + ":" + e.getModule() + ":" +
-                        e.getGekendVoorkant() + ":" + e.getGekendAchterkant() + "\n";
+                        e.getGekendVoorkant() + ":" + e.getGekendAchterkant() +
+                        ":" + e.getGekendSchrijfVoorkant() + ":" + e.getGekendSchrijfAchterkant() + "\n";
                 assert outfile != null;
                 outfile.write(a);
             }
@@ -355,6 +372,28 @@ public class Kaartenbak {
 
     public void setAantalNeutraalA(int aantalNeutraalA) {
         this.aantalNeutraalA = aantalNeutraalA;
+    }
+
+    public int getAantalNeutraalSV() {
+        return aantalNeutraalSV;
+    }
+
+    public int getAantalGoedSV() {
+        return aantalGoedSV;
+    }
+    public int getAantalNogNietSV() {
+        return aantalNogNietSV;
+    }
+
+    public int getAantalNeutraalSA() {
+        return aantalNeutraalSA;
+    }
+
+    public int getAantalGoedSA() {
+        return aantalGoedSA;
+    }
+    public int getAantalNogNietSA() {
+        return aantalNogNietSA;
     }
 
 

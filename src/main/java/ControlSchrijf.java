@@ -43,12 +43,12 @@ public class ControlSchrijf {
 
     public void setKaartNietGekend() {
         if (state.getIsVoorkant()) {
-            huidigeKaart.setGekendVoorkant("niet");
+            huidigeKaart.setGekendSchrijfVoorkant("niet");
         } else {
-            huidigeKaart.setGekendAchterkant("niet");
+            huidigeKaart.setGekendSchrijfAchterkant("niet");
         }
         kaarten.setKaart(huidigeKaart, state.getIndex());
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant() , state.getLeervorm());
         state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
@@ -57,12 +57,12 @@ public class ControlSchrijf {
 
     public void setKaartGekend() {
         if (state.getIsVoorkant()) {
-            huidigeKaart.setGekendVoorkant("goed");
+            huidigeKaart.setGekendSchrijfVoorkant("goed");
         } else {
-            huidigeKaart.setGekendAchterkant("goed");
+            huidigeKaart.setGekendSchrijfAchterkant("goed");
         }
         kaarten.setKaart(huidigeKaart, state.getIndex());
-        kaarten.telStanden(state.getIsVoorkant());
+        kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
         state.setKaarten(kaarten.getKaarten());
         state.setRange(true);
         state.bouwFilter();
@@ -75,13 +75,13 @@ public class ControlSchrijf {
         int aantalNeutraal;
 
         if (state.getIsVoorkant()) {
-            aantalGoed = kaarten.getAantalGoedV();
-            aantalNietGoed = kaarten.getAantalNogNietV();
-            aantalNeutraal = kaarten.getAantalNeutraalV();
+            aantalGoed = kaarten.getAantalGoedSV();
+            aantalNietGoed = kaarten.getAantalNogNietSV();
+            aantalNeutraal = kaarten.getAantalNeutraalSV();
         } else {
-            aantalGoed = kaarten.getAantalGoedA();
-            aantalNietGoed = kaarten.getAantalNogNietA();
-            aantalNeutraal = kaarten.getAantalNeutraalA();
+            aantalGoed = kaarten.getAantalGoedSA();
+            aantalNietGoed = kaarten.getAantalNogNietSA();
+            aantalNeutraal = kaarten.getAantalNeutraalSA();
         }
 
         view.showAantalGoedSchrijf(Integer.toString(aantalGoed));
@@ -120,9 +120,9 @@ public class ControlSchrijf {
             }
 
             if (state.getIsVoorkant()) {
-                view.schrijfShowKleur(huidigeKaart.getGekendVoorkant());
+                view.schrijfShowKleur(huidigeKaart.getGekendSchrijfVoorkant());
             } else {
-                view.schrijfShowKleur(huidigeKaart.getGekendAchterkant());
+                view.schrijfShowKleur(huidigeKaart.getGekendSchrijfAchterkant());
             }
             view.setButtonTekstSchrijf(buttontekst);
             view.showInfoSchrijf(info + " " + kaartnummer);
@@ -143,7 +143,11 @@ public class ControlSchrijf {
     }
 
     public void reset() {
-
+        kaarten.resetLeeruitslagen(state.getIsVoorkant(), state.getLeervorm(), state.getModule());
+        kaarten.telStanden(state.getIsVoorkant(), state.getLeervorm());
+        state.bouwFilter();
+        showStandenSchrijf();
+        toonKaart();
     }
 
     public void maakModules() {

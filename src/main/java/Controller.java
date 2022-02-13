@@ -96,9 +96,9 @@ public class Controller {
     }
 
     public void showStanden() {
-        int aantalGoed;
-        int aantalNietGoed;
-        int aantalNeutraal;
+        int aantalGoed = 0;
+        int aantalNietGoed= 0;
+        int aantalNeutraal = 0 ;
 
         if (state.getIsVoorkant()) {
             aantalGoed = kaarten.getAantalGoedV();
@@ -148,8 +148,6 @@ public class Controller {
         state.bouwFilter();
         state.setTotenmet(state.getModuleEinde());
         view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
-        view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
-        //toonSchrijfKaart();
         controlSchrijf.toonKaart();
     }
 
@@ -218,7 +216,7 @@ public class Controller {
         } else {
             view.setBtnCheck(false);
         }
-        toonSchrijfKaart();
+        controlSchrijf.toonKaart();
     }
 
 
@@ -280,13 +278,13 @@ public class Controller {
     }
 
     public void reset() {
-        kaarten.resetLeeruitslagen(state.getIsVoorkant(), state.getLeervorm());
+        kaarten.resetLeeruitslagen(state.getIsVoorkant(), state.getLeervorm(), state.getModule());
         state.bouwFilter();
         if (state.getLeervorm() == 0) {
             toonKaart();
         }
         if (state.getLeervorm() == 1) {
-            toonSchrijfKaart();
+            controlSchrijf.toonKaart();
         }
     }
 
@@ -385,7 +383,6 @@ public class Controller {
         controlSchrijf.toonKaart();
     }
 
-
     // methods voor beheerKaarten
     public void toonBeheerkaart() {
         view.showBeheerFileNaam(kaarten.getFileName());
@@ -395,8 +392,11 @@ public class Controller {
                 huidigeKaart.getAchterkant() + "\n" +
                 huidigeKaart.getModule() + "\n" +
                 huidigeKaart.getGekendVoorkant() + "\n" +
-                huidigeKaart.getGekendAchterkant();
-        view.showKaartgegevens(kaartgegevens);
+                huidigeKaart.getGekendAchterkant() + "\n" +
+                huidigeKaart.getGekendSchrijfVoorkant()  + "\n" +
+                huidigeKaart.getGekendSchrijfAchterkant();
+
+                view.showKaartgegevens(kaartgegevens);
     }
 
     public void nieuweKaart() {
@@ -417,9 +417,10 @@ public class Controller {
     public void saveKaart() {
         int kaartnr = Integer.parseInt(view.getBeheerKaartnummer());
         String kaartgegevens = view.getBeheerKaart();
-        kaartgegevens = kaartgegevens + " \n".repeat(5);
+        kaartgegevens = kaartgegevens + " \n".repeat(7);
         String[] fields = kaartgegevens.split("\n");
-        Kaart temp = new Kaart(fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim(), fields[4].trim());
+        Kaart temp = new Kaart(fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim(), fields[4].trim(),
+        fields[5].trim(), fields[6].trim());
         if (kaartnr == state.getIndex() + 1) {
             kaarten.setKaart(temp, state.getIndex());
         } else {
@@ -432,38 +433,8 @@ public class Controller {
         initBeheerSessie();
     }
 
-    public void toonSchrijfKaart() {
-        controlSchrijf.showStandenSchrijf();
-        view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
-        view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
-        huidigeKaart = kaarten.getKaart(state.getIndex());
-        String kaartTekst;
-        String info;
-        String kaartnummer = Integer.toString(state.getIndex() + 1);
-        if (state.getIsVraag()) {
-            kaartTekst = huidigeKaart.getVoorkant();
-            info = "vraag:";
-
-        } else {
-            kaartTekst = huidigeKaart.getAchterkant();
-            info = " antwoord:";
-        }
-
-        if (state.getIsVoorkant()) {
-            view.schrijfShowKleur(huidigeKaart.getGekendVoorkant());
-        } else {
-            view.schrijfShowKleur(huidigeKaart.getGekendAchterkant());
-        }
-        view.schrijfShowInfo(info + " " + kaartnummer);
-        view.schrijfShowKaartTekst(kaartTekst);
-        view.schrijfShowSelectieModule(huidigeKaart.getModule());
-        view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
-    }
-
-
     public void volgendeSchrijfKaart() {
         volgendeKaart();
-        // toonSchrijfKaart();
         controlSchrijf.toonKaart();
     }
 
@@ -508,6 +479,7 @@ public class Controller {
                 }
                 view.setChkAutocue(false);
                 initSchrijfsessie();
+                kaarten.telStanden(state.getIsVoorkant(),state.getLeervorm());
                 controlSchrijf.showStandenSchrijf();
                 controlSchrijf.toonKaart();
                 tabkeuze = index;
