@@ -92,7 +92,7 @@ public class KaartenLeersessieGui extends JPanel {
         totKaartTextField.setName("totAan");
         this.add(totKaartTextField);
 
-        zoekWoordField = new JTextField(10);
+        zoekWoordField = new JTextField(9);
         zoekWoordField.setName("zoekWoord");
         this.add(zoekWoordField);
     }
@@ -100,7 +100,7 @@ public class KaartenLeersessieGui extends JPanel {
     public void createFilterFields() {
         JLabel lblInFilter = new JLabel("in filter:");
         this.add(lblInFilter);
-        txtTotaalinfilter = new JTextField(5);
+        txtTotaalinfilter = new JTextField(4);
         txtTotaalinfilter.setBackground(Color.getHSBColor(100, 86, 96));
         txtTotaalinfilter.setText("");
         txtTotaalinfilter.setEditable(false);
@@ -108,7 +108,7 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void createInfoFields() {
-        txtInfo = new JTextField(7);
+        txtInfo = new JTextField(9);
         txtInfo.setBackground(Color.getHSBColor(100, 86, 96));
         txtInfo.setEditable(false);
         this.add(txtInfo);

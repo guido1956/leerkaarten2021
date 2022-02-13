@@ -129,6 +129,7 @@ public class ControlSchrijf {
             view.showKaartTekstSchrijf(kaartTekst);
             view.schrijfShowSelectieModule(huidigeKaart.getModule());
             view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+            showStandenSchrijf();
         }
     }
 
