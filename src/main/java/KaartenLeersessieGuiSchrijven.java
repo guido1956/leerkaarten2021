@@ -117,6 +117,11 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         this.add(btnReset);
     }
 
+    public void gaNaarHandler(ActionListener actionListener) {
+        naarKaartTextField.addActionListener(actionListener);
+    }
+
+
 
     public void schrijfButtonHandler(ActionListener actionListener) {
         btnVolgende.addActionListener(actionListener);

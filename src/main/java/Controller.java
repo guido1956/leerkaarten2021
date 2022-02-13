@@ -29,12 +29,14 @@ public class Controller {
         this.view.buttonHandler(new LeerSessieButtonHandler());
         this.view.textFieldHandler(new FileKaartenBakHandler());
         this.view.gaNaarHandler(new GaNaarHandler());
+        this.view.gaNaarHandlerSchrijf(new GaNaarHandlerSchrijf());
         this.view.windowsListener(new WindowsHandler());
         this.view.moduleHandler(new ModulesHandler());
         this.view.moduleHandlerSchrijf(new ModulesHandlerSchrijf());
         this.view.randomHandler(new RandomHandler());
         this.view.randomHandlerSchrijf(new RandomHandlerSchrijf());
         this.view.totenMetHandler(new TotHandler());
+        this.view.totenMetHandlerSchrijf(new TotHandlerSchrijf());
         this.view.nogNietHandler(new NogNietHandler());
         this.view.goedHandler(new GoedHandler());
         this.view.nogNietHandlerSchrijf(new NogNietHandlerSchrijf());
@@ -163,6 +165,14 @@ public class Controller {
         toonKaart();
     }
 
+    public void gaNaarSchrijf(int positie) {
+        state.gaNaar(positie);
+        state.setVanaf(positie);
+        state.setRange(true);
+        state.bouwFilter();
+        controlSchrijf.toonKaart();
+    }
+
     public void totEnMetKaart(int positie) {
         int tijdelijk = state.getTotenMet() + 1;
 
@@ -174,6 +184,19 @@ public class Controller {
         state.setRange(true);
         state.bouwFilter();
         toonKaart();
+    }
+
+    public void totEnMetKaartSchrijf(int positie) {
+        int tijdelijk = state.getTotenMet() + 1;
+
+        if (state.getVanaf() > positie - 1) {
+            positie = tijdelijk;
+        }
+
+        state.setTotenmet((positie) - 1);
+        state.setRange(true);
+        state.bouwFilter();
+        controlSchrijf.toonKaart();
     }
 
     public void volgendeKaart() {
@@ -533,6 +556,16 @@ public class Controller {
         }
     }
 
+    class GaNaarHandlerSchrijf implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField) e.getSource();
+            String gaNaarKaart = name.getText();
+            gaNaarSchrijf(Integer.parseInt(gaNaarKaart));
+        }
+    }
+
 
     class TotHandler implements ActionListener {
 
@@ -541,6 +574,16 @@ public class Controller {
             JTextField name = (JTextField) e.getSource();
             String totEnMetKaart = name.getText();
             totEnMetKaart(Integer.parseInt(totEnMetKaart));
+        }
+    }
+
+    class TotHandlerSchrijf implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField) e.getSource();
+            String totEnMetKaart = name.getText();
+            totEnMetKaartSchrijf(Integer.parseInt(totEnMetKaart));
         }
     }
 

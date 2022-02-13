@@ -17,7 +17,7 @@ buenas noches:goedenavond:unidad 00:goed:goed:neutraal:neutraal
 la noche:de nacht:unidad 00:goed:goed:neutraal:neutraal
 hasta pronto:tot snel:unidad 00:goed:goed:neutraal:neutraal
 los números:de getallen:unidad 00:goed:goed:neutraal:neutraal
-México:Mexico:unidad 00:goed:goed:neutraal:neutraal
+México:Mexico:unidad 00:goed:goed:neutraal:goed
 es:het is:unidad 00:goed:goed:neutraal:neutraal
 la unidad:het hoofdstuk:unidad 00:goed:goed:neutraal:neutraal
 Colombia:Colombia:unidad 00:goed:goed:neutraal:neutraal
@@ -574,84 +574,84 @@ la terapia de errores:de foutentherapie:unidad 04:goed:niet:neutraal:neutraal
 el error:de fout:unidad 04:goed:goed:neutraal:neutraal
 ya:al:unidad 04:niet:niet:neutraal:neutraal
 el truco:de truc, het ezelsbruggetje:unidad 04:goed:goed:neutraal:neutraal
-comer:eten:unidad 05:goed:neutraal:neutraal:neutraal
-con gusto:graag, met plezier:unidad 05:goed:neutraal:neutraal:neutraal
+comer:eten:unidad 05:goed:neutraal:goed:neutraal
+con gusto:graag, met plezier:unidad 05:goed:neutraal:niet:neutraal
 la cesta:de mand:unidad 05:niet:neutraal:neutraal:neutraal
-la semana:de week:unidad 05:goed:neutraal:neutraal:neutraal
+la semana:de week:unidad 05:goed:neutraal:goed:neutraal
 el zumo:het sap:unidad 05:goed:neutraal:neutraal:neutraal
-el hambre:de honger:unidad 05:niet:neutraal:neutraal:neutraal
-la vendura:de groente:unidad 05:neutraal:neutraal:neutraal:neutraal
+el hambre:de honger:unidad 05:niet:neutraal:niet:neutraal
+la vendura:de groente:unidad 05:neutraal:neutraal:niet:neutraal
 la sed:de dorst:unidad 05:neutraal:neutraal:neutraal:neutraal
-el agua:het water:unidad 05:goed:neutraal:neutraal:neutraal
-el huevo:het ei:unidad 05:neutraal:neutraal:neutraal:neutraal
-la carne:het vlees:unidad 05:goed:neutraal:neutraal:neutraal
-el plátano:de banaan:unidad 05:neutraal:neutraal:neutraal:neutraal
-el limón:de citroen:unidad 05:goed:neutraal:neutraal:neutraal
-el pollo:de kip:unidad 05:goed:neutraal:neutraal:neutraal
-la pasta:de pasta:unidad 05:goed:neutraal:neutraal:neutraal
+el agua:het water:unidad 05:goed:neutraal:goed:neutraal
+el huevo:het ei:unidad 05:neutraal:neutraal:goed:neutraal
+la carne:het vlees:unidad 05:goed:neutraal:goed:neutraal
+el plátano:de banaan:unidad 05:neutraal:neutraal:goed:neutraal
+el limón:de citroen:unidad 05:goed:neutraal:goed:neutraal
+el pollo:de kip:unidad 05:goed:neutraal:goed:neutraal
+la pasta:de pasta:unidad 05:goed:neutraal:goed:neutraal
 la mantequilla:de boter:unidad 05:niet:neutraal:neutraal:neutraal
-la manzana:de appel:unidad 05:goed:neutraal:neutraal:neutraal
-la patata:de aardappel:unidad 05:goed:neutraal:neutraal:neutraal
-el pescado:de vis:unidad 05:goed:neutraal:neutraal:neutraal
-la cebolla:de ui:unidad 05:neutraal:neutraal:neutraal:neutraal
-la lechuga:de sla:unidad 05:neutraal:neutraal:neutraal:neutraal
-el pan:het brood:unidad 05:goed:neutraal:neutraal:neutraal
-el/la cliente/a:de klant:unidad 05:goed:neutraal:neutraal:neutraal
-todos los alimentos:alle levensmiddelen:unidad 05:neutraal:neutraal:neutraal:neutraal
-todos:alle:unidad 05:neutraal:neutraal:neutraal:neutraal
-el alimento:het levensmiddel:unidad 05:neutraal:neutraal:neutraal:neutraal
-queria:ik wil graag:unidad 05:neutraal:neutraal:neutraal:neutraal
-un kilo de tomatos:een kilo tomaten:unidad 05:goed:neutraal:neutraal:neutraal
-la ensalade:de salade:unidad 05:goed:neutraal:neutraal:neutraal
-la salsa:de saus:unidad 05:goed:neutraal:neutraal:neutraal
-un momento:een ogenblik:unidad 05:goed:neutraal:neutraal:neutraal
-soy yo:ik ben het:unidad 05:neutraal:neutraal:neutraal:neutraal
-por favor:alsublieft:unidad 05:goed:neutraal:neutraal:neutraal
+la manzana:de appel:unidad 05:goed:neutraal:goed:neutraal
+la patata:de aardappel:unidad 05:goed:neutraal:goed:neutraal
+el pescado:de vis:unidad 05:goed:neutraal:goed:neutraal
+la cebolla:de ui:unidad 05:neutraal:neutraal:goed:neutraal
+la lechuga:de sla:unidad 05:neutraal:neutraal:goed:neutraal
+el pan:het brood:unidad 05:goed:neutraal:goed:neutraal
+el/la cliente/a:de klant:unidad 05:goed:neutraal:goed:neutraal
+todos los alimentos:alle levensmiddelen:unidad 05:neutraal:neutraal:niet:neutraal
+todos:alle:unidad 05:neutraal:neutraal:goed:neutraal
+el alimento:het levensmiddel:unidad 05:neutraal:neutraal:goed:neutraal
+queria:ik wil graag:unidad 05:neutraal:neutraal:niet:neutraal
+un kilo de tomatos:een kilo tomaten:unidad 05:goed:neutraal:goed:neutraal
+la ensalade:de salade:unidad 05:goed:neutraal:goed:neutraal
+la salsa:de saus:unidad 05:goed:neutraal:niet:neutraal
+un momento:een ogenblik:unidad 05:goed:neutraal:niet:neutraal
+soy yo:ik ben het:unidad 05:neutraal:neutraal:niet:neutraal
+por favor:alsublieft:unidad 05:goed:neutraal:niet:neutraal
 aqui tiene:alsublieft, bij het overhandigen:unidad 05:niet:neutraal:neutraal:neutraal
-algo más?:anders nog iets?:unidad 05:neutraal:neutraal:neutraal:neutraal
-la mandarina:de mandarijn:unidad 05:goed:neutraal:neutraal:neutraal
-bueno/a:goed:unidad 05:goed:neutraal:neutraal:neutraal
-prefiero:ik heb liever:unidad 05:neutraal:neutraal:neutraal:neutraal
+algo más?:anders nog iets?:unidad 05:neutraal:neutraal:goed:neutraal
+la mandarina:de mandarijn:unidad 05:goed:neutraal:goed:neutraal
+bueno/a:goed:unidad 05:goed:neutraal:goed:neutraal
+prefiero:ik heb liever:unidad 05:neutraal:neutraal:niet:neutraal
 preferir:liever hebben…, de voorkeur geven aan…:unidad 05:neutraal:neutraal:neutraal:neutraal
 cuánto quiere?:hoeveel wilt u?:unidad 05:neutraal:neutraal:neutraal:neutraal
-querer:willen:unidad 05:goed:neutraal:neutraal:neutraal
-un kilo y medio:anderhalve kilo:unidad 05:goed:neutraal:neutraal:neutraal
-medio/a:half, halve:unidad 05:goed:neutraal:neutraal:neutraal
-el mango:de mango:unidad 05:goed:neutraal:neutraal:neutraal
-lo siento:het spijt me:unidad 05:goed:neutraal:neutraal:neutraal
-sentir:spijten, betreuren:unidad 05:neutraal:neutraal:neutraal:neutraal
-hoy no tengo:vandaag heb ik er geen:unidad 05:neutraal:neutraal:neutraal:neutraal
+querer:willen:unidad 05:goed:neutraal:goed:neutraal
+un kilo y medio:anderhalve kilo:unidad 05:goed:neutraal:goed:neutraal
+medio/a:half, halve:unidad 05:goed:neutraal:niet:neutraal
+el mango:de mango:unidad 05:goed:neutraal:goed:neutraal
+lo siento:het spijt me:unidad 05:goed:neutraal:goed:neutraal
+sentir:spijten, betreuren:unidad 05:neutraal:neutraal:niet:neutraal
+hoy no tengo:vandaag heb ik er geen:unidad 05:neutraal:neutraal:niet:neutraal
 entonces:dan:unidad 05:niet:neutraal:neutraal:neutraal
 deme(dar):geeft u mij:unidad 05:niet:neutraal:neutraal:neutraal
-y qué mas?:en wat nog meer?:unidad 05:neutraal:neutraal:neutraal:neutraal
-el melon:de meloen:unidad 05:neutraal:neutraal:neutraal:neutraal
-bueno:goed, oké:unidad 05:neutraal:neutraal:neutraal:neutraal
-ese es todo:dat is alles:unidad 05:neutraal:neutraal:neutraal:neutraal
-cuánto es?:hoeveel is het?:unidad 05:neutraal:neutraal:neutraal:neutraal
-son…:Dat wordt dan…:unidad 05:neutraal:neutraal:neutraal:neutraal
-el peso:Argentijnse munteenheid:unidad 05:neutraal:neutraal:neutraal:neutraal
-muchas gracias:hartelijk dank:unidad 05:neutraal:neutraal:neutraal:neutraal
-hasta la próxima:tot de volgende keer:unidad 05:neutraal:neutraal:neutraal:neutraal
-en voz alta:hardop:unidad 05:neutraal:neutraal:neutraal:neutraal
+y qué mas?:en wat nog meer?:unidad 05:neutraal:neutraal:niet:neutraal
+el melon:de meloen:unidad 05:neutraal:neutraal:goed:neutraal
+bueno:goed, oké:unidad 05:neutraal:neutraal:niet:neutraal
+ese es todo:dat is alles:unidad 05:neutraal:neutraal:goed:neutraal
+cuánto es?:hoeveel is het?:unidad 05:neutraal:neutraal:goed:neutraal
+son…:Dat wordt dan…:unidad 05:neutraal:neutraal:niet:neutraal
+el peso:Argentijnse munteenheid:unidad 05:neutraal:neutraal:niet:neutraal
+muchas gracias:hartelijk dank:unidad 05:neutraal:neutraal:niet:neutraal
+hasta la próxima:tot de volgende keer:unidad 05:neutraal:neutraal:goed:neutraal
+en voz alta:hardop:unidad 05:neutraal:neutraal:niet:neutraal
 el/la vendedor/a:de verkoper, de verkoopster:unidad 05:neutraal:neutraal:neutraal:neutraal
-cuánto questa…?:wat kost…?:unidad 05:neutraal:neutraal:neutraal:neutraal
-costar:kosten:unidad 05:neutraal:neutraal:neutraal:neutraal
-en total:in totaal:unidad 05:neutraal:neutraal:neutraal:neutraal
-dos euros con diez:twee euro tien:unidad 05:neutraal:neutraal:neutraal:neutraal
-el euro:de euro:unidad 05:neutraal:neutraal:neutraal:neutraal
-el vino blanco:de witte wijn:unidad 05:neutraal:neutraal:neutraal:neutraal
-el vino tinto:de rode wijn:unidad 05:neutraal:neutraal:neutraal:neutraal
-la cerveza sin alcohol:het alcoholvrije bier:unidad 05:neutraal:neutraal:neutraal:neutraal
-sin:zonder:unidad 05:neutraal:neutraal:neutraal:neutraal
-el alcohol:de alcohol:unidad 05:neutraal:neutraal:neutraal:neutraal
-el gas:het koolzuur:unidad 05:neutraal:neutraal:neutraal:neutraal
-el zumo de naranja:het sinaasappelsap:unidad 05:neutraal:neutraal:neutraal:neutraal
-el azúcar:de suiker:unidad 05:neutraal:neutraal:neutraal:neutraal
+cuánto questa…?:wat kost…?:unidad 05:neutraal:neutraal:niet:neutraal
+costar:kosten:unidad 05:neutraal:neutraal:goed:neutraal
+en total:in totaal:unidad 05:neutraal:neutraal:goed:neutraal
+dos euros con diez:twee euro tien:unidad 05:neutraal:neutraal:goed:neutraal
+el euro:de euro:unidad 05:neutraal:neutraal:goed:neutraal
+el vino blanco:de witte wijn:unidad 05:neutraal:neutraal:goed:neutraal
+el vino tinto:de rode wijn:unidad 05:neutraal:neutraal:goed:neutraal
+la cerveza sin alcohol:het alcoholvrije bier:unidad 05:neutraal:neutraal:niet:neutraal
+sin:zonder:unidad 05:neutraal:neutraal:goed:neutraal
+el alcohol:de alcohol:unidad 05:neutraal:neutraal:goed:neutraal
+el gas:het koolzuur:unidad 05:neutraal:neutraal:goed:neutraal
+el zumo de naranja:het sinaasappelsap:unidad 05:neutraal:neutraal:niet:neutraal
+el azúcar:de suiker:unidad 05:neutraal:neutraal:goed:neutraal
 compre:koop:unidad 05:neutraal:neutraal:neutraal:neutraal
 los números que faltan:de ontbrekende getallen:unidad 05:neutraal:neutraal:neutraal:neutraal
-faltar:ontbreken:unidad 05:neutraal:neutraal:neutraal:neutraal
-cien(to):honderd:unidad 05:neutraal:neutraal:neutraal:neutraal
-mil:duizen:unidad 05:neutraal:neutraal:neutraal:neutraal
+faltar:ontbreken:unidad 05:neutraal:neutraal:goed:neutraal
+cien(to):honderd:unidad 05:neutraal:neutraal:goed:neutraal
+mil:duizend:unidad 05:neutraal:neutraal:niet:neutraal
 el millón:het miljoen:unidad 05:neutraal:neutraal:neutraal:neutraal
 la exportacíon:de export:unidad 05:neutraal:neutraal:neutraal:neutraal
 Brasil:Brazilie:unidad 05:neutraal:neutraal:neutraal:neutraal

@@ -97,7 +97,7 @@ public class ControlSchrijf {
 
         } else {
             view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
-            view.showTotEnMet(Integer.toString(state.getModuleEinde() + 1));
+            view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
             huidigeKaart = kaarten.getKaart(state.getIndex());
             String kaartTekst;
             String info;

@@ -49,7 +49,6 @@ public class Kaartenbak {
         }
 
         kaarten = temporaly;
-        System.out.println(kaarten.get(0));
         return "";
     }
 

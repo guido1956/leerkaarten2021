@@ -10,7 +10,7 @@ public class KaartenLeersessieGui extends JPanel {
     protected JTextArea txtVraagAntwoord, txtAantalGoed, txtAantalNogNiet, txtAantalNeutraal, txtTotaal;
     protected JButton  btnVolgende, btnVorige, btnCheck, btnNietGoed, btnReset, btnFlip;
     protected JTextField naamFileTextField;
-    protected JTextField naarKaartTextField, totKaartTextField;
+    protected JTextField naarKaartTextField, totKaartTextField, zoekWoordField;
     protected JTextField txtInfo, txtTotaalinfilter;
     protected JTextField modulesTextField;
     protected JComboBox<String> modulesCombo;
@@ -91,6 +91,10 @@ public class KaartenLeersessieGui extends JPanel {
         totKaartTextField.setText("");
         totKaartTextField.setName("totAan");
         this.add(totKaartTextField);
+
+        zoekWoordField = new JTextField(10);
+        zoekWoordField.setName("zoekWoord");
+        this.add(zoekWoordField);
     }
 
     public void createFilterFields() {
@@ -104,7 +108,7 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void createInfoFields() {
-        txtInfo = new JTextField(15);
+        txtInfo = new JTextField(7);
         txtInfo.setBackground(Color.getHSBColor(100, 86, 96));
         txtInfo.setEditable(false);
         this.add(txtInfo);
@@ -396,6 +400,7 @@ public class KaartenLeersessieGui extends JPanel {
     public void gaNaarHandler(ActionListener actionListener) {
         naarKaartTextField.addActionListener(actionListener);
     }
+
 
     public void totenMetHandler(ActionListener actionListener) {
         totKaartTextField.addActionListener(actionListener);

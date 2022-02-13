@@ -29,7 +29,7 @@ public class KaartenGui extends JFrame {
         beheerview.createGuiBeheer();
         leersessieschrijven.createGuiLeersessie();
         setUpTabs();
-        setTitle("Leren met flashcards -12-02-2022- Guido Dulos  versie 16");
+        setTitle("Leren met flashcards -13-02-2022- Guido Dulos  versie 17");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         repaint();
@@ -350,8 +350,17 @@ public class KaartenGui extends JFrame {
         leersessieview.gaNaarHandler(actionListener);
     }
 
+
+    public void gaNaarHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.gaNaarHandler(actionListener);
+    }
+
     public void totenMetHandler(ActionListener actionListener) {
         leersessieview.totenMetHandler(actionListener);
+    }
+
+    public void totenMetHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.totenMetHandler(actionListener);
     }
 
     public void randomHandler(ActionListener actionListener) {
