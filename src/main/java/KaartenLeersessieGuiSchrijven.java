@@ -122,6 +122,14 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
     }
 
 
+    public void zoekwoordHandler(ActionListener actionListener) {
+        zoekWoordField.addActionListener(actionListener);
+    }
+
+    public void zoekwoordHandlerSchrijf(ActionListener actionListener) {
+        zoekWoordField.addActionListener(actionListener);
+    }
+
 
     public void schrijfButtonHandler(ActionListener actionListener) {
         btnVolgende.addActionListener(actionListener);

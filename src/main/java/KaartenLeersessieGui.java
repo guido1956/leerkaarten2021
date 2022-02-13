@@ -397,6 +397,11 @@ public class KaartenLeersessieGui extends JPanel {
         modulesCombo.addActionListener(actionListener);
     }
 
+    public void zoekwoordHandler(ActionListener actionListener) {
+        zoekWoordField.addActionListener(actionListener);
+    }
+
+
     public void gaNaarHandler(ActionListener actionListener) {
         naarKaartTextField.addActionListener(actionListener);
     }

@@ -239,6 +239,24 @@ public class LeersessieState {
         }
     }
 
+    public boolean zoekKaart(String zoekString) {
+        boolean gevonden = false;
+        int kaartIndex = -1;
+        for (int x = 0; x < filterKaarten.size() && !gevonden; x++) {
+            kaartIndex = filterKaarten.get(x);
+            if (kaarten.get(x).getVoorkant().indexOf(zoekString) != -1 ||
+                    kaarten.get(x).getAchterkant().indexOf(zoekString) != -1) {
+                gevonden = true;
+            }
+        }
+
+        if (gevonden) {
+            index = kaartIndex;
+            return true;
+        }
+        return false;
+    }
+
     public void setModule() {
         moduleStart = 0;
         moduleEinde = kaarten.size() - 1;

@@ -359,6 +359,14 @@ public class KaartenGui extends JFrame {
         leersessieview.totenMetHandler(actionListener);
     }
 
+    public void zoekwoordHandler(ActionListener actionListener) {
+        leersessieview.zoekwoordHandler(actionListener);
+    }
+
+    public void zoekwoordHandlerSchrijf(ActionListener actionListener) {
+        leersessieschrijven.zoekwoordHandlerSchrijf(actionListener);
+    }
+
     public void totenMetHandlerSchrijf(ActionListener actionListener) {
         leersessieschrijven.totenMetHandler(actionListener);
     }
@@ -460,6 +468,8 @@ public class KaartenGui extends JFrame {
     public void showInfoSchrijf(String waarde) {
         leersessieschrijven.showInfo(waarde);
     }
+
+
 }
 
 

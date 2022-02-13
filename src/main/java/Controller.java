@@ -41,6 +41,8 @@ public class Controller {
         this.view.goedHandler(new GoedHandler());
         this.view.nogNietHandlerSchrijf(new NogNietHandlerSchrijf());
         this.view.goedHandlerSchrijf(new GoedHandlerSchrijf() );
+        this.view.zoekwoordHandler(new ZoekwoordHandler() );
+        this.view.zoekwoordHandlerSchrijf(new ZoekwoordHandlerSchrijf());
         this.view.neutraalHandler(new NeutraalHandler());
         this.view.neutraalHandlerSchrijf(new NeutraalHandlerSchrijf());
         this.view.autocueHandler(new AutocueHandler());
@@ -240,6 +242,20 @@ public class Controller {
             view.setBtnCheck(false);
         }
         controlSchrijf.toonKaart();
+    }
+
+    public void  zoekWoord(String zoekwoord) {
+        boolean gevonden = state.zoekKaart(zoekwoord);
+        if (gevonden) {
+            toonKaart();
+        }
+    }
+
+    public void  zoekWoordSchrijf(String zoekwoord) {
+        boolean gevonden = state.zoekKaart(zoekwoord);
+        if (gevonden) {
+            controlSchrijf.toonKaart();
+        }
     }
 
 
@@ -547,7 +563,6 @@ public class Controller {
     }
 
     class GaNaarHandler implements ActionListener {
-
         @Override
         public void actionPerformed(ActionEvent e) {
             JTextField name = (JTextField) e.getSource();
@@ -565,6 +580,27 @@ public class Controller {
             gaNaarSchrijf(Integer.parseInt(gaNaarKaart));
         }
     }
+
+
+    class ZoekwoordHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField) e.getSource();
+            String zoekwoord = name.getText();
+            zoekWoord(zoekwoord);
+        }
+    }
+
+    class ZoekwoordHandlerSchrijf implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JTextField name = (JTextField) e.getSource();
+            String zoekwoord = name.getText();
+            zoekWoordSchrijf(zoekwoord);
+        }
+    }
+
+
 
 
     class TotHandler implements ActionListener {
