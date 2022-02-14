@@ -1,729 +1,729 @@
-bienvenidos:welkom:unidad 00:goed:goed:goed:goed
-hola:hallo:unidad 00:niet:goed:neutraal:neutraal
-buenos dias:goedendag:unidad 00:goed:goed:neutraal:neutraal
-el dia:de dag:unidad 00:goed:goed:neutraal:neutraal
-escusche:luister:unidad 00:goed:goed:neutraal:neutraal
-me llamo...:ik heet...:unidad 00:goed:goed:neutraal:neutraal
-cómo se llama usted?:hoe heet u?:unidad 00:goed:goed:neutraal:neutraal
-buenas tardes:goedemiddag:unidad 00:goed:goed:neutraal:neutraal
-la tarde:de namiddag, de vooravond:unidad 00:goed:niet:neutraal:neutraal
-y tú?:en jij?:unidad 00:goed:goed:neutraal:neutraal
-cómo te llamas?:hoe heet jij?:unidad 00:goed:goed:neutraal:neutraal
-soy:ik ben:unidad 00:goed:goed:neutraal:neutraal
-adiós:tot ziens:unidad 00:goed:goed:neutraal:neutraal
-hasta luego:tot straks:unidad 00:goed:goed:neutraal:neutraal
-una cadena:een ketting:unidad 00:goed:goed:neutraal:neutraal
-buenas noches:goedenavond:unidad 00:goed:goed:neutraal:neutraal
-la noche:de nacht:unidad 00:goed:goed:neutraal:neutraal
-hasta pronto:tot snel:unidad 00:goed:goed:neutraal:neutraal
-los números:de getallen:unidad 00:goed:goed:neutraal:neutraal
-México:Mexico:unidad 00:goed:goed:neutraal:goed
-es:het is:unidad 00:goed:goed:neutraal:neutraal
-la unidad:het hoofdstuk:unidad 00:goed:goed:neutraal:neutraal
-Colombia:Colombia:unidad 00:goed:goed:neutraal:neutraal
-son:zij zijn:unidad 00:goed:goed:neutraal:neutraal
-la última unidad:het laatste hoofdstuk:unidad 00:goed:goed:neutraal:neutraal
-Argentina:Argentinie:unidad 00:goed:goed:neutraal:neutraal
-el viaje al espanol:de reis naar het Spaans:unidad 01:goed:goed:neutraal:neutraal
-el espanol:het Spaans:unidad 01:goed:goed:neutraal:neutraal
-el vino:de wijn:unidad 01:goed:goed:neutraal:neutraal
-el cacao:de cacao:unidad 01:goed:goed:neutraal:neutraal
-el mate:de maté:unidad 01:goed:goed:neutraal:neutraal
-las ruinas mayas:de Mayaruines:unidad 01:goed:goed:neutraal:neutraal
-la fiesta:het feest:unidad 01:goed:goed:neutraal:neutraal
-el jamón:de ham:unidad 01:goed:goed:neutraal:neutraal
-las tapas:de tapas:unidad 01:goed:niet:neutraal:neutraal
-la guitarra:de gitaar:unidad 01:goed:goed:neutraal:neutraal
-la playa:het strand:unidad 01:goed:goed:neutraal:neutraal
-la música:de muziek:unidad 01:goed:niet:neutraal:neutraal
-la salsa:de salsa:unidad 01:goed:goed:neutraal:neutraal
-la paella:de paella:unidad 01:goed:goed:neutraal:neutraal
-la sangria:de sangria:unidad 01:goed:goed:neutraal:neutraal
-el tomate:de tomaat:unidad 01:goed:goed:neutraal:neutraal
-los tacos:de taco's:unidad 01:goed:goed:neutraal:neutraal
-las palabras espanolas:de Spaanse woorden:unidad 01:goed:goed:neutraal:neutraal
-la palabra:het woord:unidad 01:goed:goed:neutraal:neutraal
-un viaje:een reis:unidad 01:goed:niet:neutraal:neutraal
-la persona:de persoon:unidad 01:goed:goed:neutraal:neutraal
-famoso/famosa:beroemd:unidad 01:goed:goed:neutraal:neutraal
-Cómo se llaman las personas?:Hoe heten deze personen?:unidad 01:goed:niet:neutraal:neutraal
-el nombre:de voornaam:unidad 01:goed:goed:neutraal:neutraal
-el apellido:de achternaam:unidad 01:goed:goed:neutraal:neutraal
-mi identidad espanola:mijn Spaanse identiteit:unidad 01:goed:niet:neutraal:neutraal
-la identidad de sus companeros:de identiteit van de medecursisten:unidad 01:goed:neutraal:neutraal:neutraal
-el companero:de medecursist:unidad 01:goed:neutraal:neutraal:neutraal
-la companera:de medecursiste:unidad 01:goed:neutraal:neutraal:neutraal
-Cómo se pronuncia?:Hoe spreek je dat uit?:unidad 01:goed:niet:neutraal:neutraal
-pronunciar:uitspreken:unidad 01:goed:goed:neutraal:neutraal
-estos nombres:deze namen:unidad 01:goed:goed:neutraal:neutraal
-leer:lezen:unidad 01:goed:goed:neutraal:neutraal
-luego:dan, daarna:unidad 01:goed:niet:neutraal:neutraal
-complete:vul..aan:unidad 01:goed:goed:neutraal:neutraal
-las reglas de pronunciación:de uitspraakregels:unidad 01:goed:goed:neutraal:neutraal
-la pronunciación:de uitspraak:unidad 01:goed:goed:neutraal:neutraal
-Cómo se pronunciation?:Hoe worden ... uitgesproken:unidad 01:goed:niet:neutraal:neutraal
-estas palabras:deze woorden:unidad 01:goed:goed:neutraal:neutraal
-la tortilla:de aardappelomelet:unidad 01:goed:niet:neutraal:neutraal
-la geografia:de geografie:unidad 01:goed:neutraal:neutraal:neutraal
-la informatión:de informatie:unidad 01:goed:niet:neutraal:neutraal
-la organización:de organisatie:unidad 01:goed:goed:neutraal:neutraal
-la universidad:de universiteit:unidad 01:goed:goed:neutraal:neutraal
-el teatro:het theater:unidad 01:goed:goed:neutraal:neutraal
-el quiosco:de kiosk:unidad 01:goed:niet:neutraal:neutraal
-el concierto:het concert:unidad 01:goed:goed:neutraal:neutraal
-el hotel:het hotel:unidad 01:goed:goed:neutraal:neutraal
-el chocolate:de chocolade:unidad 01:goed:goed:neutraal:neutraal
-el trabalenguas:de tongbreker:unidad 01:goed:niet:neutraal:neutraal
-Para qué estudias espanol?:Waarvoor leer jij Spaans?:unidad 01:goed:neutraal:neutraal:neutraal
-estudiar:leren, studeren:unidad 01:goed:goed:neutraal:neutraal
-marque:kruis aan:unidad 01:goed:neutraal:neutraal:neutraal
-el motivo:de reden:unidad 01:goed:neutraal:neutraal:neutraal
-estudio:ik leer, ik studeer:unidad 01:goed:niet:neutraal:neutraal
-para viajar:om te reizen:unidad 01:goed:goed:neutraal:neutraal
-a:naar:unidad 01:goed:goed:neutraal:neutraal
-Latinoamérica:Latijns-Amerika:unidad 01:goed:neutraal:neutraal:neutraal
-trabajar:werken:unidad 01:goed:niet:neutraal:neutraal
-en un hotel:in een hotel:unidad 01:goed:goed:neutraal:neutraal
-en Tenerife:op Tenerife:unidad 01:goed:goed:neutraal:neutraal
-Espana:Spanje:unidad 01:goed:goed:neutraal:neutraal
-comprar:kopen:unidad 01:goed:goed:neutraal:neutraal
-una finca:een perceel, een huis op het platteland:unidad 01:goed:neutraal:neutraal:neutraal
-visitar:bezoeken:unidad 01:goed:goed:neutraal:neutraal
-escuchar:luisteren:unidad 01:goed:goed:neutraal:neutraal
-cubano, cubana:Cubaanse:unidad 01:goed:niet:neutraal:neutraal
-pasar las vacaciones:de vakantie doorbrengen:unidad 01:goed:neutraal:neutraal:neutraal
-hablar:praten spreken:unidad 01:goed:goed:neutraal:neutraal
-con la familia:met de familie:unidad 01:goed:neutraal:neutraal:neutraal
-de:van:unidad 01:goed:neutraal:neutraal:neutraal
-mi pareja:mijn partner:unidad 01:goed:neutraal:neutraal:neutraal
-los colegas espanoles:de Spaanse collega's:unidad 01:goed:neutraal:neutraal:neutraal
-el colega / la colega:de collega:unidad 01:goed:neutraal:neutraal:neutraal
-Qué motivos son personales?:Welke redenen zijn privé?:unidad 01:goed:neutraal:neutraal:neutraal
-personal:persoonlijk, privé:unidad 01:goed:neutraal:neutraal:neutraal
-Cuáles profesionales:Welke werkgerelateerd?:unidad 01:goed:neutraal:neutraal:neutraal
-professional:beroepsmatig:unidad 01:goed:neutraal:neutraal:neutraal
-el verbo:het werkwoord:unidad 01:goed:neutraal:neutraal:neutraal
-yo:ik:unidad 01:goed:goed:neutraal:neutraal
-tú:jij:unidad 01:goed:neutraal:neutraal:neutraal
-él / ella:hij/zij, ze:unidad 01:goed:neutraal:neutraal:neutraal
-usted:u (enkelvoud):unidad 01:goed:neutraal:neutraal:neutraal
-nosotros / nosotras:wij:unidad 01:goed:neutraal:neutraal:neutraal
-vosotros / vosotras:jullie:unidad 01:goed:neutraal:neutraal:neutraal
-ellos / ellas:zij, ze:unidad 01:goed:neutraal:neutraal:neutraal
-ustedes:u (meervoud):unidad 01:goed:neutraal:neutraal:neutraal
-el inglés:het Engels:unidad 01:goed:neutraal:neutraal:neutraal
-clásico/ clásica:klassiek:unidad 01:goed:niet:neutraal:neutraal
-un apartamento:een appartement:unidad 01:goed:neutraal:neutraal:neutraal
-si:of:unidad 01:goed:neutraal:neutraal:neutraal
-Las personas se hablan de "tú":de personen spreken elkaar met "jij aan":unidad 01:goed:neutraal:neutraal:neutraal
-Andalucia:Andalicie:unidad 01:goed:neutraal:neutraal:neutraal
-el /la amigo/-a del grupo:de vriend/de vriendin van de groep:unidad 01:goed:neutraal:neutraal:neutraal
-el grupo:de groep:unidad 01:goed:neutraal:neutraal:neutraal
-presente:presenteer:unidad 01:goed:niet:neutraal:neutraal
-ahora:nu:unidad 01:goed:neutraal:neutraal:neutraal
-el resultado:het resultaat:unidad 01:goed:neutraal:neutraal:neutraal
-la historia:de geschiedenis:unidad 01:goed:neutraal:neutraal:neutraal
-una lengua:een taal:unidad 01:goed:neutraal:neutraal:neutraal
-el texto:de tekst:unidad 01:goed:neutraal:neutraal:neutraal
-de dónde vienen...?:Waar komen zij vandaan?:unidad 01:goed:neutraal:neutraal:neutraal
-el 80% (ochenta por cieto):tachtig procent:unidad 01:goed:neutraal:neutraal:neutraal
-viene del latin:komt uit het Latijn:unidad 01:goed:neutraal:neutraal:neutraal
-el latin:het Latijn:unidad 01:goed:neutraal:neutraal:neutraal
-por ejemplo:bijvoorbeeld:unidad 01:goed:neutraal:neutraal:neutraal
-la fábrica:de fabriek:unidad 01:goed:neutraal:neutraal:neutraal
-el hospital:het ziekenhuis:unidad 01:goed:neutraal:neutraal:neutraal
-la fruta:de vrucht; het fruit:unidad 01:goed:neutraal:neutraal:neutraal
-el resto:de rest:unidad 01:goed:neutraal:neutraal:neutraal
-de otras lenguas:uit andere talen:unidad 01:goed:neutraal:neutraal:neutraal
-la lengua:de taal:unidad 01:goed:neutraal:neutraal:neutraal
-muchas palabras son del árabe:veel woorden komen uit het Arabisch:unidad 01:goed:neutraal:neutraal:neutraal
-como:zoals:unidad 01:goed:neutraal:neutraal:neutraal
-el aceite:de olie:unidad 01:goed:niet:neutraal:neutraal
-el arroz:de rijst:unidad 01:goed:neutraal:neutraal:neutraal
-la taza:het kopje:unidad 01:goed:neutraal:neutraal:neutraal
-la naranja:de sinaasappel:unidad 01:goed:neutraal:neutraal:neutraal
-la jirafa:de giraf:unidad 01:goed:neutraal:neutraal:neutraal
-el café:de koffie:unidad 01:goed:neutraal:neutraal:neutraal
-la cifra:het getal:unidad 01:goed:neutraal:neutraal:neutraal
-o:of:unidad 01:goed:neutraal:neutraal:neutraal
-el griego:het Grieks:unidad 01:goed:neutraal:neutraal:neutraal
-la bibliotheca:de bibliotheek:unidad 01:goed:neutraal:neutraal:neutraal
-el museo:het museum:unidad 01:goed:neutraal:neutraal:neutraal
-vienen:ze komen:unidad 01:goed:neutraal:neutraal:neutraal
-las lenguas indigenas:de inheemse talen::goed:neutraal:neutraal:neutraal
-indigena:inheems:unidad 01:goed:neutraal:neutraal:neutraal
-América:Amerika:unidad 01:goed:neutraal:neutraal:neutraal
-el tabaco:de tabak:unidad 01:goed:neutraal:neutraal:neutraal
-el maiz:de mais:unidad 01:goed:neutraal:neutraal:neutraal
-el colibri:de kolibrie:unidad 01:goed:neutraal:neutraal:neutraal
-el jaguar:de jaguar:unidad 01:goed:neutraal:neutraal:neutraal
-la barbacoa:de barbecue:unidad 01:goed:neutraal:neutraal:neutraal
-también:ook:unidad 01:goed:neutraal:neutraal:neutraal
-americano/-a:Amerikaans, uit Amerika:unidad 01:goed:neutraal:neutraal:neutraal
-hoy:vandaag:unidad 01:goed:neutraal:neutraal:neutraal
-muchas palabras nuevas:veel nieuwe woorden:unidad 01:goed:neutraal:neutraal:neutraal
-el champú:de shampoo:unidad 01:goed:neutraal:neutraal:neutraal
-el fútbol:het voetbal:unidad 01:goed:goed:neutraal:neutraal
-todas las lenguas:alle talen:unidad 01:goed:neutraal:neutraal:neutraal
-muchas influencias:veel invloeden:unidad 01:goed:neutraal:neutraal:neutraal
-la influencia:de invloed:unidad 01:goed:neutraal:neutraal:neutraal
-"Aceite" significa...:"Aceite" betekent...:unidad 01:goed:neutraal:neutraal:neutraal
-significar:betekenen:unidad 01:goed:niet:neutraal:neutraal
-qué significa...?:wat betekent...?:unidad 01:goed:neutraal:neutraal:neutraal
-si:ja:unidad 01:goed:neutraal:neutraal:neutraal
-no:nee:unidad 01:goed:goed:neutraal:neutraal
-no sé:ik weet het niet:unidad 01:goed:neutraal:neutraal:neutraal
-ordene:orden, rangschik:unidad 01:goed:neutraal:neutraal:neutraal
-la comida:het eten:unidad 01:goed:neutraal:neutraal:neutraal
-la bebida:het drankje:unidad 01:goed:neutraal:neutraal:neutraal
-el edificio:het gebouw:unidad 01:goed:neutraal:neutraal:neutraal
-el animal:het dier:unidad 01:goed:neutraal:neutraal:neutraal
-son las deiz en punto:het is 10 uur:100 klokkijken:goed:neutraal:neutraal:neutraal
-es la dos en punto:het is 2 uur:100 klokkijken:goed:neutraal:neutraal:neutraal
-son las cinco y diez minutos:het is tien over vijf:100 klokkijken:goed:neutraal:neutraal:neutraal
-son las cinco minos diez minutos:het is tien voor vijf:100 klokkijken:goed:neutraal:neutraal:neutraal
-son las cinco y quarto:het is kwart over vijf:100 klokkijken:goed:neutraal:neutraal:neutraal
-son las cinco minos quarto:het is kwart voor vijf:100 klokkijken:goed:neutraal:neutraal:neutraal
-la tabla:de tabel:unidad 01:goed:neutraal:neutraal:neutraal
-el articulo determinando:het bepaald lidwoord:unidad 01:goed:neutraal:neutraal:neutraal
-masculino:mannelijk:unidad 01:goed:neutraal:neutraal:neutraal
-femenino:vrouwelijk:unidad 01:goed:niet:neutraal:neutraal
-el singular:het enkelvoud:unidad 01:goed:neutraal:neutraal:neutraal
-el plural:het meervoud:unidad 01:goed:neutraal:neutraal:neutraal
-la cadena:de ketting:unidad 01:goed:neutraal:neutraal:neutraal
-el bingo de palabras:de woordenbingo:unidad 01:goed:neutraal:neutraal:neutraal
-más que palabras:meer dan woorden:unidad 01:goed:neutraal:neutraal:neutraal
-la expresíon:de uitdrukking:unidad 01:goed:neutraal:neutraal:neutraal
-el saludo:de begroeting:unidad 01:goed:neutraal:neutraal:neutraal
-la despedida:het afscheid:unidad 01:goed:neutraal:neutraal:neutraal
-el pais:het land:unidad 01:goed:neutraal:neutraal:neutraal
-de origen árabe:van Arabische oorsprong:unidad 01:goed:neutraal:neutraal:neutraal
-el origin:de oorsprong:unidad 01:goed:neutraal:neutraal:neutraal
-arabé:Arabisch:unidad 01:goed:neutraal:neutraal:neutraal
-en compania:in gezelschap:unidad 01:goed:neutraal:neutraal:neutraal
-la compana:het gezelschap:unidad 01:goed:neutraal:neutraal:neutraal
-en la playa:op het strand:unidad 01:goed:neutraal:neutraal:neutraal
-el monumento:het monument:unidad 01:goed:goed:neutraal:neutraal
-la cultura:de cultuur:unidad 01:goed:neutraal:neutraal:neutraal
-antiguo:oud:unidad 01:goed:neutraal:neutraal:neutraal
-comparen:vergelijk:unidad 01:goed:neutraal:neutraal:neutraal
-sus combinaciones:uw combinaties:unidad 01:goed:neutraal:neutraal:neutraal
-la tarea final:de eindopdracht:unidad 01:goed:neutraal:neutraal:neutraal
-la frase:de zin:unidad 01:goed:neutraal:neutraal:neutraal
-el concurso:de wedstrijd:unidad 01:goed:neutraal:neutraal:neutraal
-en grupos de tres:in groepen van drie:unidad 01:goed:neutraal:neutraal:neutraal
-de Norte a Sur:van noord naar zuid:unidad 01:goed:neutraal:neutraal:neutraal
-el norte:het noorden:unidad 01:goed:neutraal:neutraal:neutraal
-el sur:het zuiden:unidad 01:goed:neutraal:neutraal:neutraal
-la ruta:de route:unidad 01:goed:neutraal:neutraal:neutraal
-fascinante:fascinerend:unidad 01:goed:neutraal:neutraal:neutraal
-por:door:unidad 01:niet:neutraal:neutraal:neutraal
-el continente:het continent, werelddeel:unidad 01:goed:neutraal:neutraal:neutraal
-desde:vanuit:unidad 01:niet:neutraal:neutraal:neutraal
-esta ruta:deze route:unidad 01:goed:neutraal:neutraal:neutraal
-pasar por:gaan door, lopen door:unidad 01:niet:neutraal:neutraal:neutraal
-la zona climática:de klimaatzone:unidad 01:goed:neutraal:neutraal:neutraal
-muy:heel erg:unidad 01:goed:neutraal:neutraal:neutraal
-diferente:verschillend:unidad 01:goed:neutraal:neutraal:neutraal
-sus lenguas:hun talen:unidad 01:goed:neutraal:neutraal:neutraal
-su gastronomia:hun gastronomie:unidad 01:goed:neutraal:neutraal:neutraal
-el paisaje:het landschap:unidad 01:goed:neutraal:neutraal:neutraal
-impresionante:indrukwekkend:unidad 01:goed:neutraal:neutraal:neutraal
-cada:elk, ieder:unidad 01:niet:neutraal:neutraal:neutraal
-la leccíon:de les:unidad 01:goed:neutraal:neutraal:neutraal
-presentar:presenteren, voorstellen:unidad 01:goed:neutraal:neutraal:neutraal
-la etapa:de etappe, het traject:unidad 01:goed:neutraal:neutraal:neutraal
-el mapa:de landkaart:unidad 01:goed:niet:neutraal:neutraal
-los paises que se mencionan:de landen die genoemd worden:unidad 01:goed:neutraal:neutraal:neutraal
-mencionar:noemen:unidad 01:goed:neutraal:neutraal:neutraal
-otra vez:nog een keer:unidad 01:niet:neutraal:neutraal:neutraal
-relacione:verbind:unidad 01:goed:niet:neutraal:neutraal
-la foto:de foto:unidad 01:goed:neutraal:neutraal:neutraal
-la comunicacion:de communicatie:unidad 01:goed:neutraal:neutraal:neutraal
-manana:morgen:unidad 01:goed:neutraal:neutraal:neutraal
-la gramática:de grammatica:unidad 01:goed:neutraal:neutraal:neutraal
-el flamenco:de flamenco:unidad 01:goed:neutraal:neutraal:neutraal
-el senor:de heer:unidad 01:goed:neutraal:neutraal:neutraal
-la senora:mevrouw:unidad 01:goed:neutraal:neutraal:neutraal
-el problema:het probleem:unidad 01:goed:neutraal:neutraal:neutraal
-la región:de regio:unidad 01:goed:neutraal:neutraal:neutraal
-senar:dineren:unidad 02:goed:niet:neutraal:neutraal
-primero/-a:eerste:unidad 02:goed:goed:neutraal:neutraal
-el contacto:het contact:unidad 02:goed:goed:neutraal:neutraal
-la digitalización:de digitalisering:unidad 02:goed:goed:neutraal:neutraal
-el congreso:het congres:unidad 02:goed:goed:neutraal:neutraal
-sobre:over:unidad 02:niet:niet:neutraal:neutraal
-el cambio:de verandering:unidad 02:niet:goed:neutraal:neutraal
-el mundo de trabajo:de wereld van het werk:unidad 02:goed:goed:neutraal:neutraal
-el trabajo:het werk:unidad 02:goed:goed:neutraal:neutraal
-28 y 29 de marzo:28 en 29 maart:unidad 02:goed:niet:neutraal:neutraal
-nasido:geboren:uit de les:goed:neutraal:neutraal:neutraal
-bale:oké:uit de les:goed:neutraal:neutraal:neutraal
-siempre:altijd:uit de les:goed:neutraal:neutraal:neutraal
-el palacio de congresos:het congrescentrum:unidad 02:goed:neutraal:neutraal:neutraal
-el congreso:het congres:unidad 02:goed:neutraal:neutraal:neutraal
-el informático:de IT'er:unidad 02:goed:neutraal:neutraal:neutraal
-el ingeniero:de ingenieur:unidad 02:goed:neutraal:neutraal:neutraal
-el camarero:de ober:unidad 02:goed:neutraal:neutraal:neutraal
-el fotografo:de fotograaf:unidad 02:goed:neutraal:neutraal:neutraal
-el mecánico:de monteur:unidad 02:goed:neutraal:neutraal:neutraal
-el arquitecto:de architect:unidad 02:goed:neutraal:neutraal:neutraal
-el secretario:de secretaris:unidad 02:goed:neutraal:neutraal:neutraal
-el cocinero:de kok:unidad 02:goed:neutraal:neutraal:neutraal
-el profesor:de leraar:unidad 02:goed:neutraal:neutraal:neutraal
-el médico:de arts:unidad 02:goed:neutraal:neutraal:neutraal
-mire:bekijk:unidad 02:goed:neutraal:neutraal:neutraal
-mirar:bekijken:unidad 02:goed:neutraal:neutraal:neutraal
-la publicidad:de reclame:unidad 02:goed:neutraal:neutraal:neutraal
-para:voor:unidad 02:goed:neutraal:neutraal:neutraal
-Qué profesión tienen las personas?:Welk beroep hebben de personen?:unidad 02:goed:neutraal:neutraal:neutraal
-la profesión:het beroep:unidad 02:goed:neutraal:neutraal:neutraal
-una de las personas se presenta:Een van de personen stelt zich voor:unidad 02:goed:neutraal:neutraal:neutraal
-presentarse:presenteren:unidad 02:goed:neutraal:neutraal:neutraal
-Quién es?:Wie is het?:unidad 02:goed:neutraal:neutraal:neutraal
-el cubano:de cubaan:unidad 02:goed:niet:neutraal:neutraal
-el peruano:de Peruaan:unidad 02:goed:neutraal:neutraal:neutraal
-vivo:ik woon, ik leef:unidad 02:goed:neutraal:neutraal:neutraal
-viver:wonen, leven:unidad 02:goed:neutraal:neutraal:neutraal
-mucho gusto:aangenaam kennis te maken:unidad 02:goed:neutraal:neutraal:neutraal
-el diálogo:de dialoog:unidad 02:goed:neutraal:neutraal:neutraal
-encantado:aangenaam kennis te maken:unidad 02:niet:neutraal:neutraal:neutraal
-el organizador:de organisator:unidad 02:goed:neutraal:neutraal:neutraal
-es usted de Cataluna?:komt u uit Catalonie?:unidad 02:neutraal:neutraal:neutraal:neutraal
-yo también:ik ook:unidad 02:neutraal:neutraal:neutraal:neutraal
-de dónde es usted?:waar komt u vandaan?:unidad 02:goed:neutraal:neutraal:neutraal
-pues:nou, dus:unidad 02:neutraal:neutraal:neutraal:neutraal
-cómo estas:hoe gaat het met je?:unidad 02:neutraal:neutraal:neutraal:neutraal
-bien, gracias:goed, dank je:unidad 02:neutraal:neutraal:neutraal:neutraal
-y tú?:en met jou?:unidad 02:neutraal:neutraal:neutraal:neutraal
-qué tal?:hoe gaat het?:unidad 02:neutraal:neutraal:neutraal:neutraal
-ser@@soy@@eres@@es@@somos@@sois@@son:zijn@@ik ben@@jij bent@@hij is@@wij zijn@@jullie zijn@@zij zijn:werkwoord:niet:goed:neutraal:neutraal
-me gusta mi gente:my bevalt me mijn familie:unidad 03:goed:goed:neutraal:neutraal
-me gusta:ik vind...leuk, mij bevalt:unidad 03:goed:goed:neutraal:neutraal
-gustar:leuk vinden:unidad 03:goed:goed:neutraal:neutraal
-mi gente:mijn familie:unidad 03:goed:goed:neutraal:neutraal
-el cumpleanos:de verjaardag:unidad 03:goed:neutraal:neutraal:neutraal
-mis companeras de trabajo:mijn collega's:unidad 03:goed:niet:neutraal:neutraal
-el papá:de vader:unidad 03:goed:goed:neutraal:neutraal
-su equipo:zijn team:unidad 03:goed:neutraal:neutraal:neutraal
-el hijo:de zoon:unidad 03:goed:goed:neutraal:neutraal
-la hija:de dochter:unidad 03:goed:goed:neutraal:neutraal
-el marido:de echtgenoot:unidad 03:goed:niet:neutraal:neutraal
-los abuelos:de grootouders:unidad 03:goed:goed:neutraal:neutraal
-los nietos:de kleinkinderen:unidad 03:goed:goed:neutraal:neutraal
-la madre:de moeder:unidad 03:goed:goed:neutraal:neutraal
-el hermano:de broer:unidad 03:goed:goed:neutraal:neutraal
-la hermana:de zus:unidad 03:goed:goed:neutraal:neutraal
-el padre:de vader:unidad 03:goed:goed:neutraal:neutraal
-En que orden?:In welke volgorde?:unidad 03:goed:niet:neutraal:neutraal
-el orden:de volgorde:unidad 02:neutraal:neutraal:neutraal:neutraal
-de quién?:van wie?:unidad 03:goed:neutraal:neutraal:neutraal
-la situación:de situatie:unidad 03:goed:neutraal:neutraal:neutraal
-mis hijos:mijn kinderen:unidad 03:goed:neutraal:neutraal:neutraal
-conoce usted a estas personas?:kent u deze personen?:unidad 03:goed:neutraal:neutraal:neutraal
-conocer:kennen:unidad 03:goed:neutraal:neutraal:neutraal
-cuántos? (m):hoeveel?:unidad 03:goed:neutraal:neutraal:neutraal
-cuántas? (v):hoeveel?:unidad 03:goed:neutraal:neutraal:neutraal
-el/la artist/a:de kunstenaar, de kunstenares:unidad 03:goed:neutraal:neutraal:neutraal
-hay (haber):zijn:unidad 03:goed:neutraal:neutraal:neutraal
-uno de los personajes más famósos:een van de beroemde personen:unidad 03:goed:neutraal:neutraal:neutraal
-el personaje:de persoon, de persoonlijkheid:unidad 03:goed:neutraal:neutraal:neutraal
-el mundo del espanol:de Spaanssprekende wereld:unidad 03:goed:neutraal:neutraal:neutraal
-no solo:niet alleen:unidad 03:goed:goed:neutraal:neutraal
-el actor/la actriz:de acteur, de actrice:unidad 03:goed:neutraal:neutraal:neutraal
-sino tambíen:maar ook:unidad 03:goed:neutraal:neutraal:neutraal
-el nieto/la nieta:het kleinkind, de kleinzoon, de kleindochter:unidad 03:goed:niet:neutraal:neutraal
-el abuelo/la abuela:de grootvader, de grootmoeder:unidad 03:goed:neutraal:neutraal:neutraal
-los hermanos:de broers en zussen:unidad 03:goed:neutraal:neutraal:neutraal
-el tio/la tia:de oom, de tante:unidad 03:goed:neutraal:neutraal:neutraal
-el primo/la prima:de neef / de nicht:unidad 03:goed:neutraal:neutraal:neutraal
-el director de cine:de filmregisseur:unidad 03:goed:neutraal:neutraal:neutraal
-la directora de cine:de filmregisseur:unidad 03:goed:neutraal:neutraal:neutraal
-la mujer:de vrouw:unidad 03:goed:neutraal:neutraal:neutraal
-otros:anderen:unidad 03:goed:neutraal:neutraal:neutraal
-otras:anderen:unidad 03:goed:neutraal:neutraal:neutraal
-el bailarin:de danser:unidad 03:goed:neutraal:neutraal:neutraal
-la bailarina:de danseres:unidad 03:goed:niet:neutraal:neutraal
-el compositor:de componist:unidad 03:goed:neutraal:neutraal:neutraal
-la compositora:de componste:unidad 03:goed:neutraal:neutraal:neutraal
-la pareja:het koppel, het stel:unidad 03:goed:neutraal:neutraal:neutraal
-el árbol genealógico:de stamboom:unidad 03:goed:neutraal:neutraal:neutraal
-con la ayuda de:met behulp van:unidad 03:goed:neutraal:neutraal:neutraal
-la ayuda:de hulp:unidad 03:goed:neutraal:neutraal:neutraal
-nuestro:ons, onze:unidad 03:goed:neutraal:neutraal:neutraal
-nuestra:ons, onze:unidad 03:goed:neutraal:neutraal:neutraal
-griego/-a:Grieks:unidad 03:goed:neutraal:neutraal:neutraal
-el sobrino:de neef (kind van broer of zus):unidad 03:goed:neutraal:neutraal:neutraal
-la sobrina:de nicht (kind van broer of zus):unidad 03:goed:neutraal:neutraal:neutraal
-los padres:de ouders:unidad 03:goed:neutraal:neutraal:neutraal
-la situación:de situatie:unidad 03:goed:neutraal:neutraal:neutraal
-mis hijos:mijn kinderen:unidad 03:goed:goed:neutraal:neutraal
-el/la esposo/a:de echtgenoot, de echtgenote:unidad 03:goed:neutraal:neutraal:neutraal
-la pregunta:de vraag:unidad 03:goed:neutraal:neutraal:neutraal
-el posesivo:het bezittelijk voornaamwoord:unidad 03:goed:neutraal:neutraal:neutraal
-vuestro/a:jullie:unidad 03:goed:neutraal:neutraal:neutraal
-fantástico:fantastisch:unidad 03:goed:neutraal:neutraal:neutraal
-pregunta por:vraag naar:unidad 03:goed:neutraal:neutraal:neutraal
-la empresa familia:het familiebedrijf:unidad 03:goed:neutraal:neutraal:neutraal
-le gusta el chocolate?:houdt u van chocolade?:unidad 03:goed:neutraal:neutraal:neutraal
-el tipo:de soort:unidad 03:goed:neutraal:neutraal:neutraal
-blanco/a:wit:unidad 03:goed:neutraal:neutraal:neutraal
-negro/a:zwart:unidad 03:goed:neutraal:neutraal:neutraal
-la leche:de melk:unidad 03:goed:neutraal:neutraal:neutraal
-la almendra:de amandel:unidad 03:goed:neutraal:neutraal:neutraal
-la generación:de generatie:unidad 03:goed:neutraal:neutraal:neutraal
-el/la chocolatero/a:de chocoladefabrikant:unidad 03:goed:neutraal:neutraal:neutraal
-la provincia:de provincie:unidad 03:goed:neutraal:neutraal:neutraal
-en ella:en erin:unidad 03:goed:neutraal:neutraal:neutraal
-antes:vroeger:unidad 03:goed:neutraal:neutraal:neutraal
-para todos los gustos:voor elk wat wils:unidad 03:goed:neutraal:neutraal:neutraal
-el gusto:de smaak:unidad 03:goed:neutraal:neutraal:neutraal
-el producto estrella:het topproduct:unidad 03:goed:neutraal:neutraal:neutraal
-la estrella:de ster:unidad 03:goed:neutraal:neutraal:neutraal
-por ciento:procent:unidad 03:goed:neutraal:neutraal:neutraal
-la chocolateria:de chocoladewinkel:unidad 03:goed:neutraal:neutraal:neutraal
-exportar:exporteren:unidad 03:goed:neutraal:neutraal:neutraal
-más de 60 paises:meer dan 60 landen:unidad 03:niet:neutraal:neutraal:neutraal
-la pasion:de passie:unidad 03:goed:neutraal:neutraal:neutraal
-unas cifras:een paar cijfers:unidad 03:goed:neutraal:neutraal:neutraal
-cuántos anos tiene Marie?:hoe oud is Marie?:unidad 03:goed:neutraal:neutraal:neutraal
-tener 10 anos:10 jaar oud zijn:unidad 03:goed:neutraal:neutraal:neutraal
-el ano:het jaar:unidad 03:goed:goed:neutraal:neutraal
-el miembro:het lid:unidad 03:goed:neutraal:neutraal:neutraal
-diferente:anders:unidad 03:goed:neutraal:neutraal:neutraal
-se acuerde da..?:herinnert u zich...?:unidad 03:goed:neutraal:neutraal:neutraal
-acordarse:zich herinneren:unidad 03:goed:neutraal:neutraal:neutraal
-guapo/a:mooi:unidad 03:goed:neutraal:neutraal:neutraal
-moreno:donkerharig:unidad 03:goed:neutraal:neutraal:neutraal
-delgado/a:slank:unidad 03:goed:neutraal:neutraal:neutraal
-la fotografia:fotografie:unidad 03:niet:neutraal:neutraal:neutraal
-alegre:vrolijk:unidad 03:goed:neutraal:neutraal:neutraal
-abierto:open:unidad 03:goed:neutraal:neutraal:neutraal
-a veces:soms:unidad 03:goed:neutraal:neutraal:neutraal
-arrogante:arrogant:unidad 03:goed:neutraal:neutraal:neutraal
-está casado/a:hij, zij is getrouwd:unidad 03:goed:neutraal:neutraal:neutraal
-el hombre:de man:unidad 03:goed:neutraal:neutraal:neutraal
-attractivo/a:aantrekkelijk:unidad 03:goed:niet:neutraal:neutraal
-tener los ojos negros:donkere ogen hebben:unidad 03:goed:neutraal:neutraal:neutraal
-el ojo:het oog:unidad 03:goed:neutraal:neutraal:neutraal
-alto/a:groot, hoog:unidad 03:goed:neutraal:neutraal:neutraal
-gordito/a:mollig:unidad 03:goed:neutraal:neutraal:neutraal
-de carácter:van karakter:unidad 03:goed:neutraal:neutraal:neutraal
-optimista:optimistisch:unidad 03:goed:neutraal:neutraal:neutraal
-timido/a:verlegen:unidad 03:goed:neutraal:neutraal:neutraal
-estar divorciado/a:gescheiden zijn:unidad 03:goed:neutraal:neutraal:neutraal
-el perro:de hond:unidad 03:goed:neutraal:neutraal:neutraal
-el hobby:de hobby:unidad 03:goed:neutraal:neutraal:neutraal
-original:origineel:unidad 03:goed:neutraal:neutraal:neutraal
-el buceo:het duiken:unidad 03:goed:neutraal:neutraal:neutraal
-el adjetivo:het bijvoegelijke naamwoord:unidad 03:goed:neutraal:neutraal:neutraal
-bajito/a:klein van stuk:unidad 03:goed:neutraal:neutraal:neutraal
-joven:jong:unidad 03:goed:neutraal:neutraal:neutraal
-mayor:ouder,volwassen:unidad 03:goed:neutraal:neutraal:neutraal
-rubio/a:blond:unidad 03:goed:neutraal:neutraal:neutraal
-feo/a:lelijk:unidad 03:goed:niet:neutraal:neutraal
-antipático:onaardig, onvriendelijk:unidad 03:goed:neutraal:neutraal:neutraal
-pesimista:pessimistisch:unidad 03:goed:niet:neutraal:neutraal
-los dos:allebei, beiden:unidad 03:goed:neutraal:neutraal:neutraal
-la entrada:het toegangskaartje:unidad 03:goed:neutraal:neutraal:neutraal
-la venta de entradas:het kaartverkoop:unidad 03:goed:neutraal:neutraal:neutraal
-me gusta...:ik vind...leuk:unidad 03:goed:neutraal:neutraal:neutraal
-la pelicula:de film:unidad 03:goed:neutraal:neutraal:neutraal
-romántico:romantisch:unidad 03:goed:neutraal:neutraal:neutraal
-me gusta ver:ik kijk graag:unidad 03:goed:neutraal:neutraal:neutraal
-ver (yo veo):zien:unidad 03:goed:neutraal:neutraal:neutraal
-por internet:op internet:unidad 03:goed:neutraal:neutraal:neutraal
-el/la internet:het internet:unidad 03:goed:neutraal:neutraal:neutraal
-la peculia de terror:de horrorfilm:unidad 03:goed:neutraal:neutraal:neutraal
-el terror:de ontzetting, de angst:unidad 03:goed:neutraal:neutraal:neutraal
-ver la tele:tv-kijken:unidad 03:goed:neutraal:neutraal:neutraal
-te gusta...?:vind je...leuk:unidad 03:goed:neutraal:neutraal:neutraal
-la fiesta de cumplenos:het verjaardagsfeest:unidad 03:goed:neutraal:neutraal:neutraal
-la ópera:de opera:unidad 03:goed:neutraal:neutraal:neutraal
-el color:de kleur:unidad 03:goed:neutraal:neutraal:neutraal
-el rosa:het roze:unidad 03:goed:neutraal:neutraal:neutraal
-viajar en avión:met het vliegtuig reizen:unidad 03:goed:neutraal:neutraal:neutraal
-el avión:het vliegtuig:unidad 03:goed:neutraal:neutraal:neutraal
-(no) mucho:niet erg:unidad 03:goed:neutraal:neutraal:neutraal
-bastiante:nogal, tamelijk:unidad 03:goed:neutraal:neutraal:neutraal
-no...nada:helemaal niet:unidad 03:goed:neutraal:neutraal:neutraal
-a Linda le gustan mucho...:Linda vindt...leuk:unidad 03:goed:neutraal:neutraal:neutraal
-cuàndo es tu compleanos?:wanneer ben je jarig?:unidad 03:goed:neutraal:neutraal:neutraal
-el 18 de enero:18 januari, op 18 januari:unidad 03:goed:neutraal:neutraal:neutraal
-el uno / primero de abril:(op) 1 april:unidad 03:goed:neutraal:neutraal:neutraal
-el mes:de maand:unidad 03:goed:neutraal:neutraal:neutraal
-enero:januari:unidad 03:goed:neutraal:neutraal:neutraal
-febrero:februari:unidad 03:goed:neutraal:neutraal:neutraal
-marzo:maart:unidad 03:goed:neutraal:neutraal:neutraal
-abril:april:unidad 03:goed:neutraal:neutraal:neutraal
-mayo:mei:unidad 03:goed:neutraal:neutraal:neutraal
-junio:juni:unidad 03:goed:neutraal:neutraal:neutraal
-julio:juli:unidad 03:goed:neutraal:neutraal:neutraal
-agusto:augustus:unidad 03:goed:neutraal:neutraal:neutraal
-septiember:september:unidad 03:goed:neutraal:neutraal:neutraal
-octubre:oktober:unidad 03:goed:neutraal:neutraal:neutraal
-noviembre:november:unidad 03:goed:neutraal:neutraal:neutraal
-diciembre:december:unidad 03:goed:neutraal:neutraal:neutraal
-la canción:het lied:unidad 03:goed:neutraal:neutraal:neutraal
-cumpleanos feliz:gefeliciteerd met je verjaardag:unidad 03:goed:niet:neutraal:neutraal
-feliz:gelukkig, blij:unidad 03:goed:neutraal:neutraal:neutraal
-la competición:de wedstrijd, de competitie:unidad 03:goed:neutraal:neutraal:neutraal
-el aspecto:het uiterlijk:unidad 03:goed:neutraal:neutraal:neutraal
-exótico/-a:exotisch:unidad 03:goed:neutraal:neutraal:neutraal
-la caracteristica:de eigenschap:unidad 03:goed:neutraal:neutraal:neutraal
-la relación con usted:de relatie met u:unidad 03:goed:neutraal:neutraal:neutraal
-guatemalteco/a:uit Guatemala:unidad 03:goed:neutraal:neutraal:neutraal
-pequeno/a:klein:unidad 03:goed:neutraal:neutraal:neutraal
-variado/a:afwisselend:unidad 03:goed:neutraal:neutraal:neutraal
-la naturaleza:de natuur:unidad 03:goed:neutraal:neutraal:neutraal
-la selva tropical más grande:het grootste tropische regenwoud:unidad 03:niet:neutraal:neutraal:neutraal
-tropical:tropisch:unidad 03:goed:neutraal:neutraal:neutraal
-grande:groot, hoog:unidad 03:goed:neutraal:neutraal:neutraal
-Centroamérica:Midden-Amerika:unidad 03:goed:neutraal:neutraal:neutraal
-el vulcán:de vulkaan:unidad 03:goed:neutraal:neutraal:neutraal
-el lago:het meer:unidad 03:goed:neutraal:neutraal:neutraal
-el cráter:de krater:unidad 03:goed:neutraal:neutraal:neutraal
-ideal:ideaal:unidad 03:goed:neutraal:neutraal:neutraal
-de...a...:van...tot...:unidad 03:goed:neutraal:neutraal:neutraal
-Ciudad de Guatemala:Guatemala-Stad:unidad 03:goed:neutraal:neutraal:neutraal
-moderno/a:modern:unidad 03:goed:neutraal:neutraal:neutraal
-la casa colonial:het huis in koloniale stijl:unidad 03:goed:neutraal:neutraal:neutraal
-de todo el mundo:uit de hele wereld:unidad 03:goed:neutraal:neutraal:neutraal
-más de 50%:meer dan 50%:unidad 03:goed:neutraal:neutraal:neutraal
-el/la habitante:de inwoner:unidad 03:goed:neutraal:neutraal:neutraal
-conservar:bewaren:unidad 03:goed:neutraal:neutraal:neutraal
-el ritual:het ritueel:unidad 03:goed:neutraal:neutraal:neutraal
-religioso/-a:religieus:unidad 03:goed:neutraal:neutraal:neutraal
-la atracción:de bezienswaardigheid:unidad 03:goed:neutraal:neutraal:neutraal
-muchos turistas:veel toeristen:unidad 03:goed:neutraal:neutraal:neutraal
-el/la turista:de toerist(e):unidad 03:goed:neutraal:neutraal:neutraal
-el mercado:de markt:unidad 03:goed:neutraal:neutraal:neutraal
-donde:waar (als betrekkelijk voornaamwoord):unidad 03:goed:neutraal:neutraal:neutraal
-el/la indigena:de oorspronkelijke inwoner/inwoonster:unidad 03:goed:neutraal:neutraal:neutraal
-intercambiar:uitwisselen:unidad 03:goed:neutraal:neutraal:neutraal
-al sur de...:ten zuiden van:unidad 03:goed:neutraal:neutraal:neutraal
-están(estar):ze liggen:unidad 03:goed:neutraal:neutraal:neutraal
-el pais más pequeno:het kleinste land:unidad 03:goed:niet:neutraal:neutraal
-por:vanwege, door:unidad 03:goed:neutraal:neutraal:neutraal
-marvallioso/a:schitterend:unidad 03:goed:neutraal:neutraal:neutraal
-el Caribe:de Caraiben:unidad 03:goed:neutraal:neutraal:neutraal
-el paraiso:het paradijs:unidad 03:goed:niet:neutraal:neutraal
-la reserva natural:het natuurreservaat:unidad 03:goed:neutraal:neutraal:neutraal
-los restos:de resten:unidad 03:goed:neutraal:neutraal:neutraal
-arguelógico/a:archeologisch:unidad 03:goed:neutraal:neutraal:neutraal
-quizás:misschien:unidad 03:goed:neutraal:neutraal:neutraal
-triste:somber,droevig:unidad 03:goed:neutraal:neutraal:neutraal
-la idea:het idee:unidad 03:goed:neutraal:neutraal:neutraal
-quiénes son...?:Wie zijn...?:unidad 03:goed:neutraal:neutraal:neutraal
-por qué:waarom?:unidad 03:goed:neutraal:neutraal:neutraal
-se saludan:ze begroeten elkaar:unidad 04:goed:niet:neutraal:neutraal
-saludar(se):elkaar begroeten:unidad 04:goed:niet:neutraal:neutraal
-darse un beso:elkaar een kus geven:unidad 04:goed:goed:neutraal:neutraal
-dar(yo doy):geven:unidad 04:goed:goed:neutraal:neutraal
-el beso:de kus:unidad 04:goed:goed:neutraal:neutraal
-la mano:de hand:unidad 04:goed:goed:neutraal:neutraal
-abrazar(se):(elkaar) omhelzen:unidad 04:goed:niet:neutraal:neutraal
-la entrevista:het interview:unidad 04:goed:goed:neutraal:neutraal
-el/la hispanohablante:de Spaanssprekende:unidad 04:goed:niet:neutraal:neutraal
-la opcíon:de keuze, de optie:unidad 04:goed:niet:neutraal:neutraal
-formal:formeel:unidad 04:goed:goed:neutraal:neutraal
-otro/a:een ander(e):unidad 04:goed:goed:neutraal:neutraal
-Bolivia:Bolivia:unidad 04:goed:goed:neutraal:neutraal
-los jóvenes:de jongeren:unidad 04:goed:goed:neutraal:neutraal
-los mayores:de ouderen:unidad 04:goed:goed:neutraal:neutraal
-entrar en contacto:in contact komen:unidad 04:goed:niet:neutraal:neutraal
-esta es mi hija:dit is mijn dochter:unidad 04:goed:goed:neutraal:neutraal
-precioso/a:prachtig:unidad 04:goed:niet:neutraal:neutraal
-qué bonito nombre:wat een mooie naam:unidad 04:goed:goed:neutraal:neutraal
-bonito:mooi:unidad 04:goed:goed:neutraal:neutraal
-el cóctel:de cocktail:unidad 04:goed:goed:neutraal:neutraal
-la edad:de leeftijd:unidad 04:goed:goed:neutraal:neutraal
-la nacionalidad:de nationaliteit:unidad 04:goed:goed:neutraal:neutraal
-el video:de video:unidad 04:goed:goed:neutraal:neutraal
-fácil:gemakkelijk:unidad 04:goed:goed:neutraal:neutraal
-divertido/a:grappig, leuk:unidad 04:goed:goed:neutraal:neutraal
-exigente:veeleisend:unidad 04:goed:niet:neutraal:neutraal
-conocido/a:bekend:unidad 04:goed:niet:neutraal:neutraal
-casi:bijna:unidad 04:niet:niet:neutraal:neutraal
-todos los dias:elke dag:unidad 04:goed:goed:neutraal:neutraal
-ensayer:repeteren:unidad 04:goed:goed:neutraal:neutraal
-dar clases de piano:pianoles geven:unidad 04:goed:niet:neutraal:neutraal
-la clase:de les:unidad 04:goed:goed:neutraal:neutraal
-qué tipo de musica?:wat voor soort muziek?:unidad 04:goed:goed:neutraal:neutraal
-tocar un instrumento:een muziekinstrument bespelen:unidad 04:goed:niet:neutraal:neutraal
-bailar:dansen:unidad 04:goed:goed:neutraal:neutraal
-asociar:associeren:unidad 04:goed:goed:neutraal:neutraal
-qué piensa?:wat denkt u?:unidad 04:goed:goed:neutraal:neutraal
-pensar:denken:unidad 04:goed:goed:neutraal:neutraal
-regularmente:regelmatig:unidad 04:goed:niet:neutraal:neutraal
-ahi:daar:unidad 04:goed:niet:neutraal:neutraal
-el valle:de vallei:unidad 04:goed:goed:neutraal:neutraal
-el río:de rivier:unidad 04:goed:goed:neutraal:neutraal
-el turismo ecológico:het ecotoerisme:unidad 04:goed:niet:neutraal:neutraal
-mundial:mondiaal:unidad 04:goed:goed:neutraal:neutraal
-comunicativo/a:spraakzaam, open:unidad 04:goed:niet:neutraal:neutraal
-el mapa asociativo:het woordveld:unidad 04:goed:niet:neutraal:neutraal
-aprender mejor:beter leren:unidad 04:goed:goed:neutraal:neutraal
-el/la espanol/a:de Spanjaard, de Spaanse:unidad 04:goed:goed:neutraal:neutraal
-rápido:snel, vlug:unidad 04:goed:goed:neutraal:neutraal
-la informática:de informatica:unidad 04:goed:goed:neutraal:neutraal
-espontáneo/a:spontaan:unidad 04:goed:neutraal:neutraal:neutraal
-el vocabulario:de woordenschat:unidad 04:goed:neutraal:neutraal:neutraal
-el tenis:het tennis:unidad 04:goed:goed:neutraal:neutraal
-la terapia de errores:de foutentherapie:unidad 04:goed:niet:neutraal:neutraal
-el error:de fout:unidad 04:goed:goed:neutraal:neutraal
-ya:al:unidad 04:niet:niet:neutraal:neutraal
-el truco:de truc, het ezelsbruggetje:unidad 04:goed:goed:neutraal:neutraal
-comer:eten:unidad 05:goed:neutraal:goed:neutraal
-con gusto:graag, met plezier:unidad 05:goed:neutraal:niet:neutraal
-la cesta:de mand:unidad 05:niet:neutraal:neutraal:neutraal
-la semana:de week:unidad 05:goed:neutraal:goed:neutraal
-el zumo:het sap:unidad 05:goed:neutraal:neutraal:neutraal
-el hambre:de honger:unidad 05:niet:neutraal:niet:neutraal
-la vendura:de groente:unidad 05:neutraal:neutraal:niet:neutraal
-la sed:de dorst:unidad 05:neutraal:neutraal:neutraal:neutraal
-el agua:het water:unidad 05:goed:neutraal:goed:neutraal
-el huevo:het ei:unidad 05:neutraal:neutraal:goed:neutraal
-la carne:het vlees:unidad 05:goed:neutraal:goed:neutraal
-el plátano:de banaan:unidad 05:neutraal:neutraal:goed:neutraal
-el limón:de citroen:unidad 05:goed:neutraal:goed:neutraal
-el pollo:de kip:unidad 05:goed:neutraal:goed:neutraal
-la pasta:de pasta:unidad 05:goed:neutraal:goed:neutraal
-la mantequilla:de boter:unidad 05:niet:neutraal:neutraal:neutraal
-la manzana:de appel:unidad 05:goed:neutraal:goed:neutraal
-la patata:de aardappel:unidad 05:goed:neutraal:goed:neutraal
-el pescado:de vis:unidad 05:goed:neutraal:goed:neutraal
-la cebolla:de ui:unidad 05:neutraal:neutraal:goed:neutraal
-la lechuga:de sla:unidad 05:neutraal:neutraal:goed:neutraal
-el pan:het brood:unidad 05:goed:neutraal:goed:neutraal
-el/la cliente/a:de klant:unidad 05:goed:neutraal:goed:neutraal
-todos los alimentos:alle levensmiddelen:unidad 05:neutraal:neutraal:niet:neutraal
-todos:alle:unidad 05:neutraal:neutraal:goed:neutraal
-el alimento:het levensmiddel:unidad 05:neutraal:neutraal:goed:neutraal
-queria:ik wil graag:unidad 05:neutraal:neutraal:niet:neutraal
-un kilo de tomatos:een kilo tomaten:unidad 05:goed:neutraal:goed:neutraal
-la ensalade:de salade:unidad 05:goed:neutraal:goed:neutraal
-la salsa:de saus:unidad 05:goed:neutraal:niet:neutraal
-un momento:een ogenblik:unidad 05:goed:neutraal:niet:neutraal
-soy yo:ik ben het:unidad 05:neutraal:neutraal:niet:neutraal
-por favor:alsublieft:unidad 05:goed:neutraal:niet:neutraal
-aqui tiene:alsublieft, bij het overhandigen:unidad 05:niet:neutraal:neutraal:neutraal
-algo más?:anders nog iets?:unidad 05:neutraal:neutraal:goed:neutraal
-la mandarina:de mandarijn:unidad 05:goed:neutraal:goed:neutraal
-bueno/a:goed:unidad 05:goed:neutraal:goed:neutraal
-prefiero:ik heb liever:unidad 05:neutraal:neutraal:niet:neutraal
-preferir:liever hebben…, de voorkeur geven aan…:unidad 05:neutraal:neutraal:neutraal:neutraal
-cuánto quiere?:hoeveel wilt u?:unidad 05:neutraal:neutraal:neutraal:neutraal
-querer:willen:unidad 05:goed:neutraal:goed:neutraal
-un kilo y medio:anderhalve kilo:unidad 05:goed:neutraal:goed:neutraal
-medio/a:half, halve:unidad 05:goed:neutraal:niet:neutraal
-el mango:de mango:unidad 05:goed:neutraal:goed:neutraal
-lo siento:het spijt me:unidad 05:goed:neutraal:goed:neutraal
-sentir:spijten, betreuren:unidad 05:neutraal:neutraal:niet:neutraal
-hoy no tengo:vandaag heb ik er geen:unidad 05:neutraal:neutraal:niet:neutraal
-entonces:dan:unidad 05:niet:neutraal:neutraal:neutraal
-deme(dar):geeft u mij:unidad 05:niet:neutraal:neutraal:neutraal
-y qué mas?:en wat nog meer?:unidad 05:neutraal:neutraal:niet:neutraal
-el melon:de meloen:unidad 05:neutraal:neutraal:goed:neutraal
-bueno:goed, oké:unidad 05:neutraal:neutraal:niet:neutraal
-ese es todo:dat is alles:unidad 05:neutraal:neutraal:goed:neutraal
-cuánto es?:hoeveel is het?:unidad 05:neutraal:neutraal:goed:neutraal
-son…:Dat wordt dan…:unidad 05:neutraal:neutraal:niet:neutraal
-el peso:Argentijnse munteenheid:unidad 05:neutraal:neutraal:niet:neutraal
-muchas gracias:hartelijk dank:unidad 05:neutraal:neutraal:niet:neutraal
-hasta la próxima:tot de volgende keer:unidad 05:neutraal:neutraal:goed:neutraal
-en voz alta:hardop:unidad 05:neutraal:neutraal:niet:neutraal
-el/la vendedor/a:de verkoper, de verkoopster:unidad 05:neutraal:neutraal:neutraal:neutraal
-cuánto questa…?:wat kost…?:unidad 05:neutraal:neutraal:niet:neutraal
-costar:kosten:unidad 05:neutraal:neutraal:goed:neutraal
-en total:in totaal:unidad 05:neutraal:neutraal:goed:neutraal
-dos euros con diez:twee euro tien:unidad 05:neutraal:neutraal:goed:neutraal
-el euro:de euro:unidad 05:neutraal:neutraal:goed:neutraal
-el vino blanco:de witte wijn:unidad 05:neutraal:neutraal:goed:neutraal
-el vino tinto:de rode wijn:unidad 05:neutraal:neutraal:goed:neutraal
-la cerveza sin alcohol:het alcoholvrije bier:unidad 05:neutraal:neutraal:niet:neutraal
-sin:zonder:unidad 05:neutraal:neutraal:goed:neutraal
-el alcohol:de alcohol:unidad 05:neutraal:neutraal:goed:neutraal
-el gas:het koolzuur:unidad 05:neutraal:neutraal:goed:neutraal
-el zumo de naranja:het sinaasappelsap:unidad 05:neutraal:neutraal:niet:neutraal
-el azúcar:de suiker:unidad 05:neutraal:neutraal:goed:neutraal
-compre:koop:unidad 05:neutraal:neutraal:neutraal:neutraal
-los números que faltan:de ontbrekende getallen:unidad 05:neutraal:neutraal:neutraal:neutraal
-faltar:ontbreken:unidad 05:neutraal:neutraal:goed:neutraal
-cien(to):honderd:unidad 05:neutraal:neutraal:goed:neutraal
-mil:duizend:unidad 05:neutraal:neutraal:niet:neutraal
-el millón:het miljoen:unidad 05:neutraal:neutraal:neutraal:neutraal
-la exportacíon:de export:unidad 05:neutraal:neutraal:neutraal:neutraal
-Brasil:Brazilie:unidad 05:neutraal:neutraal:neutraal:neutraal
-probar:proeven, proberen:unidad 05:neutraal:neutraal:neutraal:neutraal
-piden:ze bestellen:unidad 05:neutraal:neutraal:neutraal:neutraal
-el champinon:de champignon:unidad 05:neutraal:neutraal:neutraal:neutraal
-al ajillo:gebakken met knoflook:unidad 05:neutraal:neutraal:neutraal:neutraal
-la albóndiga:het gehaktballetje:unidad 05:neutraal:neutraal:neutraal:neutraal
-la gamba:de gamba:unidad 05:neutraal:neutraal:neutraal:neutraal
-a la plancha:gegrild:unidad 05:neutraal:neutraal:neutraal:neutraal
-los calamares:de gefrituurde inktvisringen:unidad 05:neutraal:neutraal:neutraal:neutraal
-a la romana:gepaneerd:unidad 05:neutraal:neutraal:neutraal:neutraal
-la sardina:het sardientje:unidad 05:neutraal:neutraal:neutraal:neutraal
-frito/a:gefrituurd, gebakken:unidad 05:neutraal:neutraal:neutraal:neutraal
-la aceituna:de olijf:unidad 05:neutraal:neutraal:neutraal:neutraal
-verde:groen:unidad 05:neutraal:neutraal:neutraal:neutraal
-el jamón serrano:de serranoham:unidad 05:neutraal:neutraal:neutraal:neutraal
-a ver:even kijken:unidad 05:neutraal:neutraal:neutraal:neutraal
-las patatas bravas:aardappeltjes met pikante saus:unidad 05:neutraal:neutraal:neutraal:neutraal
-lleva ajo?:zit er knoflook in?:unidad 05:neutraal:neutraal:neutraal:neutraal
-llevar:bevatten, meenemen:unidad 05:neutraal:neutraal:neutraal:neutraal
-la mayonesa:de mayonaise:unidad 05:neutraal:neutraal:neutraal:neutraal
-el tabasco:de tabasco:unidad 05:neutraal:neutraal:neutraal:neutraal
-puedo:ik kan, ik mag:unidad 05:neutraal:neutraal:neutraal:neutraal
-poder:kunnen, mogen:unidad 05:neutraal:neutraal:neutraal:neutraal
-tomar:nemen:unidad 05:neutraal:neutraal:neutraal:neutraal
-picante:pittig, scherp:unidad 05:neutraal:neutraal:neutraal:neutraal
-qué va:welnee:unidad 05:neutraal:neutraal:neutraal:neutraal
-una ración de…:een portie:unidad 05:neutraal:neutraal:neutraal:neutraal
-enseguida:hier, het komt eraan:unidad 05:neutraal:neutraal:neutraal:neutraal
-para beber:om te drinken:unidad 05:neutraal:neutraal:neutraal:neutraal
-el vino tinto de la case:de rode wijn van het huis:unidad 05:neutraal:neutraal:neutraal:neutraal
-no?:niet waar?:unidad 05:neutraal:neutraal:neutraal:neutraal
-tomar alcohol:alcohol drinken:unidad 05:neutraal:neutraal:neutraal:neutraal
-el agua mineral:het mineraalwater:unidad 05:neutraal:neutraal:neutraal:neutraal
-qué tal?:hoe smaakt het?:unidad 05:neutraal:neutraal:neutraal:neutraal
-delicioso/a:heerlijk:unidad 05:neutraal:neutraal:neutraal:neutraal
-pagar:betalen:unidad 05:neutraal:neutraal:neutraal:neutraal
-informarse:informatie inwinnen:unidad 05:neutraal:neutraal:neutraal:neutraal
-se come caliente?:wordt het warm gegeten?:unidad 05:neutraal:neutraal:neutraal:neutraal
-frio/a:koud:unidad 05:neutraal:neutraal:neutraal:neutraal
-vamos:we gaan:unidad 05:neutraal:neutraal:neutraal:neutraal
-el menú:het menu:unidad 05:neutraal:neutraal:neutraal:neutraal
-la sepia:de inktvis:unidad 05:neutraal:neutraal:neutraal:neutraal
-en su tinta:in eigen inkt:unidad 05:neutraal:neutraal:neutraal:neutraal
-los boquerones:de ansjovis:unidad 05:neutraal:neutraal:neutraal:neutraal
-el vinagre:de azijn:unidad 05:neutraal:neutraal:neutraal:neutraal
-los pimientos del padrón:de kleine groene paprika’s:unidad 05:neutraal:neutraal:neutraal:neutraal
-el pimiento:de paprika:unidad 05:neutraal:neutraal:neutraal:neutraal
-la ensaladilla rusa:de huzarensalade:unidad 05:neutraal:neutraal:neutraal:neutraal
-el pulpo:de octopus:unidad 05:neutraal:neutraal:neutraal:neutraal
-a la gallega:op galische wijze (met aardappelen):unidad 05:neutraal:neutraal:neutraal:neutraal
-las croquetas:de kroketten:unidad 05:neutraal:neutraal:neutraal:neutraal
-referirse a:betrekking hebben op:unidad 05:neutraal:neutraal:neutraal:neutraal
-siquiente:volgende:unidad 05:neutraal:neutraal:neutraal:neutraal
-las quiere negras o verdes?:wilt u zwarte of groene?::neutraal:neutraal:neutraal:neutraal
-el té:de thee:unidad 05:neutraal:neutraal:neutraal:neutraal
-el objeto:het object:unidad 05:neutraal:neutraal:neutraal:neutraal
-se habla:er wordt gesproken:unidad 05:neutraal:neutraal:neutraal:neutraal
-necesitar:nodig hebben:unidad 05:neutraal:neutraal:neutraal:neutraal
-usar:gebruiken:unidad 05:neutraal:neutraal:neutraal:neutraal
-la sopa:de soep:unidad 05:neutraal:neutraal:neutraal:neutraal
-cortar:snijden:unidad 05:neutraal:neutraal:neutraal:neutraal
-preparar:bereiden:unidad 05:neutraal:neutraal:neutraal:neutraal
-los espaquetis:de spaghetti:unidad 05:neutraal:neutraal:neutraal:neutraal
-la chuchara:de lepel:unidad 05:neutraal:neutraal:neutraal:neutraal
-el chuchillo:het mes:unidad 05:neutraal:neutraal:neutraal:neutraal
-el vaso:het (water)glas:unidad 05:neutraal:neutraal:neutraal:neutraal
-el copa:het (wijn)glas:unidad 05:neutraal:neutraal:neutraal:neutraal
-estudiar:studeren@@estudio@@estudias@@estudia@@estudiamos@@estudiáis@@estudian:werkwoord:niet:neutraal:neutraal:neutraal
-hablar:praten@@hablo@@hablas@@habla@@hablamos@@habláis@@hablan:werkwoord:neutraal:neutraal:neutraal:neutraal
-comer:eten@@como@@comes@@come@@comemos@@coméis@@comen:werkwoord:neutraal:neutraal:neutraal:neutraal
-vivir:leven@@vivo@@vives@@vive@@vivimos@@vivis@@viven:werkwoord:neutraal:neutraal:neutraal:neutraal
-ducharse:douchen@@me ducho@@te duchas@@se ducha@@nos duchamos@@os ducháis@@se duchan:werkwoord:neutraal:neutraal:neutraal:neutraal
-mejor:beter:unidad 04:goed:goed:neutraal:neutraal
+bienvenidos&&welkom&&unidad 00&&goed&&goed&&goed&&goed
+hola&&hallo&&unidad 00&&goed&&goed&&goed&&neutraal
+buenos dias&&goedendag&&unidad 00&&goed&&goed&&niet&&neutraal
+el dia&&de dag&&unidad 00&&goed&&goed&&goed&&neutraal
+escusche&&luister&&unidad 00&&goed&&goed&&goed&&neutraal
+me llamo...&&ik heet...&&unidad 00&&goed&&goed&&goed&&neutraal
+cómo se llama usted?&&hoe heet u?&&unidad 00&&goed&&goed&&goed&&neutraal
+buenas tardes&&goedemiddag&&unidad 00&&goed&&goed&&niet&&neutraal
+la tarde&&de namiddag, de vooravond&&unidad 00&&goed&&niet&&niet&&neutraal
+y tú?&&en jij?&&unidad 00&&goed&&goed&&niet&&neutraal
+cómo te llamas?&&hoe heet jij?&&unidad 00&&goed&&goed&&goed&&neutraal
+soy&&ik ben&&unidad 00&&goed&&goed&&goed&&goed
+adiós&&tot ziens&&unidad 00&&goed&&goed&&goed&&niet
+hasta luego&&tot straks&&unidad 00&&goed&&goed&&niet&&goed
+una cadena&&een ketting&&unidad 00&&goed&&goed&&goed&&goed
+buenas noches&&goedenavond&&unidad 00&&goed&&goed&&niet&&neutraal
+la noche&&de nacht&&unidad 00&&goed&&goed&&goed&&neutraal
+hasta pronto&&tot snel&&unidad 00&&goed&&goed&&goed&&neutraal
+los números&&de getallen&&unidad 00&&goed&&goed&&niet&&neutraal
+México&&Mexico&&unidad 00&&goed&&goed&&goed&&neutraal
+es&&het is&&unidad 00&&goed&&goed&&niet&&neutraal
+la unidad&&het hoofdstuk&&unidad 00&&goed&&goed&&goed&&neutraal
+Colombia&&Colombia&&unidad 00&&goed&&goed&&goed&&neutraal
+son&&zij zijn&&unidad 00&&goed&&goed&&neutraal&&neutraal
+la última unidad&&het laatste hoofdstuk&&unidad 00&&goed&&goed&&neutraal&&neutraal
+Argentina&&Argentinie&&unidad 00&&goed&&goed&&neutraal&&neutraal
+el viaje al espanol&&de reis naar het Spaans&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el espanol&&het Spaans&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el vino&&de wijn&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el cacao&&de cacao&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el mate&&de maté&&unidad 01&&goed&&goed&&neutraal&&neutraal
+las ruinas mayas&&de Mayaruines&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la fiesta&&het feest&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el jamón&&de ham&&unidad 01&&goed&&goed&&neutraal&&neutraal
+las tapas&&de tapas&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la guitarra&&de gitaar&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la playa&&het strand&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la música&&de muziek&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la salsa&&de salsa&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la paella&&de paella&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la sangria&&de sangria&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el tomate&&de tomaat&&unidad 01&&goed&&goed&&neutraal&&neutraal
+los tacos&&de taco's&&unidad 01&&goed&&goed&&neutraal&&neutraal
+las palabras espanolas&&de Spaanse woorden&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la palabra&&het woord&&unidad 01&&goed&&goed&&neutraal&&neutraal
+un viaje&&een reis&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la persona&&de persoon&&unidad 01&&goed&&goed&&neutraal&&neutraal
+famoso/famosa&&beroemd&&unidad 01&&goed&&goed&&neutraal&&neutraal
+Cómo se llaman las personas?&&Hoe heten deze personen?&&unidad 01&&goed&&niet&&neutraal&&neutraal
+el nombre&&de voornaam&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el apellido&&de achternaam&&unidad 01&&goed&&goed&&neutraal&&neutraal
+mi identidad espanola&&mijn Spaanse identiteit&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la identidad de sus companeros&&de identiteit van de medecursisten&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el companero&&de medecursist&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la companera&&de medecursiste&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+Cómo se pronuncia?&&Hoe spreek je dat uit?&&unidad 01&&goed&&niet&&neutraal&&neutraal
+pronunciar&&uitspreken&&unidad 01&&goed&&goed&&neutraal&&neutraal
+estos nombres&&deze namen&&unidad 01&&goed&&goed&&neutraal&&neutraal
+leer&&lezen&&unidad 01&&goed&&goed&&neutraal&&neutraal
+luego&&dan, daarna&&unidad 01&&goed&&niet&&neutraal&&neutraal
+complete&&vul..aan&&unidad 01&&goed&&goed&&neutraal&&neutraal
+las reglas de pronunciación&&de uitspraakregels&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la pronunciación&&de uitspraak&&unidad 01&&goed&&goed&&neutraal&&neutraal
+Cómo se pronunciation?&&Hoe worden ... uitgesproken&&unidad 01&&goed&&niet&&neutraal&&neutraal
+estas palabras&&deze woorden&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la tortilla&&de aardappelomelet&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la geografia&&de geografie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la informatión&&de informatie&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la organización&&de organisatie&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la universidad&&de universiteit&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el teatro&&het theater&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el quiosco&&de kiosk&&unidad 01&&goed&&niet&&neutraal&&neutraal
+el concierto&&het concert&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el hotel&&het hotel&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el chocolate&&de chocolade&&unidad 01&&goed&&goed&&neutraal&&neutraal
+el trabalenguas&&de tongbreker&&unidad 01&&goed&&niet&&neutraal&&neutraal
+Para qué estudias espanol?&&Waarvoor leer jij Spaans?&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+estudiar&&leren, studeren&&unidad 01&&goed&&goed&&neutraal&&neutraal
+marque&&kruis aan&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el motivo&&de reden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+estudio&&ik leer, ik studeer&&unidad 01&&goed&&niet&&neutraal&&neutraal
+para viajar&&om te reizen&&unidad 01&&goed&&goed&&neutraal&&neutraal
+a&&naar&&unidad 01&&goed&&goed&&neutraal&&neutraal
+Latinoamérica&&Latijns-Amerika&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+trabajar&&werken&&unidad 01&&goed&&niet&&neutraal&&neutraal
+en un hotel&&in een hotel&&unidad 01&&goed&&goed&&neutraal&&neutraal
+en Tenerife&&op Tenerife&&unidad 01&&goed&&goed&&neutraal&&neutraal
+Espana&&Spanje&&unidad 01&&goed&&goed&&neutraal&&neutraal
+comprar&&kopen&&unidad 01&&goed&&goed&&neutraal&&neutraal
+una finca&&een perceel, een huis op het platteland&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+visitar&&bezoeken&&unidad 01&&goed&&goed&&neutraal&&neutraal
+escuchar&&luisteren&&unidad 01&&goed&&goed&&neutraal&&neutraal
+cubano, cubana&&Cubaanse&&unidad 01&&goed&&niet&&neutraal&&neutraal
+pasar las vacaciones&&de vakantie doorbrengen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+hablar&&praten spreken&&unidad 01&&goed&&goed&&neutraal&&neutraal
+con la familia&&met de familie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+de&&van&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+mi pareja&&mijn partner&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+los colegas espanoles&&de Spaanse collega's&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el colega / la colega&&de collega&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+Qué motivos son personales?&&Welke redenen zijn privé?&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+personal&&persoonlijk, privé&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+Cuáles profesionales&&Welke werkgerelateerd?&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+professional&&beroepsmatig&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el verbo&&het werkwoord&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+yo&&ik&&unidad 01&&goed&&goed&&neutraal&&neutraal
+tú&&jij&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+él / ella&&hij/zij, ze&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+usted&&u (enkelvoud)&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+nosotros / nosotras&&wij&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+vosotros / vosotras&&jullie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+ellos / ellas&&zij, ze&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+ustedes&&u (meervoud)&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el inglés&&het Engels&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+clásico/ clásica&&klassiek&&unidad 01&&goed&&niet&&neutraal&&neutraal
+un apartamento&&een appartement&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+si&&of&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+Las personas se hablan de "tú"&&de personen spreken elkaar met "jij aan"&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+Andalucia&&Andalicie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el /la amigo/-a del grupo&&de vriend/de vriendin van de groep&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el grupo&&de groep&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+presente&&presenteer&&unidad 01&&goed&&niet&&neutraal&&neutraal
+ahora&&nu&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el resultado&&het resultaat&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la historia&&de geschiedenis&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+una lengua&&een taal&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el texto&&de tekst&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+de dónde vienen...?&&Waar komen zij vandaan?&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el 80% (ochenta por cieto)&&tachtig procent&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+viene del latin&&komt uit het Latijn&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el latin&&het Latijn&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+por ejemplo&&bijvoorbeeld&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la fábrica&&de fabriek&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el hospital&&het ziekenhuis&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la fruta&&de vrucht; het fruit&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el resto&&de rest&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+de otras lenguas&&uit andere talen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la lengua&&de taal&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+muchas palabras son del árabe&&veel woorden komen uit het Arabisch&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+como&&zoals&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el aceite&&de olie&&unidad 01&&goed&&niet&&neutraal&&neutraal
+el arroz&&de rijst&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la taza&&het kopje&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la naranja&&de sinaasappel&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la jirafa&&de giraf&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el café&&de koffie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la cifra&&het getal&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+o&&of&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el griego&&het Grieks&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la bibliotheca&&de bibliotheek&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el museo&&het museum&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+vienen&&ze komen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+las lenguas indigenas&&de inheemse talen&&&&goed&&neutraal&&neutraal&&neutraal
+indigena&&inheems&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+América&&Amerika&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el tabaco&&de tabak&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el maiz&&de mais&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el colibri&&de kolibrie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el jaguar&&de jaguar&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la barbacoa&&de barbecue&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+también&&ook&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+americano/-a&&Amerikaans, uit Amerika&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+hoy&&vandaag&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+muchas palabras nuevas&&veel nieuwe woorden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el champú&&de shampoo&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el fútbol&&het voetbal&&unidad 01&&goed&&goed&&neutraal&&neutraal
+todas las lenguas&&alle talen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+muchas influencias&&veel invloeden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la influencia&&de invloed&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+"Aceite" significa...&&"Aceite" betekent...&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+significar&&betekenen&&unidad 01&&goed&&niet&&neutraal&&neutraal
+qué significa...?&&wat betekent...?&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+si&&ja&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+no&&nee&&unidad 01&&goed&&goed&&neutraal&&neutraal
+no sé&&ik weet het niet&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+ordene&&orden, rangschik&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la comida&&het eten&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la bebida&&het drankje&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el edificio&&het gebouw&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el animal&&het dier&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+son las deiz en punto&&het is 10 uur&&100 klokkijken&&neutraal&&neutraal&&goed&&neutraal
+es la dos en punto&&het is 2 uur&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
+son las cinco y diez minutos&&het is tien over vijf&&100 klokkijken&&neutraal&&neutraal&&niet&&neutraal
+son las cinco minos diez minutos&&het is tien voor vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
+son las cinco y quarto&&het is kwart over vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
+son las cinco minos quarto&&het is kwart voor vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
+la tabla&&de tabel&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el articulo determinando&&het bepaald lidwoord&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+masculino&&mannelijk&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+femenino&&vrouwelijk&&unidad 01&&goed&&niet&&neutraal&&neutraal
+el singular&&het enkelvoud&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el plural&&het meervoud&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la cadena&&de ketting&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el bingo de palabras&&de woordenbingo&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+más que palabras&&meer dan woorden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la expresíon&&de uitdrukking&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el saludo&&de begroeting&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la despedida&&het afscheid&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el pais&&het land&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+de origen árabe&&van Arabische oorsprong&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el origin&&de oorsprong&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+arabé&&Arabisch&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+en compania&&in gezelschap&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la compana&&het gezelschap&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+en la playa&&op het strand&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el monumento&&het monument&&unidad 01&&goed&&goed&&neutraal&&neutraal
+la cultura&&de cultuur&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+antiguo&&oud&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+comparen&&vergelijk&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+sus combinaciones&&uw combinaties&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la tarea final&&de eindopdracht&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la frase&&de zin&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el concurso&&de wedstrijd&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+en grupos de tres&&in groepen van drie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+de Norte a Sur&&van noord naar zuid&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el norte&&het noorden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el sur&&het zuiden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la ruta&&de route&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+fascinante&&fascinerend&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+por&&door&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el continente&&het continent, werelddeel&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+desde&&vanuit&&unidad 01&&niet&&neutraal&&neutraal&&neutraal
+esta ruta&&deze route&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+pasar por&&gaan door, lopen door&&unidad 01&&niet&&neutraal&&neutraal&&neutraal
+la zona climática&&de klimaatzone&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+muy&&heel erg&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+diferente&&verschillend&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+sus lenguas&&hun talen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+su gastronomia&&hun gastronomie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el paisaje&&het landschap&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+impresionante&&indrukwekkend&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+cada&&elk, ieder&&unidad 01&&niet&&neutraal&&neutraal&&neutraal
+la leccíon&&de les&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+presentar&&presenteren, voorstellen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la etapa&&de etappe, het traject&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el mapa&&de landkaart&&unidad 01&&goed&&niet&&neutraal&&neutraal
+los paises que se mencionan&&de landen die genoemd worden&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+mencionar&&noemen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+otra vez&&nog een keer&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+relacione&&verbind&&unidad 01&&goed&&niet&&neutraal&&neutraal
+la foto&&de foto&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la comunicacion&&de communicatie&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+manana&&morgen&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la gramática&&de grammatica&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el flamenco&&de flamenco&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el senor&&de heer&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la senora&&mevrouw&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+el problema&&het probleem&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+la región&&de regio&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
+senar&&dineren&&unidad 02&&goed&&niet&&neutraal&&neutraal
+primero/-a&&eerste&&unidad 02&&goed&&goed&&neutraal&&neutraal
+el contacto&&het contact&&unidad 02&&goed&&goed&&neutraal&&neutraal
+la digitalización&&de digitalisering&&unidad 02&&goed&&goed&&neutraal&&neutraal
+el congreso&&het congres&&unidad 02&&goed&&goed&&neutraal&&neutraal
+sobre&&over&&unidad 02&&niet&&niet&&neutraal&&neutraal
+el cambio&&de verandering&&unidad 02&&niet&&goed&&neutraal&&neutraal
+el mundo de trabajo&&de wereld van het werk&&unidad 02&&goed&&goed&&neutraal&&neutraal
+el trabajo&&het werk&&unidad 02&&goed&&goed&&neutraal&&neutraal
+28 y 29 de marzo&&28 en 29 maart&&unidad 02&&goed&&niet&&neutraal&&neutraal
+nasido&&geboren&&uit de les&&goed&&neutraal&&neutraal&&neutraal
+bale&&oké&&uit de les&&goed&&neutraal&&neutraal&&neutraal
+siempre&&altijd&&uit de les&&goed&&neutraal&&neutraal&&neutraal
+el palacio de congresos&&het congrescentrum&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el congreso&&het congres&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el informático&&de IT'er&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el ingeniero&&de ingenieur&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el camarero&&de ober&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el fotografo&&de fotograaf&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el mecánico&&de monteur&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el arquitecto&&de architect&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el secretario&&de secretaris&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el cocinero&&de kok&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el profesor&&de leraar&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el médico&&de arts&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+mire&&bekijk&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+mirar&&bekijken&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+la publicidad&&de reclame&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+para&&voor&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+Qué profesión tienen las personas?&&Welk beroep hebben de personen?&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+la profesión&&het beroep&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+una de las personas se presenta&&Een van de personen stelt zich voor&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+presentarse&&presenteren&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+Quién es?&&Wie is het?&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el cubano&&de cubaan&&unidad 02&&goed&&niet&&neutraal&&neutraal
+el peruano&&de Peruaan&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+vivo&&ik woon, ik leef&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+viver&&wonen, leven&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+mucho gusto&&aangenaam kennis te maken&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el diálogo&&de dialoog&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+encantado&&aangenaam kennis te maken&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+el organizador&&de organisator&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+es usted de Cataluna?&&komt u uit Catalonie?&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+yo también&&ik ook&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+de dónde es usted?&&waar komt u vandaan?&&unidad 02&&goed&&neutraal&&neutraal&&neutraal
+pues&&nou, dus&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+cómo estas&&hoe gaat het met je?&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+bien, gracias&&goed, dank je&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+y tú?&&en met jou?&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+qué tal?&&hoe gaat het?&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+ser@@soy@@eres@@es@@somos@@sois@@son&&zijn@@ik ben@@jij bent@@hij is@@wij zijn@@jullie zijn@@zij zijn&&werkwoord&&neutraal&&goed&&neutraal&&neutraal
+me gusta mi gente&&my bevalt me mijn familie&&unidad 03&&goed&&goed&&neutraal&&neutraal
+me gusta&&ik vind...leuk, mij bevalt&&unidad 03&&goed&&goed&&neutraal&&neutraal
+gustar&&leuk vinden&&unidad 03&&goed&&goed&&neutraal&&neutraal
+mi gente&&mijn familie&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el cumpleanos&&de verjaardag&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+mis companeras de trabajo&&mijn collega's&&unidad 03&&goed&&niet&&neutraal&&neutraal
+el papá&&de vader&&unidad 03&&goed&&goed&&neutraal&&neutraal
+su equipo&&zijn team&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el hijo&&de zoon&&unidad 03&&goed&&goed&&neutraal&&neutraal
+la hija&&de dochter&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el marido&&de echtgenoot&&unidad 03&&goed&&niet&&neutraal&&neutraal
+los abuelos&&de grootouders&&unidad 03&&goed&&goed&&neutraal&&neutraal
+los nietos&&de kleinkinderen&&unidad 03&&goed&&goed&&neutraal&&neutraal
+la madre&&de moeder&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el hermano&&de broer&&unidad 03&&goed&&goed&&neutraal&&neutraal
+la hermana&&de zus&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el padre&&de vader&&unidad 03&&goed&&goed&&neutraal&&neutraal
+En que orden?&&In welke volgorde?&&unidad 03&&goed&&niet&&neutraal&&neutraal
+el orden&&de volgorde&&unidad 02&&neutraal&&neutraal&&neutraal&&neutraal
+de quién?&&van wie?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la situación&&de situatie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+mis hijos&&mijn kinderen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+conoce usted a estas personas?&&kent u deze personen?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+conocer&&kennen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+cuántos? (m)&&hoeveel?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+cuántas? (v)&&hoeveel?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el/la artist/a&&de kunstenaar, de kunstenares&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+hay (haber)&&zijn&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+uno de los personajes más famósos&&een van de beroemde personen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el personaje&&de persoon, de persoonlijkheid&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el mundo del espanol&&de Spaanssprekende wereld&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+no solo&&niet alleen&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el actor/la actriz&&de acteur, de actrice&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+sino tambíen&&maar ook&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el nieto/la nieta&&het kleinkind, de kleinzoon, de kleindochter&&unidad 03&&goed&&niet&&neutraal&&neutraal
+el abuelo/la abuela&&de grootvader, de grootmoeder&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+los hermanos&&de broers en zussen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el tio/la tia&&de oom, de tante&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el primo/la prima&&de neef / de nicht&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el director de cine&&de filmregisseur&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la directora de cine&&de filmregisseur&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la mujer&&de vrouw&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+otros&&anderen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+otras&&anderen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el bailarin&&de danser&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la bailarina&&de danseres&&unidad 03&&goed&&niet&&neutraal&&neutraal
+el compositor&&de componist&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la compositora&&de componste&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la pareja&&het koppel, het stel&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el árbol genealógico&&de stamboom&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+con la ayuda de&&met behulp van&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la ayuda&&de hulp&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+nuestro&&ons, onze&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+nuestra&&ons, onze&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+griego/-a&&Grieks&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el sobrino&&de neef (kind van broer of zus)&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la sobrina&&de nicht (kind van broer of zus)&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+los padres&&de ouders&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la situación&&de situatie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+mis hijos&&mijn kinderen&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el/la esposo/a&&de echtgenoot, de echtgenote&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la pregunta&&de vraag&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el posesivo&&het bezittelijk voornaamwoord&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+vuestro/a&&jullie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+fantástico&&fantastisch&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+pregunta por&&vraag naar&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la empresa familia&&het familiebedrijf&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+le gusta el chocolate?&&houdt u van chocolade?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el tipo&&de soort&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+blanco/a&&wit&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+negro/a&&zwart&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la leche&&de melk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la almendra&&de amandel&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la generación&&de generatie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el/la chocolatero/a&&de chocoladefabrikant&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la provincia&&de provincie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+en ella&&en erin&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+antes&&vroeger&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+para todos los gustos&&voor elk wat wils&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el gusto&&de smaak&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el producto estrella&&het topproduct&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la estrella&&de ster&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+por ciento&&procent&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la chocolateria&&de chocoladewinkel&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+exportar&&exporteren&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+más de 60 paises&&meer dan 60 landen&&unidad 03&&niet&&neutraal&&neutraal&&neutraal
+la pasion&&de passie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+unas cifras&&een paar cijfers&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+cuántos anos tiene Marie?&&hoe oud is Marie?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+tener 10 anos&&10 jaar oud zijn&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el ano&&het jaar&&unidad 03&&goed&&goed&&neutraal&&neutraal
+el miembro&&het lid&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+diferente&&anders&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+se acuerde da..?&&herinnert u zich...?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+acordarse&&zich herinneren&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+guapo/a&&mooi&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+moreno&&donkerharig&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+delgado/a&&slank&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la fotografia&&fotografie&&unidad 03&&niet&&neutraal&&neutraal&&neutraal
+alegre&&vrolijk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+abierto&&open&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+a veces&&soms&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+arrogante&&arrogant&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+está casado/a&&hij, zij is getrouwd&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el hombre&&de man&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+attractivo/a&&aantrekkelijk&&unidad 03&&goed&&niet&&neutraal&&neutraal
+tener los ojos negros&&donkere ogen hebben&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el ojo&&het oog&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+alto/a&&groot, hoog&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+gordito/a&&mollig&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+de carácter&&van karakter&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+optimista&&optimistisch&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+timido/a&&verlegen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+estar divorciado/a&&gescheiden zijn&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el perro&&de hond&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el hobby&&de hobby&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+original&&origineel&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el buceo&&het duiken&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el adjetivo&&het bijvoegelijke naamwoord&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+bajito/a&&klein van stuk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+joven&&jong&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+mayor&&ouder,volwassen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+rubio/a&&blond&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+feo/a&&lelijk&&unidad 03&&goed&&niet&&neutraal&&neutraal
+antipático&&onaardig, onvriendelijk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+pesimista&&pessimistisch&&unidad 03&&goed&&niet&&neutraal&&neutraal
+los dos&&allebei, beiden&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la entrada&&het toegangskaartje&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la venta de entradas&&het kaartverkoop&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+me gusta...&&ik vind...leuk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la pelicula&&de film&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+romántico&&romantisch&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+me gusta ver&&ik kijk graag&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+ver (yo veo)&&zien&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+por internet&&op internet&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el/la internet&&het internet&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la peculia de terror&&de horrorfilm&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el terror&&de ontzetting, de angst&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+ver la tele&&tv-kijken&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+te gusta...?&&vind je...leuk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la fiesta de cumplenos&&het verjaardagsfeest&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la ópera&&de opera&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el color&&de kleur&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el rosa&&het roze&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+viajar en avión&&met het vliegtuig reizen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el avión&&het vliegtuig&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+(no) mucho&&niet erg&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+bastiante&&nogal, tamelijk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+no...nada&&helemaal niet&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+a Linda le gustan mucho...&&Linda vindt...leuk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+cuàndo es tu compleanos?&&wanneer ben je jarig?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el 18 de enero&&18 januari, op 18 januari&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el uno / primero de abril&&(op) 1 april&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el mes&&de maand&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+enero&&januari&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+febrero&&februari&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+marzo&&maart&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+abril&&april&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+mayo&&mei&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+junio&&juni&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+julio&&juli&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+agusto&&augustus&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+septiember&&september&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+octubre&&oktober&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+noviembre&&november&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+diciembre&&december&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la canción&&het lied&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+cumpleanos feliz&&gefeliciteerd met je verjaardag&&unidad 03&&goed&&niet&&neutraal&&neutraal
+feliz&&gelukkig, blij&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la competición&&de wedstrijd, de competitie&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el aspecto&&het uiterlijk&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+exótico/-a&&exotisch&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la caracteristica&&de eigenschap&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la relación con usted&&de relatie met u&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+guatemalteco/a&&uit Guatemala&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+pequeno/a&&klein&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+variado/a&&afwisselend&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la naturaleza&&de natuur&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la selva tropical más grande&&het grootste tropische regenwoud&&unidad 03&&niet&&neutraal&&neutraal&&neutraal
+tropical&&tropisch&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+grande&&groot, hoog&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+Centroamérica&&Midden-Amerika&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el vulcán&&de vulkaan&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el lago&&het meer&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el cráter&&de krater&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+ideal&&ideaal&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+de...a...&&van...tot...&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+Ciudad de Guatemala&&Guatemala-Stad&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+moderno/a&&modern&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la casa colonial&&het huis in koloniale stijl&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+de todo el mundo&&uit de hele wereld&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+más de 50%&&meer dan 50%&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el/la habitante&&de inwoner&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+conservar&&bewaren&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el ritual&&het ritueel&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+religioso/-a&&religieus&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la atracción&&de bezienswaardigheid&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+muchos turistas&&veel toeristen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el/la turista&&de toerist(e)&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el mercado&&de markt&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+donde&&waar (als betrekkelijk voornaamwoord)&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el/la indigena&&de oorspronkelijke inwoner/inwoonster&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+intercambiar&&uitwisselen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+al sur de...&&ten zuiden van&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+están(estar)&&ze liggen&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el pais más pequeno&&het kleinste land&&unidad 03&&goed&&niet&&neutraal&&neutraal
+por&&vanwege, door&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+marvallioso/a&&schitterend&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el Caribe&&de Caraiben&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+el paraiso&&het paradijs&&unidad 03&&goed&&niet&&neutraal&&neutraal
+la reserva natural&&het natuurreservaat&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+los restos&&de resten&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+arguelógico/a&&archeologisch&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+quizás&&misschien&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+triste&&somber,droevig&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+la idea&&het idee&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+quiénes son...?&&Wie zijn...?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+por qué&&waarom?&&unidad 03&&goed&&neutraal&&neutraal&&neutraal
+se saludan&&ze begroeten elkaar&&unidad 04&&goed&&niet&&neutraal&&neutraal
+saludar(se)&&elkaar begroeten&&unidad 04&&goed&&niet&&neutraal&&neutraal
+darse un beso&&elkaar een kus geven&&unidad 04&&goed&&goed&&neutraal&&neutraal
+dar(yo doy)&&geven&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el beso&&de kus&&unidad 04&&goed&&goed&&neutraal&&neutraal
+la mano&&de hand&&unidad 04&&goed&&goed&&neutraal&&neutraal
+abrazar(se)&&(elkaar) omhelzen&&unidad 04&&goed&&niet&&neutraal&&neutraal
+la entrevista&&het interview&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el/la hispanohablante&&de Spaanssprekende&&unidad 04&&goed&&niet&&neutraal&&neutraal
+la opcíon&&de keuze, de optie&&unidad 04&&goed&&niet&&neutraal&&neutraal
+formal&&formeel&&unidad 04&&goed&&goed&&neutraal&&neutraal
+otro/a&&een ander(e)&&unidad 04&&goed&&goed&&neutraal&&neutraal
+Bolivia&&Bolivia&&unidad 04&&goed&&goed&&neutraal&&neutraal
+los jóvenes&&de jongeren&&unidad 04&&goed&&goed&&neutraal&&neutraal
+los mayores&&de ouderen&&unidad 04&&goed&&goed&&neutraal&&neutraal
+entrar en contacto&&in contact komen&&unidad 04&&goed&&niet&&neutraal&&neutraal
+esta es mi hija&&dit is mijn dochter&&unidad 04&&goed&&goed&&neutraal&&neutraal
+precioso/a&&prachtig&&unidad 04&&goed&&niet&&neutraal&&neutraal
+qué bonito nombre&&wat een mooie naam&&unidad 04&&goed&&goed&&neutraal&&neutraal
+bonito&&mooi&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el cóctel&&de cocktail&&unidad 04&&goed&&goed&&neutraal&&neutraal
+la edad&&de leeftijd&&unidad 04&&goed&&goed&&neutraal&&neutraal
+la nacionalidad&&de nationaliteit&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el video&&de video&&unidad 04&&goed&&goed&&neutraal&&neutraal
+fácil&&gemakkelijk&&unidad 04&&goed&&goed&&neutraal&&neutraal
+divertido/a&&grappig, leuk&&unidad 04&&goed&&goed&&neutraal&&neutraal
+exigente&&veeleisend&&unidad 04&&goed&&niet&&neutraal&&neutraal
+conocido/a&&bekend&&unidad 04&&goed&&niet&&neutraal&&neutraal
+casi&&bijna&&unidad 04&&niet&&niet&&neutraal&&neutraal
+todos los dias&&elke dag&&unidad 04&&goed&&goed&&neutraal&&neutraal
+ensayer&&repeteren&&unidad 04&&goed&&goed&&neutraal&&neutraal
+dar clases de piano&&pianoles geven&&unidad 04&&goed&&niet&&neutraal&&neutraal
+la clase&&de les&&unidad 04&&goed&&goed&&neutraal&&neutraal
+qué tipo de musica?&&wat voor soort muziek?&&unidad 04&&goed&&goed&&neutraal&&neutraal
+tocar un instrumento&&een muziekinstrument bespelen&&unidad 04&&goed&&niet&&neutraal&&neutraal
+bailar&&dansen&&unidad 04&&goed&&goed&&neutraal&&neutraal
+asociar&&associeren&&unidad 04&&goed&&goed&&neutraal&&neutraal
+qué piensa?&&wat denkt u?&&unidad 04&&goed&&goed&&neutraal&&neutraal
+pensar&&denken&&unidad 04&&goed&&goed&&neutraal&&neutraal
+regularmente&&regelmatig&&unidad 04&&goed&&niet&&neutraal&&neutraal
+ahi&&daar&&unidad 04&&goed&&niet&&neutraal&&neutraal
+el valle&&de vallei&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el río&&de rivier&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el turismo ecológico&&het ecotoerisme&&unidad 04&&goed&&niet&&neutraal&&neutraal
+mundial&&mondiaal&&unidad 04&&goed&&goed&&neutraal&&neutraal
+comunicativo/a&&spraakzaam, open&&unidad 04&&goed&&niet&&neutraal&&neutraal
+el mapa asociativo&&het woordveld&&unidad 04&&goed&&niet&&neutraal&&neutraal
+aprender mejor&&beter leren&&unidad 04&&goed&&goed&&neutraal&&neutraal
+el/la espanol/a&&de Spanjaard, de Spaanse&&unidad 04&&goed&&goed&&neutraal&&neutraal
+rápido&&snel, vlug&&unidad 04&&goed&&goed&&neutraal&&neutraal
+la informática&&de informatica&&unidad 04&&goed&&goed&&neutraal&&neutraal
+espontáneo/a&&spontaan&&unidad 04&&goed&&neutraal&&neutraal&&neutraal
+el vocabulario&&de woordenschat&&unidad 04&&goed&&neutraal&&neutraal&&neutraal
+el tenis&&het tennis&&unidad 04&&goed&&goed&&neutraal&&neutraal
+la terapia de errores&&de foutentherapie&&unidad 04&&goed&&niet&&neutraal&&neutraal
+el error&&de fout&&unidad 04&&goed&&goed&&neutraal&&neutraal
+ya&&al&&unidad 04&&niet&&niet&&neutraal&&neutraal
+el truco&&de truc, het ezelsbruggetje&&unidad 04&&goed&&goed&&neutraal&&neutraal
+comer&&eten&&unidad 05&&goed&&neutraal&&goed&&neutraal
+con gusto&&graag, met plezier&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la cesta&&de mand&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la semana&&de week&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el zumo&&het sap&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el hambre&&de honger&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la vendura&&de groente&&unidad 05&&goed&&neutraal&&niet&&neutraal
+la sed&&de dorst&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el agua&&het water&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el huevo&&het ei&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la carne&&het vlees&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el plátano&&de banaan&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el limón&&de citroen&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el pollo&&de kip&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la pasta&&de pasta&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la mantequilla&&de boter&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la manzana&&de appel&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la patata&&de aardappel&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el pescado&&de vis&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la cebolla&&de ui&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la lechuga&&de sla&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el pan&&het brood&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el/la cliente/a&&de klant&&unidad 05&&goed&&neutraal&&goed&&neutraal
+todos los alimentos&&alle levensmiddelen&&unidad 05&&goed&&neutraal&&goed&&neutraal
+todos&&alle&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el alimento&&het levensmiddel&&unidad 05&&goed&&neutraal&&goed&&neutraal
+queria&&ik wil graag&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+un kilo de tomatos&&een kilo tomaten&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la ensalade&&de salade&&unidad 05&&goed&&neutraal&&goed&&neutraal
+la salsa&&de saus&&unidad 05&&goed&&neutraal&&niet&&neutraal
+un momento&&een ogenblik&&unidad 05&&goed&&neutraal&&goed&&neutraal
+soy yo&&ik ben het&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+por favor&&alsublieft&&unidad 05&&goed&&neutraal&&goed&&neutraal
+aqui tiene&&alsublieft, bij het overhandigen&&unidad 05&&goed&&neutraal&&niet&&neutraal
+algo más?&&anders nog iets?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la mandarina&&de mandarijn&&unidad 05&&goed&&neutraal&&goed&&neutraal
+bueno/a&&goed&&unidad 05&&goed&&neutraal&&goed&&neutraal
+prefiero&&ik heb liever&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+preferir&&liever hebben…, de voorkeur geven aan…&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+cuánto quiere?&&hoeveel wilt u?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+querer&&willen&&unidad 05&&goed&&neutraal&&goed&&neutraal
+un kilo y medio&&anderhalve kilo&&unidad 05&&goed&&neutraal&&goed&&neutraal
+medio/a&&half, halve&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el mango&&de mango&&unidad 05&&goed&&neutraal&&goed&&neutraal
+lo siento&&het spijt me&&unidad 05&&goed&&neutraal&&goed&&neutraal
+sentir&&spijten, betreuren&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+hoy no tengo&&vandaag heb ik er geen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+entonces&&dan&&unidad 05&&goed&&neutraal&&niet&&neutraal
+deme(dar)&&geeft u mij&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+y qué mas?&&en wat nog meer?&&unidad 05&&goed&&neutraal&&goed&&neutraal
+el melon&&de meloen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+bueno&&goed, oké&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+ese es todo&&dat is alles&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+cuánto es?&&hoeveel is het?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+son…&&dat wordt dan…&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+el peso&&Argentijnse munteenheid&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+muchas gracias&&hartelijk dank&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+hasta la próxima&&tot de volgende keer&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+en voz alta&&hardop&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el/la vendedor/a&&de verkoper, de verkoopster&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+cuánto questa…?&&wat kost…?&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+costar&&kosten&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+en total&&in totaal&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+dos euros con diez&&twee euro tien&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el euro&&de euro&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el vino blanco&&de witte wijn&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el vino tinto&&de rode wijn&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la cerveza sin alcohol&&het alcoholvrije bier&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+sin&&zonder&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el alcohol&&de alcohol&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el gas&&het koolzuur&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el zumo de naranja&&het sinaasappelsap&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el azúcar&&de suiker&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+compre&&koop&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+los números que faltan&&de ontbrekende getallen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+faltar&&ontbreken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+cien(to)&&honderd&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+mil&&duizend&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el millón&&het miljoen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la exportacíon&&de export&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+Brasil&&Brazilie&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+probar&&proeven, proberen&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+piden&&ze bestellen&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+el champinon&&de champignon&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+al ajillo&&gebakken met knoflook&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+la albóndiga&&het gehaktballetje&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la gamba&&de gamba&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+a la plancha&&gegrild&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+los calamares&&de gefrituurde inktvisringen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+a la romana&&gepaneerd&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la sardina&&het sardientje&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+frito/a&&gefrituurd, gebakken&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+la aceituna&&de olijf&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+verde&&groen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el jamón serrano&&de serranoham&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+a ver&&even kijken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+las patatas bravas&&aardappeltjes met pikante saus&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+lleva ajo?&&zit er knoflook in?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+llevar&&bevatten, meenemen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la mayonesa&&de mayonaise&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el tabasco&&de tabasco&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+puedo&&ik kan, ik mag&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+poder&&kunnen, mogen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+tomar&&nemen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+picante&&pittig, scherp&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+qué va&&welnee&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+una ración de…&&een portie&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+enseguida&&hier, het komt eraan&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+para beber&&om te drinken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el vino tinto de la case&&de rode wijn van het huis&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+no?&&niet waar?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+tomar alcohol&&alcohol drinken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el agua mineral&&het mineraalwater&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+qué tal?&&hoe smaakt het?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+delicioso/a&&heerlijk&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+pagar&&betalen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+informarse&&informatie inwinnen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+se come caliente?&&wordt het warm gegeten?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+frio/a&&koud&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+vamos&&we gaan&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el menú&&het menu&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la sepia&&de inktvis&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+en su tinta&&in eigen inkt&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+los boquerones&&de ansjovis&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el vinagre&&de azijn&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+los pimientos del padrón&&de kleine groene paprika’s&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+el pimiento&&de paprika&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la ensaladilla rusa&&de huzarensalade&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el pulpo&&de octopus&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+a la gallega&&op galische wijze (met aardappelen)&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+las croquetas&&de kroketten&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+referirse a&&betrekking hebben op&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
+siquiente&&volgende&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+las quiere negras o verdes?&&wilt u zwarte of groene?&&&&neutraal&&neutraal&&neutraal&&neutraal
+el té&&de thee&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el objeto&&het object&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+se habla&&er wordt gesproken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+necesitar&&nodig hebben&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+usar&&gebruiken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la sopa&&de soep&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+cortar&&snijden&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+preparar&&bereiden&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+los espaquetis&&de spaghetti&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+la chuchara&&de lepel&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el chuchillo&&het mes&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el vaso&&het (water)glas&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el copa&&het (wijn)glas&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+estudiar&&studeren@@estudio@@estudias@@estudia@@estudiamos@@estudiáis@@estudian&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
+hablar&&praten@@hablo@@hablas@@habla@@hablamos@@habláis@@hablan&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
+comer&&eten@@como@@comes@@come@@comemos@@coméis@@comen&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
+vivir&&leven@@vivo@@vives@@vive@@vivimos@@vivis@@viven&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
+ducharse&&douchen@@me ducho@@te duchas@@se ducha@@nos duchamos@@os ducháis@@se duchan&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
+mejor&&beter&&unidad 04&&goed&&goed&&neutraal&&neutraal

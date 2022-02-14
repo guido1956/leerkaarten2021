@@ -266,7 +266,7 @@ public class Kaartenbak {
             while (isKaart) {
                 tijdelijk = inKaartfile.readLine();
                 if (!(tijdelijk == null)) {
-                    String[] fields = tijdelijk.split(":");
+                    String[] fields = tijdelijk.split("&&");
                     int lengte = fields.length;
                     for (int x = 0; x < fields.length; x++) {
                         fields[x] = fields[x].trim();
@@ -309,9 +309,9 @@ public class Kaartenbak {
         try {
             BufferedWriter outfile = createBestand();
             for (Kaart e : kaarten) {
-                String a = e.getVoorkant() + ":" + e.getAchterkant() + ":" + e.getModule() + ":" +
-                        e.getGekendVoorkant() + ":" + e.getGekendAchterkant() +
-                        ":" + e.getGekendSchrijfVoorkant() + ":" + e.getGekendSchrijfAchterkant() + "\n";
+                String a = e.getVoorkant() + "&&" + e.getAchterkant() + "&&" + e.getModule() + "&&" +
+                        e.getGekendVoorkant() + "&&" + e.getGekendAchterkant() +
+                        "&&" + e.getGekendSchrijfVoorkant() + "&&" + e.getGekendSchrijfAchterkant() + "\n";
                 assert outfile != null;
                 outfile.write(a);
             }
