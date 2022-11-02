@@ -11,7 +11,7 @@ public class KaartenBeheerGui extends JPanel{
     public void createGuiBeheer() {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        JLabel lblkaartnr = new JLabel("kaartnr: ");
+        JLabel lblkaartnr = new JLabel("cardnr: ");
         JLabel lblonzichtbaar = new JLabel(" ".repeat(BREEDTE));
         JLabel lblonzichtbaar2 = new JLabel(" ".repeat(BREEDTE + 20));
         txtKaartnr = new JTextField(4);
@@ -22,13 +22,13 @@ public class KaartenBeheerGui extends JPanel{
 
 
         JLabel lblonzichtbaar3 = new JLabel(" ".repeat(BREEDTE + 20));
-        JLabel lblfilename = new JLabel("naam file: ");
+        JLabel lblfilename = new JLabel("name file: ");
         txtFilename = new JTextArea(1,BREEDTE);
         this.add(lblfilename);
         this.add(txtFilename);
         this.add(lblonzichtbaar3);
 
-        JLabel lblInvoerKaart = new JLabel("vraag-antwoord-module");
+        JLabel lblInvoerKaart = new JLabel("question-answer-module");
         txtInvoerKaart = new JTextArea(4,BREEDTE);
         this.add(lblInvoerKaart);
         this.add(txtInvoerKaart);
@@ -37,12 +37,12 @@ public class KaartenBeheerGui extends JPanel{
             this.add(new JLabel(" ".repeat(BREEDTE + 20)));
         }
 
-        btnNieuw = new JButton("nieuw");
-        btnNieuw.setName("nieuw");
+        btnNieuw = new JButton("new");
+        btnNieuw.setName("new");
         this.add(btnNieuw);
 
-        btnVerwijder = new JButton("verwijder");
-        btnVerwijder.setName("verwijder");
+        btnVerwijder = new JButton("delete");
+        btnVerwijder.setName("delete");
         this.add(btnVerwijder);
 
         btnSave = new JButton("save");

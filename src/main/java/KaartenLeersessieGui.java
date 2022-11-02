@@ -35,7 +35,7 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void createFileField() {
-        JLabel naamFileLabel = new JLabel("naam kaartenbestand: ");
+        JLabel naamFileLabel = new JLabel("name card database: ");
         this.add(naamFileLabel);
         naamFileTextField = new JTextField(13);
         naamFileTextField.setBackground(Color.white);
@@ -43,21 +43,21 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void createStatisticFields() {
-        JLabel totaalKaartenTextAreaLabel = new JLabel("aantal:  ");
+        JLabel totaalKaartenTextAreaLabel = new JLabel("amount:  ");
         this.add(totaalKaartenTextAreaLabel);
         txtTotaal = new JTextArea("", 1, 4);
         txtTotaal.setBackground(Color.getHSBColor(100, 86, 96));
         txtTotaal.setEditable(false);
         this.add(txtTotaal);
 
-        JLabel aantalNeutraalLabel = new JLabel("neutraal:");
+        JLabel aantalNeutraalLabel = new JLabel("neutral:");
         this.add(aantalNeutraalLabel);
         txtAantalNeutraal = new JTextArea("", 1, 4);
         txtAantalNeutraal.setBackground(Color.getHSBColor(100, 86, 96));
         txtAantalNeutraal.setEditable(false);
         this.add(txtAantalNeutraal);
 
-        JLabel aantalGoedLabel = new JLabel("goed:");
+        JLabel aantalGoedLabel = new JLabel("correct:");
         this.add(aantalGoedLabel);
 
         txtAantalGoed = new JTextArea("", 1, 4);
@@ -65,14 +65,14 @@ public class KaartenLeersessieGui extends JPanel {
         txtAantalGoed.setEditable(false);
         this.add(txtAantalGoed);
 
-        JLabel aantalNogNietLabel = new JLabel("nog niet:");
+        JLabel aantalNogNietLabel = new JLabel("not yet:");
         this.add(aantalNogNietLabel);
         txtAantalNogNiet = new JTextArea("", 1, 4);
         txtAantalNogNiet.setBackground(Color.getHSBColor(100, 86, 96));
         txtAantalNogNiet.setEditable(false);
         this.add(txtAantalNogNiet);
 
-        JLabel lblVanaf = new JLabel("leren vanaf kaartnr:     ");
+        JLabel lblVanaf = new JLabel("learning from cardnr:     ");
         this.add(lblVanaf);
     }
 
@@ -80,20 +80,20 @@ public class KaartenLeersessieGui extends JPanel {
         naarKaartTextField = new JTextField(5);
         naarKaartTextField.setBackground(Color.white);
         naarKaartTextField.setText("");
-        naarKaartTextField.setName("ganaar");
+        naarKaartTextField.setName("go to");
         this.add(naarKaartTextField);
 
-        JLabel lblTM = new JLabel("t/m");
+        JLabel lblTM = new JLabel("up to");
         this.add(lblTM);
 
         totKaartTextField = new JTextField(5);
         totKaartTextField.setBackground(Color.white);
         totKaartTextField.setText("");
-        totKaartTextField.setName("totAan");
+        totKaartTextField.setName("till");
         this.add(totKaartTextField);
 
         zoekWoordField = new JTextField(9);
-        zoekWoordField.setName("zoekWoord");
+        zoekWoordField.setName("search word");
         this.add(zoekWoordField);
     }
 
@@ -134,23 +134,23 @@ public class KaartenLeersessieGui extends JPanel {
     }
 
     public void createButtons() {
-        btnVolgende = new JButton("volgende kaart");
+        btnVolgende = new JButton("next card");
         btnVolgende.setName("nextCard");
         this.add(btnVolgende);
 
-        btnCheck = new JButton("goed");
+        btnCheck = new JButton("correct");
         btnCheck.setName("correct");
         this.add(btnCheck);
 
-        btnNietGoed = new JButton("nog niet");
+        btnNietGoed = new JButton("not yet");
         btnNietGoed.setName("incorrect");
         this.add(btnNietGoed);
 
-        btnVorige = new JButton("vorige kaart");
+        btnVorige = new JButton("former card");
         btnVorige.setName("formerCard");
         this.add(btnVorige);
 
-        btnFlip = new JButton("flip kaart");
+        btnFlip = new JButton("flip card");
         btnFlip.setName("flip");
         this.add(btnFlip);
 
@@ -171,14 +171,14 @@ public class KaartenLeersessieGui extends JPanel {
 
     public void createRadioButtons() {
         ButtonGroup volgorde = new ButtonGroup();
-        voorkantRadioButton = new JRadioButton("start met voorkant");
+        voorkantRadioButton = new JRadioButton("start with front");
         voorkantRadioButton.setSelected(true);
-        voorkantRadioButton.setName("radioVoorkant");
+        voorkantRadioButton.setName("radioFront");
         this.add(voorkantRadioButton);
 
-        achterkantRadioButton = new JRadioButton("start met achterkant");
+        achterkantRadioButton = new JRadioButton("start met back");
         achterkantRadioButton.setSelected(false);
-        achterkantRadioButton.setName("radioAchterkant");
+        achterkantRadioButton.setName("radioBack");
         this.add(achterkantRadioButton);
         volgorde.add(voorkantRadioButton);
         volgorde.add(achterkantRadioButton);
@@ -189,22 +189,22 @@ public class KaartenLeersessieGui extends JPanel {
         this.add(chkRandom);
         chkRandom.setSelected(false);
 
-        chkNeutraal = new JCheckBox("neutraal");
+        chkNeutraal = new JCheckBox("neutral");
         this.add(chkNeutraal);
         chkNeutraal.setSelected(true);
 
-        chkGoed = new JCheckBox("goed");
+        chkGoed = new JCheckBox("correct");
         this.add(chkGoed);
         chkGoed.setSelected(true);
 
-        chkNogNiet = new JCheckBox("nog niet");
+        chkNogNiet = new JCheckBox("not yet");
         this.add(chkNogNiet);
         chkNogNiet.setSelected(true);
 
         chkAutocue = new JCheckBox("autocue");
         this.add(chkAutocue);
         chkAutocue.setSelected(false);
-        JCheckBox schrijvenCheckBox = new JCheckBox("schrijven");
+        JCheckBox schrijvenCheckBox = new JCheckBox("writing");
         //  window.add(schrijvenCheckBox);
         schrijvenCheckBox.setSelected(false);
     }
@@ -216,7 +216,7 @@ public class KaartenLeersessieGui extends JPanel {
                 modulesCombo.removeItem(modulesCombo.getItemAt(1));
             }
         } else {
-            modulesCombo.addItem("Alle");
+            modulesCombo.addItem("All");
         }
 
         for (String e : modules) {
@@ -438,10 +438,10 @@ public class KaartenLeersessieGui extends JPanel {
 
     private String maakMessage(String code) {
         return switch (code) {
-            case "EC fileNotFound" -> "Bestand niet gevonden";
-            case "EC fillArrayError" -> "Bestand met kaarten bevat errors";
-            case "EC cardsNotInFilter" -> "Er zijn 0 kaarten in het filter. \nWijzig het filter";
-            default -> "Onbekende fout";
+            case "EC fileNotFound" -> "File not found";
+            case "EC fillArrayError" -> "Database with cards consists errors";
+            case "EC cardsNotInFilter" -> "There are zero card in the filter. \nchange filter";
+            default -> "unknown error";
         };
     }
 }

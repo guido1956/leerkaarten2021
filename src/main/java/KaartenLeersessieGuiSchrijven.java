@@ -82,33 +82,33 @@ public class KaartenLeersessieGuiSchrijven extends KaartenLeersessieGui{
         this.add(chkRandom);
         chkRandom.setSelected(false);
 
-        chkNeutraal = new JCheckBox("neutraal");
+        chkNeutraal = new JCheckBox("neutral");
         this.add(chkNeutraal);
         chkNeutraal.setSelected(true);
 
-        chkGoed = new JCheckBox("goed");
+        chkGoed = new JCheckBox("correct");
         this.add(chkGoed);
         chkGoed.setSelected(true);
 
-        chkNogNiet = new JCheckBox("nog niet");
+        chkNogNiet = new JCheckBox("not yet");
         this.add(chkNogNiet);
         chkNogNiet.setSelected(true);
     }
 
     public void createButtons() {
-        btnVolgende = new JButton("volgende kaart");
-        btnVolgende.setName("volgende");
+        btnVolgende = new JButton("next card");
+        btnVolgende.setName("next");
         this.add(btnVolgende);
 
         btnCheck = new JButton("check");
         btnCheck.setName("check");
         this.add(btnCheck);
 
-        btnVorige = new JButton("vorige kaart");
-        btnVorige.setName("vorige");
+        btnVorige = new JButton("former card");
+        btnVorige.setName("former");
         this.add(btnVorige);
 
-        btnFlip = new JButton("flip kaart");
+        btnFlip = new JButton("flip card");
         btnFlip.setName("flip");
         this.add(btnFlip);
 

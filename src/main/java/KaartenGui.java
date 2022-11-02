@@ -29,7 +29,7 @@ public class KaartenGui extends JFrame {
         beheerview.createGuiBeheer();
         leersessieschrijven.createGuiLeersessie();
         setUpTabs();
-        setTitle("Leren met flashcards -13-02-2022- Guido Dulos  versie 18");
+        setTitle("Learning with flashcards -02-11-2022- Guido Dulos  version 19(Eng)");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         repaint();
@@ -40,9 +40,9 @@ public class KaartenGui extends JFrame {
         tabTabs = new JTabbedPane();
         Border rand = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         tabTabs.setBorder(rand);
-        tabTabs.add("leren",  leersessieview );
-        tabTabs.add("schrijven" , leersessieschrijven);
-        tabTabs.add("beheer", beheerview);
+        tabTabs.add("learning",  leersessieview );
+        tabTabs.add("writing" , leersessieschrijven);
+        tabTabs.add("maintenance", beheerview);
 
         tabTabs.setBounds(50, 50, 200, 200);
         this.add(tabTabs);

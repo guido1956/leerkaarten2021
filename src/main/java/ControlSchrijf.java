@@ -109,16 +109,16 @@ public class ControlSchrijf {
             if (state.getIsVraag()) {
                 view.setBtnCheck(true);
                 kaartTekst = huidigeKaart.getVoorkant();
-                info = "vraag:";
-                buttontekst = "    antwoord      ";
+                info = "question:";
+                buttontekst = "    answer      ";
                 kaartTekst = kaartTekst.replaceAll("@@", "\n");
             } else {
                 view.setBtnCheck(false);
                 view.setSchrijfKaart("");
                 kaartTekst = huidigeKaart.getAchterkant();
                 kaartTekst = kaartTekst.replaceAll("@@", "\n");
-                info = " antwoord:";
-                buttontekst = "volgende kaart";
+                info = " question:";
+                buttontekst = "next card";
             }
 
             if (state.getIsVoorkant()) {

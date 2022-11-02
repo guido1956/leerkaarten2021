@@ -281,14 +281,14 @@ public class Controller {
 
         if (state.getIsVraag()) {
             kaartTekst = huidigeKaart.getVoorkant();
-            info = "vraag:";
-            buttontekst = "    antwoord      ";
+            info = "question:";
+            buttontekst = "    answer      ";
             kaartTekst = kaartTekst.replaceAll("@@", "\n");
         } else {
             kaartTekst = huidigeKaart.getAchterkant();
             kaartTekst = kaartTekst.replaceAll("@@", "\n");
-            info = " antwoord:";
-            buttontekst = "volgende kaart";
+            info = " question:";
+            buttontekst = "next card";
         }
 
         if (state.getIsVoorkant()) {
@@ -352,7 +352,7 @@ public class Controller {
     }
 
     public void flipVoorkantAchterkant(String name) {
-        if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
+        if (name.equals("radioFront") && !state.getIsVoorkant()) {
             state.setIsVoorkant(true);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
@@ -365,7 +365,7 @@ public class Controller {
             toonKaart();
             return;
         }
-        if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
+        if (name.equals("radioBack") && state.getIsVoorkant()) {
             state.setIsVoorkant(false);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
@@ -381,7 +381,7 @@ public class Controller {
     }
 
     public void flipVoorkantAchterkantSchrijf(String name) {
-        if (name.equals("radioVoorkant") && !state.getIsVoorkant()) {
+        if (name.equals("radioFront") && !state.getIsVoorkant()) {
             state.setIsVoorkant(true);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
@@ -394,7 +394,7 @@ public class Controller {
             controlSchrijf.toonKaart();
             return;
         }
-        if (name.equals("radioAchterkant") && state.getIsVoorkant()) {
+        if (name.equals("radioBack") && state.getIsVoorkant()) {
             state.setIsVoorkant(false);
             state.flipKaarten();
             state.setKaarten(kaarten.getKaarten());
@@ -800,8 +800,8 @@ public class Controller {
             String name = button.getName();
             // controlLeervorm1.leersessieKaart();
             switch (name) {
-                case "nieuw" -> nieuweKaart();
-                case "verwijder" -> verwijderKaart();
+                case "new" -> nieuweKaart();
+                case "delete" -> verwijderKaart();
                 case "save" -> saveKaart();
             }
         }
@@ -813,8 +813,8 @@ public class Controller {
             JButton button = (JButton) e.getSource();
             String name = button.getName();
             switch (name) {
-                case "volgende" -> controlSchrijf.volgendeKaart();
-                case "vorige" -> controlSchrijf.vorigeKaart();
+                case "next" -> controlSchrijf.volgendeKaart();
+                case "former" -> controlSchrijf.vorigeKaart();
                 case "check" -> checkSchrijven();
                 case "flip" -> flipKaartSchrijf();
                 case "reset" -> controlSchrijf.reset();
