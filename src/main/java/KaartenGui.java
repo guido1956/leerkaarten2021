@@ -19,7 +19,7 @@ public class KaartenGui extends JFrame {
     }
 
     private void initGui() {
-        setSize(800, 430);
+        setSize(750, 440);
         setFocusable(true);
         setLocation(400, 250);
         setLocation(400, 300);

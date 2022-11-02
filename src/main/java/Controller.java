@@ -282,7 +282,7 @@ public class Controller {
         if (state.getIsVraag()) {
             kaartTekst = huidigeKaart.getVoorkant();
             info = "question:";
-            buttontekst = "    answer      ";
+            buttontekst = "  answer  ";
             kaartTekst = kaartTekst.replaceAll("@@", "\n");
         } else {
             kaartTekst = huidigeKaart.getAchterkant();
