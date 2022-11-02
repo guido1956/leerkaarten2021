@@ -1,26 +1,26 @@
-bienvenidos&&welkom&&unidad 00&&goed&&goed&&goed&&goed
-hola&&hallo&&unidad 00&&goed&&goed&&goed&&neutraal
-buenos dias&&goedendag&&unidad 00&&goed&&goed&&niet&&neutraal
-el dia&&de dag&&unidad 00&&goed&&goed&&goed&&neutraal
-escusche&&luister&&unidad 00&&goed&&goed&&goed&&neutraal
-me llamo...&&ik heet...&&unidad 00&&goed&&goed&&goed&&neutraal
-cómo se llama usted?&&hoe heet u?&&unidad 00&&goed&&goed&&goed&&neutraal
-buenas tardes&&goedemiddag&&unidad 00&&goed&&goed&&niet&&neutraal
-la tarde&&de namiddag, de vooravond&&unidad 00&&goed&&niet&&niet&&neutraal
-y tú?&&en jij?&&unidad 00&&goed&&goed&&niet&&neutraal
-cómo te llamas?&&hoe heet jij?&&unidad 00&&goed&&goed&&goed&&neutraal
-soy&&ik ben&&unidad 00&&goed&&goed&&goed&&goed
-adiós&&tot ziens&&unidad 00&&goed&&goed&&goed&&niet
-hasta luego&&tot straks&&unidad 00&&goed&&goed&&niet&&goed
-una cadena&&een ketting&&unidad 00&&goed&&goed&&goed&&goed
-buenas noches&&goedenavond&&unidad 00&&goed&&goed&&niet&&neutraal
-la noche&&de nacht&&unidad 00&&goed&&goed&&goed&&neutraal
-hasta pronto&&tot snel&&unidad 00&&goed&&goed&&goed&&neutraal
-los números&&de getallen&&unidad 00&&goed&&goed&&niet&&neutraal
-México&&Mexico&&unidad 00&&goed&&goed&&goed&&neutraal
-es&&het is&&unidad 00&&goed&&goed&&niet&&neutraal
-la unidad&&het hoofdstuk&&unidad 00&&goed&&goed&&goed&&neutraal
-Colombia&&Colombia&&unidad 00&&goed&&goed&&goed&&neutraal
+bienvenidos&&welkom&&unidad 00&&goed&&goed&&neutraal&&goed
+hola&&hallo&&unidad 00&&goed&&goed&&neutraal&&goed
+buenos dias&&goedendag&&unidad 00&&goed&&goed&&neutraal&&neutraal
+el dia&&de dag&&unidad 00&&goed&&goed&&neutraal&&neutraal
+escusche&&luister&&unidad 00&&goed&&goed&&neutraal&&neutraal
+me llamo...&&ik heet...&&unidad 00&&goed&&goed&&neutraal&&neutraal
+cómo se llama usted?&&hoe heet u?&&unidad 00&&goed&&goed&&neutraal&&neutraal
+buenas tardes&&goedemiddag&&unidad 00&&goed&&goed&&neutraal&&neutraal
+la tarde&&de namiddag, de vooravond&&unidad 00&&goed&&niet&&neutraal&&neutraal
+y tú?&&en jij?&&unidad 00&&goed&&goed&&neutraal&&neutraal
+cómo te llamas?&&hoe heet jij?&&unidad 00&&goed&&goed&&neutraal&&neutraal
+soy&&ik ben&&unidad 00&&goed&&goed&&neutraal&&goed
+adiós&&tot ziens&&unidad 00&&goed&&goed&&neutraal&&niet
+hasta luego&&tot straks&&unidad 00&&goed&&goed&&neutraal&&goed
+una cadena&&een ketting&&unidad 00&&goed&&goed&&neutraal&&goed
+buenas noches&&goedenavond&&unidad 00&&goed&&goed&&neutraal&&neutraal
+la noche&&de nacht&&unidad 00&&goed&&goed&&neutraal&&neutraal
+hasta pronto&&tot snel&&unidad 00&&goed&&goed&&neutraal&&neutraal
+los números&&de getallen&&unidad 00&&goed&&goed&&neutraal&&neutraal
+México&&Mexico&&unidad 00&&goed&&goed&&neutraal&&neutraal
+es&&het is&&unidad 00&&goed&&goed&&neutraal&&neutraal
+la unidad&&het hoofdstuk&&unidad 00&&goed&&goed&&neutraal&&neutraal
+Colombia&&Colombia&&unidad 00&&goed&&goed&&neutraal&&neutraal
 son&&zij zijn&&unidad 00&&goed&&goed&&neutraal&&neutraal
 la última unidad&&het laatste hoofdstuk&&unidad 00&&goed&&goed&&neutraal&&neutraal
 Argentina&&Argentinie&&unidad 00&&goed&&goed&&neutraal&&neutraal
@@ -178,9 +178,9 @@ la comida&&het eten&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 la bebida&&het drankje&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 el edificio&&het gebouw&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 el animal&&het dier&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
-son las deiz en punto&&het is 10 uur&&100 klokkijken&&neutraal&&neutraal&&goed&&neutraal
+son las deiz en punto&&het is 10 uur&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
 es la dos en punto&&het is 2 uur&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
-son las cinco y diez minutos&&het is tien over vijf&&100 klokkijken&&neutraal&&neutraal&&niet&&neutraal
+son las cinco y diez minutos&&het is tien over vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
 son las cinco minos diez minutos&&het is tien voor vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
 son las cinco y quarto&&het is kwart over vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
 son las cinco minos quarto&&het is kwart voor vijf&&100 klokkijken&&neutraal&&neutraal&&neutraal&&neutraal
@@ -219,7 +219,7 @@ la ruta&&de route&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 fascinante&&fascinerend&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 por&&door&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 el continente&&het continent, werelddeel&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
-desde&&vanuit&&unidad 01&&niet&&neutraal&&neutraal&&neutraal
+desde&&vanuit&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 esta ruta&&deze route&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
 pasar por&&gaan door, lopen door&&unidad 01&&niet&&neutraal&&neutraal&&neutraal
 la zona climática&&de klimaatzone&&unidad 01&&goed&&neutraal&&neutraal&&neutraal
@@ -574,153 +574,153 @@ la terapia de errores&&de foutentherapie&&unidad 04&&goed&&niet&&neutraal&&neutr
 el error&&de fout&&unidad 04&&goed&&goed&&neutraal&&neutraal
 ya&&al&&unidad 04&&niet&&niet&&neutraal&&neutraal
 el truco&&de truc, het ezelsbruggetje&&unidad 04&&goed&&goed&&neutraal&&neutraal
-comer&&eten&&unidad 05&&goed&&neutraal&&goed&&neutraal
-con gusto&&graag, met plezier&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la cesta&&de mand&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la semana&&de week&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el zumo&&het sap&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el hambre&&de honger&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la vendura&&de groente&&unidad 05&&goed&&neutraal&&niet&&neutraal
-la sed&&de dorst&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el agua&&het water&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el huevo&&het ei&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la carne&&het vlees&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el plátano&&de banaan&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el limón&&de citroen&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el pollo&&de kip&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la pasta&&de pasta&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la mantequilla&&de boter&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la manzana&&de appel&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la patata&&de aardappel&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el pescado&&de vis&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la cebolla&&de ui&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la lechuga&&de sla&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el pan&&het brood&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el/la cliente/a&&de klant&&unidad 05&&goed&&neutraal&&goed&&neutraal
-todos los alimentos&&alle levensmiddelen&&unidad 05&&goed&&neutraal&&goed&&neutraal
-todos&&alle&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el alimento&&het levensmiddel&&unidad 05&&goed&&neutraal&&goed&&neutraal
-queria&&ik wil graag&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-un kilo de tomatos&&een kilo tomaten&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la ensalade&&de salade&&unidad 05&&goed&&neutraal&&goed&&neutraal
-la salsa&&de saus&&unidad 05&&goed&&neutraal&&niet&&neutraal
-un momento&&een ogenblik&&unidad 05&&goed&&neutraal&&goed&&neutraal
-soy yo&&ik ben het&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-por favor&&alsublieft&&unidad 05&&goed&&neutraal&&goed&&neutraal
-aqui tiene&&alsublieft, bij het overhandigen&&unidad 05&&goed&&neutraal&&niet&&neutraal
-algo más?&&anders nog iets?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la mandarina&&de mandarijn&&unidad 05&&goed&&neutraal&&goed&&neutraal
-bueno/a&&goed&&unidad 05&&goed&&neutraal&&goed&&neutraal
-prefiero&&ik heb liever&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-preferir&&liever hebben…, de voorkeur geven aan…&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-cuánto quiere?&&hoeveel wilt u?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-querer&&willen&&unidad 05&&goed&&neutraal&&goed&&neutraal
-un kilo y medio&&anderhalve kilo&&unidad 05&&goed&&neutraal&&goed&&neutraal
-medio/a&&half, halve&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el mango&&de mango&&unidad 05&&goed&&neutraal&&goed&&neutraal
-lo siento&&het spijt me&&unidad 05&&goed&&neutraal&&goed&&neutraal
-sentir&&spijten, betreuren&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-hoy no tengo&&vandaag heb ik er geen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-entonces&&dan&&unidad 05&&goed&&neutraal&&niet&&neutraal
+comer&&eten&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+con gusto&&graag, met plezier&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la cesta&&de mand&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la semana&&de week&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el zumo&&het sap&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el hambre&&de honger&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la vendura&&de groente&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la sed&&de dorst&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el agua&&het water&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el huevo&&het ei&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la carne&&het vlees&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el plátano&&de banaan&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el limón&&de citroen&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el pollo&&de kip&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la pasta&&de pasta&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la mantequilla&&de boter&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la manzana&&de appel&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la patata&&de aardappel&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el pescado&&de vis&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la cebolla&&de ui&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la lechuga&&de sla&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el pan&&het brood&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el/la cliente/a&&de klant&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+todos los alimentos&&alle levensmiddelen&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+todos&&alle&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el alimento&&het levensmiddel&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+queria&&ik wil graag&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+un kilo de tomatos&&een kilo tomaten&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la ensalade&&de salade&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+la salsa&&de saus&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+un momento&&een ogenblik&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+soy yo&&ik ben het&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+por favor&&alsublieft&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+aqui tiene&&alsublieft, bij het overhandigen&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+algo más?&&anders nog iets?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la mandarina&&de mandarijn&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+bueno/a&&goed&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+prefiero&&ik heb liever&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+preferir&&liever hebben…, de voorkeur geven aan…&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+cuánto quiere?&&hoeveel wilt u?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+querer&&willen&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+un kilo y medio&&anderhalve kilo&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+medio/a&&half, halve&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el mango&&de mango&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+lo siento&&het spijt me&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+sentir&&spijten, betreuren&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+hoy no tengo&&vandaag heb ik er geen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+entonces&&dan&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
 deme(dar)&&geeft u mij&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
-y qué mas?&&en wat nog meer?&&unidad 05&&goed&&neutraal&&goed&&neutraal
-el melon&&de meloen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-bueno&&goed, oké&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+y qué mas?&&en wat nog meer?&&unidad 05&&goed&&neutraal&&neutraal&&neutraal
+el melon&&de meloen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+bueno&&goed, oké&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
 ese es todo&&dat is alles&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
-cuánto es?&&hoeveel is het?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-son…&&dat wordt dan…&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-el peso&&Argentijnse munteenheid&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-muchas gracias&&hartelijk dank&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-hasta la próxima&&tot de volgende keer&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-en voz alta&&hardop&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el/la vendedor/a&&de verkoper, de verkoopster&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-cuánto questa…?&&wat kost…?&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-costar&&kosten&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-en total&&in totaal&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-dos euros con diez&&twee euro tien&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el euro&&de euro&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el vino blanco&&de witte wijn&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el vino tinto&&de rode wijn&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la cerveza sin alcohol&&het alcoholvrije bier&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-sin&&zonder&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el alcohol&&de alcohol&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el gas&&het koolzuur&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el zumo de naranja&&het sinaasappelsap&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el azúcar&&de suiker&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-compre&&koop&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-los números que faltan&&de ontbrekende getallen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-faltar&&ontbreken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-cien(to)&&honderd&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-mil&&duizend&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el millón&&het miljoen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la exportacíon&&de export&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-Brasil&&Brazilie&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-probar&&proeven, proberen&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-piden&&ze bestellen&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-el champinon&&de champignon&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-al ajillo&&gebakken met knoflook&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-la albóndiga&&het gehaktballetje&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la gamba&&de gamba&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-a la plancha&&gegrild&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-los calamares&&de gefrituurde inktvisringen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-a la romana&&gepaneerd&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la sardina&&het sardientje&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-frito/a&&gefrituurd, gebakken&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-la aceituna&&de olijf&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-verde&&groen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el jamón serrano&&de serranoham&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-a ver&&even kijken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-las patatas bravas&&aardappeltjes met pikante saus&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-lleva ajo?&&zit er knoflook in?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-llevar&&bevatten, meenemen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la mayonesa&&de mayonaise&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el tabasco&&de tabasco&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-puedo&&ik kan, ik mag&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-poder&&kunnen, mogen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-tomar&&nemen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-picante&&pittig, scherp&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-qué va&&welnee&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-una ración de…&&een portie&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-enseguida&&hier, het komt eraan&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-para beber&&om te drinken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el vino tinto de la case&&de rode wijn van het huis&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-no?&&niet waar?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-tomar alcohol&&alcohol drinken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el agua mineral&&het mineraalwater&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-qué tal?&&hoe smaakt het?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-delicioso/a&&heerlijk&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-pagar&&betalen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-informarse&&informatie inwinnen&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-se come caliente?&&wordt het warm gegeten?&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-frio/a&&koud&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-vamos&&we gaan&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el menú&&het menu&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la sepia&&de inktvis&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-en su tinta&&in eigen inkt&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-los boquerones&&de ansjovis&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el vinagre&&de azijn&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-los pimientos del padrón&&de kleine groene paprika’s&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-el pimiento&&de paprika&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la ensaladilla rusa&&de huzarensalade&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el pulpo&&de octopus&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-a la gallega&&op galische wijze (met aardappelen)&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-las croquetas&&de kroketten&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-referirse a&&betrekking hebben op&&unidad 05&&neutraal&&neutraal&&niet&&neutraal
-siquiente&&volgende&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+cuánto es?&&hoeveel is het?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+son…&&dat wordt dan…&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el peso&&Argentijnse munteenheid&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+muchas gracias&&hartelijk dank&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+hasta la próxima&&tot de volgende keer&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+en voz alta&&hardop&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el/la vendedor/a&&de verkoper, de verkoopster&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+cuánto questa…?&&wat kost…?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+costar&&kosten&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+en total&&in totaal&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+dos euros con diez&&twee euro tien&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el euro&&de euro&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el vino blanco&&de witte wijn&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el vino tinto&&de rode wijn&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la cerveza sin alcohol&&het alcoholvrije bier&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+sin&&zonder&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el alcohol&&de alcohol&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el gas&&het koolzuur&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el zumo de naranja&&het sinaasappelsap&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el azúcar&&de suiker&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+compre&&koop&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+los números que faltan&&de ontbrekende getallen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+faltar&&ontbreken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+cien(to)&&honderd&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+mil&&duizend&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el millón&&het miljoen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la exportacíon&&de export&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+Brasil&&Brazilie&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+probar&&proeven, proberen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+piden&&ze bestellen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el champinon&&de champignon&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+al ajillo&&gebakken met knoflook&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la albóndiga&&het gehaktballetje&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la gamba&&de gamba&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+a la plancha&&gegrild&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+los calamares&&de gefrituurde inktvisringen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+a la romana&&gepaneerd&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la sardina&&het sardientje&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+frito/a&&gefrituurd, gebakken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la aceituna&&de olijf&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+verde&&groen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el jamón serrano&&de serranoham&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+a ver&&even kijken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+las patatas bravas&&aardappeltjes met pikante saus&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+lleva ajo?&&zit er knoflook in?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+llevar&&bevatten, meenemen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la mayonesa&&de mayonaise&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el tabasco&&de tabasco&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+puedo&&ik kan, ik mag&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+poder&&kunnen, mogen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+tomar&&nemen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+picante&&pittig, scherp&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+qué va&&welnee&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+una ración de…&&een portie&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+enseguida&&hier, het komt eraan&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+para beber&&om te drinken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el vino tinto de la case&&de rode wijn van het huis&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+no?&&niet waar?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+tomar alcohol&&alcohol drinken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el agua mineral&&het mineraalwater&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+qué tal?&&hoe smaakt het?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+delicioso/a&&heerlijk&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+pagar&&betalen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+informarse&&informatie inwinnen&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+se come caliente?&&wordt het warm gegeten?&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+frio/a&&koud&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+vamos&&we gaan&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el menú&&het menu&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la sepia&&de inktvis&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+en su tinta&&in eigen inkt&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+los boquerones&&de ansjovis&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el vinagre&&de azijn&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+los pimientos del padrón&&de kleine groene paprika’s&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el pimiento&&de paprika&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la ensaladilla rusa&&de huzarensalade&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el pulpo&&de octopus&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+a la gallega&&op galische wijze (met aardappelen)&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+las croquetas&&de kroketten&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+referirse a&&betrekking hebben op&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+siquiente&&volgende&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
 las quiere negras o verdes?&&wilt u zwarte of groene?&&&&neutraal&&neutraal&&neutraal&&neutraal
-el té&&de thee&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el objeto&&het object&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-se habla&&er wordt gesproken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-necesitar&&nodig hebben&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-usar&&gebruiken&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la sopa&&de soep&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-cortar&&snijden&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-preparar&&bereiden&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-los espaquetis&&de spaghetti&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-la chuchara&&de lepel&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el chuchillo&&het mes&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el vaso&&het (water)glas&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
-el copa&&het (wijn)glas&&unidad 05&&neutraal&&neutraal&&goed&&neutraal
+el té&&de thee&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el objeto&&het object&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+se habla&&er wordt gesproken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+necesitar&&nodig hebben&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+usar&&gebruiken&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la sopa&&de soep&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+cortar&&snijden&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+preparar&&bereiden&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+los espaquetis&&de spaghetti&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+la chuchara&&de lepel&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el chuchillo&&het mes&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el vaso&&het (water)glas&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
+el copa&&het (wijn)glas&&unidad 05&&neutraal&&neutraal&&neutraal&&neutraal
 estudiar&&studeren@@estudio@@estudias@@estudia@@estudiamos@@estudiáis@@estudian&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
 hablar&&praten@@hablo@@hablas@@habla@@hablamos@@habláis@@hablan&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal
 comer&&eten@@como@@comes@@come@@comemos@@coméis@@comen&&werkwoord&&neutraal&&neutraal&&neutraal&&neutraal

@@ -93,8 +93,10 @@ public class ControlSchrijf {
 
     public void toonKaart() {
         if (state.getNoCards()) {
-            view.showKaartTekstSchrijf("Er voldoet geen enkele kaart aan de selectiecriteria\nWijzig de selectie");
-
+            view.showKaartTekstSchrijf("");
+            view.schrijfShowTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+            view.showMessageCode("EC cardsNotInFilter");
+            view.repaint();
         } else {
             view.showGaNaarKaartSchrijf(Integer.toString(state.getModuleStart() + 1));
             view.showTotEnMetSchrijf(Integer.toString(state.getModuleEinde() + 1));
@@ -124,6 +126,7 @@ public class ControlSchrijf {
             } else {
                 view.schrijfShowKleur(huidigeKaart.getGekendSchrijfAchterkant());
             }
+
             view.setButtonTekstSchrijf(buttontekst);
             view.showInfoSchrijf(info + " " + kaartnummer);
             view.showKaartTekstSchrijf(kaartTekst);

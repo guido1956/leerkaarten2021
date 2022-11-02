@@ -266,7 +266,9 @@ public class Controller {
 
     public void toonKaart() {
         if (state.getNoCards()) {
-            view.showKaartTekst("Er voldoet geen enkele kaart aan de selectiecriteria\nWijzig de selectie");
+            view.showKaartTekstSchrijf("");
+            view.showTotaalInFilter(Integer.toString(state.getAantalInfilter()));
+            view.showMessageCode("EC cardsNotInFilter");
             return;
         }
         view.showGaNaarKaart(Integer.toString(state.getModuleStart() + 1));

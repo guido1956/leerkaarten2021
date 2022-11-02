@@ -236,6 +236,8 @@ public class LeersessieState {
             aantalInFilter = filterKaarten.size();
         } else {
             noCards = true;
+            aantalInFilter = 0;
+
         }
     }
 
