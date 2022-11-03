@@ -176,7 +176,7 @@ public class KaartenLeersessieGui extends JPanel {
         voorkantRadioButton.setName("radioFront");
         this.add(voorkantRadioButton);
 
-        achterkantRadioButton = new JRadioButton("start met back");
+        achterkantRadioButton = new JRadioButton("start with back");
         achterkantRadioButton.setSelected(false);
         achterkantRadioButton.setName("radioBack");
         this.add(achterkantRadioButton);
