@@ -287,7 +287,7 @@ public class Controller {
         } else {
             kaartTekst = huidigeKaart.getAchterkant();
             kaartTekst = kaartTekst.replaceAll("@@", "\n");
-            info = " question:";
+            info = " answer:";
             buttontekst = "next card";
         }
 
